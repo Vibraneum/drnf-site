@@ -2,18 +2,14 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://drrabindernathfoundation.org/sitemap.xml
+Sitemap: https://drnf.org/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1
-
-# Block specific paths if needed (none for now)
-# Disallow: /admin/
-# Disallow: /private/
 
 # Allow all images
 Allow: /images/
 
 # Allow all CSS and JS
 Allow: /css/
-Allow: /js/ 
+Allow: /js/

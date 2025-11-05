@@ -255,10 +255,11 @@ img {
 .nav-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 clamp(1rem, 3vw, 3rem);
+    padding: 0 clamp(1.5rem, 3vw, 3rem);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
 }
 
 /* Enhanced Brand Section */
@@ -579,9 +580,13 @@ img {
         text-align: center;
         width: 100%;
     }
-    
-    .brand-content {
-        display: none;
+
+    .brand-title {
+        font-size: clamp(1.1rem, 3vw, 1.4rem);
+    }
+
+    .brand-tagline {
+        font-size: clamp(0.7rem, 2vw, 0.85rem);
     }
 }
 
