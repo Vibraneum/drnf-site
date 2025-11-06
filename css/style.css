@@ -529,109 +529,7 @@ img {
     opacity: 0.8;
 }
 
-/* Mobile Optimizations */
-@media (max-width: 968px) {
-    .nav-container {
-        flex-wrap: wrap;
-    }
-    
-    .nav-actions {
-        order: 2;
-    }
-    
-    .nav-menu {
-        order: 3;
-        width: 100%;
-        flex-basis: 100%;
-    }
-    
-    .nav-cta {
-        display: none;
-    }
-    
-    .hamburger {
-        display: flex;
-    }
-    
-    .nav-menu {
-        position: fixed;
-        top: 100px;
-        right: -100%;
-        width: 100%;
-        height: calc(100vh - 100px);
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(24px);
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
-        padding-top: 4rem;
-        transition: var(--transition-smooth);
-        gap: 2rem;
-        box-shadow: var(--shadow-lg);
-    }
-    
-    .nav-menu.active {
-        right: 0;
-    }
-    
-    .nav-link {
-        font-size: 1.3rem;
-        padding: 1.5rem;
-        text-align: center;
-        width: 100%;
-    }
-
-    .brand-title {
-        font-size: clamp(1.1rem, 3vw, 1.4rem);
-    }
-
-    .brand-tagline {
-        font-size: clamp(0.7rem, 2vw, 0.85rem);
-    }
-}
-
-@media (max-width: 768px) {
-    :root {
-        --section-padding: 4rem 0;
-    }
-    
-    .hero-cta {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-    
-    .hero-stats {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .hamburger.active .bar:nth-child(1) {
-        transform: rotate(45deg) translate(8px, 8px);
-    }
-    
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .hamburger.active .bar:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-stats {
-        grid-template-columns: 1fr;
-    }
-    
-    .stat-item {
-        padding: 1.5rem;
-    }
-    
-    .nav-container {
-        padding: 0 1rem;
-    }
-}
+/* Mobile Optimizations - See comprehensive responsive design section below */
 
 /* New Content Styles */
 
@@ -1015,8 +913,80 @@ img {
     font-size: 1.2rem;
 }
 
-/* Enhanced Mobile Responsive Design */
-@media (max-width: 968px) {
+/* ========================================
+   COMPREHENSIVE MOBILE RESPONSIVE DESIGN
+   ======================================== */
+
+/* Large Desktop: 1200px+ (default styles already applied) */
+
+/* Desktop/Tablet Breakpoint: max-width 1200px */
+@media (max-width: 1200px) {
+    :root {
+        --section-padding: clamp(2.5rem, 6vw, 5rem) 0;
+    }
+
+    .hero-section {
+        min-height: 650px;
+    }
+
+    .image-grid,
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+}
+
+/* Tablet Breakpoint: max-width 992px */
+@media (max-width: 992px) {
+    :root {
+        --section-padding: clamp(2rem, 5vw, 4rem) 0;
+        --container-padding: 0 clamp(1rem, 3vw, 1.5rem);
+    }
+
+    /* Navigation - Hamburger Menu Activation */
+    .nav-actions {
+        order: 2;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 100px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 100px);
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(24px);
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        padding-top: 4rem;
+        transition: var(--transition-smooth);
+        gap: 2rem;
+        box-shadow: var(--shadow-lg);
+        overflow-y: auto;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-link {
+        font-size: 1.3rem;
+        padding: 1.5rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Hide CTA on mobile nav */
+    .nav-cta {
+        display: none;
+    }
+
+    /* Two-column layouts to single column */
     .partnership-content,
     .about-content,
     .workshop-content,
@@ -1028,69 +998,861 @@ img {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
-    
-    .initiative-stats {
-        grid-template-columns: 1fr;
+
+    /* Hero Section Adjustments */
+    .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
-    
+
+    /* Multi-column grids to 2 columns */
+    .initiative-stats,
+    .employment-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    /* Media and Gallery Grids */
     .media-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
-    
-    .highlights-grid,
-    .employment-stats,
-    .donation-gallery {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+
+    .image-grid,
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
-    
+
+    /* Social Links */
     .social-links {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+
+    /* Donation Gallery */
+    .donation-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
 }
 
+/* Mobile Landscape: max-width 768px */
 @media (max-width: 768px) {
+    :root {
+        --section-padding: 3rem 0;
+        --font-size-5xl: 2.5rem;
+        --font-size-4xl: 2rem;
+        --font-size-3xl: 1.75rem;
+    }
+
+    html {
+        font-size: 15px;
+    }
+
+    /* Typography adjustments */
+    h1 { font-size: clamp(2rem, 5vw, 3rem); }
+    h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+    h3 { font-size: clamp(1.4rem, 3vw, 2rem); }
+
+    p {
+        font-size: clamp(0.95rem, 2vw, 1.05rem);
+    }
+
+    /* Navigation */
+    .brand-title {
+        font-size: clamp(1.1rem, 3vw, 1.35rem);
+    }
+
+    .brand-tagline {
+        font-size: clamp(0.7rem, 2vw, 0.8rem);
+    }
+
+    .logo-img {
+        width: clamp(45px, 6vw, 60px);
+        height: clamp(45px, 6vw, 60px);
+    }
+
+    /* Hero Section */
+    .hero-section {
+        min-height: 600px;
+        height: auto;
+        padding: 8rem 0 4rem;
+    }
+
+    .hero-title {
+        font-size: clamp(2rem, 5.5vw, 3.5rem);
+        margin-bottom: 1.25rem;
+    }
+
+    .hero-subtitle {
+        font-size: clamp(1.2rem, 3vw, 1.5rem);
+        margin-bottom: 0.75rem;
+    }
+
+    .hero-description {
+        font-size: clamp(1rem, 2.5vw, 1.15rem);
+        margin-bottom: 2.5rem;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+        max-width: 300px;
+        padding: 16px 32px;
+        font-size: 1.05rem;
+    }
+
+    .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 3rem;
+    }
+
+    .stat-item {
+        padding: 1.75rem;
+    }
+
+    .stat-number {
+        font-size: clamp(2.25rem, 5vw, 3rem);
+    }
+
+    .stat-label {
+        font-size: clamp(0.85rem, 2vw, 1rem);
+    }
+
+    /* Hamburger Animation */
+    .hamburger.active .bar:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* Buttons - Touch-friendly sizing */
+    .btn {
+        padding: 14px 28px;
+        font-size: 1rem;
+        min-height: 48px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Section Titles */
+    .section-title {
+        font-size: clamp(2rem, 4.5vw, 2.75rem);
+        margin-bottom: 3rem;
+    }
+
+    .section-subtitle {
+        font-size: clamp(1rem, 2.2vw, 1.2rem);
+        margin-bottom: 3rem;
+    }
+
+    /* Content Cards */
     .loocafe-partnership,
-    .community-overview {
+    .community-overview,
+    .animal-welfare {
         padding: 2.5rem 1.5rem;
     }
-    
-    .status-card {
-        padding: 2rem;
-    }
-    
+
+    .status-card,
     .contact-card,
-    .volunteer-card {
-        padding: 2rem;
+    .volunteer-card,
+    .workshop-intro,
+    .author-section,
+    .book-relaunch {
+        padding: 2rem 1.5rem;
     }
-    
+
+    /* Video Embeds - Responsive Aspect Ratio */
+    .video-embed {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+    }
+
+    .video-embed iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .media-item iframe {
+        height: 200px;
+    }
+
+    .video-container video {
+        height: 200px;
+    }
+
+    .book-videos iframe {
+        height: 240px;
+    }
+
+    /* Image Grids - All to Single Column */
+    .initiative-stats,
+    .highlights-grid,
+    .employment-stats,
+    .donation-gallery,
+    .media-grid,
+    .image-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+    }
+
+    /* Image Heights Adjustment */
+    .gallery-item img,
+    .news-image img,
+    .image-item img {
+        height: 240px;
+    }
+
+    .small-images img {
+        height: 140px;
+    }
+
+    /* Container Padding */
     .container {
         padding: 0 1rem;
     }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    /* Back to Top */
+    .back-to-top {
+        bottom: 25px;
+        right: 25px;
+        width: 55px;
+        height: 55px;
+    }
+
+    /* Scroll Indicator */
+    .scroll-indicator {
+        bottom: 30px;
+    }
 }
 
-@media (max-width: 480px) {
-    .loocafe-partnership,
-    .community-overview {
-        padding: 2rem 1rem;
+/* Mobile Portrait: max-width 576px */
+@media (max-width: 576px) {
+    :root {
+        --section-padding: 2.5rem 0;
     }
-    
+
+    html {
+        font-size: 14px;
+    }
+
+    /* Typography - Smaller on tiny screens */
+    h1 { font-size: clamp(1.75rem, 5vw, 2.5rem); }
+    h2 { font-size: clamp(1.5rem, 4vw, 2rem); }
+    h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+    h4 { font-size: clamp(1.1rem, 2.5vw, 1.4rem); }
+
+    /* Navigation */
+    .nav-container {
+        padding: 0 1rem;
+    }
+
+    .brand-title {
+        font-size: clamp(1rem, 3vw, 1.2rem);
+    }
+
+    .brand-tagline {
+        font-size: clamp(0.65rem, 1.8vw, 0.75rem);
+        display: none; /* Hide on very small screens */
+    }
+
+    .logo-img {
+        width: clamp(40px, 6vw, 50px);
+        height: clamp(40px, 6vw, 50px);
+    }
+
+    /* Hero Section */
+    .hero-section {
+        min-height: 550px;
+        padding: 7rem 0 3rem;
+    }
+
+    .hero-content {
+        padding: 0 1.25rem;
+    }
+
+    .hero-title {
+        font-size: clamp(1.75rem, 5.5vw, 2.75rem);
+        line-height: 1.25;
+    }
+
+    .hero-subtitle {
+        font-size: clamp(1.1rem, 3vw, 1.35rem);
+    }
+
+    .hero-description {
+        font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+        margin-bottom: 2rem;
+    }
+
+    .hero-cta {
+        margin-bottom: 2.5rem;
+    }
+
+    .hero-cta .btn {
+        padding: 14px 24px;
+        font-size: 1rem;
+    }
+
+    .hero-stats {
+        margin-top: 2.5rem;
+        gap: 1.25rem;
+    }
+
     .stat-item {
-        padding: 1.5rem;
+        padding: 1.5rem 1.25rem;
     }
-    
+
     .stat-number {
-        font-size: 2.5rem;
+        font-size: clamp(2rem, 5vw, 2.75rem);
     }
-    
+
+    /* Section Spacing */
+    .section-title {
+        font-size: clamp(1.75rem, 4.5vw, 2.25rem);
+        margin-bottom: 2.5rem;
+    }
+
+    .section-subtitle {
+        font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+        margin-bottom: 2.5rem;
+    }
+
+    /* Cards and Content Blocks */
+    .loocafe-partnership,
+    .community-overview,
+    .animal-welfare {
+        padding: 2rem 1.25rem;
+        border-radius: var(--border-radius);
+    }
+
+    .status-card,
+    .stat-card,
+    .highlight-card,
+    .employment-card,
+    .gallery-item,
+    .social-card {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .contact-card,
+    .volunteer-card {
+        padding: 1.75rem 1.25rem;
+    }
+
+    /* Icons */
+    .status-icon,
+    .contact-icon,
+    .highlight-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 1.75rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .stat-card .stat-icon,
+    .social-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    /* Highlight Items */
+    .highlight-item,
+    .feature-item,
+    .expansion-item {
+        padding: 1.25rem;
+        gap: 1.25rem;
+    }
+
+    .highlight-item i,
+    .feature-item i,
+    .expansion-item i {
+        font-size: 1.3rem;
+    }
+
+    /* Partnership Highlights */
+    .partnership-highlights .highlight-item {
+        padding: 1.25rem;
+    }
+
+    /* Media and Video */
+    .video-embed iframe,
+    .media-item iframe {
+        height: 200px;
+    }
+
+    .video-container video {
+        height: 180px;
+    }
+
+    /* Images */
+    .gallery-item img,
+    .news-image img,
+    .image-item img,
+    .about-image {
+        height: 220px;
+    }
+
+    .gallery-grid img {
+        height: 180px;
+    }
+
+    .small-images {
+        grid-template-columns: 1fr;
+    }
+
+    .small-images img {
+        height: 160px;
+    }
+
+    /* Grid Adjustments */
+    .image-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .social-links {
+        grid-template-columns: 1fr;
+    }
+
+    .social-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1.5rem;
+    }
+
+    .social-icon {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    /* Employment Numbers */
+    .employment-number {
+        font-size: 3rem;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 3rem 0 1.5rem;
+    }
+
+    .footer-content {
+        gap: 2rem;
+    }
+
+    .footer-social a {
+        width: 45px;
+        height: 45px;
+    }
+
+    /* Back to Top */
     .back-to-top {
         bottom: 20px;
         right: 20px;
         width: 50px;
         height: 50px;
+        font-size: 1.1rem;
+    }
+
+    /* Scroll Indicator */
+    .scroll-indicator {
+        bottom: 25px;
+    }
+
+    .scroll-arrow {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Small Mobile: max-width 400px */
+@media (max-width: 400px) {
+    :root {
+        --section-padding: 2rem 0;
+        --border-radius: 12px;
+        --border-radius-lg: 16px;
+        --border-radius-xl: 20px;
+    }
+
+    html {
+        font-size: 13px;
+    }
+
+    /* Navigation */
+    .nav-container {
+        padding: 0 0.75rem;
+    }
+
+    .navbar {
+        padding: 0.75rem 0;
+    }
+
+    .brand-title {
+        font-size: clamp(0.95rem, 3vw, 1.1rem);
+    }
+
+    .brand-tagline {
+        display: none;
+    }
+
+    .logo-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav-brand {
+        gap: 1rem;
+    }
+
+    .hamburger {
+        padding: 0.5rem;
+    }
+
+    .bar {
+        width: 24px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        min-height: 500px;
+        padding: 6rem 0 2.5rem;
+    }
+
+    .hero-content {
+        padding: 0 1rem;
+    }
+
+    .hero-title {
+        font-size: clamp(1.5rem, 5.5vw, 2.25rem);
+        margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: clamp(1rem, 3vw, 1.2rem);
+        margin-bottom: 0.75rem;
+    }
+
+    .hero-description {
+        font-size: clamp(0.9rem, 2.5vw, 1rem);
+        margin-bottom: 1.75rem;
+    }
+
+    .hero-cta {
+        margin-bottom: 2rem;
+    }
+
+    .hero-cta .btn {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+
+    .hero-stats {
+        margin-top: 2rem;
+        gap: 1rem;
+    }
+
+    .stat-item {
+        padding: 1.25rem 1rem;
+    }
+
+    .stat-number {
+        font-size: clamp(1.75rem, 5vw, 2.25rem);
+    }
+
+    .stat-label {
+        font-size: clamp(0.8rem, 2vw, 0.9rem);
+    }
+
+    /* Typography */
+    h1 { font-size: clamp(1.5rem, 5vw, 2rem); }
+    h2 { font-size: clamp(1.35rem, 4vw, 1.75rem); }
+    h3 { font-size: clamp(1.15rem, 3vw, 1.5rem); }
+    h4 { font-size: clamp(1rem, 2.5vw, 1.25rem); }
+
+    p {
+        font-size: clamp(0.9rem, 2vw, 1rem);
+    }
+
+    /* Section Elements */
+    .section-title {
+        font-size: clamp(1.5rem, 4.5vw, 2rem);
+        margin-bottom: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: clamp(0.9rem, 2.2vw, 1rem);
+        margin-bottom: 2rem;
+    }
+
+    .section-title::after {
+        width: 80px;
+        height: 3px;
+        bottom: -15px;
+    }
+
+    /* Container */
+    .container {
+        padding: 0 0.75rem;
+    }
+
+    /* Cards */
+    .loocafe-partnership,
+    .community-overview,
+    .animal-welfare {
+        padding: 1.5rem 1rem;
+    }
+
+    .status-card,
+    .stat-card,
+    .highlight-card,
+    .employment-card,
+    .contact-card,
+    .volunteer-card,
+    .social-card {
+        padding: 1.5rem 1rem;
+    }
+
+    /* Icons */
+    .status-icon,
+    .contact-icon,
+    .highlight-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .stat-card .stat-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 1.4rem;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+        min-height: 44px;
+    }
+
+    /* Highlight Items */
+    .highlight-item,
+    .feature-item,
+    .expansion-item {
+        padding: 1rem;
+        gap: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .highlight-item i,
+    .feature-item i,
+    .expansion-item i {
+        font-size: 1.25rem;
+    }
+
+    /* Media */
+    .video-embed iframe,
+    .media-item iframe {
+        height: 180px;
+    }
+
+    .video-container video {
+        height: 160px;
+    }
+
+    .book-videos iframe {
+        height: 200px;
+    }
+
+    /* Images */
+    .gallery-item img,
+    .news-image img,
+    .image-item img {
+        height: 200px;
+    }
+
+    .gallery-grid img {
+        height: 160px;
+    }
+
+    .about-image {
+        height: auto;
+    }
+
+    /* Employment Numbers */
+    .employment-number {
+        font-size: 2.5rem;
+    }
+
+    .employment-label {
+        font-size: 1.1rem;
+    }
+
+    /* Social Cards */
+    .social-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .social-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 1.5rem;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 2.5rem 0 1.5rem;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-social a {
+        width: 42px;
+        height: 42px;
+        font-size: 1.1rem;
+    }
+
+    /* Back to Top */
+    .back-to-top {
+        bottom: 15px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+
+    /* Scroll Indicator */
+    .scroll-indicator {
+        bottom: 20px;
+    }
+
+    .scroll-arrow {
+        width: 26px;
+        height: 26px;
+    }
+
+    /* Workshop Intro */
+    .workshop-intro blockquote {
+        font-size: 1.1rem;
+    }
+
+    /* News Card */
+    .news-content {
+        padding: 2rem 1.25rem;
+    }
+
+    /* Update Note */
+    .update-note {
+        padding: 1.5rem;
+    }
+
+    /* Animal Story */
+    .animal-story {
+        padding: 1.5rem;
+    }
+
+    /* Map Link */
+    .map-link {
+        padding: 0.75rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    /* Grids - Ensure single column */
+    .image-grid,
+    .gallery-grid,
+    .media-grid,
+    .donation-gallery,
+    .highlights-grid,
+    .employment-stats,
+    .initiative-stats {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+}
+
+/* Prevent Horizontal Scroll - All Breakpoints */
+@media (max-width: 992px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        overflow-x: hidden;
+    }
+
+    /* Ensure text doesn't cause overflow */
+    h1, h2, h3, h4, h5, h6, p, li, span, a {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+
+    /* Prevent images from causing overflow */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Touch-Friendly Elements - All Mobile Devices */
+@media (hover: none) and (pointer: coarse) {
+    /* Ensure all interactive elements are at least 44x44px */
+    .btn,
+    .nav-link,
+    .hamburger,
+    .back-to-top,
+    .map-link,
+    .animal-link {
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    /* Remove hover effects on touch devices */
+    .btn:hover,
+    .nav-link:hover,
+    .card:hover,
+    .stat-item:hover {
+        transform: none;
+    }
+
+    /* Add active states for touch feedback */
+    .btn:active {
+        transform: scale(0.97);
+    }
+
+    .hamburger:active {
+        transform: scale(0.95);
     }
 }
 
