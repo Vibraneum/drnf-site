@@ -641,16 +641,7 @@
                         <h3><i class="fas fa-paper-plane"></i> Send Us a Message</h3>
                         <p style="margin-bottom: 2rem;">Fill out the form below and we'll get back to you within 24 hours.</p>
 
-                        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">
-                            <!-- Web3Forms Access Key - Replace with your own from web3forms.com -->
-                            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-
-                            <!-- Success/Error Messages -->
-                            <input type="hidden" name="redirect" value="https://drnf.org/contact?success=true">
-                            <input type="hidden" name="subject" value="New Contact Form Submission from DRNF Website">
-
-                            <!-- Honeypot for spam protection -->
-                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        <form class="contact-form" id="contactForm">
 
                             <div class="form-group">
                                 <label for="name"><i class="fas fa-user"></i> Full Name *</label>
@@ -841,13 +832,46 @@
         }
 
         // Form submission handling
-        form.addEventListener('submit', function(e) {
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
             const submitButton = form.querySelector('button[type="submit"]');
             const originalText = submitButton.innerHTML;
 
             // Update button to show loading state
             submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitButton.disabled = true;
+
+            try {
+                // Collect form data
+                const formData = {
+                    name: document.getElementById('name').value.trim(),
+                    email: document.getElementById('email').value.trim(),
+                    phone: document.getElementById('phone').value.trim(),
+                    queryType: document.getElementById('interest').value,
+                    message: document.getElementById('message').value.trim(),
+                    source: 'drnf'  // IMPORTANT: Routes to DRNF Leads tab
+                };
+
+                // Send to Google Sheets CRM
+                await fetch('https://script.google.com/macros/s/AKfycbwMgsa8DrTHl2xOhpLYCzv-JY61t5RIeMXTAmxiDD2Sue8ukCZuEuKdonH2w9P87PAY/exec', {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                // Success - redirect to success page
+                window.location.href = '/contact?success=true';
+
+            } catch (error) {
+                console.error('Form submission error:', error);
+                alert('Something went wrong. Please try again or contact us directly via WhatsApp.');
+                submitButton.innerHTML = originalText;
+                submitButton.disabled = false;
+            }
         });
     </script>
 </body>
