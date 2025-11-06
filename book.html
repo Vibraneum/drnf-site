@@ -1362,23 +1362,112 @@
                 font-size: 1rem;
             }
         }
+
+        /* Sticky Table of Contents */
+        .sticky-toc {
+            position: fixed;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            padding: 1rem;
+            max-width: 280px;
+            max-height: 70vh;
+            overflow: hidden;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+
+        .sticky-toc.minimized .toc-links {
+            display: none;
+        }
+
+        .sticky-toc.minimized .toc-toggle i {
+            transform: rotate(180deg);
+        }
+
+        .toc-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--background-light);
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .toc-header i {
+            font-size: 1.2rem;
+        }
+
+        .toc-toggle {
+            margin-left: auto;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--primary-color);
+            font-size: 1rem;
+            padding: 0.25rem;
+            transition: transform 0.3s ease;
+        }
+
+        .toc-toggle:hover {
+            color: var(--secondary-color);
+        }
+
+        .toc-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            overflow-y: auto;
+            max-height: calc(70vh - 80px);
+        }
+
+        .toc-link {
+            padding: 0.5rem 0.75rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .toc-link:hover {
+            background: var(--background-light);
+            border-left-color: var(--primary-color);
+            padding-left: 1rem;
+        }
+
+        .toc-link.active {
+            background: linear-gradient(135deg, rgba(102,126,234,0.1), rgba(118,75,162,0.1));
+            border-left-color: var(--primary-color);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        @media (max-width: 1200px) {
+            .sticky-toc {
+                position: fixed;
+                right: 1rem;
+                top: auto;
+                bottom: 1rem;
+                transform: none;
+                max-width: 250px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sticky-toc {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Top Contact Bar (Desktop Only) -->
-    <div class="top-bar">
-        <div class="top-bar-container">
-            <a href="https://wa.me/919966906781" class="top-bar-link" target="_blank" rel="noopener">
-                <i class="fab fa-whatsapp"></i>
-                <span>WhatsApp: <strong>+91-9966906781</strong></span>
-            </a>
-            <a href="mailto:info@drnf.org" class="top-bar-link">
-                <i class="fas fa-envelope"></i>
-                <span>Email: <strong>info@drnf.org</strong></span>
-            </a>
-        </div>
-    </div>
-
     <!-- Main Enhanced Navigation -->
     <nav class="enhanced-nav" id="enhancedNav">
         <div class="nav-container-enhanced">
@@ -1423,7 +1512,7 @@
 
             <!-- Navigation Actions -->
             <div class="nav-actions-enhanced">
-                <a href="contact.html" class="nav-cta-enhanced">Get Involved</a>
+                <a href="contact.html" class="nav-cta-enhanced">Volunteer Today</a>
                 <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
                     <span></span>
                     <span></span>
@@ -1672,7 +1761,7 @@
 
             <!-- Mobile CTA -->
             <div class="mobile-menu-cta">
-                <a href="contact.html" class="nav-cta-enhanced">Get Involved</a>
+                <a href="contact.html" class="nav-cta-enhanced">Volunteer Today</a>
             </div>
         </div>
     </div>
@@ -1688,8 +1777,34 @@
         </div>
     </section>
 
+    <!-- Sticky Table of Contents -->
+    <div class="sticky-toc" id="stickyToc">
+        <div class="toc-header">
+            <i class="fas fa-book-open"></i>
+            <span>Quick Navigation</span>
+            <button class="toc-toggle" id="tocToggle" aria-label="Toggle table of contents">
+                <i class="fas fa-chevron-up"></i>
+            </button>
+        </div>
+        <nav class="toc-links" id="tocLinks">
+            <a href="#about-book" class="toc-link">About the Book</a>
+            <a href="#about-mul-raj" class="toc-link">About Mul Raj</a>
+            <a href="#historical-context" class="toc-link">Historical Context</a>
+            <a href="#arya-samaj" class="toc-link">Arya Samaj Movement</a>
+            <a href="#dav-college" class="toc-link">D.A.V. College</a>
+            <a href="#pnb-foundation" class="toc-link">Punjab National Bank</a>
+            <a href="#swadeshi-movement" class="toc-link">Swadeshi Movement</a>
+            <a href="#tribune-media" class="toc-link">Tribune & Media</a>
+            <a href="#achievements" class="toc-link">Achievements</a>
+            <a href="#family-lineage" class="toc-link">Family Lineage</a>
+            <a href="#book-relaunch" class="toc-link">Book Relaunch</a>
+            <a href="#inside-book" class="toc-link">Inside the Book</a>
+            <a href="#legacy-today" class="toc-link">Legacy Today</a>
+        </nav>
+    </div>
+
     <!-- About the Book Section -->
-    <section class="section">
+    <section id="about-book" class="section">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">About the Book</h2>
             <div class="about-content">
@@ -1798,7 +1913,7 @@
     <!-- About Rai Bahadur Mul Raj Section -->
     <section class="section" style="background: var(--background-light);">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">About Rai Bahadur Mul Raj</h2>
+            <h2 id="about-mul-raj" class="section-title" data-aos="fade-up">About Rai Bahadur Mul Raj</h2>
             <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
                 A self-made scholar, social reformer, and nation builder who shaped modern India
             </p>
@@ -1838,7 +1953,7 @@
     <!-- Historical Context: India in Mul Raj's Era -->
     <section class="section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Historical Context: India in Mul Raj's Era (1855-1945)</h2>
+            <h2 id="historical-context" class="section-title" data-aos="fade-up">Historical Context: India in Mul Raj's Era (1855-1945)</h2>
             <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
                 90 years that transformed a nation - from British annexation to the eve of independence
             </p>
@@ -1930,7 +2045,7 @@
     <!-- The Arya Samaj Movement -->
     <section class="section" style="background: var(--background-light);">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">The Arya Samaj Movement: A Revolutionary Reform</h2>
+            <h2 id="arya-samaj" class="section-title" data-aos="fade-up">The Arya Samaj Movement: A Revolutionary Reform</h2>
             <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
                 "The first institution in India that institutionalized the Indian identity"
             </p>
@@ -2030,7 +2145,7 @@
     <!-- D.A.V. College Movement -->
     <section class="section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">The D.A.V. College Movement: Bridging Tradition & Modernity</h2>
+            <h2 id="dav-college" class="section-title" data-aos="fade-up">The D.A.V. College Movement: Bridging Tradition & Modernity</h2>
             <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
                 From one college in 1886 to 900+ institutions educating millions today
             </p>
@@ -2141,7 +2256,7 @@
     <!-- Punjab National Bank Foundation Story -->
     <section class="section" style="background: var(--background-light);">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Punjab National Bank: The Foundation Story</h2>
+            <h2 id="pnb-foundation" class="section-title" data-aos="fade-up">Punjab National Bank: The Foundation Story</h2>
             <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
                 Creating India's first truly Indian bank - a vision of economic self-reliance
             </p>
@@ -2274,7 +2389,7 @@
     <!-- Swadeshi Movement: 30 Years Before Gandhi -->
     <section class="section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Swadeshi Movement: 30 Years Before Gandhi</h2>
+            <h2 id="swadeshi-movement" class="section-title" data-aos="fade-up">Swadeshi Movement: 30 Years Before Gandhi</h2>
             <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
                 Economic nationalism in 1893 - a prescient vision Gandhi would later amplify
             </p>
@@ -2383,7 +2498,7 @@
     <!-- The Tribune & Media Advocacy -->
     <section class="section" style="background: var(--background-light);">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">The Tribune & Media Advocacy</h2>
+            <h2 id="tribune-media" class="section-title" data-aos="fade-up">The Tribune & Media Advocacy</h2>
             <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
                 Using journalism as a tool for social reform and nation-building
             </p>
@@ -2502,7 +2617,7 @@
     <!-- Major Achievements Section -->
     <section class="section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Major Achievements & Contributions</h2>
+            <h2 id="achievements" class="section-title" data-aos="fade-up">Major Achievements & Contributions</h2>
 
             <div class="achievement-grid">
                 <div class="achievement-card" data-aos="fade-up" data-aos-delay="100">
@@ -2644,7 +2759,7 @@
     <!-- Family Lineage Section -->
     <section class="section" style="background: var(--background-light);">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Family Lineage</h2>
+            <h2 id="family-lineage" class="section-title" data-aos="fade-up">Family Lineage</h2>
             <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
                 A legacy of service spanning five generations
             </p>
@@ -3434,7 +3549,7 @@
     <!-- The Book Relaunch (2016) -->
     <section class="section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">The Book Relaunch (2016)</h2>
+            <h2 id="book-relaunch" class="section-title" data-aos="fade-up">The Book Relaunch (2016)</h2>
             <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
                 A heritage rediscovered and shared with the world
             </p>
@@ -3510,7 +3625,7 @@
     <!-- Inside the Book Section -->
     <section class="section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Inside the Book</h2>
+            <h2 id="inside-book" class="section-title" data-aos="fade-up">Inside the Book</h2>
             <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
                 An in-depth look at the structure, content, and unique aspects of this historic autobiography
             </p>
@@ -4751,7 +4866,7 @@
     <!-- Legacy Today Section -->
     <section class="section" style="background: var(--background-light);">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Legacy Today</h2>
+            <h2 id="legacy-today" class="section-title" data-aos="fade-up">Legacy Today</h2>
             <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
                 The institutions and movements Mul Raj founded continue to shape India
             </p>
@@ -5540,6 +5655,62 @@
     <script>
         // Current year in footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Sticky TOC functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const toc = document.getElementById('stickyToc');
+            const tocToggle = document.getElementById('tocToggle');
+            const tocLinks = document.querySelectorAll('.toc-link');
+
+            // Toggle TOC visibility
+            tocToggle.addEventListener('click', function() {
+                toc.classList.toggle('minimized');
+            });
+
+            // Smooth scroll and active state
+            tocLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Update active link on scroll
+            const sections = Array.from(tocLinks).map(link => {
+                const id = link.getAttribute('href');
+                return document.querySelector(id);
+            }).filter(section => section !== null);
+
+            function updateActiveLink() {
+                let current = '';
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (window.pageYOffset >= sectionTop - 100) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                tocLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', updateActiveLink);
+            updateActiveLink(); // Initial call
+        });
 
         // Gallery functionality
         document.addEventListener('DOMContentLoaded', function() {

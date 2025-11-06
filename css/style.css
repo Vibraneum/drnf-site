@@ -3428,6 +3428,81 @@ img {
     }
 }
 
+/* Enhanced CTA Button Styling */
+.nav-cta-enhanced {
+    background: linear-gradient(135deg, #2c5530 0%, #1a7e22 100%);
+    color: white;
+    padding: 0.7rem 1.8rem !important;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(44, 85, 48, 0.3);
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-cta-enhanced::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.nav-cta-enhanced:hover::before {
+    left: 100%;
+}
+
+.nav-cta-enhanced:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(44, 85, 48, 0.4);
+    background: linear-gradient(135deg, #1a7e22 0%, #2c5530 100%);
+}
+
+.nav-cta-enhanced:active {
+    transform: translateY(-1px);
+}
+
+/* Initiative Cards Hover Effects */
+.initiative-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.initiative-card::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(102,126,234,0.05) 0%, rgba(118,75,162,0.05) 100%);
+    transition: top 0.4s ease;
+}
+
+.initiative-card:hover::before {
+    top: 0;
+}
+
+.initiative-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(102,126,234,0.25);
+}
+
+.initiative-card .btn {
+    margin-top: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
 /* Mobile Adjustments */
 @media (max-width: 768px) {
     .nav-container-enhanced {
@@ -3446,6 +3521,10 @@ img {
 
     .nav-brand-text .brand-tagline {
         font-size: 0.75rem;
+    }
+
+    .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
