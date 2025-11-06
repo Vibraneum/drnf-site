@@ -651,7 +651,22 @@ function initializeEnhancedNavigation() {
         const megaMenu = document.getElementById(menuId);
 
         if (megaMenu) {
-            // Mouse enter
+            // Click to toggle (better for accessibility and mobile)
+            trigger.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                const isActive = megaMenu.classList.contains('active');
+
+                closeMegaMenus();
+
+                if (!isActive) {
+                    megaMenu.classList.add('active');
+                    trigger.classList.add('active');
+                }
+            });
+
+            // Mouse enter (for desktop hover)
             trigger.addEventListener('mouseenter', function() {
                 closeMegaMenus();
                 megaMenu.classList.add('active');

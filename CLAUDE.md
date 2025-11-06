@@ -2,6 +2,32 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Website Purpose & Philosophy
+
+**IMPORTANT**: This website is an **information-focused showcase**, not a volunteer recruitment platform.
+
+> "It is a site to express our work in detail and what we are, what we believe in, our daily impact and more"
+
+### Primary Purpose
+- Showcase the foundation's daily work and community impact (500-600 people served daily)
+- Share Dr. Rabinder Nath's legacy and the foundation's story
+- Highlight community service programs and initiatives
+- Communicate the foundation's beliefs, values, and mission
+- Enable information discovery and exploration
+
+### What This Site Is NOT
+- ❌ A volunteer recruitment platform
+- ❌ A donation-focused fundraising site
+- ❌ An action-oriented campaign site
+
+### What This Site IS
+- ✅ An information-rich showcase of community service work
+- ✅ A storytelling platform for Dr. Rabinder Nath's legacy
+- ✅ A detailed presentation of programs and daily impact
+- ✅ An educational resource about the foundation's values
+
+**When making changes**: Always prioritize information discovery over action-oriented CTAs. Contact options should be available but not pushy.
+
 ## Organization Overview
 
 ### Dr. Rabinder Nath Foundation (DRNF)
@@ -44,28 +70,45 @@ This is a **static website** deployed to **GitHub Pages** at **drnf.org**.
 ### Project Structure
 ```
 DRNF_website/
-├── index.html              # Main landing page with all sections
-├── faq.html                # FAQ page with structured data
+├── index.html                          # Main landing page with modern hero section
+├── about.html                          # About page with foundation story
+├── book.html                           # Heritage book page
+├── faq.html                            # FAQ page with structured data
+├── contact.html                        # Contact page with form
+├── chai-counters.html                  # Free chai counters program
+├── community.html                      # Community support programs
+├── dr-rabinder-nath.html              # Dr. Rabinder Nath biography
+├── privacy-policy.html                 # Privacy policy
+├── terms-of-service.html               # Terms of service
+├── navigation-template.html            # Navigation template for consistency
 ├── css/
-│   └── style.css           # All styles (responsive, animations, components)
+│   ├── style.css                       # All styles (responsive, animations, components)
+│   └── social-share.css                # Social sharing button styles
 ├── js/
-│   └── main.js             # Interactive features (navigation, animations, lightbox)
-├── images/                 # Website images and media
-│   ├── DRNF_logo.jpg       # Foundation logo
+│   ├── main.js                         # Interactive features (navigation, animations)
+│   └── social-share.js                 # Social sharing functionality
+├── images/                             # Website images and media
+│   ├── DRNF_logo.jpg                   # Foundation logo
 │   ├── rabinder_nath2.1.jpg
 │   ├── loocafe_no_bg_collage.png
 │   └── [various images and videos]
-├── sitemap.xml             # SEO sitemap
-├── robots.txt              # Search engine instructions
-├── CNAME                   # Domain configuration (drnf.org)
-├── .nojekyll               # Prevents Jekyll processing on GitHub Pages
+├── sitemap.xml                         # SEO sitemap
+├── robots.txt                          # Search engine instructions
+├── CNAME                               # Domain configuration (drnf.org)
+├── .nojekyll                           # Prevents Jekyll processing on GitHub Pages
+├── CLAUDE.md                           # This file - Development documentation
+├── MOBILE_FIX_SUMMARY.md               # Mobile navigation fixes documentation
+├── WEBSITE_REFOCUS_SUMMARY.md          # Complete refocus documentation (Nov 2025)
 └── .github/
     └── workflows/
-        └── static.yml      # GitHub Actions deployment workflow
+        └── static.yml                  # GitHub Actions deployment workflow
 ```
 
 ### Key Website Sections (index.html)
-1. **Hero Section** (`#hero`): Statistics (1,16,800+ cups served, 2 active counters, 70+ jobs)
+1. **Hero Section** (`#hero`): Modern design with statistics (500-600 people served daily, 1,16,800+ cups, 2 counters, 70+ jobs)
+   - **CTAs**: "Our Story" (primary), "Get in Touch" (secondary)
+   - **Background**: Clean white/gray gradient for excellent readability
+   - **Updated**: November 2025 - Complete redesign for clarity
 2. **Social Media** (`#socials`): Facebook and LinkedIn links
 3. **About** (`#about`): Foundation legacy and Dr. Rabinder Nath's story with YouTube videos
 4. **Free Chai Counters** (`#chai-counters`): LooCafe partnership, media coverage, expansion plans
@@ -73,7 +116,9 @@ DRNF_website/
 6. **Workshops** (`#workshops`): Sanitation and education workshops
 7. **Environment** (`#environment`): Tree plantation and animal welfare initiatives
 8. **Books** (`#books`): Literary legacy (7+ books, Punjabi Nationalism book relaunch)
-9. **Contact** (`#contact`): WhatsApp, email, office location, volunteer opportunities
+9. **Discover Our Work** (`#get-involved`): Information-focused CTA section (formerly volunteer-focused)
+   - Features: Daily Chai Service, Education Support, Community Care
+10. **Contact** (`#contact`): WhatsApp, email, office location, general inquiries
 
 ## Development Commands
 
@@ -178,6 +223,7 @@ Since this is a static site, testing primarily involves:
 
 The main.js file provides:
 - **Mobile Navigation**: Hamburger menu with smooth animations
+- **Mobile Menu Sections**: Expandable/collapsible sections for clean navigation (Nov 2025)
 - **Scroll Effects**: Hide/show navbar, parallax hero section
 - **Active Section Highlighting**: Navigation updates based on scroll position
 - **Smooth Scrolling**: Anchor links with offset for fixed navbar
@@ -187,14 +233,56 @@ The main.js file provides:
 - **Back to Top Button**: Appears after scrolling 300px
 - **AOS Integration**: Fade/slide animations for sections
 - **Social Share**: Pre-configured for Facebook, Twitter, LinkedIn, WhatsApp
+- **Mega Menu Dropdowns**: Desktop navigation with enhanced hover effects
+
+### Recent Updates (November 2025)
+- Added mobile section toggle functionality (lines 772-802)
+- Enhanced dropdown hover states for better UX
+- Improved chevron animations on navigation dropdowns
+
+## Recent Changes & Updates
+
+### November 2025 - Website Refocus
+**Major Update**: Transformed site from volunteer-focused to information-focused showcase.
+
+#### Key Changes:
+1. **Hero Section Redesign**
+   - Fixed text visibility issues (dark text on light background)
+   - Modern white/gray gradient design
+   - Changed CTAs: "Volunteer Today" → "Our Story", "Support Our Mission" → "Get in Touch"
+
+2. **Navigation Updates (All Pages)**
+   - Navigation CTA: "Volunteer Today" → "Our Story"
+   - Mega menu: "Volunteer with Us" → "Get in Touch"
+   - Enhanced dropdown hover states with color and animation
+
+3. **Content Refocus**
+   - Section title: "Ready to Make an Impact?" → "Discover Our Work"
+   - Feature icons: Volunteer/Partner/Support → Daily Chai/Education/Community Care
+   - All content emphasizes information discovery over recruitment
+
+4. **Mobile Menu Redesign**
+   - Streamlined structure with expandable sections
+   - Removed clutter and volunteer-focused CTAs
+   - Better organization: "About DRNF" and "Our Work" sections
+   - Proper button toggles (removed href="#" issues)
+
+5. **Google Analytics Integration**
+   - Added GA4 tracking (ID: G-BKRC1PBFTM) across all pages
+   - Automatic page view tracking
+   - Event tracking for CTAs, forms, and user engagement
+
+**Documentation**: See `WEBSITE_REFOCUS_SUMMARY.md` for complete details.
 
 ## Important Notes for Future Development
 
 ### Content Philosophy
-1. **Community-Centered**: All content should emphasize community service and compassion
-2. **Transparency**: Be clear about ongoing vs. past initiatives
-3. **Sustainability Focus**: Highlight sustainable models and long-term impact
-4. **Partnership Emphasis**: Always credit LooCafe, Ixora Group, and other partners
+1. **Information-Focused**: Prioritize showcasing work and impact over action CTAs
+2. **Community-Centered**: All content should emphasize community service and compassion
+3. **Transparency**: Be clear about ongoing vs. past initiatives
+4. **Sustainability Focus**: Highlight sustainable models and long-term impact
+5. **Partnership Emphasis**: Always credit LooCafe, Ixora Group, and other partners
+6. **NO Pushy CTAs**: Avoid volunteer recruitment or donation pressure tactics
 
 ### LooCafe Partnership Context
 - LooCafe is a network of 270+ public toilet facilities across Hyderabad
@@ -212,11 +300,14 @@ The foundation has significant media coverage:
 - **Gates Foundation**: LooCafe is the exclusive partner for public toilets
 
 ### When Editing Content
+- **CRITICAL**: Maintain information-focused approach (not volunteer/donation-focused)
 - Always maintain the dignified, compassionate tone
 - Preserve references to Dr. Rabinder Nath's legacy
 - Keep statistics current (update cup count, jobs created, etc.)
 - Ensure all external links (especially LooCafe and Ixora) remain functional
 - Preserve structured data for SEO (schema.org markup)
+- Avoid adding "Volunteer Today" or similar pushy CTAs
+- Use "Our Story", "Get in Touch", "Learn More" for CTAs instead
 
 ### Future Expansion Plans
 - Expand free chai counters across all 270 LooCafe locations
@@ -284,7 +375,22 @@ The website includes a professional contact form at `/contact` for lead generati
 
 ### Form Location
 - **Main Form**: `/contact` page
-- **CTAs**: "Get Involved" buttons throughout site link to contact form
+- **CTAs**: "Get in Touch" buttons throughout site link to contact form (not "Volunteer Today")
+
+## Analytics & Tracking
+
+### Google Analytics 4 (GA4)
+- **Measurement ID**: G-BKRC1PBFTM
+- **Implementation**: Added to all pages (November 2025)
+- **Tracking**:
+  - Page views (automatic)
+  - CTA clicks
+  - Form submissions
+  - External link clicks
+  - Social share interactions
+  - Phone/WhatsApp clicks
+
+**Note**: This is separate from the Ixora Group website analytics. Events are customized for DRNF-specific tracking.
 
 ## Contact for Technical Questions
 For technical issues or enhancement requests regarding this website, contact:
