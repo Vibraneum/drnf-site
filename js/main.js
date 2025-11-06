@@ -769,6 +769,38 @@ function initializeEnhancedNavigation() {
         }
     }
 
+    // New Clean Mobile Menu Section Toggles
+    document.querySelectorAll('.mobile-section-header-clean').forEach(header => {
+        header.addEventListener('click', function() {
+            const toggleId = this.getAttribute('data-toggle');
+            const content = document.getElementById(toggleId);
+
+            // Close all other sections
+            document.querySelectorAll('.mobile-section-content-clean').forEach(section => {
+                if (section.id !== toggleId) {
+                    section.classList.remove('active');
+                    const otherHeader = document.querySelector(`[data-toggle="${section.id}"]`);
+                    if (otherHeader) {
+                        otherHeader.classList.remove('active');
+                    }
+                }
+            });
+
+            // Toggle current section
+            this.classList.toggle('active');
+            if (content) {
+                content.classList.toggle('active');
+            }
+        });
+    });
+
+    // Close mobile menu when clicking on clean links
+    document.querySelectorAll('.mobile-menu-item-clean, .mobile-link-clean').forEach(link => {
+        link.addEventListener('click', function() {
+            closeMobileMenu();
+        });
+    });
+
     function closeMobileMenu() {
         if (mobileMenuOverlay) {
             mobileMenuOverlay.classList.remove('active');
