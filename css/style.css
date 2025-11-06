@@ -153,7 +153,7 @@ img {
     transform: translateX(-50%);
     width: 100px;
     height: 4px;
-    background: var(--gradient-secondary);
+    background: #2c5530; /* Solid forest green accent */
     border-radius: 2px;
 }
 
