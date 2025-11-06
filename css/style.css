@@ -141,10 +141,7 @@ img {
     margin-bottom: 4rem;
     position: relative;
     font-size: clamp(2.5rem, 5vw, 3.5rem);
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #1a3a1f; /* Dark forest green - excellent contrast */
     font-weight: 700;
 }
 
@@ -163,7 +160,7 @@ img {
 .section-subtitle {
     text-align: center;
     font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-    color: var(--text-secondary);
+    color: #2c3e50; /* Darker for better readability */
     margin-bottom: 4rem;
     max-width: 700px;
     margin-left: auto;
@@ -2177,7 +2174,7 @@ img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: var(--gradient-primary);
+    background: linear-gradient(135deg, #2c5530 0%, #1a7e22 100%);
     color: white;
     border: none;
     cursor: pointer;
@@ -2185,7 +2182,10 @@ img {
     visibility: hidden;
     transition: var(--transition-smooth);
     z-index: 999;
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 8px 32px rgba(44, 85, 48, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .back-to-top.visible {
@@ -2194,8 +2194,19 @@ img {
 }
 
 .back-to-top:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-xl);
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 16px 48px rgba(44, 85, 48, 0.35);
+    background: linear-gradient(135deg, #1a7e22 0%, #2c5530 100%);
+}
+
+/* Mobile responsive sizing */
+@media (max-width: 768px) {
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+    }
 }
 
 /* Animations */
@@ -3119,36 +3130,7 @@ img {
     font-size: 1.05rem;
 }
 
-/* Back to Top Button */
-.back-to-top {
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: var(--gradient-primary);
-    color: white;
-    border: none;
-    cursor: pointer;
-    opacity: 0;
-    visibility: hidden;
-    transition: var(--transition-smooth);
-    z-index: 999;
-    box-shadow: var(--shadow-lg);
-    font-size: 1.2rem;
-}
-
-.back-to-top.visible {
-    opacity: 1;
-    visibility: visible;
-}
-
-.back-to-top:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-xl);
-    background: var(--gradient-secondary);
-}
+/* Back to Top Button - Duplicate removed, using styles from line 2172 */
 
 /* Animations */
 @keyframes fadeInUp {
@@ -3333,7 +3315,8 @@ img {
 }
 
 .nav-link-enhanced.active {
-    color: var(--primary-color);
+    color: #2c5530; /* Forest green for active state */
+    font-weight: 600;
 }
 
 .nav-dropdown-trigger {

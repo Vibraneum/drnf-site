@@ -90,6 +90,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form-validation.css">
 
     <style>
         /* Contact Form Styles */
@@ -640,6 +641,9 @@
                         <h3><i class="fas fa-paper-plane"></i> Tell Us How You Want to Help</h3>
                         <p style="margin-bottom: 2rem;">Fill out the form below and we'll reach out within 24 hours with next steps tailored to your interests.</p>
 
+                        <!-- Honeypot field for spam prevention (hidden from users) -->
+                        <input type="text" name="website" value="" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
                         <form class="contact-form" id="contactForm">
 
                             <div class="form-group">
@@ -874,6 +878,7 @@
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/formValidation.js"></script>
     <script>
         // Current year in footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
@@ -881,6 +886,13 @@
         // Contact Form Handling
         const form = document.getElementById('contactForm');
         const formSuccess = document.getElementById('formSuccess');
+
+        // Start form timer for spam prevention
+        FormValidation.startFormTimer();
+
+        // Auto-focus first field
+        const nameField = document.getElementById('name');
+        if (nameField) nameField.focus();
 
         // Check for success parameter in URL
         const urlParams = new URLSearchParams(window.location.search);
@@ -894,6 +906,77 @@
             }, 300);
         }
 
+        // Real-time validation on blur
+        document.getElementById('name').addEventListener('blur', function() {
+            const result = FormValidation.validateName(this.value);
+            if (result.isValid) {
+                FormValidation.showSuccess('name');
+            } else {
+                FormValidation.showError('name', result.error);
+            }
+        });
+
+        document.getElementById('email').addEventListener('blur', function() {
+            const result = FormValidation.validateEmail(this.value);
+            if (result.isValid) {
+                FormValidation.hideError('email');
+                if (this.value && FormValidation.isPersonalEmail(this.value)) {
+                    FormValidation.showWarning('email', 'Consider using your organizational email for faster service');
+                } else {
+                    FormValidation.hideWarning('email');
+                }
+                if (this.value) FormValidation.showSuccess('email');
+            } else {
+                FormValidation.showError('email', result.error);
+                FormValidation.hideWarning('email');
+            }
+        });
+
+        document.getElementById('phone').addEventListener('blur', function() {
+            const result = FormValidation.validatePhone(this.value);
+            if (result.isValid) {
+                FormValidation.hideError('phone');
+                if (this.value) FormValidation.showSuccess('phone');
+            } else {
+                FormValidation.showError('phone', result.error);
+            }
+        });
+
+        document.getElementById('message').addEventListener('blur', function() {
+            const result = FormValidation.validateMessage(this.value);
+            if (result.isValid) {
+                FormValidation.showSuccess('message');
+            } else {
+                FormValidation.showError('message', result.error);
+            }
+        });
+
+        // Character counter for message
+        document.getElementById('message').addEventListener('input', function() {
+            const charCount = this.value.length;
+            const charCountMessage = FormValidation.getCharacterCountMessage(charCount, 10, 1000);
+
+            let counterElement = this.parentElement.querySelector('.character-counter');
+            if (!counterElement) {
+                counterElement = document.createElement('div');
+                counterElement.className = 'character-counter';
+                this.parentElement.appendChild(counterElement);
+            }
+
+            counterElement.textContent = charCountMessage;
+
+            // Update counter color
+            if (charCount < 10) {
+                counterElement.classList.add('warning');
+                counterElement.classList.remove('error');
+            } else if (charCount > 1000) {
+                counterElement.classList.add('error');
+                counterElement.classList.remove('warning');
+            } else {
+                counterElement.classList.remove('warning', 'error');
+            }
+        });
+
         // Form submission handling
         form.addEventListener('submit', async function(e) {
             e.preventDefault();
@@ -901,29 +984,96 @@
             const submitButton = form.querySelector('button[type="submit"]');
             const originalText = submitButton.innerHTML;
 
-            // Update button to show loading state
-            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            submitButton.disabled = true;
-
             // Collect form data
+            const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
             const phone = document.getElementById('phone').value.trim();
+            const message = document.getElementById('message').value.trim();
+            const honeypot = document.querySelector('input[name="website"]').value;
 
-            // VALIDATION: Require at least email OR phone
-            if (!email && !phone) {
-                alert('⚠️ Please provide either an email address or phone number (or both) so we can contact you.');
-                submitButton.innerHTML = originalText;
-                submitButton.disabled = false;
+            // Comprehensive validation
+            let hasErrors = false;
+
+            // Validate name
+            const nameResult = FormValidation.validateName(name);
+            if (!nameResult.isValid) {
+                FormValidation.showError('name', nameResult.error);
+                hasErrors = true;
+            } else {
+                FormValidation.showSuccess('name');
+            }
+
+            // Validate email if provided
+            if (email) {
+                const emailResult = FormValidation.validateEmail(email);
+                if (!emailResult.isValid) {
+                    FormValidation.showError('email', emailResult.error);
+                    hasErrors = true;
+                } else {
+                    FormValidation.showSuccess('email');
+                }
+            }
+
+            // Validate phone if provided
+            if (phone) {
+                const phoneResult = FormValidation.validatePhone(phone);
+                if (!phoneResult.isValid) {
+                    FormValidation.showError('phone', phoneResult.error);
+                    hasErrors = true;
+                } else {
+                    FormValidation.showSuccess('phone');
+                }
+            }
+
+            // Validate email OR phone
+            const emailOrPhoneResult = FormValidation.validateEmailOrPhone(email, phone);
+            if (!emailOrPhoneResult.isValid) {
+                alert('⚠️ ' + emailOrPhoneResult.error);
+                hasErrors = true;
+            }
+
+            // Validate message
+            const messageResult = FormValidation.validateMessage(message);
+            if (!messageResult.isValid) {
+                FormValidation.showError('message', messageResult.error);
+                hasErrors = true;
+            } else {
+                FormValidation.showSuccess('message');
+            }
+
+            // Honeypot spam check
+            if (!FormValidation.validateHoneypot(honeypot)) {
+                console.log('Spam detected via honeypot');
                 return;
             }
 
+            // Time-based spam check
+            const timeResult = FormValidation.validateFormSubmissionTime();
+            if (!timeResult.isValid) {
+                alert('⚠️ ' + timeResult.error);
+                return;
+            }
+
+            // If there are errors, scroll to first error and stop
+            if (hasErrors) {
+                const firstError = form.querySelector('.error');
+                if (firstError) {
+                    firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+                return;
+            }
+
+            // Update button to show loading state
+            submitButton.innerHTML = '<span class="spinner"></span> Sending...';
+            submitButton.disabled = true;
+
             try {
                 const formData = {
-                    name: document.getElementById('name').value.trim(),
-                    email: email,
-                    phone: phone,
+                    name: FormValidation.sanitizeInput(name),
+                    email: FormValidation.sanitizeInput(email),
+                    phone: phone ? FormValidation.formatPhoneNumber(phone) : '',
                     queryType: document.getElementById('interest').value,
-                    message: document.getElementById('message').value.trim(),
+                    message: FormValidation.sanitizeInput(message),
                     source: 'drnf'  // IMPORTANT: Routes to DRNF Leads tab
                 };
 

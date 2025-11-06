@@ -68,23 +68,32 @@ document.addEventListener('DOMContentLoaded', function() {
         lastScrollTop = scrollTop;
     });
 
-    // Active navigation link highlighting
+    // Active navigation link highlighting (FIXED for enhanced nav)
     const sections = document.querySelectorAll('section[id]');
-    
+
     function highlightNavLink() {
         const scrollY = window.pageYOffset;
-        const navbarHeight = navbar.offsetHeight;
+        const navbarHeight = navbar ? navbar.offsetHeight : 80;
 
         sections.forEach(section => {
             const sectionHeight = section.offsetHeight;
-            const sectionTop = section.offsetTop - navbarHeight - 50;
+            const sectionTop = section.offsetTop - navbarHeight - 100;
             const sectionId = section.getAttribute('id');
-            const correspondingNavLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+
+            // Check both old and new nav classes
+            const correspondingNavLink = document.querySelector(`.nav-link-enhanced[href="${sectionId}.html"]`) ||
+                                        document.querySelector(`.nav-link-enhanced[href="index.html"]`);
 
             if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                navLinks.forEach(link => link.classList.remove('active'));
-                if (correspondingNavLink) {
-                    correspondingNavLink.classList.add('active');
+                // Highlight current section in nav
+                document.querySelectorAll('.nav-link-enhanced').forEach(link => {
+                    link.classList.remove('active');
+                });
+
+                // If we're on homepage sections, highlight Home
+                if (sectionId === 'hero' || sectionId === 'socials' || sectionId === 'about') {
+                    const homeLink = document.querySelector('.nav-link-enhanced[href="index.html"]');
+                    if (homeLink) homeLink.classList.add('active');
                 }
             }
         });
