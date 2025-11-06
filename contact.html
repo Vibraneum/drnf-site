@@ -261,6 +261,19 @@
             }
         }
     </style>
+
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PLACEHOLDER', {
+        'page_title': document.title,
+        'page_path': window.location.pathname,
+        'send_page_view': true
+      });
+    </script>
 </head>
 <body>
     <!-- Main Enhanced Navigation -->
@@ -344,6 +357,10 @@
                                     <i class="fas fa-book-open mega-menu-icon"></i>
                                     <span class="mega-menu-text">Our Story</span>
                                 </a>
+                                <a href="dr-rabinder-nath.html" class="mega-menu-link">
+                                    <i class="fas fa-user-md mega-menu-icon"></i>
+                                    <span class="mega-menu-text">Dr. Rabinder Nath</span>
+                                </a>
                                 <a href="book.html" class="mega-menu-link">
                                     <i class="fas fa-book mega-menu-icon"></i>
                                     <span class="mega-menu-text">Heritage Book</span>
@@ -351,10 +368,6 @@
                                 <a href="about.html#team" class="mega-menu-link">
                                     <i class="fas fa-users mega-menu-icon"></i>
                                     <span class="mega-menu-text">Our Team</span>
-                                </a>
-                                <a href="about.html#impact" class="mega-menu-link">
-                                    <i class="fas fa-trophy mega-menu-icon"></i>
-                                    <span class="mega-menu-text">Impact & Stats</span>
                                 </a>
                             </div>
 
@@ -364,9 +377,9 @@
                                     <i class="fas fa-bullseye mega-menu-icon"></i>
                                     <span class="mega-menu-text">Vision & Mission</span>
                                 </a>
-                                <a href="about.html#legacy" class="mega-menu-link">
-                                    <i class="fas fa-scroll mega-menu-icon"></i>
-                                    <span class="mega-menu-text">Dr. Rabinder Nath's Legacy</span>
+                                <a href="about.html#impact" class="mega-menu-link">
+                                    <i class="fas fa-trophy mega-menu-icon"></i>
+                                    <span class="mega-menu-text">Impact & Stats</span>
                                 </a>
                                 <a href="about.html#values" class="mega-menu-link">
                                     <i class="fas fa-star mega-menu-icon"></i>
@@ -476,6 +489,10 @@
                         <i class="fas fa-book-open"></i>
                         <span>Our Story</span>
                     </a>
+                    <a href="dr-rabinder-nath.html" class="mobile-submenu-link">
+                        <i class="fas fa-user-md"></i>
+                        <span>Dr. Rabinder Nath</span>
+                    </a>
                     <a href="book.html" class="mobile-submenu-link">
                         <i class="fas fa-book"></i>
                         <span>Heritage Book</span>
@@ -484,17 +501,13 @@
                         <i class="fas fa-users"></i>
                         <span>Our Team</span>
                     </a>
-                    <a href="about.html#impact" class="mobile-submenu-link">
-                        <i class="fas fa-trophy"></i>
-                        <span>Impact & Stats</span>
-                    </a>
                     <a href="about.html#mission" class="mobile-submenu-link">
                         <i class="fas fa-bullseye"></i>
                         <span>Vision & Mission</span>
                     </a>
-                    <a href="about.html#legacy" class="mobile-submenu-link">
-                        <i class="fas fa-scroll"></i>
-                        <span>Dr. Rabinder Nath's Legacy</span>
+                    <a href="about.html#impact" class="mobile-submenu-link">
+                        <i class="fas fa-trophy"></i>
+                        <span>Impact & Stats</span>
                     </a>
                     <a href="about.html#values" class="mobile-submenu-link">
                         <i class="fas fa-star"></i>
@@ -739,6 +752,42 @@
         </div>
     </section>
 
+    <!-- Social Share Section -->
+    <section class="social-share-section" data-aos="fade-up">
+        <div class="container">
+            <div class="share-content">
+                <h3 class="share-title">Share Our Mission</h3>
+                <p class="share-subtitle">Help us reach more people who want to make a difference</p>
+
+                <div class="share-buttons">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" rel="noopener noreferrer" data-share="facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </a>
+
+                    <a href="https://twitter.com/intent/tweet?url=" class="share-btn twitter" target="_blank" rel="noopener noreferrer" data-share="twitter">
+                        <i class="fab fa-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=" class="share-btn linkedin" target="_blank" rel="noopener noreferrer" data-share="linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                    </a>
+
+                    <a href="https://wa.me/?text=Get%20involved%20with%20Dr.%20Rabinder%20Nath%20Foundation%20-%20" class="share-btn whatsapp" target="_blank" rel="noopener noreferrer" data-share="whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+
+                <p class="share-footer">
+                    <i class="fas fa-heart" style="color: #e74c3c;"></i> Thank you for spreading awareness
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -782,6 +831,16 @@
                 </div>
 
                 <div class="footer-section">
+                    <h4>Media & Press</h4>
+                    <ul>
+                        <li><a href="https://telanganatoday.com/tag/dr-rabinder-nath-foundation" target="_blank" rel="noopener">Press Coverage</a></li>
+                        <li><a href="/#media">Media Recognition</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=m0-LfxfS8mo" target="_blank" rel="noopener">Video Stories</a></li>
+                        <li><a href="https://www.linkedin.com/company/78002335/" target="_blank" rel="noopener">LinkedIn</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
                     <h4>Contact Info</h4>
                     <div class="contact-item">
                         <i class="fab fa-whatsapp"></i>
@@ -804,7 +863,7 @@
 
             <div class="footer-credibility">
                 <p style="text-align: center; font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
-                    <strong>Registered NGO</strong> | Operating since 2020 | Serving Hyderabad with compassion
+                    <strong>Registered NGO</strong> | Operating since 2016 | Serving Hyderabad with compassion
                 </p>
             </div>
 

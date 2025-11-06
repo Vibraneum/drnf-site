@@ -68,7 +68,7 @@
         },
         "telephone": "+91-9966906781",
         "email": "info@drnf.org",
-        "foundingDate": "2020",
+        "foundingDate": "2016",
         "founder": {
             "@type": "Person",
             "name": "Dr. Rabinder Nath"
@@ -110,8 +110,41 @@
     
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Analytics GA4 -->
+    <!--
+    Google Analytics Setup Instructions:
+    1. Go to https://analytics.google.com
+    2. Create a new GA4 property named "DRNF Website"
+    3. Get your Measurement ID (format: G-XXXXXXXXXX)
+    4. Replace 'G-PLACEHOLDER' in the script tag below with your actual ID
+    5. All events are automatically tracked:
+       - page_view: Automatic page view tracking (different from Ixora GA4)
+       - form_submission: Contact form submissions
+       - cta_click: Call-to-action button clicks
+       - phone_click: Phone number clicks for WhatsApp/calls
+       - whatsapp_click: WhatsApp engagement
+       - external_link_click: External link clicks
+       - social_share: Social share button clicks (Facebook, Twitter, LinkedIn, WhatsApp)
+       - volunteer_interest: Volunteer engagement tracking
+       - newsletter_signup: Newsletter/email subscriptions
+       - page_scroll: Scroll depth tracking
+       - video_play: Video engagement (if videos added)
+       - file_download: Document downloads (if enabled)
+    -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PLACEHOLDER', {
+        'page_title': document.title,
+        'page_path': window.location.pathname,
+        'send_page_view': true
+      });
+    </script>
 </head>
 <body>
     <!-- Main Enhanced Navigation -->
@@ -195,6 +228,10 @@
                                     <i class="fas fa-book-open mega-menu-icon"></i>
                                     <span class="mega-menu-text">Our Story</span>
                                 </a>
+                                <a href="dr-rabinder-nath.html" class="mega-menu-link">
+                                    <i class="fas fa-user-md mega-menu-icon"></i>
+                                    <span class="mega-menu-text">Dr. Rabinder Nath</span>
+                                </a>
                                 <a href="book.html" class="mega-menu-link">
                                     <i class="fas fa-book mega-menu-icon"></i>
                                     <span class="mega-menu-text">Heritage Book</span>
@@ -202,10 +239,6 @@
                                 <a href="about.html#team" class="mega-menu-link">
                                     <i class="fas fa-users mega-menu-icon"></i>
                                     <span class="mega-menu-text">Our Team</span>
-                                </a>
-                                <a href="about.html#impact" class="mega-menu-link">
-                                    <i class="fas fa-trophy mega-menu-icon"></i>
-                                    <span class="mega-menu-text">Impact & Stats</span>
                                 </a>
                             </div>
 
@@ -215,9 +248,9 @@
                                     <i class="fas fa-bullseye mega-menu-icon"></i>
                                     <span class="mega-menu-text">Vision & Mission</span>
                                 </a>
-                                <a href="about.html#legacy" class="mega-menu-link">
-                                    <i class="fas fa-scroll mega-menu-icon"></i>
-                                    <span class="mega-menu-text">Dr. Rabinder Nath's Legacy</span>
+                                <a href="about.html#impact" class="mega-menu-link">
+                                    <i class="fas fa-trophy mega-menu-icon"></i>
+                                    <span class="mega-menu-text">Impact & Stats</span>
                                 </a>
                                 <a href="about.html#values" class="mega-menu-link">
                                     <i class="fas fa-star mega-menu-icon"></i>
@@ -327,6 +360,10 @@
                         <i class="fas fa-book-open"></i>
                         <span>Our Story</span>
                     </a>
+                    <a href="dr-rabinder-nath.html" class="mobile-submenu-link">
+                        <i class="fas fa-user-md"></i>
+                        <span>Dr. Rabinder Nath</span>
+                    </a>
                     <a href="book.html" class="mobile-submenu-link">
                         <i class="fas fa-book"></i>
                         <span>Heritage Book</span>
@@ -335,17 +372,13 @@
                         <i class="fas fa-users"></i>
                         <span>Our Team</span>
                     </a>
-                    <a href="about.html#impact" class="mobile-submenu-link">
-                        <i class="fas fa-trophy"></i>
-                        <span>Impact & Stats</span>
-                    </a>
                     <a href="about.html#mission" class="mobile-submenu-link">
                         <i class="fas fa-bullseye"></i>
                         <span>Vision & Mission</span>
                     </a>
-                    <a href="about.html#legacy" class="mobile-submenu-link">
-                        <i class="fas fa-scroll"></i>
-                        <span>Dr. Rabinder Nath's Legacy</span>
+                    <a href="about.html#impact" class="mobile-submenu-link">
+                        <i class="fas fa-trophy"></i>
+                        <span>Impact & Stats</span>
                     </a>
                     <a href="about.html#values" class="mobile-submenu-link">
                         <i class="fas fa-star"></i>
@@ -417,7 +450,7 @@
         <div class="hero-overlay"></div>
         <div class="hero-content" data-aos="fade-up">
             <h1 class="hero-title">Dr. Rabinder Nath Foundation</h1>
-            <p class="hero-subtitle">Serving 1,16,800+ people through compassion, dignity, and community care</p>
+            <p class="hero-subtitle">Serving 500-600 people daily through compassion, dignity, and community care</p>
             <p class="hero-description">Join our mission to empower Hyderabad through Free Chai Counters, Community Support, Education, and Environmental Initiatives</p>
             <div class="hero-cta">
                 <a href="/contact" class="btn btn-primary">Volunteer Today</a>
@@ -425,12 +458,12 @@
             </div>
             <div class="hero-stats">
                 <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="stat-number">1,16,800+</div>
-                    <div class="stat-label">People Served</div>
+                    <div class="stat-number">500-600</div>
+                    <div class="stat-label">People Served Daily</div>
                 </div>
                 <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="stat-number">5+ Years</div>
-                    <div class="stat-label">Since 2020</div>
+                    <div class="stat-number">Since July 2021</div>
+                    <div class="stat-label">Free Chai Counter</div>
                 </div>
                 <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
                     <div class="stat-number">2</div>
@@ -535,8 +568,9 @@
                     <h3>Free Chai Counters</h3>
                     <p>Operating 24/7 with dignity at its heart. We serve hot tea and meals to those in need, creating a safe space for homeless individuals and supporting cancer patients' families.</p>
                     <div class="initiative-stats">
-                        <span class="stat-badge">1,16,800+ Served</span>
+                        <span class="stat-badge">500-600 People Daily</span>
                         <span class="stat-badge">2 Locations</span>
+                        <span class="stat-badge">Since July 2021</span>
                     </div>
                     <a href="/chai-counters" class="btn btn-primary">Join Free Chai Service</a>
                 </div>
@@ -596,8 +630,8 @@
                     <div class="impact-icon">
                         <i class="fas fa-coffee"></i>
                     </div>
-                    <div class="impact-number">1,16,800+</div>
-                    <div class="impact-label">Cups of Tea Served</div>
+                    <div class="impact-number">500-600</div>
+                    <div class="impact-label">People Served Daily</div>
                 </div>
 
                 <div class="impact-stat" data-aos="fade-up" data-aos-delay="250">
@@ -643,6 +677,89 @@
         </div>
     </section>
 
+    <!-- Media & Recognition Section -->
+    <section id="media" class="section" style="background: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Media & Recognition</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                Our work has been recognized by leading media outlets and organizations
+            </p>
+            <div class="media-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div class="media-card" data-aos="fade-up" data-aos-delay="200" style="background: white; padding: 2rem; border-radius: var(--border-radius); box-shadow: var(--shadow-md);">
+                    <div class="media-icon" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 1rem;">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem;">Press Coverage</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.75rem;">
+                            <a href="https://telanganatoday.com/charitable-trust-launches-free-chai-counter-in-hyderabad" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none;">
+                                <i class="fas fa-external-link-alt" style="margin-right: 0.5rem;"></i>Telangana Today: Free Chai Counter Launch (2021)
+                            </a>
+                        </li>
+                        <li style="margin-bottom: 0.75rem;">
+                            <a href="https://telanganatoday.com/tag/dr-rabinder-nath-foundation" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none;">
+                                <i class="fas fa-external-link-alt" style="margin-right: 0.5rem;"></i>Telangana Today: DRNF Coverage
+                            </a>
+                        </li>
+                        <li style="margin-bottom: 0.75rem;">
+                            <a href="https://timesofindia.indiatimes.com/entertainment/events/hyderabad/dr-rabinder-naths-61st-birthday-bash/articleshow/11926993.cms" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none;">
+                                <i class="fas fa-external-link-alt" style="margin-right: 0.5rem;"></i>Times of India: Dr. Rabinder Nath Feature
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="media-card" data-aos="fade-up" data-aos-delay="300" style="background: white; padding: 2rem; border-radius: var(--border-radius); box-shadow: var(--shadow-md);">
+                    <div class="media-icon" style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 1rem;">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem;">Videos</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.75rem;">
+                            <a href="https://www.youtube.com/watch?v=m0-LfxfS8mo" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none;">
+                                <i class="fab fa-youtube" style="margin-right: 0.5rem; color: #FF0000;"></i>DRNF Story on YouTube
+                            </a>
+                        </li>
+                        <li style="margin-bottom: 0.75rem;">
+                            <a href="https://www.youtube.com/watch?v=a6LDWTYpLBY" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none;">
+                                <i class="fab fa-youtube" style="margin-right: 0.5rem; color: #FF0000;"></i>Dr. Rabinder Nath's Legacy (English)
+                            </a>
+                        </li>
+                        <li style="margin-bottom: 0.75rem;">
+                            <a href="https://www.youtube.com/watch?v=4amQYIZNh4g" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none;">
+                                <i class="fab fa-youtube" style="margin-right: 0.5rem; color: #FF0000;"></i>Our Impact Story (With Subtitles)
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="media-card" data-aos="fade-up" data-aos-delay="400" style="background: white; padding: 2rem; border-radius: var(--border-radius); box-shadow: var(--shadow-md);">
+                    <div class="media-icon" style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1rem;">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem;">Connect</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.75rem;">
+                            <a href="https://www.linkedin.com/company/78002335/" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none;">
+                                <i class="fab fa-linkedin" style="margin-right: 0.5rem; color: #0077B5;"></i>LinkedIn: DRNF Company Page
+                            </a>
+                        </li>
+                        <li style="margin-bottom: 0.75rem;">
+                            <a href="https://nexteen.notion.site/Dr-Rabinder-Nath-Foundation-73e3403377cf490ebf1ed1427bbdd7e9" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none;">
+                                <i class="fas fa-file-alt" style="margin-right: 0.5rem;"></i>Foundation Overview (Notion)
+                            </a>
+                        </li>
+                        <li style="margin-bottom: 0.75rem;">
+                            <a href="https://www.1mg.com/doctors/dr-rabinder-nath-dental-surgery-in-hyderabad/DR-19z5o" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none;">
+                                <i class="fas fa-user-md" style="margin-right: 0.5rem;"></i>Dr. Rabinder Nath's Profile
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Call-to-Action Section -->
     <section id="get-involved" class="section cta-section">
         <div class="container">
@@ -674,6 +791,34 @@
         </div>
     </section>
 
+    <!-- Social Share Section -->
+    <section class="section">
+        <div class="container">
+            <div class="social-share-section" data-aos="fade-up">
+                <h3>Share Our Mission</h3>
+                <p>Help us spread the word about DRNF's impact across Hyderabad</p>
+                <div class="share-buttons">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" rel="noopener noreferrer" data-share="facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url=" class="share-btn twitter" target="_blank" rel="noopener noreferrer" data-share="twitter">
+                        <i class="fab fa-x-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=" class="share-btn linkedin" target="_blank" rel="noopener noreferrer" data-share="linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://wa.me/?text=Check%20out%20Dr.%20Rabinder%20Nath%20Foundation%20-%20" class="share-btn whatsapp" target="_blank" rel="noopener noreferrer" data-share="whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -693,7 +838,7 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4>Our Initiatives</h4>
                     <ul>
@@ -713,6 +858,16 @@
                         <li><a href="/faq">FAQ</a></li>
                         <li><a href="mailto:info@drnf.org">Volunteer</a></li>
                         <li><a href="https://loocafe.com" target="_blank" rel="noopener">LooCafe Partnership</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Media & Press</h4>
+                    <ul>
+                        <li><a href="https://telanganatoday.com/tag/dr-rabinder-nath-foundation" target="_blank" rel="noopener">Press Coverage</a></li>
+                        <li><a href="#media">Media Recognition</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=m0-LfxfS8mo" target="_blank" rel="noopener">Video Stories</a></li>
+                        <li><a href="https://www.linkedin.com/company/78002335/" target="_blank" rel="noopener">LinkedIn</a></li>
                     </ul>
                 </div>
                 
@@ -739,7 +894,7 @@
             
             <div class="footer-credibility">
                 <p style="text-align: center; font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
-                    <strong>Registered NGO</strong> | Operating since 2020 | Serving Hyderabad with compassion
+                    <strong>Registered NGO</strong> | Operating since 2016 | Serving Hyderabad with compassion
                 </p>
             </div>
 

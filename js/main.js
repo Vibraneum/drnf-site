@@ -1,5 +1,12 @@
 // DRNF Website - Interactive JavaScript
 
+// Google Analytics GA4 Event Tracking Helper
+const trackEvent = (eventName, parameters = {}) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', eventName, parameters);
+    }
+};
+
 document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize AOS (Animate On Scroll)
@@ -85,9 +92,59 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', highlightNavLink);
 
+    // Track scroll depth for analytics
+    let scrolledThresholds = new Set();
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = docHeight > 0 ? Math.round((scrollTop / docHeight) * 100) : 0;
+
+        // Track at 25%, 50%, 75%, and 100%
+        const thresholds = [25, 50, 75, 100];
+        thresholds.forEach(threshold => {
+            if (scrollPercent >= threshold && !scrolledThresholds.has(threshold)) {
+                scrolledThresholds.add(threshold);
+                trackEvent('page_scroll', {
+                    'scroll_percentage': threshold,
+                    'page': window.location.pathname
+                });
+            }
+        });
+    });
+
+    // Track phone and WhatsApp clicks
+    const phoneLinks = document.querySelectorAll('a[href^="tel:"], a[href*="whatsapp"], a[href*="wa.me"]');
+    phoneLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.href;
+            if (href.includes('tel:')) {
+                trackEvent('phone_click', {
+                    'phone_number': href.replace('tel:', ''),
+                    'source': this.textContent.trim() || 'phone_link',
+                    'page': window.location.pathname
+                });
+            } else if (href.includes('wa.me') || href.includes('whatsapp')) {
+                trackEvent('whatsapp_click', {
+                    'source': this.textContent.trim() || 'whatsapp_button',
+                    'page': window.location.pathname
+                });
+            }
+        });
+    });
+
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
+            // Track CTA clicks
+            if (this.classList.contains('btn') || this.classList.contains('nav-cta-enhanced') || this.classList.contains('cta-btn')) {
+                const buttonText = this.textContent.trim();
+                trackEvent('cta_click', {
+                    'button_text': buttonText,
+                    'button_class': this.className,
+                    'page': window.location.pathname
+                });
+            }
+
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
 
@@ -275,15 +332,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Form validation and submission (if contact forms exist)
     const forms = document.querySelectorAll('form');
-    
+
     forms.forEach(form => {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             // Basic validation
             const inputs = form.querySelectorAll('input[required], textarea[required]');
             let isValid = true;
-            
+
             inputs.forEach(input => {
                 if (!input.value.trim()) {
                     input.classList.add('error');
@@ -292,8 +349,18 @@ document.addEventListener('DOMContentLoaded', function() {
                     input.classList.remove('error');
                 }
             });
-            
+
             if (isValid) {
+                // Track form submission
+                const formName = form.getAttribute('data-form-name') || form.getAttribute('id') || 'contact_form';
+                const interestType = form.querySelector('select[name="interest_type"]')?.value || 'general';
+
+                trackEvent('form_submit', {
+                    'form_name': formName,
+                    'form_type': interestType,
+                    'page': window.location.pathname
+                });
+
                 // Show success message
                 showNotification('Thank you for your message! We\'ll get back to you soon.', 'success');
                 form.reset();
@@ -340,35 +407,62 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Social share functionality
     function createSocialShare() {
-        const shareButtons = document.querySelectorAll('.share-btn');
-        
+        const shareButtons = document.querySelectorAll('.share-btn, .social-card, [class*="social"]');
+
         shareButtons.forEach(btn => {
             btn.addEventListener('click', function(e) {
-                e.preventDefault();
-                const platform = this.dataset.platform;
-                const url = encodeURIComponent(window.location.href);
-                const title = encodeURIComponent(document.title);
-                
-                let shareUrl = '';
-                
-                switch(platform) {
-                    case 'facebook':
-                        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-                        break;
-                    case 'twitter':
-                        shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
-                        break;
-                    case 'linkedin':
-                        shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
-                        break;
-                    case 'whatsapp':
-                        shareUrl = `https://wa.me/?text=${title} ${url}`;
-                        break;
+                // Track social shares and external link clicks
+                const platform = this.dataset.platform || this.className;
+                const href = this.href || this.getAttribute('data-platform');
+
+                if (href || platform) {
+                    trackEvent('social_share', {
+                        'platform': platform,
+                        'page': window.location.pathname,
+                        'page_title': document.title
+                    });
                 }
-                
-                if (shareUrl) {
-                    window.open(shareUrl, '_blank', 'width=600,height=400');
+
+                // Handle share button clicks
+                if (this.classList.contains('share-btn')) {
+                    e.preventDefault();
+                    const platform = this.dataset.platform;
+                    const url = encodeURIComponent(window.location.href);
+                    const title = encodeURIComponent(document.title);
+
+                    let shareUrl = '';
+
+                    switch(platform) {
+                        case 'facebook':
+                            shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+                            break;
+                        case 'twitter':
+                            shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
+                            break;
+                        case 'linkedin':
+                            shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+                            break;
+                        case 'whatsapp':
+                            shareUrl = `https://wa.me/?text=${title} ${url}`;
+                            break;
+                    }
+
+                    if (shareUrl) {
+                        window.open(shareUrl, '_blank', 'width=600,height=400');
+                    }
                 }
+            });
+        });
+
+        // Track external link clicks
+        const externalLinks = document.querySelectorAll('a[target="_blank"], a[rel="noopener"]');
+        externalLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                trackEvent('external_link_click', {
+                    'link_url': this.href,
+                    'link_text': this.textContent.trim(),
+                    'page': window.location.pathname
+                });
             });
         });
     }
@@ -871,4 +965,65 @@ const additionalStyles = `
 // Inject additional styles
 const styleSheet = document.createElement('style');
 styleSheet.textContent = additionalStyles;
-document.head.appendChild(styleSheet); 
+document.head.appendChild(styleSheet);
+
+/* ===================================
+   SOCIAL SHARE FUNCTIONALITY
+   =================================== */
+
+// Initialize social share buttons with current page URL
+function initializeSocialShare() {
+    const currentUrl = window.location.href;
+    const pageTitle = document.title;
+    const encodedUrl = encodeURIComponent(currentUrl);
+    const encodedTitle = encodeURIComponent(pageTitle);
+
+    // Get all share buttons
+    const shareButtons = document.querySelectorAll('.share-btn');
+
+    shareButtons.forEach(button => {
+        const platform = button.getAttribute('data-share');
+        let shareUrl = '';
+
+        switch(platform) {
+            case 'facebook':
+                shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
+                break;
+            case 'twitter':
+                shareUrl = `https://twitter.com/intent/tweet?url=${encodedUrl}&text=Check%20out%20DRNF's%20amazing%20work%20-%20${encodedTitle}`;
+                break;
+            case 'linkedin':
+                shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
+                break;
+            case 'whatsapp':
+                shareUrl = `https://wa.me/?text=Check%20out%20DRNF's%20amazing%20work%20-%20${encodedTitle}%20${encodedUrl}`;
+                break;
+        }
+
+        // Update the href with the actual URL
+        if (shareUrl) {
+            button.setAttribute('href', shareUrl);
+        }
+
+        // Add click tracking (optional - for analytics)
+        button.addEventListener('click', function(e) {
+            const platform = this.getAttribute('data-share');
+            if (window.gtag) {
+                gtag('event', 'share', {
+                    'method': platform,
+                    'page': pageTitle
+                });
+            }
+        });
+    });
+}
+
+// Initialize social share when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initializeSocialShare();
+});
+
+// Also initialize when page loads (for dynamically loaded content)
+window.addEventListener('load', function() {
+    initializeSocialShare();
+}); 

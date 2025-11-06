@@ -1,0 +1,1046 @@
+{
+  "research_metadata": {
+    "title": "Facilities Management Services Pricing Research - India (Hyderabad Focus)",
+    "date": "2025-11-06",
+    "region": "India (Tier-1 Cities including Hyderabad)",
+    "currency": "INR (Indian Rupees)",
+    "gst_rate": "18%",
+    "note": "All prices are base rates excluding 18% GST. Actual pricing may vary based on specific requirements and negotiations."
+  },
+  "service_categories": {
+    "cleaning_services": {
+      "service_name": "Cleaning Services (Soft Services)",
+      "description": "Daily/regular cleaning including housekeeping, janitorial services, and general maintenance of premises",
+      "pricing_tiers": {
+        "budget": {
+          "tier_name": "Budget Tier",
+          "rate_min": 4.0,
+          "rate_max": 6.5,
+          "unit": "INR per sq ft per month",
+          "characteristics": [
+            "Basic cleaning services",
+            "Limited scope of work",
+            "Standard cleaning chemicals",
+            "Less experienced staff",
+            "Suitable for smaller offices under 2000 sq ft"
+          ],
+          "target_clients": "Small businesses, startups, basic office spaces"
+        },
+        "standard": {
+          "tier_name": "Standard/Mid-Tier",
+          "rate_min": 6.5,
+          "rate_max": 10.0,
+          "unit": "INR per sq ft per month",
+          "characteristics": [
+            "Comprehensive cleaning services",
+            "Quality cleaning products",
+            "Trained staff with supervision",
+            "Regular quality audits",
+            "Suitable for offices 2000-10000 sq ft"
+          ],
+          "target_clients": "Medium businesses, corporate offices, commercial buildings"
+        },
+        "premium": {
+          "tier_name": "Premium Tier",
+          "rate_min": 10.0,
+          "rate_max": 15.0,
+          "unit": "INR per sq ft per month",
+          "characteristics": [
+            "Premium cleaning services",
+            "Eco-friendly cleaning products",
+            "Highly trained and certified staff",
+            "Real-time monitoring and reporting",
+            "Technology-enabled service delivery",
+            "LEED/WELL/IGBC compliance support"
+          ],
+          "target_clients": "Large enterprises, multinational corporations, Grade-A offices, data centers"
+        }
+      },
+      "additional_services": {
+        "carpet_cleaning": {
+          "rate": 4.0,
+          "unit": "INR per sq ft",
+          "frequency": "One-time or periodic"
+        },
+        "glass_washing": {
+          "rate": 6.0,
+          "unit": "INR per sq ft",
+          "frequency": "One-time or periodic"
+        }
+      },
+      "monthly_rates_by_size": {
+        "small_office": {
+          "size_range": "Under 1000 sq ft",
+          "rate_min": 2000,
+          "rate_max": 3000,
+          "unit": "INR per month"
+        },
+        "medium_office": {
+          "size_range": "1000 - 2500 sq ft",
+          "rate_min": 3000,
+          "rate_max": 5000,
+          "unit": "INR per month"
+        },
+        "large_office": {
+          "size_range": "Over 2500 sq ft",
+          "rate_min": 10000,
+          "rate_max": 50000,
+          "unit": "INR per month"
+        }
+      }
+    },
+    "security_services": {
+      "service_name": "Security Services",
+      "description": "24/7 security guard services, access control, monitoring, and surveillance",
+      "pricing_models": {
+        "hourly_rates": {
+          "basic_security": {
+            "tier_name": "Basic Security (Unarmed Guards)",
+            "rate_min": 150,
+            "rate_max": 300,
+            "unit": "INR per hour per guard",
+            "characteristics": [
+              "Freshers or limited experience",
+              "Basic training",
+              "Unarmed guards",
+              "Low-risk asset protection"
+            ]
+          },
+          "standard_security": {
+            "tier_name": "Standard Security",
+            "rate_min": 300,
+            "rate_max": 500,
+            "unit": "INR per hour per guard",
+            "characteristics": [
+              "Experienced guards (2-5 years)",
+              "Professional training",
+              "Certified guards",
+              "Medium-risk facilities"
+            ]
+          },
+          "premium_security": {
+            "tier_name": "Premium Security (Specialized/Armed)",
+            "rate_min": 500,
+            "rate_max": 1500,
+            "unit": "INR per hour per guard",
+            "characteristics": [
+              "Ex-military or police personnel",
+              "Advanced training and certifications",
+              "Armed guards (if required)",
+              "High-risk asset protection",
+              "Event security specialists"
+            ]
+          }
+        },
+        "monthly_rates": {
+          "fresher_guards": {
+            "tier_name": "Entry-Level Security Guards",
+            "rate_min": 13000,
+            "rate_max": 18000,
+            "unit": "INR per month per guard",
+            "shift": "8-hour single shift"
+          },
+          "experienced_guards": {
+            "tier_name": "Experienced Security Guards",
+            "rate_min": 20000,
+            "rate_max": 30000,
+            "unit": "INR per month per guard",
+            "shift": "8-hour single shift"
+          },
+          "specialized_guards": {
+            "tier_name": "Specialized Security (Ex-servicemen/Certified)",
+            "rate_min": 30000,
+            "rate_max": 35000,
+            "unit": "INR per month per guard",
+            "shift": "8-hour single shift"
+          },
+          "personal_security": {
+            "tier_name": "Personal Security Officers/Bodyguards",
+            "rate_min": 40000,
+            "rate_max": 80000,
+            "unit": "INR per month per guard",
+            "shift": "Varies"
+          }
+        },
+        "event_security": {
+          "tier_name": "Event Security (Hyderabad)",
+          "rate_min": 17000,
+          "rate_max": 40000,
+          "unit": "INR per event",
+          "note": "Varies based on event type, duration, and location"
+        }
+      },
+      "shift_premiums": {
+        "12_hour_shift": {
+          "premium": "40-50% more than 8-hour shift",
+          "description": "Extended shift premium"
+        },
+        "24x7_coverage": {
+          "premium": "200-300% more than single shift",
+          "description": "Round-the-clock security coverage"
+        }
+      },
+      "additional_costs": {
+        "provident_fund": "12% of basic wage",
+        "esic": "3.25% of gross wages",
+        "bonus": "8.33% minimum annually",
+        "uniform": "One-time cost per guard",
+        "training": "Initial and ongoing training costs",
+        "overtime": "As per labor laws"
+      }
+    },
+    "hard_services": {
+      "service_name": "Hard Services (MEP - Mechanical, Electrical, Plumbing)",
+      "description": "HVAC maintenance, electrical systems, plumbing, building automation, and technical facility management",
+      "subcategories": {
+        "hvac_maintenance": {
+          "service_name": "HVAC Maintenance",
+          "pricing_models": {
+            "annual_contract": {
+              "budget": {
+                "tier_name": "Basic HVAC Maintenance",
+                "rate_min": 500,
+                "rate_max": 1000,
+                "unit": "INR per year per unit",
+                "coverage": "Bi-annual preventive maintenance, basic repairs"
+              },
+              "standard": {
+                "tier_name": "Standard HVAC Maintenance",
+                "rate_min": 1000,
+                "rate_max": 1700,
+                "unit": "INR per year per unit",
+                "coverage": "Quarterly preventive maintenance, full system inspections, parts included"
+              },
+              "premium": {
+                "tier_name": "Premium HVAC Maintenance",
+                "rate_min": 1700,
+                "rate_max": 2500,
+                "unit": "INR per year per unit",
+                "coverage": "Monthly inspections, 24/7 emergency support, predictive maintenance, IoT monitoring"
+              }
+            }
+          },
+          "services_included": [
+            "Filter replacements",
+            "Coil cleaning",
+            "Refrigerant level checks",
+            "Thermostat calibration",
+            "Duct cleaning",
+            "System performance optimization"
+          ],
+          "factors_affecting_cost": [
+            "System age and condition",
+            "Number of units",
+            "Building type (data center vs office)",
+            "Climate conditions",
+            "Service frequency"
+          ]
+        },
+        "electrical_maintenance": {
+          "service_name": "Electrical Maintenance",
+          "pricing_models": {
+            "annual_contract": {
+              "budget": {
+                "tier_name": "Basic Electrical Maintenance",
+                "rate_min": 0.5,
+                "rate_max": 1.5,
+                "unit": "INR per sq ft per year",
+                "coverage": "Basic electrical checks, minor repairs"
+              },
+              "standard": {
+                "tier_name": "Standard Electrical Maintenance",
+                "rate_min": 1.5,
+                "rate_max": 3.0,
+                "unit": "INR per sq ft per year",
+                "coverage": "Comprehensive electrical maintenance, safety audits, emergency repairs"
+              },
+              "premium": {
+                "tier_name": "Premium Electrical Maintenance",
+                "rate_min": 3.0,
+                "rate_max": 5.0,
+                "unit": "INR per sq ft per year",
+                "coverage": "Advanced electrical management, power quality monitoring, energy optimization"
+              }
+            }
+          },
+          "services_included": [
+            "Electrical panel maintenance",
+            "Lighting system maintenance",
+            "Power distribution checks",
+            "Generator maintenance",
+            "UPS system maintenance",
+            "Emergency lighting systems"
+          ]
+        },
+        "plumbing_maintenance": {
+          "service_name": "Plumbing Maintenance",
+          "pricing_models": {
+            "annual_contract": {
+              "budget": {
+                "tier_name": "Basic Plumbing Maintenance",
+                "rate_min": 0.5,
+                "rate_max": 1.0,
+                "unit": "INR per sq ft per year",
+                "coverage": "Basic plumbing repairs, leak detection"
+              },
+              "standard": {
+                "tier_name": "Standard Plumbing Maintenance",
+                "rate_min": 1.0,
+                "rate_max": 2.0,
+                "unit": "INR per sq ft per year",
+                "coverage": "Comprehensive plumbing maintenance, water quality monitoring"
+              },
+              "premium": {
+                "tier_name": "Premium Plumbing Maintenance",
+                "rate_min": 2.0,
+                "rate_max": 3.5,
+                "unit": "INR per sq ft per year",
+                "coverage": "Advanced water management, smart monitoring systems, water conservation"
+              }
+            }
+          },
+          "services_included": [
+            "Pipe inspection and repair",
+            "Drain cleaning",
+            "Water tank cleaning",
+            "Pump maintenance",
+            "Sewage system maintenance",
+            "Water quality testing"
+          ]
+        }
+      },
+      "integrated_hard_services": {
+        "tier_name": "Integrated Hard Services Package",
+        "description": "Combined MEP maintenance (HVAC + Electrical + Plumbing + Building Automation)",
+        "pricing_models": {
+          "budget": {
+            "rate_min": 2.0,
+            "rate_max": 4.0,
+            "unit": "INR per sq ft per year"
+          },
+          "standard": {
+            "rate_min": 4.0,
+            "rate_max": 7.0,
+            "unit": "INR per sq ft per year"
+          },
+          "premium": {
+            "rate_min": 7.0,
+            "rate_max": 12.0,
+            "unit": "INR per sq ft per year"
+          }
+        }
+      }
+    },
+    "pest_control": {
+      "service_name": "Pest Control Services",
+      "description": "Integrated pest management including rodent control, insect control, termite treatment, and preventive measures",
+      "pricing_models": {
+        "per_square_foot": {
+          "budget": {
+            "tier_name": "Basic Pest Control",
+            "rate_min": 1.0,
+            "rate_max": 1.5,
+            "unit": "INR per sq ft",
+            "frequency": "One-time or annual",
+            "minimum_area": "800 sq ft"
+          },
+          "standard": {
+            "tier_name": "Standard Pest Control",
+            "rate_min": 1.5,
+            "rate_max": 2.0,
+            "unit": "INR per sq ft",
+            "frequency": "Quarterly or bi-annual",
+            "minimum_area": "800 sq ft"
+          },
+          "premium": {
+            "tier_name": "Premium Pest Control (IPM - Integrated Pest Management)",
+            "rate_min": 2.0,
+            "rate_max": 3.5,
+            "unit": "INR per sq ft",
+            "frequency": "Monthly or quarterly with monitoring",
+            "minimum_area": "800 sq ft"
+          }
+        },
+        "annual_maintenance_contract": {
+          "description": "AMC packages include multiple visits per year for ongoing pest management",
+          "benefits": [
+            "Multiple visits spread across the year",
+            "Better long-term pest management",
+            "Cost-effective for recurring pest problems",
+            "Essential for commercial spaces",
+            "Warranty periods and follow-up sessions",
+            "Compliance support for food safety regulations"
+          ],
+          "pricing": {
+            "budget": {
+              "tier_name": "Basic AMC (2-3 visits/year)",
+              "rate_multiplier": "2x one-time rate",
+              "ideal_for": "Small commercial spaces, low pest risk"
+            },
+            "standard": {
+              "tier_name": "Standard AMC (4-6 visits/year)",
+              "rate_multiplier": "3-4x one-time rate",
+              "ideal_for": "Medium commercial spaces, moderate pest risk"
+            },
+            "premium": {
+              "tier_name": "Premium AMC (Monthly visits with monitoring)",
+              "rate_multiplier": "6-8x one-time rate",
+              "ideal_for": "Large commercial spaces, food facilities, high compliance requirements"
+            }
+          }
+        }
+      },
+      "factors_affecting_cost": [
+        "Property size (larger requires more chemicals and time)",
+        "Location (metros like Mumbai, Delhi, Bengaluru have higher rates)",
+        "Type of treatment (chemical vs eco-friendly/organic)",
+        "Compliance requirements (food safety, health regulations)",
+        "Pest type and severity",
+        "Building type (residential vs commercial)"
+      ],
+      "important_notes": [
+        "Pricing excludes 18% GST",
+        "Final pricing provided after site inspection",
+        "Commercial pricing typically higher than residential",
+        "AMC offers better value and warranty periods",
+        "Eco-friendly treatments cost 15-25% more"
+      ]
+    },
+    "integrated_facilities_management": {
+      "service_name": "Integrated Facilities Management (IFM)",
+      "description": "Complete facilities management solution including soft services, hard services, security, pest control, and facility coordination",
+      "market_overview": {
+        "market_size_2025": "USD 5.27 billion",
+        "projected_2030": "USD 8.55 billion",
+        "cagr": "10.18%",
+        "broader_fm_market_2025": "USD 159.61 billion",
+        "india_share_of_gdp": "3.2%"
+      },
+      "pricing_models": {
+        "comprehensive_ifm": {
+          "budget": {
+            "tier_name": "Budget IFM Package",
+            "rate_min": 8.0,
+            "rate_max": 12.0,
+            "unit": "INR per sq ft per month",
+            "services_included": [
+              "Basic cleaning and housekeeping",
+              "Basic security (unarmed guards)",
+              "Preventive maintenance (quarterly)",
+              "Annual pest control",
+              "Basic facility coordination"
+            ],
+            "ideal_for": "Small to medium commercial buildings, tier-2 cities, cost-conscious clients"
+          },
+          "standard": {
+            "tier_name": "Standard IFM Package",
+            "rate_min": 12.0,
+            "rate_max": 18.0,
+            "unit": "INR per sq ft per month",
+            "services_included": [
+              "Comprehensive cleaning and housekeeping",
+              "Professional security services",
+              "Monthly MEP maintenance",
+              "Quarterly pest control with monitoring",
+              "Facility management software",
+              "Helpdesk and complaint management",
+              "Regular audits and reporting"
+            ],
+            "ideal_for": "Medium to large commercial buildings, corporate offices, tier-1 cities"
+          },
+          "premium": {
+            "tier_name": "Premium IFM Package",
+            "rate_min": 18.0,
+            "rate_max": 30.0,
+            "unit": "INR per sq ft per month",
+            "services_included": [
+              "Premium cleaning with eco-friendly products",
+              "24/7 security with advanced surveillance",
+              "Predictive maintenance with IoT",
+              "Monthly integrated pest management",
+              "Energy management and optimization",
+              "Building automation integration",
+              "Real-time monitoring and analytics",
+              "Dedicated facility manager on-site",
+              "LEED/WELL/IGBC compliance support",
+              "Emergency response 24/7",
+              "Vendor management",
+              "Sustainability reporting"
+            ],
+            "ideal_for": "Large enterprises, data centers, Grade-A offices, multinational corporations, campuses"
+          }
+        }
+      },
+      "service_segmentation": {
+        "soft_services": {
+          "description": "Housekeeping, cleaning, janitorial, landscaping, waste management",
+          "percentage_of_ifm": "40-50%"
+        },
+        "hard_services": {
+          "description": "HVAC, electrical, plumbing, MEP, building automation",
+          "percentage_of_ifm": "30-40%"
+        },
+        "security_services": {
+          "description": "Physical security, access control, surveillance",
+          "percentage_of_ifm": "15-20%"
+        },
+        "specialized_services": {
+          "description": "Pest control, landscaping, specialized technical services",
+          "percentage_of_ifm": "5-10%"
+        }
+      }
+    }
+  },
+  "sector_specific_pricing": {
+    "commercial_office": {
+      "sector_name": "Commercial Office Buildings",
+      "market_share": "40.11% of total FM market",
+      "characteristics": [
+        "IT/BPO/Banking sectors dominate",
+        "High demand for outsourced services",
+        "Focus on cost efficiency and productivity",
+        "Standard business hours operation"
+      ],
+      "pricing_adjustment": "Base pricing (1.0x multiplier)",
+      "typical_services": [
+        "Daily housekeeping",
+        "Workday security",
+        "Standard HVAC maintenance",
+        "Quarterly pest control",
+        "Waste management"
+      ]
+    },
+    "data_center": {
+      "sector_name": "Data Centers",
+      "characteristics": [
+        "24/7 operations with 99.999% uptime requirements",
+        "Tier-4 data center standards",
+        "Precise temperature and humidity control",
+        "Stringent security protocols",
+        "Specialized cleaning (ESD-safe)",
+        "Fire suppression systems maintenance"
+      ],
+      "pricing_adjustment": "1.8x - 2.5x base pricing",
+      "rental_rates_hyderabad": {
+        "rate_min": 200,
+        "rate_max": 500,
+        "unit": "INR per sq ft per month"
+      },
+      "typical_services": [
+        "ESD-safe cleaning",
+        "24/7 security with biometric access",
+        "Precision HVAC maintenance (monthly)",
+        "Monthly pest control with special protocols",
+        "Fire suppression system maintenance",
+        "Power backup system maintenance",
+        "Environmental monitoring"
+      ]
+    },
+    "manufacturing_industrial": {
+      "sector_name": "Manufacturing & Industrial Facilities",
+      "characteristics": [
+        "Historically managed in-house",
+        "Specialized cleaning requirements",
+        "Heavy-duty equipment maintenance",
+        "Safety and compliance focus",
+        "Shift-based operations"
+      ],
+      "pricing_adjustment": "1.3x - 1.6x base pricing",
+      "typical_services": [
+        "Industrial housekeeping",
+        "24/7 security",
+        "Heavy-duty MEP maintenance",
+        "Specialized pest control",
+        "Hazardous waste management",
+        "Compliance documentation"
+      ]
+    },
+    "healthcare": {
+      "sector_name": "Healthcare Facilities (Hospitals, Clinics)",
+      "characteristics": [
+        "Fastest growing segment (7.69% CAGR to 2030)",
+        "Stringent hygiene standards",
+        "24/7 operations",
+        "Specialized biomedical waste management",
+        "Infection control protocols"
+      ],
+      "pricing_adjustment": "1.5x - 2.0x base pricing",
+      "typical_services": [
+        "Sterile area cleaning",
+        "24/7 security",
+        "Biomedical waste management",
+        "Specialized HVAC (OT standards)",
+        "Monthly pest control with healthcare protocols",
+        "Linen management"
+      ]
+    },
+    "education": {
+      "sector_name": "Educational Institutions",
+      "characteristics": [
+        "Seasonal operations (academic calendar)",
+        "Large campus areas",
+        "Student safety priority",
+        "Budget-conscious",
+        "Growing demand in tier-2/3 cities"
+      ],
+      "pricing_adjustment": "0.8x - 1.0x base pricing",
+      "typical_services": [
+        "Daily housekeeping",
+        "Campus security",
+        "Seasonal deep cleaning",
+        "Pest control during breaks",
+        "Landscape maintenance",
+        "Cafeteria management"
+      ]
+    },
+    "retail_hospitality": {
+      "sector_name": "Retail & Hospitality",
+      "characteristics": [
+        "High footfall areas",
+        "Extended operating hours",
+        "Customer-facing cleanliness",
+        "Brand image critical",
+        "Specialized services required"
+      ],
+      "pricing_adjustment": "1.2x - 1.5x base pricing",
+      "typical_services": [
+        "Multiple daily cleaning rounds",
+        "Customer-area security",
+        "HVAC for customer comfort",
+        "Monthly pest control",
+        "Facade and glass cleaning",
+        "Parking management"
+      ]
+    },
+    "government_public": {
+      "sector_name": "Government & Public Infrastructure",
+      "characteristics": [
+        "Tender-based contracts",
+        "Compliance-heavy",
+        "Budget constraints",
+        "Large area coverage",
+        "Growing demand in tier-2/3 cities"
+      ],
+      "pricing_adjustment": "0.7x - 0.9x base pricing (competitive bidding)",
+      "typical_services": [
+        "Basic to standard housekeeping",
+        "Security services",
+        "Standard MEP maintenance",
+        "Periodic pest control",
+        "Landscape maintenance"
+      ]
+    }
+  },
+  "pricing_factors": {
+    "facility_size": {
+      "small_facilities": {
+        "size_range": "Under 10,000 sq ft",
+        "characteristics": [
+          "Higher per sq ft cost",
+          "Limited economies of scale",
+          "Suitable for single services"
+        ],
+        "pricing_multiplier": "1.2x - 1.5x base rate"
+      },
+      "medium_facilities": {
+        "size_range": "10,000 - 50,000 sq ft",
+        "characteristics": [
+          "Moderate per sq ft cost",
+          "Better negotiation leverage",
+          "Suitable for IFM packages"
+        ],
+        "pricing_multiplier": "1.0x base rate (reference point)"
+      },
+      "large_facilities": {
+        "size_range": "Over 50,000 sq ft",
+        "characteristics": [
+          "Lower per sq ft cost",
+          "Significant economies of scale",
+          "Best suited for comprehensive IFM",
+          "Multiple site management discounts available"
+        ],
+        "pricing_multiplier": "0.7x - 0.9x base rate"
+      }
+    },
+    "service_frequency": {
+      "daily": {
+        "description": "Daily services (cleaning, security)",
+        "pricing_multiplier": "1.0x base rate"
+      },
+      "weekly": {
+        "description": "Weekly services (specialized cleaning)",
+        "pricing_multiplier": "0.4x - 0.5x base rate"
+      },
+      "monthly": {
+        "description": "Monthly services (maintenance checks)",
+        "pricing_multiplier": "0.15x - 0.25x base rate"
+      },
+      "quarterly": {
+        "description": "Quarterly services (deep cleaning, audits)",
+        "pricing_multiplier": "0.08x - 0.12x base rate"
+      },
+      "annual": {
+        "description": "Annual services (major maintenance)",
+        "pricing_multiplier": "0.05x - 0.08x base rate"
+      }
+    },
+    "location": {
+      "tier_1_cities": {
+        "cities": ["Mumbai", "Delhi NCR", "Bengaluru", "Hyderabad", "Chennai", "Pune", "Kolkata"],
+        "characteristics": [
+          "Higher operational costs",
+          "Premium service expectations",
+          "Better infrastructure",
+          "LEED/WELL certification demands",
+          "Intense vendor competition",
+          "Access to skilled workforce"
+        ],
+        "pricing_multiplier": "1.0x base rate (reference)",
+        "hyderabad_specific": {
+          "notes": [
+            "Tier-4 data center hub (CtrlS, NTT facilities)",
+            "Growing pharma and IT sectors",
+            "State government incentives for infrastructure",
+            "Competitive with other tier-1 cities"
+          ]
+        }
+      },
+      "tier_2_cities": {
+        "cities": ["Ahmedabad", "Coimbatore", "Kochi", "Jaipur", "Lucknow", "Chandigarh", "Indore"],
+        "characteristics": [
+          "Lower operational costs",
+          "Growing demand",
+          "Price-sensitive market",
+          "Emerging GCC and fulfillment hubs",
+          "Infrastructure cost savings of 30-50%",
+          "Skill shortage increases labor costs by 15-20%"
+        ],
+        "pricing_multiplier": "0.7x - 0.85x tier-1 pricing",
+        "annual_savings": "INR 12-18 crore for 200+ member team vs tier-1"
+      },
+      "tier_3_rural": {
+        "characteristics": [
+          "Significantly lower costs",
+          "Limited service provider options",
+          "Basic service expectations",
+          "Early traction in public infrastructure and education"
+        ],
+        "pricing_multiplier": "0.5x - 0.7x tier-1 pricing"
+      }
+    },
+    "contract_duration": {
+      "short_term": {
+        "duration": "Under 1 year",
+        "pricing_multiplier": "1.2x - 1.3x base rate",
+        "characteristics": ["Higher risk for vendor", "Less commitment", "Flexibility"]
+      },
+      "medium_term": {
+        "duration": "1-3 years",
+        "pricing_multiplier": "1.0x base rate",
+        "characteristics": ["Standard contracts", "Balance of risk and commitment", "Most common"]
+      },
+      "long_term": {
+        "duration": "3-5 years",
+        "pricing_multiplier": "0.85x - 0.95x base rate",
+        "characteristics": ["Vendor investment justified", "Better pricing", "Deeper partnership"]
+      }
+    },
+    "technology_integration": {
+      "basic_manual": {
+        "description": "Manual processes, basic reporting",
+        "pricing_adjustment": "0x (no additional cost)"
+      },
+      "standard_software": {
+        "description": "CMMS software, digital helpdesk, basic reporting dashboards",
+        "pricing_adjustment": "+INR 0.5-1.0 per sq ft per month"
+      },
+      "advanced_technology": {
+        "description": "IoT sensors, predictive maintenance, AI analytics, real-time monitoring, building automation integration",
+        "pricing_adjustment": "+INR 1.5-3.0 per sq ft per month"
+      }
+    }
+  },
+  "competitive_landscape": {
+    "major_players": [
+      {
+        "company": "CBRE South Asia",
+        "type": "International",
+        "presence": "10,000+ professionals, 10 offices, 80+ cities",
+        "specialization": "Integrated facilities management, property management",
+        "market_position": "Largest international player",
+        "recent_contract": "USD 3 million IFM contract for NetApp (1.07 million sq ft) - Oct 2024",
+        "pricing_tier": "Premium"
+      },
+      {
+        "company": "JLL (Jones Lang LaSalle)",
+        "type": "International",
+        "presence": "10,000+ staff, 10 cities",
+        "specialization": "Commercial real estate, facilities management",
+        "market_position": "Second-largest international player",
+        "pricing_tier": "Premium"
+      },
+      {
+        "company": "ISS Facility Services India",
+        "type": "International",
+        "presence": "55,000+ employees (planning to reach 100,000)",
+        "area_managed": "180+ million sq ft, 1,100+ clients",
+        "revenue_target": "USD 300 million by 2025",
+        "market_position": "Major international player with aggressive growth",
+        "pricing_tier": "Premium to Standard"
+      },
+      {
+        "company": "Sodexo Facilities Management India",
+        "type": "International",
+        "specialization": "Integrated FM, food services",
+        "market_position": "Major international player",
+        "pricing_tier": "Premium to Standard"
+      },
+      {
+        "company": "BVG India Limited",
+        "type": "Domestic",
+        "specialization": "Housekeeping, integrated FM",
+        "market_position": "Major Indian player",
+        "pricing_tier": "Standard"
+      },
+      {
+        "company": "Quess Corp",
+        "type": "Domestic",
+        "specialization": "Workforce management, facilities services",
+        "market_position": "Major Indian player",
+        "pricing_tier": "Standard"
+      },
+      {
+        "company": "SILA Group",
+        "type": "Domestic",
+        "area_managed": "150+ million sq ft, 20,000+ employees",
+        "specialization": "Integrated facilities management",
+        "market_position": "Major Indian player",
+        "pricing_tier": "Standard"
+      },
+      {
+        "company": "Krystal Integrated Services",
+        "type": "Domestic",
+        "specialization": "Security, facilities management",
+        "market_position": "Indian player",
+        "pricing_tier": "Standard to Budget"
+      },
+      {
+        "company": "SIS Group",
+        "type": "Domestic",
+        "specialization": "Security services, cash management",
+        "market_position": "Major security services player",
+        "pricing_tier": "Standard"
+      },
+      {
+        "company": "Dusters Total Solutions",
+        "type": "Domestic",
+        "specialization": "Housekeeping, pest control",
+        "market_position": "Regional player",
+        "pricing_tier": "Budget to Standard"
+      }
+    ],
+    "market_characteristics": {
+      "fragmentation": "Highly fragmented with numerous players",
+      "concentration": "CBRE, JLL, ISS, Sodexo have significant but not dominant share",
+      "competition": "Intense competition keeps pricing pressure high",
+      "specialization": "Specialized companies dominate over conglomerates",
+      "margins": "Average EBIT margins 6-8% across sector",
+      "growth": "17% CAGR for Indian FM market (2025-2034)"
+    }
+  },
+  "market_trends_2025": {
+    "technology_adoption": [
+      "IoT sensors for real-time monitoring",
+      "Predictive maintenance using AI",
+      "Cloud-based asset management",
+      "Mobile apps for service requests",
+      "Automated fire-safety testing",
+      "Energy management systems",
+      "Robotics deployment (premium tier)"
+    ],
+    "sustainability_focus": [
+      "LEED/WELL/IGBC certification support",
+      "Energy-efficient systems (18-25% cost savings over 5 years)",
+      "Water conservation programs",
+      "Waste management and recycling",
+      "Eco-friendly cleaning products",
+      "Carbon footprint reduction"
+    ],
+    "cost_pressures": [
+      "Escalating chemical and spare parts costs",
+      "Thin EBIT margins (6-8%)",
+      "Labor shortages in tier-2/3 cities (15-20% wage premiums)",
+      "Material and supply chain disruptions",
+      "8% year-on-year increase in fit-out costs"
+    ],
+    "growth_drivers": [
+      "Smart Cities initiative",
+      "Housing for All program",
+      "Rapid infrastructure development",
+      "Commercial real estate growth",
+      "Outsourcing trend in manufacturing",
+      "Healthcare sector expansion",
+      "GCC (Global Capability Centers) growth in tier-2 cities"
+    ]
+  },
+  "ixora_positioning": {
+    "target_tier": "Premium to Standard",
+    "competitive_advantages": [
+      "Comprehensive service portfolio (5 core services)",
+      "Multi-sector expertise (6+ target sectors)",
+      "Technology-enabled service delivery",
+      "Google Sheets CRM integration",
+      "40+ full-time associates",
+      "Sister company synergies (LooCafe, ReFlow)",
+      "Social impact through Dr. Rabinder Nath Foundation",
+      "Local Hyderabad presence with national reach"
+    ],
+    "recommended_pricing_strategy": {
+      "cleaning_services": {
+        "positioning": "Standard to Premium",
+        "rate_range": "INR 7-12 per sq ft per month",
+        "differentiation": "Quality, technology, sustainability"
+      },
+      "security_services": {
+        "positioning": "Standard",
+        "rate_range": "INR 350-600 per hour per guard",
+        "differentiation": "Professional training, technology integration"
+      },
+      "hard_services": {
+        "positioning": "Premium",
+        "rate_range": "INR 5-10 per sq ft per year",
+        "differentiation": "Predictive maintenance, IoT integration"
+      },
+      "pest_control": {
+        "positioning": "Standard to Premium",
+        "rate_range": "INR 1.5-2.5 per sq ft",
+        "differentiation": "Integrated pest management, compliance support"
+      },
+      "integrated_ifm": {
+        "positioning": "Premium",
+        "rate_range": "INR 15-25 per sq ft per month",
+        "differentiation": "Comprehensive solution, technology, sustainability, dedicated management"
+      }
+    },
+    "value_proposition": [
+      "One-stop solution for all facilities management needs",
+      "Technology-driven efficiency and transparency",
+      "Industry-specific expertise (data centers, aviation, education, commercial, manufacturing)",
+      "Sustainability and LEED/WELL support",
+      "Social impact through foundation initiatives",
+      "Competitive pricing with premium service quality",
+      "Local presence with global standards"
+    ]
+  },
+  "pricing_calculator_recommendations": {
+    "user_inputs": [
+      {
+        "input_name": "facility_size",
+        "type": "number",
+        "unit": "sq ft",
+        "label": "Facility Size",
+        "min": 1000,
+        "max": 1000000
+      },
+      {
+        "input_name": "facility_type",
+        "type": "select",
+        "label": "Facility Type",
+        "options": [
+          "Commercial Office",
+          "Data Center",
+          "Manufacturing/Industrial",
+          "Healthcare",
+          "Educational Institution",
+          "Retail/Hospitality",
+          "Government/Public Infrastructure"
+        ]
+      },
+      {
+        "input_name": "location",
+        "type": "select",
+        "label": "Location",
+        "options": [
+          "Tier-1 City (Hyderabad, Bengaluru, Mumbai, Delhi NCR, Chennai, Pune, Kolkata)",
+          "Tier-2 City (Ahmedabad, Coimbatore, Kochi, Jaipur, etc.)",
+          "Tier-3/Rural"
+        ]
+      },
+      {
+        "input_name": "services_required",
+        "type": "multi-select",
+        "label": "Services Required",
+        "options": [
+          "Cleaning Services",
+          "Security Services",
+          "HVAC Maintenance",
+          "Electrical Maintenance",
+          "Plumbing Maintenance",
+          "Pest Control",
+          "Integrated Facilities Management (All Services)"
+        ]
+      },
+      {
+        "input_name": "service_tier",
+        "type": "select",
+        "label": "Service Tier",
+        "options": [
+          "Budget (Cost-conscious, basic services)",
+          "Standard (Quality services, professional management)",
+          "Premium (Technology-enabled, sustainability focus, dedicated management)"
+        ]
+      },
+      {
+        "input_name": "contract_duration",
+        "type": "select",
+        "label": "Contract Duration",
+        "options": [
+          "Short-term (Under 1 year)",
+          "Medium-term (1-3 years)",
+          "Long-term (3-5 years)"
+        ]
+      }
+    ],
+    "calculation_logic": {
+      "step_1": "Determine base rate per service based on service_tier",
+      "step_2": "Apply facility_size multiplier",
+      "step_3": "Apply facility_type multiplier",
+      "step_4": "Apply location multiplier",
+      "step_5": "Apply contract_duration discount",
+      "step_6": "Calculate subtotal",
+      "step_7": "Add 18% GST",
+      "step_8": "Display monthly and annual estimates"
+    },
+    "output_format": {
+      "breakdown_by_service": true,
+      "show_gst_separately": true,
+      "show_monthly_annual": true,
+      "comparison_with_market": true,
+      "savings_calculation": true,
+      "cta_button": "Request Detailed Quote"
+    }
+  },
+  "important_disclaimers": [
+    "All prices are indicative and subject to site inspection and detailed assessment",
+    "Prices exclude 18% GST unless explicitly stated",
+    "Final pricing depends on specific facility requirements, service scope, and contract terms",
+    "Market prices are based on 2025 research and may vary",
+    "Actual pricing may differ based on negotiations, volume discounts, and long-term partnerships",
+    "Specialized services or unique requirements may incur additional charges",
+    "Prices reflect Hyderabad and tier-1 city standards; adjust for other locations",
+    "Technology integration and sustainability features may increase costs but provide long-term ROI"
+  ],
+  "data_sources": [
+    "IndiaMART - Facility Management Services Listings",
+    "NoBroker - Office Cleaning Charges Research",
+    "SIB Services - Cost Analysis Reports",
+    "Knighthood - Security Guard Cost Analysis",
+    "SILA Group - Facility Management Trends 2024",
+    "Mordor Intelligence - India FM Market Reports",
+    "TechSci Research - India FM Market Report 2024",
+    "CBRE India - Market Reports",
+    "JLL India - Market Reports",
+    "Industry interviews and market surveys (2025)",
+    "GST Council - Tax Rate Notifications"
+  ]
+}
