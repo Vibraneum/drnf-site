@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Dr. Rabinder Nath Foundation</title>
+    <link rel="icon" href="/images/favicon.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 700px;
+            background: white;
+            border-radius: 20px;
+            padding: 60px 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            position: relative;
+        }
+
+        .error-code {
+            font-size: 120px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .tooth-icon {
+            font-size: 80px;
+            animation: float 3s ease-in-out infinite;
+            display: inline-block;
+            margin: 20px 0;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .tooth-icon:hover {
+            transform: scale(1.2);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #333;
+            margin: 20px 0;
+        }
+
+        p {
+            font-size: 18px;
+            color: #666;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+
+        .pun {
+            font-size: 20px;
+            color: #667eea;
+            font-style: italic;
+            margin: 30px 0;
+        }
+
+        .game-area {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            position: relative;
+        }
+
+        .game-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .teeth-row {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .tooth {
+            font-size: 40px;
+            cursor: pointer;
+            transition: all 0.3s;
+            filter: brightness(1);
+        }
+
+        .tooth.healthy {
+            filter: brightness(1);
+        }
+
+        .tooth.cavity {
+            filter: brightness(0.7) hue-rotate(45deg);
+        }
+
+        .tooth.cleaned {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .tooth:hover:not(.cleaned) {
+            transform: scale(1.3);
+        }
+
+        .score {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .game-instructions {
+            font-size: 14px;
+            color: #999;
+            margin-top: 10px;
+        }
+
+        .countdown-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0 15px;
+        }
+
+        .countdown-text {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            cursor: pointer;
+            border: none;
+            margin: 10px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .cta-button.secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .cta-button.secondary:hover {
+            background: #f0f0f0;
+        }
+
+        .links {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+        }
+
+        .links a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .links a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        .easter-egg {
+            margin-top: 30px;
+            font-size: 11px;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="error-code">404</div>
+
+        <div class="tooth-icon" id="tooth">
+            🦷
+        </div>
+
+        <h1 id="pun">
+            Oops! This page needs some social impact!
+        </h1>
+
+        <p>
+            Just like Dr. Rabinder Nath believed in serving communities, we believe this page should exist too – but it doesn't yet!
+        </p>
+
+        <!-- Cavity Shooting Game -->
+        <div class="game-area">
+            <div class="score">🦷 Cavities Cleaned: <span id="score">0</span></div>
+            <div class="game-title">🎯 Dr. Nath's Dental Challenge</div>
+            <p class="game-instructions">Click on the brown/dark teeth (cavities) to clean them! Just like Dr. Nath's dental work serving communities.</p>
+            <div class="teeth-row" id="teethRow">
+                <!-- Teeth will be generated by JS -->
+            </div>
+            <p class="game-instructions" style="font-size: 12px; margin-top: 15px;">
+                💡 Dr. Rabinder Nath's passion for dental surgery helped thousands in underserved communities
+            </p>
+        </div>
+
+        <div class="countdown-circle" id="countdown">5</div>
+        <div class="countdown-text">
+            Redirecting to home in <span id="seconds">5</span> second<span id="plural">s</span>...
+        </div>
+
+        <div>
+            <button class="cta-button" onclick="window.location.href='index.html'">
+                Return Home
+            </button>
+            <button class="cta-button secondary" onclick="window.location.href='contact.html'">
+                Support Our Mission
+            </button>
+        </div>
+
+        <div class="links">
+            <a href="about.html">About Dr. Rabinder Nath</a>
+            <span style="color: #ddd;">|</span>
+            <a href="book.html">The Book</a>
+            <span style="color: #ddd;">|</span>
+            <a href="chai-counters.html">Chai Counters</a>
+            <span style="color: #ddd;">|</span>
+            <a href="community.html">Our Impact</a>
+            <span style="color: #ddd;">|</span>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="easter-egg">
+            <p>Error Code: SOCIAL_IMPACT_NOT_FOUND</p>
+            <p>💡 "Service to others is the rent we pay for our room here on Earth." - Dr. Rabinder Nath Foundation</p>
+        </div>
+    </div>
+
+    <script>
+        // Countdown timer
+        let countdown = 5;
+        const countdownEl = document.getElementById('countdown');
+        const secondsEl = document.getElementById('seconds');
+        const pluralEl = document.getElementById('plural');
+
+        const timer = setInterval(() => {
+            countdown--;
+            countdownEl.textContent = countdown;
+            secondsEl.textContent = countdown;
+            pluralEl.textContent = countdown === 1 ? '' : 's';
+
+            if (countdown <= 0) {
+                clearInterval(timer);
+                window.location.href = 'index.html';
+            }
+        }, 1000);
+
+        // Cavity shooting game
+        let score = 0;
+        const scoreEl = document.getElementById('score');
+        const teethRow = document.getElementById('teethRow');
+
+        // Generate random teeth (some healthy, some with cavities)
+        function generateTeeth() {
+            teethRow.innerHTML = '';
+            for (let i = 0; i < 12; i++) {
+                const tooth = document.createElement('div');
+                tooth.className = 'tooth';
+                tooth.textContent = '🦷';
+
+                // Randomly make some teeth have cavities (darker)
+                const hasCavity = Math.random() > 0.5;
+                if (hasCavity) {
+                    tooth.classList.add('cavity');
+                    tooth.addEventListener('click', function() {
+                        if (!this.classList.contains('cleaned')) {
+                            score++;
+                            scoreEl.textContent = score;
+                            this.classList.add('cleaned');
+                            this.classList.remove('cavity');
+
+                            // Celebration effect
+                            this.textContent = '✨';
+                            setTimeout(() => {
+                                this.textContent = '🦷';
+                            }, 500);
+                        }
+                    });
+                } else {
+                    tooth.classList.add('healthy');
+                }
+
+                teethRow.appendChild(tooth);
+            }
+        }
+
+        generateTeeth();
+
+        // Regenerate teeth every 8 seconds for continued gameplay
+        setInterval(() => {
+            if (countdown > 0) {
+                generateTeeth();
+            }
+        }, 8000);
+
+        // Puns array
+        const puns = [
+            "Oops! This page needs some social impact!",
+            "404: This page is missing its community service!",
+            "This page hasn't received Dr. Nath's care yet!",
+            "Error: Page needs dental attention... and so does the world!",
+            "This page is like a cavity – it shouldn't be here!",
+            "404: Looking for this page? Try our Chai Counters instead! ☕"
+        ];
+
+        // Tooth click to change pun
+        let currentPunIndex = 0;
+        document.getElementById('tooth').addEventListener('click', function() {
+            currentPunIndex = (currentPunIndex + 1) % puns.length;
+            document.getElementById('pun').textContent = puns[currentPunIndex];
+
+            // Spin animation
+            this.style.transform = 'rotate(360deg)';
+            setTimeout(() => {
+                this.style.transform = 'rotate(0deg)';
+            }, 300);
+        });
+    </script>
+</body>
+</html>
