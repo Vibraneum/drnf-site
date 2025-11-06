@@ -600,7 +600,7 @@ img {
     line-height: 1.15;
     margin-bottom: 1.5rem;
     color: #2c5530; /* Forest green - solid color for visibility */
-    animation: fadeInUp 0.8s ease 0.2s forwards;
+    opacity: 1; /* Always visible */
 }
 
 .hero-subtitle-modern {
@@ -609,7 +609,7 @@ img {
     color: #2c3e50; /* Dark slate - solid color */
     font-weight: 600;
     margin-bottom: 1rem;
-    animation: fadeInUp 0.8s ease 0.3s forwards;
+    opacity: 1; /* Always visible */
 }
 
 .hero-description-modern {
@@ -618,7 +618,7 @@ img {
     color: #5d6d7e; /* Secondary text color - solid */
     margin-bottom: 2.5rem;
     max-width: 600px;
-    animation: fadeInUp 0.8s ease 0.4s forwards;
+    opacity: 1; /* Always visible */
 }
 
 .hero-cta-modern {
