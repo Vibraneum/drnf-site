@@ -7,33 +7,39 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://drnf.org/about.html</loc>
+        <loc>https://drnf.org/about</loc>
         <lastmod>2025-11-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://drnf.org/chai-counters.html</loc>
+        <loc>https://drnf.org/chai-counters</loc>
         <lastmod>2025-11-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://drnf.org/community.html</loc>
+        <loc>https://drnf.org/community</loc>
         <lastmod>2025-11-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://drnf.org/contact.html</loc>
+        <loc>https://drnf.org/contact</loc>
         <lastmod>2025-11-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://drnf.org/faq.html</loc>
+        <loc>https://drnf.org/faq</loc>
         <lastmod>2025-11-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://drnf.org/book</loc>
+        <lastmod>2025-11-06</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
     </url>
 </urlset>

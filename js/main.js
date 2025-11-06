@@ -514,7 +514,205 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     console.log('DRNF Website initialized successfully! 🎉');
+
+    // ========================================
+    // ENHANCED NAVIGATION SYSTEM
+    // ========================================
+
+    initializeEnhancedNavigation();
 });
+
+// Enhanced Navigation Initialization
+function initializeEnhancedNavigation() {
+    const enhancedNav = document.querySelector('.enhanced-nav');
+    const topBar = document.querySelector('.top-bar');
+    const megaMenus = document.querySelectorAll('.mega-menu');
+    const navDropdownTriggers = document.querySelectorAll('.nav-dropdown-trigger');
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+    const mobileMenuClose = document.querySelector('.mobile-menu-close');
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+    // Scroll effect for enhanced navigation
+    if (enhancedNav) {
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > 50) {
+                enhancedNav.classList.add('scrolled');
+            } else {
+                enhancedNav.classList.remove('scrolled');
+            }
+        });
+
+        // Set top-bar class if top bar exists
+        if (topBar) {
+            enhancedNav.classList.add('with-top-bar');
+        }
+    }
+
+    // Mega Menu Functionality
+    navDropdownTriggers.forEach(trigger => {
+        const menuId = trigger.getAttribute('data-menu');
+        const megaMenu = document.getElementById(menuId);
+
+        if (megaMenu) {
+            // Mouse enter
+            trigger.addEventListener('mouseenter', function() {
+                closeMegaMenus();
+                megaMenu.classList.add('active');
+                trigger.classList.add('active');
+            });
+
+            // Keep mega menu open when hovering over it
+            megaMenu.addEventListener('mouseenter', function() {
+                megaMenu.classList.add('active');
+                trigger.classList.add('active');
+            });
+
+            // Close on mouse leave from trigger
+            trigger.addEventListener('mouseleave', function(e) {
+                // Check if we're not moving to the mega menu
+                setTimeout(() => {
+                    if (!megaMenu.matches(':hover') && !trigger.matches(':hover')) {
+                        megaMenu.classList.remove('active');
+                        trigger.classList.remove('active');
+                    }
+                }, 100);
+            });
+
+            // Close on mouse leave from mega menu
+            megaMenu.addEventListener('mouseleave', function() {
+                megaMenu.classList.remove('active');
+                trigger.classList.remove('active');
+            });
+        }
+    });
+
+    // Close mega menus when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.nav-dropdown-trigger') && !e.target.closest('.mega-menu')) {
+            closeMegaMenus();
+        }
+    });
+
+    // Close mega menus on ESC key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeMegaMenus();
+            closeMobileMenu();
+        }
+    });
+
+    function closeMegaMenus() {
+        megaMenus.forEach(menu => menu.classList.remove('active'));
+        navDropdownTriggers.forEach(trigger => trigger.classList.remove('active'));
+    }
+
+    // Mobile Menu Toggle
+    if (mobileMenuToggle && mobileMenuOverlay) {
+        mobileMenuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            openMobileMenu();
+        });
+    }
+
+    if (mobileMenuClose) {
+        mobileMenuClose.addEventListener('click', function() {
+            closeMobileMenu();
+        });
+    }
+
+    // Mobile Menu Accordion
+    mobileMenuLinks.forEach(link => {
+        const hasSubmenu = link.nextElementSibling && link.nextElementSibling.classList.contains('mobile-submenu');
+
+        if (hasSubmenu) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const submenu = this.nextElementSibling;
+                const isActive = submenu.classList.contains('active');
+
+                // Close all other submenus
+                document.querySelectorAll('.mobile-submenu').forEach(sub => {
+                    sub.classList.remove('active');
+                });
+                document.querySelectorAll('.mobile-menu-link').forEach(l => {
+                    l.classList.remove('active');
+                });
+
+                // Toggle current submenu
+                if (!isActive) {
+                    submenu.classList.add('active');
+                    this.classList.add('active');
+                }
+            });
+        }
+    });
+
+    // Close mobile menu when clicking on a link without submenu
+    document.querySelectorAll('.mobile-submenu-link').forEach(link => {
+        link.addEventListener('click', function() {
+            closeMobileMenu();
+        });
+    });
+
+    // Close mobile menu when clicking on direct links
+    document.querySelectorAll('.mobile-menu-link:not([data-submenu])').forEach(link => {
+        link.addEventListener('click', function() {
+            if (!this.nextElementSibling || !this.nextElementSibling.classList.contains('mobile-submenu')) {
+                closeMobileMenu();
+            }
+        });
+    });
+
+    function openMobileMenu() {
+        if (mobileMenuOverlay) {
+            mobileMenuOverlay.classList.add('active');
+            mobileMenuToggle.classList.add('active');
+            document.body.classList.add('mobile-menu-open');
+        }
+    }
+
+    function closeMobileMenu() {
+        if (mobileMenuOverlay) {
+            mobileMenuOverlay.classList.remove('active');
+            if (mobileMenuToggle) {
+                mobileMenuToggle.classList.remove('active');
+            }
+            document.body.classList.remove('mobile-menu-open');
+
+            // Close all submenus
+            document.querySelectorAll('.mobile-submenu').forEach(sub => {
+                sub.classList.remove('active');
+            });
+            document.querySelectorAll('.mobile-menu-link').forEach(l => {
+                l.classList.remove('active');
+            });
+        }
+    }
+
+    // Close mobile menu when clicking overlay background
+    if (mobileMenuOverlay) {
+        mobileMenuOverlay.addEventListener('click', function(e) {
+            if (e.target === mobileMenuOverlay) {
+                closeMobileMenu();
+            }
+        });
+    }
+
+    // Active link highlighting for enhanced nav
+    const currentPath = window.location.pathname;
+    document.querySelectorAll('.nav-link-enhanced, .mobile-menu-link, .mobile-submenu-link').forEach(link => {
+        const href = link.getAttribute('href');
+        if (href && (currentPath === href || currentPath.includes(href.replace('.html', '')))) {
+            link.classList.add('active');
+        }
+    });
+
+    console.log('Enhanced Navigation System initialized! ✨');
+}
 
 // Add CSS for lightbox and notifications
 const additionalStyles = `

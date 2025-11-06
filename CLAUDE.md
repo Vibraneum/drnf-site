@@ -266,6 +266,26 @@ git push origin main  # Triggers automatic deployment
 - **HTTPS**: Enforced
 - **.nojekyll**: Present to prevent Jekyll processing
 
+## Contact Form Setup
+
+The website includes a professional contact form at `/contact` for lead generation. The form uses **Web3Forms** (free service) to handle submissions.
+
+### Form Features
+- **Fields**: Name, Email, Phone, Interest Type (dropdown), Message
+- **Lead Categories**: Volunteering, Partnership, Donation, Corporate CSR, Media, General, Other
+- **Spam Protection**: Built-in honeypot field
+- **Email Delivery**: Submissions sent to info@drnf.org
+- **Success Handling**: Redirects to /contact?success=true with success message
+
+### Setup Required
+1. Get free Web3Forms API key from https://web3forms.com
+2. Update line 475 in `/contact.html`: Replace `YOUR_ACCESS_KEY_HERE` with actual key
+3. See `/FORM_SETUP.md` for detailed instructions
+
+### Form Location
+- **Main Form**: `/contact` page
+- **CTAs**: "Get Involved" buttons throughout site link to contact form
+
 ## Contact for Technical Questions
 For technical issues or enhancement requests regarding this website, contact:
 - **Email**: hello@ixoragroup.com

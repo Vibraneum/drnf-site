@@ -17,7 +17,7 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://drnf.org/contact.html">
+    <meta property="og:url" content="https://drnf.org/contact">
     <meta property="og:title" content="Contact Us | Dr. Rabinder Nath Foundation">
     <meta property="og:description" content="Get in touch with DRNF to volunteer, support our mission, or learn more about our community programs.">
     <meta property="og:image" content="https://drnf.org/images/DRNF_logo.jpg">
@@ -26,7 +26,7 @@
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://drnf.org/contact.html">
+    <meta property="twitter:url" content="https://drnf.org/contact">
     <meta property="twitter:title" content="Contact Us | Dr. Rabinder Nath Foundation">
     <meta property="twitter:description" content="Get in touch with DRNF to volunteer, support our mission, or learn more about our community programs.">
     <meta property="twitter:image" content="https://drnf.org/images/DRNF_logo.jpg">
@@ -34,7 +34,7 @@
     <!-- Additional SEO Meta Tags -->
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
-    <link rel="canonical" href="https://drnf.org/contact.html">
+    <link rel="canonical" href="https://drnf.org/contact">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/DRNF_logo.jpg">
@@ -90,38 +90,490 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Contact Form Styles */
+        .contact-form-wrapper {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .contact-form-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .contact-form-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .contact-form {
+            margin-top: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+        }
+
+        .form-group label i {
+            margin-right: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(44, 85, 48, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-submit {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .form-submit button {
+            width: 100%;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .form-note {
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .form-success {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: #f0f9ff;
+            border-radius: 12px;
+            border: 2px solid #bfdbfe;
+        }
+
+        .form-success i {
+            font-size: 4rem;
+            color: #16a34a;
+            margin-bottom: 1rem;
+        }
+
+        .form-success h4 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .volunteer-section-full {
+            width: 100%;
+        }
+
+        .volunteer-card-large {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 3rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .volunteer-card-large h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .volunteer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .volunteer-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .volunteer-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .volunteer-item i {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+        }
+
+        .volunteer-item span {
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .volunteer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <div class="brand-logo">
-                    <img src="images/DRNF_logo.jpg" alt="Dr. Rabinder Nath Foundation Logo" class="logo-img">
-                </div>
-                <div class="brand-content">
+    <!-- Top Contact Bar (Desktop Only) -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <a href="https://wa.me/919966906781" class="top-bar-link" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp: <strong>+91-9966906781</strong></span>
+            </a>
+            <a href="mailto:info@drnf.org" class="top-bar-link">
+                <i class="fas fa-envelope"></i>
+                <span>Email: <strong>info@drnf.org</strong></span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Enhanced Navigation -->
+    <nav class="enhanced-nav" id="enhancedNav">
+        <div class="nav-container-enhanced">
+            <!-- Logo & Brand -->
+            <a href="index.html" class="nav-logo-enhanced">
+                <img src="images/DRNF_logo.jpg" alt="Dr. Rabinder Nath Foundation Logo" class="logo-img">
+                <div class="nav-brand-text">
                     <h1 class="brand-title">Dr. Rabinder Nath Foundation</h1>
                     <p class="brand-tagline">Serving with Compassion</p>
                 </div>
-            </div>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="chai-counters.html" class="nav-link">Free Chai</a></li>
-                <li><a href="community.html" class="nav-link">Community Work</a></li>
-                <li><a href="faq.html" class="nav-link">FAQ</a></li>
-                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <ul class="nav-links-enhanced">
+                <li><a href="index.html" class="nav-link-enhanced">Home</a></li>
+
+                <!-- About Dropdown -->
+                <li>
+                    <div class="nav-link-enhanced nav-dropdown-trigger" data-menu="about-mega-menu">
+                        <span>About</span>
+                        <svg class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                </li>
+
+                <li><a href="book.html" class="nav-link-enhanced">Heritage Book</a></li>
+
+                <!-- Programs Dropdown -->
+                <li>
+                    <div class="nav-link-enhanced nav-dropdown-trigger" data-menu="programs-mega-menu">
+                        <span>Our Programs</span>
+                        <svg class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                </li>
+
+                <li><a href="contact.html" class="nav-link-enhanced active">Contact</a></li>
+                <li><a href="faq.html" class="nav-link-enhanced">FAQ</a></li>
             </ul>
-            <div class="nav-actions">
-                <a href="contact.html" class="btn btn-primary nav-cta">Get Involved</a>
-                <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
+
+            <!-- Navigation Actions -->
+            <div class="nav-actions-enhanced">
+                <a href="contact.html" class="nav-cta-enhanced">Get Involved</a>
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- About Mega Menu -->
+        <div class="mega-menu" id="about-mega-menu">
+            <div class="mega-menu-container">
+                <div class="mega-menu-content">
+                    <!-- Left Side Card -->
+                    <div class="mega-menu-card">
+                        <img src="images/rabinder_nath2.1.jpg" alt="About Us">
+                        <h3>About Us</h3>
+                        <p>Learn about our story, mission, and the legacy of Dr. Rabinder Nath.</p>
+                        <div class="arrow-circle">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+
+                    <!-- Right Side Grid -->
+                    <div class="mega-menu-grid">
+                        <div class="mega-menu-header">
+                            <h3>Discover Our Foundation</h3>
+                            <p>Learn more about our mission, values, and the legacy we continue.</p>
+                        </div>
+
+                        <div class="mega-menu-columns">
+                            <!-- Column 1 -->
+                            <div>
+                                <a href="about.html" class="mega-menu-link">
+                                    <i class="fas fa-book-open mega-menu-icon"></i>
+                                    <span class="mega-menu-text">Our Story</span>
+                                </a>
+                                <a href="book.html" class="mega-menu-link">
+                                    <i class="fas fa-book mega-menu-icon"></i>
+                                    <span class="mega-menu-text">Heritage Book</span>
+                                </a>
+                                <a href="about.html#team" class="mega-menu-link">
+                                    <i class="fas fa-users mega-menu-icon"></i>
+                                    <span class="mega-menu-text">Our Team</span>
+                                </a>
+                                <a href="about.html#impact" class="mega-menu-link">
+                                    <i class="fas fa-trophy mega-menu-icon"></i>
+                                    <span class="mega-menu-text">Impact & Stats</span>
+                                </a>
+                            </div>
+
+                            <!-- Column 2 -->
+                            <div>
+                                <a href="about.html#mission" class="mega-menu-link">
+                                    <i class="fas fa-bullseye mega-menu-icon"></i>
+                                    <span class="mega-menu-text">Vision & Mission</span>
+                                </a>
+                                <a href="about.html#legacy" class="mega-menu-link">
+                                    <i class="fas fa-scroll mega-menu-icon"></i>
+                                    <span class="mega-menu-text">Dr. Rabinder Nath's Legacy</span>
+                                </a>
+                                <a href="about.html#values" class="mega-menu-link">
+                                    <i class="fas fa-star mega-menu-icon"></i>
+                                    <span class="mega-menu-text">Our Values</span>
+                                </a>
+                                <a href="contact.html" class="mega-menu-link">
+                                    <i class="fas fa-envelope mega-menu-icon"></i>
+                                    <span class="mega-menu-text">Contact Us</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Programs Mega Menu -->
+        <div class="mega-menu" id="programs-mega-menu">
+            <div class="mega-menu-container">
+                <div class="mega-menu-content">
+                    <!-- Left Side Card -->
+                    <div class="mega-menu-card">
+                        <img src="images/chai_counter.jpg" alt="Our Programs">
+                        <h3>Our Programs</h3>
+                        <p>Explore our community service initiatives and programs making a difference.</p>
+                        <div class="arrow-circle">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+
+                    <!-- Right Side Grid -->
+                    <div class="mega-menu-grid">
+                        <div class="mega-menu-header">
+                            <h3>Community Service Programs</h3>
+                            <p>Making a difference through dedicated community initiatives.</p>
+                        </div>
+
+                        <div class="mega-menu-columns">
+                            <!-- Column 1 -->
+                            <div>
+                                <a href="chai-counters.html" class="mega-menu-link">
+                                    <i class="fas fa-coffee mega-menu-icon"></i>
+                                    <span class="mega-menu-text">Free Chai Counters</span>
+                                </a>
+                                <a href="community.html" class="mega-menu-link">
+                                    <i class="fas fa-hands-helping mega-menu-icon"></i>
+                                    <span class="mega-menu-text">Community Support</span>
+                                </a>
+                                <a href="community.html#workshops" class="mega-menu-link">
+                                    <i class="fas fa-graduation-cap mega-menu-icon"></i>
+                                    <span class="mega-menu-text">Education Workshops</span>
+                                </a>
+                            </div>
+
+                            <!-- Column 2 -->
+                            <div>
+                                <a href="community.html#environment" class="mega-menu-link">
+                                    <i class="fas fa-leaf mega-menu-icon"></i>
+                                    <span class="mega-menu-text">Environmental Care</span>
+                                </a>
+                                <a href="community.html#animal-welfare" class="mega-menu-link">
+                                    <i class="fas fa-paw mega-menu-icon"></i>
+                                    <span class="mega-menu-text">Animal Welfare</span>
+                                </a>
+                                <a href="contact.html" class="mega-menu-link">
+                                    <i class="fas fa-heart mega-menu-icon"></i>
+                                    <span class="mega-menu-text">Volunteer with Us</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <div class="mobile-menu-header">
+            <a href="index.html" class="nav-logo-enhanced">
+                <img src="images/DRNF_logo.jpg" alt="DRNF Logo" class="logo-img">
+                <div class="nav-brand-text">
+                    <h1 class="brand-title">DRNF</h1>
+                </div>
+            </a>
+            <button class="mobile-menu-close" aria-label="Close mobile menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="mobile-menu-body">
+            <!-- Home -->
+            <div class="mobile-menu-item">
+                <a href="index.html" class="mobile-menu-link">Home</a>
+            </div>
+
+            <!-- About with Submenu -->
+            <div class="mobile-menu-item">
+                <a href="#" class="mobile-menu-link" data-submenu="about">
+                    <span>About</span>
+                    <svg class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </a>
+                <div class="mobile-submenu">
+                    <a href="about.html" class="mobile-submenu-link">
+                        <i class="fas fa-book-open"></i>
+                        <span>Our Story</span>
+                    </a>
+                    <a href="book.html" class="mobile-submenu-link">
+                        <i class="fas fa-book"></i>
+                        <span>Heritage Book</span>
+                    </a>
+                    <a href="about.html#team" class="mobile-submenu-link">
+                        <i class="fas fa-users"></i>
+                        <span>Our Team</span>
+                    </a>
+                    <a href="about.html#impact" class="mobile-submenu-link">
+                        <i class="fas fa-trophy"></i>
+                        <span>Impact & Stats</span>
+                    </a>
+                    <a href="about.html#mission" class="mobile-submenu-link">
+                        <i class="fas fa-bullseye"></i>
+                        <span>Vision & Mission</span>
+                    </a>
+                    <a href="about.html#legacy" class="mobile-submenu-link">
+                        <i class="fas fa-scroll"></i>
+                        <span>Dr. Rabinder Nath's Legacy</span>
+                    </a>
+                    <a href="about.html#values" class="mobile-submenu-link">
+                        <i class="fas fa-star"></i>
+                        <span>Our Values</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Heritage Book -->
+            <div class="mobile-menu-item">
+                <a href="book.html" class="mobile-menu-link">Heritage Book</a>
+            </div>
+
+            <!-- Our Programs with Submenu -->
+            <div class="mobile-menu-item">
+                <a href="#" class="mobile-menu-link" data-submenu="programs">
+                    <span>Our Programs</span>
+                    <svg class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </a>
+                <div class="mobile-submenu">
+                    <a href="chai-counters.html" class="mobile-submenu-link">
+                        <i class="fas fa-coffee"></i>
+                        <span>Free Chai Counters</span>
+                    </a>
+                    <a href="community.html" class="mobile-submenu-link">
+                        <i class="fas fa-hands-helping"></i>
+                        <span>Community Support</span>
+                    </a>
+                    <a href="community.html#workshops" class="mobile-submenu-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Education Workshops</span>
+                    </a>
+                    <a href="community.html#environment" class="mobile-submenu-link">
+                        <i class="fas fa-leaf"></i>
+                        <span>Environmental Care</span>
+                    </a>
+                    <a href="community.html#animal-welfare" class="mobile-submenu-link">
+                        <i class="fas fa-paw"></i>
+                        <span>Animal Welfare</span>
+                    </a>
+                    <a href="contact.html" class="mobile-submenu-link">
+                        <i class="fas fa-heart"></i>
+                        <span>Volunteer with Us</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="mobile-menu-item">
+                <a href="contact.html" class="mobile-menu-link">Contact</a>
+            </div>
+
+            <!-- FAQ -->
+            <div class="mobile-menu-item">
+                <a href="faq.html" class="mobile-menu-link">FAQ</a>
+            </div>
+
+            <!-- Mobile CTA -->
+            <div class="mobile-menu-cta">
+                <a href="contact.html" class="nav-cta-enhanced">Get Involved</a>
+            </div>
+        </div>
+    </div>
 
     <!-- Contact Hero Section -->
     <section class="page-hero">
@@ -184,18 +636,106 @@
                     </div>
                 </div>
 
-                <div class="volunteer-section" data-aos="fade-left">
-                    <div class="volunteer-card">
-                        <h3>Volunteer With Us</h3>
-                        <p>Join our mission to serve the community. We welcome volunteers for:</p>
-                        <ul class="volunteer-list">
-                            <li><i class="fas fa-coffee"></i> Free Chai Counter Operations</li>
-                            <li><i class="fas fa-gift"></i> Community Support Programs</li>
-                            <li><i class="fas fa-chalkboard-teacher"></i> Educational Workshops</li>
-                            <li><i class="fas fa-leaf"></i> Environmental Initiatives</li>
-                            <li><i class="fas fa-paw"></i> Animal Welfare Activities</li>
-                        </ul>
-                        <a href="mailto:info@drnf.org" class="btn btn-primary">Join Our Team</a>
+                <div class="contact-form-wrapper" data-aos="fade-left">
+                    <div class="contact-form-card">
+                        <h3><i class="fas fa-paper-plane"></i> Send Us a Message</h3>
+                        <p style="margin-bottom: 2rem;">Fill out the form below and we'll get back to you within 24 hours.</p>
+
+                        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">
+                            <!-- Web3Forms Access Key - Replace with your own from web3forms.com -->
+                            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+
+                            <!-- Success/Error Messages -->
+                            <input type="hidden" name="redirect" value="https://drnf.org/contact?success=true">
+                            <input type="hidden" name="subject" value="New Contact Form Submission from DRNF Website">
+
+                            <!-- Honeypot for spam protection -->
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                            <div class="form-group">
+                                <label for="name"><i class="fas fa-user"></i> Full Name *</label>
+                                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email"><i class="fas fa-envelope"></i> Email Address *</label>
+                                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="interest"><i class="fas fa-tag"></i> I'm Interested In *</label>
+                                <select id="interest" name="interest" required>
+                                    <option value="">-- Select an option --</option>
+                                    <option value="Volunteering">Volunteering with DRNF</option>
+                                    <option value="Partnership">Partnership Opportunities</option>
+                                    <option value="Donation">Supporting Our Mission (Donations)</option>
+                                    <option value="Corporate CSR">Corporate CSR Collaboration</option>
+                                    <option value="Media">Media & Press Inquiries</option>
+                                    <option value="General">General Inquiry</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message"><i class="fas fa-comment-dots"></i> Your Message *</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Tell us more about how you'd like to connect with DRNF..."></textarea>
+                            </div>
+
+                            <div class="form-submit">
+                                <button type="submit" class="btn btn-primary btn-large">
+                                    <i class="fas fa-paper-plane"></i> Send Message
+                                </button>
+                                <p class="form-note">We respect your privacy and will never share your information.</p>
+                            </div>
+                        </form>
+
+                        <!-- Success Message (hidden by default) -->
+                        <div class="form-success" id="formSuccess" style="display: none;">
+                            <i class="fas fa-check-circle"></i>
+                            <h4>Thank You!</h4>
+                            <p>Your message has been received. We'll get back to you within 24 hours.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Volunteer Section Below Form -->
+            <div class="volunteer-section-full" data-aos="fade-up" style="margin-top: 4rem;">
+                <div class="volunteer-card-large">
+                    <h3><i class="fas fa-hands-helping"></i> Join Our Volunteer Team</h3>
+                    <p style="font-size: 1.1rem; margin-bottom: 2rem;">We welcome volunteers for various programs and activities. Select "Volunteering" in the form above or reach out directly!</p>
+                    <div class="volunteer-grid">
+                        <div class="volunteer-item">
+                            <i class="fas fa-coffee"></i>
+                            <span>Free Chai Counter Operations</span>
+                        </div>
+                        <div class="volunteer-item">
+                            <i class="fas fa-gift"></i>
+                            <span>Community Support Programs</span>
+                        </div>
+                        <div class="volunteer-item">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>Educational Workshops</span>
+                        </div>
+                        <div class="volunteer-item">
+                            <i class="fas fa-leaf"></i>
+                            <span>Environmental Initiatives</span>
+                        </div>
+                        <div class="volunteer-item">
+                            <i class="fas fa-paw"></i>
+                            <span>Animal Welfare Activities</span>
+                        </div>
+                        <div class="volunteer-item">
+                            <i class="fas fa-camera"></i>
+                            <span>Social Media & Content</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -225,20 +765,21 @@
                 <div class="footer-section">
                     <h4>Our Initiatives</h4>
                     <ul>
-                        <li><a href="index.html#chai-counters">Free Chai Counters</a></li>
-                        <li><a href="index.html#donations">Community Work</a></li>
-                        <li><a href="index.html#workshops">Education Workshops</a></li>
-                        <li><a href="index.html#environment">Environmental Care</a></li>
+                        <li><a href="/#chai-counters">Free Chai Counters</a></li>
+                        <li><a href="/#donations">Community Work</a></li>
+                        <li><a href="/#workshops">Education Workshops</a></li>
+                        <li><a href="/#environment">Environmental Care</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/book">Heritage Book</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/faq">FAQ</a></li>
                         <li><a href="https://loocafe.com" target="_blank" rel="noopener">LooCafe Partnership</a></li>
                     </ul>
                 </div>
@@ -282,6 +823,32 @@
     <script>
         // Current year in footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Contact Form Handling
+        const form = document.getElementById('contactForm');
+        const formSuccess = document.getElementById('formSuccess');
+
+        // Check for success parameter in URL
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success') === 'true') {
+            form.style.display = 'none';
+            formSuccess.style.display = 'block';
+
+            // Scroll to success message
+            setTimeout(() => {
+                formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 300);
+        }
+
+        // Form submission handling
+        form.addEventListener('submit', function(e) {
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalText = submitButton.innerHTML;
+
+            // Update button to show loading state
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitButton.disabled = true;
+        });
     </script>
 </body>
 </html>
