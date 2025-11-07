@@ -3,8 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LooCafe Social Impact | Dr. Rabinder Nath Foundation</title>
-    <meta name="description" content="Discover how the LooCafe model creates sustainable public sanitation, empowers 1000+ entrepreneurs, and partners with DRNF to serve communities across Hyderabad">
+    <title>LooCafe Social Impact Partnership | Dr. Rabinder Nath Foundation</title>
+    <meta name="description" content="Discover how the LooCafe model creates sustainable public sanitation, empowers 1000+ entrepreneurs, and partners with DRNF to serve communities across Hyderabad. 400+ facilities nationwide, 270+ in Hyderabad.">
+    <meta name="keywords" content="LooCafe, sustainable sanitation, public toilets, social impact, DRNF partnership, Gates Foundation, entrepreneurship, Hyderabad, community service">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://drnf.org/loocafe-impact">
+    <meta property="og:title" content="LooCafe Social Impact Partnership - Dr. Rabinder Nath Foundation">
+    <meta property="og:description" content="How DRNF leverages the LooCafe model for sustainable social impact. 400+ facilities, 1000+ jobs created, Gates Foundation partnership.">
+    <meta property="og:image" content="https://drnf.org/images/loocafe-impact-og.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://drnf.org/loocafe-impact">
+    <meta property="twitter:title" content="LooCafe Social Impact Partnership - DRNF">
+    <meta property="twitter:description" content="Sustainable sanitation meets community service. 400+ facilities, 1000+ jobs created, transforming lives across India.">
+    <meta property="twitter:image" content="https://drnf.org/images/loocafe-impact-og.jpg">
     
     <!-- Stylesheets -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,43 +40,43 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="nav-logo">
-                <img src="images/DRNF_logo.jpg" alt="Dr. Rabinder Nath Foundation" class="logo-img">
-            </a>
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="images/DRNF_logo.jpg" alt="Dr. Rabinder Nath Foundation Logo">
+                </a>
 
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
 
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item has-dropdown">
-                    <a href="#" class="nav-link">About DRNF <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="about.html">Our Foundation</a></li>
-                        <li><a href="dr-rabinder-nath.html">Dr. Rabinder Nath</a></li>
-                        <li><a href="transparency.html">Transparency & Impact</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item has-dropdown">
-                    <a href="#" class="nav-link">Our Work <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="chai-counters.html">Free Chai Counters</a></li>
-                        <li><a href="loocafe-impact.html" class="active">LooCafe Partnership</a></li>
-                        <li><a href="frontline-workers.html">Frontline Workers</a></li>
-                        <li><a href="community.html">Community Programs</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a href="book.html" class="nav-link">Heritage</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                <li class="nav-item nav-cta">
-                    <a href="about.html" class="btn btn-primary btn-small">Our Story</a>
-                </li>
-            </ul>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">About <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html">Our Story</a></li>
+                            <li><a href="dr-rabinder-nath.html">Dr. Rabinder Nath</a></li>
+                            <li><a href="book.html">Heritage Book</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Our Work <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="chai-counters.html">Free Chai Counters</a></li>
+                            <li><a href="community.html">Community Support</a></li>
+                            <li><a href="loocafe-impact.html" class="active">LooCafe Partnership</a></li>
+                            <li><a href="frontline-workers.html">Frontline Workers</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html" class="btn btn-primary nav-cta">Get in Touch</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -393,11 +408,95 @@
         </div>
     </section>
 
+    <!-- Daily Impact: Who We Serve -->
+    <section class="section" style="background: white;">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Who Benefits Every Day</h2>
+            <p class="section-subtitle" data-aos="fade-up">Real people, real dignity, real impact - 24 hours a day, 365 days a year</p>
+
+            <div class="beneficiary-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div class="beneficiary-card" data-aos="fade-up" style="background: linear-gradient(145deg, #fff5f5 0%, #ffffff 100%); padding: 2rem; border-radius: 16px; border-left: 4px solid #e74c3c;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🚗</div>
+                    <h4 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 1rem;">Auto & Taxi Drivers</h4>
+                    <p style="color: var(--text-secondary); line-height: 1.7;">On the road for 12+ hours daily, LooCafes provide clean restroom access and free chai from DRNF counters keeps them refreshed and going.</p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #f0f0f0;">
+                        <strong style="color: #e74c3c;">Impact: 150-200 drivers daily</strong>
+                    </div>
+                </div>
+
+                <div class="beneficiary-card" data-aos="fade-up" data-aos-delay="100" style="background: linear-gradient(145deg, #f0f9ff 0%, #ffffff 100%); padding: 2rem; border-radius: 16px; border-left: 4px solid #3498db;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">👷</div>
+                    <h4 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 1rem;">Construction Workers</h4>
+                    <p style="color: var(--text-secondary); line-height: 1.7;">Daily wage laborers building our city often lack access to clean toilets. LooCafes restore their dignity, DRNF chai provides warmth.</p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #f0f0f0;">
+                        <strong style="color: #3498db;">Impact: 100-150 workers daily</strong>
+                    </div>
+                </div>
+
+                <div class="beneficiary-card" data-aos="fade-up" data-aos-delay="200" style="background: linear-gradient(145deg, #f0fdf4 0%, #ffffff 100%); padding: 2rem; border-radius: 16px; border-left: 4px solid #27ae60;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🧹</div>
+                    <h4 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 1rem;">Sanitation Staff</h4>
+                    <p style="color: var(--text-secondary); line-height: 1.7;">Municipal and private sanitation workers keeping Hyderabad clean rely on LooCafe facilities and DRNF's free chai service during long shifts.</p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #f0f0f0;">
+                        <strong style="color: #27ae60;">Impact: 80-100 workers daily</strong>
+                    </div>
+                </div>
+
+                <div class="beneficiary-card" data-aos="fade-up" data-aos-delay="300" style="background: linear-gradient(145deg, #fef3f2 0%, #ffffff 100%); padding: 2rem; border-radius: 16px; border-left: 4px solid #f39c12;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">👵</div>
+                    <h4 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 1rem;">Homeless & Vulnerable</h4>
+                    <p style="color: var(--text-secondary); line-height: 1.7;">Those without a home find safety, cleanliness, and hot chai at our locations. No questions asked, just compassion.</p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #f0f0f0;">
+                        <strong style="color: #f39c12;">Impact: 60-80 people daily</strong>
+                    </div>
+                </div>
+
+                <div class="beneficiary-card" data-aos="fade-up" data-aos-delay="400" style="background: linear-gradient(145deg, #faf5ff 0%, #ffffff 100%); padding: 2rem; border-radius: 16px; border-left: 4px solid #9b59b6;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🛵</div>
+                    <h4 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 1rem;">Delivery Partners</h4>
+                    <p style="color: var(--text-secondary); line-height: 1.7;">Food delivery, e-commerce riders covering 100+ km daily find quick restroom access and refreshment at LooCafe-DRNF locations.</p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #f0f0f0;">
+                        <strong style="color: #9b59b6;">Impact: 50-70 riders daily</strong>
+                    </div>
+                </div>
+
+                <div class="beneficiary-card" data-aos="fade-up" data-aos-delay="500" style="background: linear-gradient(145deg, #fffbeb 0%, #ffffff 100%); padding: 2rem; border-radius: 16px; border-left: 4px solid #e67e22;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">👨‍👩‍👧</div>
+                    <h4 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 1rem;">Families & Travelers</h4>
+                    <p style="color: var(--text-secondary); line-height: 1.7;">Parents with young children, elderly travelers, anyone in need of clean, safe facilities - all welcome, all served with dignity.</p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #f0f0f0;">
+                        <strong style="color: #e67e22;">Impact: 60-100 people daily</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="total-impact" data-aos="zoom-in" style="margin-top: 4rem; padding: 3rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 24px; text-align: center; color: white;">
+                <h3 style="font-size: 2.5rem; margin-bottom: 1rem; color: white;">Total Daily Reach</h3>
+                <div style="font-size: 4.5rem; font-weight: 700; margin-bottom: 1rem;">500-600</div>
+                <p style="font-size: 1.3rem; margin-bottom: 1.5rem; opacity: 0.95;">People served EVERY SINGLE DAY across our 2 free chai counter locations</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2);">
+                    <div>
+                        <div style="font-size: 2.5rem; font-weight: 700;">116,800+</div>
+                        <div>Cups of Chai Served (To Date)</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 2.5rem; font-weight: 700;">730</div>
+                        <div>Consecutive Days of Service</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 2.5rem; font-weight: 700;">24/7</div>
+                        <div>Always Open, Always Caring</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- DRNF Partnership -->
     <section class="section" style="background: linear-gradient(135deg, #f7fafc 0%, #e9ecef 100%);">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">How DRNF Leverages LooCafe</h2>
-            <p class="section-subtitle" data-aos="fade-up">Combining infrastructure with compassion for maximum community impact</p>
+            <h2 class="section-title" data-aos="fade-up">How DRNF Leverages LooCafe Infrastructure</h2>
+            <p class="section-subtitle" data-aos="fade-up">Combining world-class sanitation infrastructure with compassionate community service</p>
             
             <div class="partnership-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 3rem;">
                 <div data-aos="fade-right">
@@ -453,12 +552,173 @@
         </div>
     </section>
 
+    <!-- The Complete Impact Ecosystem -->
+    <section class="section" style="background: linear-gradient(to bottom, white 0%, #f7fafc 100%);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">The Complete Impact Ecosystem</h2>
+            <p class="section-subtitle" data-aos="fade-up">How infrastructure, entrepreneurship, and compassion come together to transform lives</p>
+
+            <div class="ecosystem-diagram" style="margin-top: 4rem;">
+                <!-- Central Hub -->
+                <div class="ecosystem-hub" data-aos="zoom-in" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 3rem; border-radius: 24px; text-align: center; color: white; margin-bottom: 3rem;">
+                    <h3 style="font-size: 2.5rem; margin-bottom: 1rem; color: white;">Sustainable Social Impact Model</h3>
+                    <p style="font-size: 1.2rem; opacity: 0.95; max-width: 800px; margin: 0 auto;">LooCafe provides infrastructure. Entrepreneurs gain livelihoods. DRNF adds free service. Communities receive dignity. A self-sustaining cycle of positive change.</p>
+                </div>
+
+                <!-- Four Pillars -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                    <div class="pillar-card" data-aos="fade-up" style="background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); border-top: 4px solid #667eea;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: white; font-size: 2rem;">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h4 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 1rem;">Infrastructure Layer</h4>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.7;">LooCafe: 400+ facilities providing clean, dignified sanitation and entrepreneurship opportunities</p>
+                        <div style="background: #f7fafc; padding: 1rem; border-radius: 12px;">
+                            <strong style="color: #667eea;">Contribution:</strong> Physical assets, 24/7 operations, technology monitoring
+                        </div>
+                    </div>
+
+                    <div class="pillar-card" data-aos="fade-up" data-aos-delay="100" style="background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); border-top: 4px solid #27ae60;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #27ae60 0%, #229954 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: white; font-size: 2rem;">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h4 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 1rem;">Entrepreneurship Layer</h4>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.7;">1,000+ jobs created, transforming street vendors into dignified business owners</p>
+                        <div style="background: #f0fdf4; padding: 1rem; border-radius: 12px;">
+                            <strong style="color: #27ae60;">Contribution:</strong> Sustainable livelihoods, skills training, business ownership
+                        </div>
+                    </div>
+
+                    <div class="pillar-card" data-aos="fade-up" data-aos-delay="200" style="background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); border-top: 4px solid #e74c3c;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: white; font-size: 2rem;">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 1rem;">Compassion Layer</h4>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.7;">DRNF: 500-600 people served daily with free chai, no conditions, just care</p>
+                        <div style="background: #fff5f5; padding: 1rem; border-radius: 12px;">
+                            <strong style="color: #e74c3c;">Contribution:</strong> Free service, community support, donation drives
+                        </div>
+                    </div>
+
+                    <div class="pillar-card" data-aos="fade-up" data-aos-delay="300" style="background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); border-top: 4px solid #f39c12;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: white; font-size: 2rem;">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 1rem;">Community Layer</h4>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.7;">Thousands of beneficiaries gain access to dignity, cleanliness, and support</p>
+                        <div style="background: #fffbeb; padding: 1rem; border-radius: 12px;">
+                            <strong style="color: #f39c12;">Contribution:</strong> Restored dignity, improved health, community connection
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Why This Model Works -->
+                <div class="model-explanation" data-aos="fade-up" style="background: white; padding: 3rem; border-radius: 20px; box-shadow: 0 8px 32px rgba(0,0,0,0.1);">
+                    <h3 style="font-size: 2rem; color: var(--primary-color); text-align: center; margin-bottom: 2rem;">Why This Model Works</h3>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+                        <div>
+                            <h4 style="color: #e74c3c; margin-bottom: 1rem; font-size: 1.5rem;">Traditional Charity Model ❌</h4>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0; color: var(--text-secondary); display: flex; align-items: start;">
+                                    <i class="fas fa-times-circle" style="color: #e74c3c; margin-right: 0.75rem; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                    <span>Depends on continuous donations</span>
+                                </li>
+                                <li style="padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0; color: var(--text-secondary); display: flex; align-items: start;">
+                                    <i class="fas fa-times-circle" style="color: #e74c3c; margin-right: 0.75rem; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                    <span>Doesn't create employment</span>
+                                </li>
+                                <li style="padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0; color: var(--text-secondary); display: flex; align-items: start;">
+                                    <i class="fas fa-times-circle" style="color: #e74c3c; margin-right: 0.75rem; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                    <span>Limited scalability</span>
+                                </li>
+                                <li style="padding: 0.75rem 0; color: var(--text-secondary); display: flex; align-items: start;">
+                                    <i class="fas fa-times-circle" style="color: #e74c3c; margin-right: 0.75rem; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                    <span>Single-purpose impact only</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 style="color: #27ae60; margin-bottom: 1rem; font-size: 1.5rem;">LooCafe-DRNF Model ✅</h4>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0; color: var(--text-secondary); display: flex; align-items: start;">
+                                    <i class="fas fa-check-circle" style="color: #27ae60; margin-right: 0.75rem; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                    <span>Self-sustaining revenue from cafe sales</span>
+                                </li>
+                                <li style="padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0; color: var(--text-secondary); display: flex; align-items: start;">
+                                    <i class="fas fa-check-circle" style="color: #27ae60; margin-right: 0.75rem; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                    <span>Creates 1,000+ dignified jobs</span>
+                                </li>
+                                <li style="padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0; color: var(--text-secondary); display: flex; align-items: start;">
+                                    <i class="fas fa-check-circle" style="color: #27ae60; margin-right: 0.75rem; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                    <span>Highly scalable (400+ locations, growing)</span>
+                                </li>
+                                <li style="padding: 0.75rem 0; color: var(--text-secondary); display: flex; align-items: start;">
+                                    <i class="fas fa-check-circle" style="color: #27ae60; margin-right: 0.75rem; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                    <span>Multi-layered impact (sanitation + jobs + free service + dignity)</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%); border-radius: 16px; text-align: center;">
+                        <h4 style="color: var(--primary-color); font-size: 1.8rem; margin-bottom: 1rem;">The Result</h4>
+                        <p style="font-size: 1.2rem; color: var(--text-secondary); line-height: 1.9; max-width: 800px; margin: 0 auto;">
+                            A virtuous cycle where <strong>business sustainability enables social impact</strong>, which builds community goodwill, which supports business growth, which enables even greater social impact. This is the future of charitable work.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Expansion Vision -->
+                <div class="vision-section" data-aos="fade-up" style="margin-top: 4rem; padding: 3rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 24px; color: white; text-align: center;">
+                    <h3 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: white;">The Vision: Scaling Impact</h3>
+                    <p style="font-size: 1.3rem; margin-bottom: 2rem; opacity: 0.95; max-width: 900px; margin-left: auto; margin-right: auto;">
+                        LooCafe has <strong>270+ locations in Hyderabad</strong> and <strong>400+ nationwide</strong>. DRNF currently operates <strong>2 free chai counters</strong>. Imagine the potential.
+                    </p>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                        <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 2rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.2);">
+                            <div style="font-size: 3rem; margin-bottom: 0.5rem;">🎯</div>
+                            <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem;">30 Counters</div>
+                            <p style="opacity: 0.95;">Short-term goal (2-3 years)</p>
+                            <p style="margin-top: 1rem; opacity: 0.9; font-size: 0.95rem;">7,500-9,000 people served daily</p>
+                        </div>
+
+                        <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 2rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.2);">
+                            <div style="font-size: 3rem; margin-bottom: 0.5rem;">🚀</div>
+                            <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem;">100 Counters</div>
+                            <p style="opacity: 0.95;">Medium-term goal (5 years)</p>
+                            <p style="margin-top: 1rem; opacity: 0.9; font-size: 0.95rem;">25,000-30,000 people served daily</p>
+                        </div>
+
+                        <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 2rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.2);">
+                            <div style="font-size: 3rem; margin-bottom: 0.5rem;">⭐</div>
+                            <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem;">270+ Counters</div>
+                            <p style="opacity: 0.95;">Ultimate vision (10 years)</p>
+                            <p style="margin-top: 1rem; opacity: 0.9; font-size: 0.95rem;">Every LooCafe = free chai, transforming Hyderabad</p>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 3rem; font-size: 1.2rem; opacity: 0.95; max-width: 700px; margin-left: auto; margin-right: auto;">
+                        <strong>This isn't just a dream. It's a scalable, proven model.</strong> Every new counter is another 250-300 lives touched daily. Join us in building this future.
+                    </p>
+
+                    <div style="margin-top: 2rem;">
+                        <a href="frontline-workers.html" style="display: inline-block; padding: 1rem 2.5rem; background: white; color: #667eea; border-radius: 50px; font-weight: 600; text-decoration: none; margin: 0.5rem; box-shadow: 0 8px 24px rgba(0,0,0,0.2);">Learn About Frontline Workers Support</a>
+                        <a href="contact.html" style="display: inline-block; padding: 1rem 2.5rem; background: rgba(255,255,255,0.2); color: white; border-radius: 50px; font-weight: 600; text-decoration: none; margin: 0.5rem; border: 2px solid white;">Partner With Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta-section section">
         <div class="container">
             <div class="cta-content">
-                <h2 class="section-title" data-aos="fade-up">Support This Model</h2>
-                <p class="section-subtitle" data-aos="fade-up">Help us expand sustainable sanitation and community service across more locations</p>
+                <h2 class="section-title" data-aos="fade-up">Support This Sustainable Model</h2>
+                <p class="section-subtitle" data-aos="fade-up">Help us expand proven, sustainable sanitation and community service across more locations</p>
                 <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
                     <a href="contact.html" class="btn btn-primary btn-large">Partner With Us</a>
                     <a href="chai-counters.html" class="btn btn-secondary btn-large">Visit Chai Counters</a>
@@ -537,83 +797,87 @@
         </div>
     </section>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3 class="footer-title">Dr. Rabinder Nath Foundation</h3>
-                    <p class="footer-desc">
-                        Serving our community with compassion and dignity, one cup of chai at a time.
-                    </p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Dr. Rabinder Nath Foundation</h3>
+                    <p>A charitable initiative dedicated to serving with compassion and care. Partnering with LooCafe to create sustainable social impact through community service.</p>
                     <div class="social-links">
                         <a href="https://www.facebook.com/DrRabinderNathFoundation/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-facebook-f"></i>
                         </a>
                         <a href="https://www.linkedin.com/company/dr-rabinder-nath-foundation/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
+                            <i class="fab fa-linkedin-in"></i>
                         </a>
                     </div>
                 </div>
 
-                <div class="footer-col">
-                    <h4 class="footer-heading">Our Initiatives</h4>
-                    <ul class="footer-links">
-                        <li><a href="chai-counters.html">Free Chai Counters</a></li>
-                        <li><a href="loocafe-impact.html">LooCafe Partnership</a></li>
-                        <li><a href="frontline-workers.html">Frontline Workers Support</a></li>
-                        <li><a href="community.html">Community Programs</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <ul class="footer-links">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="dr-rabinder-nath.html">Dr. Rabinder Nath</a></li>
-                        <li><a href="book.html">Heritage & Books</a></li>
-                        <li><a href="transparency.html">Transparency</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="chai-counters.html">Free Chai Counters</a></li>
+                        <li><a href="community.html">Community Support</a></li>
+                        <li><a href="loocafe-impact.html">LooCafe Partnership</a></li>
+                        <li><a href="frontline-workers.html">Frontline Workers</a></li>
                     </ul>
                 </div>
 
-                <div class="footer-col">
-                    <h4 class="footer-heading">Get in Touch</h4>
-                    <ul class="footer-contact">
+                <div class="footer-section">
+                    <h4>Learn More</h4>
+                    <ul>
+                        <li><a href="dr-rabinder-nath.html">Dr. Rabinder Nath</a></li>
+                        <li><a href="book.html">Heritage Book</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-info">
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
                             <span>Door No: 8, 2-293/82/J/A/101<br>Journalist Colony, Jubilee Hills<br>Hyderabad, Telangana 500033</span>
                         </li>
                         <li>
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:info@drnf.org">info@drnf.org</a>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+919966906781">+91 9966906781</a>
                         </li>
                         <li>
-                            <i class="fab fa-whatsapp"></i>
-                            <a href="https://wa.me/919966906781" target="_blank" rel="noopener noreferrer">+91 9966906781</a>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@drnf.org">info@drnf.org</a>
                         </li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2024 Dr. Rabinder Nath Foundation. All rights reserved.</p>
-                <div class="footer-legal">
-                    <a href="privacy-policy.html">Privacy Policy</a>
-                    <span>|</span>
-                    <a href="terms-of-service.html">Terms of Service</a>
-                </div>
+                <p>&copy; 2025 Dr. Rabinder Nath Foundation. All rights reserved. | <a href="https://ixoragroup.com" target="_blank" rel="noopener noreferrer">An Ixora Initiative</a></p>
             </div>
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 </html>
