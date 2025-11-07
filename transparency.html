@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparency & Accountability | Dr. Rabinder Nath Foundation</title>
+    <meta name="description" content="Complete transparency on DRNF's operations, finances, impact methodology, and cost-effectiveness. See where every rupee goes and how we measure our impact.">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://drnf.org/transparency">
+    <meta property="og:title" content="Transparency & Accountability - DRNF">
+    <meta property="og:description" content="Complete transparency on operations, finances, and impact measurement at Dr. Rabinder Nath Foundation.">
+
+    <!-- Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BKRC1PBFTM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-BKRC1PBFTM');
+    </script>
+
+    <style>
+        .transparency-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8rem 0 6rem;
+            text-align: center;
+        }
+        .transparency-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+        }
+        .transparency-hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+        .trust-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(255,255,255,0.2);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            margin-top: 2rem;
+            font-weight: 600;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .info-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--primary-color);
+        }
+        .info-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .info-card p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+        .info-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        .info-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .info-label {
+            font-weight: 600;
+            color: var(--primary-color);
+            min-width: 150px;
+        }
+        .info-value {
+            color: var(--text-secondary);
+        }
+        .chart-placeholder {
+            background: linear-gradient(145deg, #f7fafc 0%, white 100%);
+            padding: 3rem;
+            border-radius: 16px;
+            text-align: center;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed #cbd5e0;
+        }
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .metric-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f7fafc 100%);
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(102,126,234,0.15);
+        }
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        .metric-label {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+        .download-section {
+            background: linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%);
+            padding: 3rem;
+            border-radius: 20px;
+            margin: 3rem 0;
+        }
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .download-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        .download-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(102,126,234,0.2);
+        }
+        .download-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation (Same as index.html) -->
+    <nav class="enhanced-nav" id="enhancedNav">
+        <div class="nav-container-enhanced">
+            <a href="index.html" class="nav-logo-enhanced">
+                <img src="images/DRNF_logo.jpg" alt="Dr. Rabinder Nath Foundation Logo" class="logo-img">
+                <div class="nav-brand-text">
+                    <h1 class="brand-title">Dr. Rabinder Nath Foundation</h1>
+                    <p class="brand-tagline">Serving with Compassion</p>
+                </div>
+            </a>
+
+            <ul class="nav-links-enhanced">
+                <li><a href="index.html" class="nav-link-enhanced">Home</a></li>
+                <li>
+                    <div class="nav-link-enhanced nav-dropdown-trigger" data-menu="about-mega-menu">
+                        <span>About</span>
+                        <svg class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                </li>
+                <li><a href="book.html" class="nav-link-enhanced">Heritage Book</a></li>
+                <li>
+                    <div class="nav-link-enhanced nav-dropdown-trigger" data-menu="programs-mega-menu">
+                        <span>Our Programs</span>
+                        <svg class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                </li>
+                <li><a href="transparency.html" class="nav-link-enhanced active">Transparency</a></li>
+                <li><a href="contact.html" class="nav-link-enhanced">Contact</a></li>
+                <li><a href="faq.html" class="nav-link-enhanced">FAQ</a></li>
+            </ul>
+
+            <div class="nav-actions-enhanced">
+                <a href="contact.html" class="nav-cta-enhanced">Get in Touch</a>
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mega Menus (Abbreviated for brevity - same as index.html) -->
+        <div class="mega-menu" id="about-mega-menu">
+            <div class="mega-menu-container">
+                <div class="mega-menu-content">
+                    <div class="mega-menu-card">
+                        <img src="images/rabinder_nath2.1.jpg" alt="About Us">
+                        <h3>About Us</h3>
+                        <p>Learn about our story, mission, and the legacy of Dr. Rabinder Nath.</p>
+                    </div>
+                    <div class="mega-menu-grid">
+                        <div class="mega-menu-header">
+                            <h3>Discover Our Foundation</h3>
+                        </div>
+                        <div class="mega-menu-columns">
+                            <div>
+                                <a href="about.html" class="mega-menu-link">
+                                    <i class="fas fa-book-open mega-menu-icon"></i>
+                                    <span class="mega-menu-text">Our Story</span>
+                                </a>
+                                <a href="dr-rabinder-nath.html" class="mega-menu-link">
+                                    <i class="fas fa-user-md mega-menu-icon"></i>
+                                    <span class="mega-menu-text">Dr. Rabinder Nath</span>
+                                </a>
+                                <a href="transparency.html" class="mega-menu-link">
+                                    <i class="fas fa-balance-scale mega-menu-icon"></i>
+                                    <span class="mega-menu-text">Transparency</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mega-menu" id="programs-mega-menu">
+            <div class="mega-menu-container">
+                <div class="mega-menu-content">
+                    <div class="mega-menu-card">
+                        <img src="images/chai_counter.jpg" alt="Our Programs">
+                        <h3>Our Programs</h3>
+                    </div>
+                    <div class="mega-menu-grid">
+                        <div class="mega-menu-header">
+                            <h3>Community Service Programs</h3>
+                        </div>
+                        <div class="mega-menu-columns">
+                            <div>
+                                <a href="chai-counters.html" class="mega-menu-link">
+                                    <i class="fas fa-coffee mega-menu-icon"></i>
+                                    <span class="mega-menu-text">Free Chai Counters</span>
+                                </a>
+                                <a href="loocafe-impact.html" class="mega-menu-link">
+                                    <i class="fas fa-building mega-menu-icon"></i>
+                                    <span class="mega-menu-text">LooCafe Partnership</span>
+                                </a>
+                                <a href="frontline-workers.html" class="mega-menu-link">
+                                    <i class="fas fa-user-shield mega-menu-icon"></i>
+                                    <span class="mega-menu-text">Frontline Workers</span>
+                                </a>
+                                <a href="community.html" class="mega-menu-link">
+                                    <i class="fas fa-hands-helping mega-menu-icon"></i>
+                                    <span class="mega-menu-text">Community Support</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu (Same structure as index.html) -->
+    <div class="mobile-menu-overlay">
+        <div class="mobile-menu-header">
+            <a href="/" class="nav-logo-enhanced">
+                <img src="images/DRNF_logo.jpg" alt="DRNF Logo" class="logo-img">
+                <div class="nav-brand-text">
+                    <h1 class="brand-title">DRNF</h1>
+                </div>
+            </a>
+            <button class="mobile-menu-close" aria-label="Close mobile menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="mobile-menu-body">
+            <a href="index.html" class="mobile-menu-item-clean">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <div class="mobile-section-clean">
+                <button class="mobile-section-header-clean" data-toggle="about-section">
+                    <span>About DRNF</span>
+                    <i class="fas fa-chevron-down mobile-chevron"></i>
+                </button>
+                <div class="mobile-section-content-clean" id="about-section">
+                    <a href="about.html" class="mobile-link-clean">
+                        <i class="fas fa-heart"></i>
+                        <span>Our Story & Mission</span>
+                    </a>
+                    <a href="dr-rabinder-nath.html" class="mobile-link-clean">
+                        <i class="fas fa-user-md"></i>
+                        <span>Dr. Rabinder Nath</span>
+                    </a>
+                    <a href="transparency.html" class="mobile-link-clean">
+                        <i class="fas fa-balance-scale"></i>
+                        <span>Transparency</span>
+                    </a>
+                </div>
+            </div>
+            <div class="mobile-section-clean">
+                <button class="mobile-section-header-clean" data-toggle="work-section">
+                    <span>Our Work</span>
+                    <i class="fas fa-chevron-down mobile-chevron"></i>
+                </button>
+                <div class="mobile-section-content-clean" id="work-section">
+                    <a href="chai-counters.html" class="mobile-link-clean">
+                        <i class="fas fa-mug-hot"></i>
+                        <span>Free Chai Counters</span>
+                    </a>
+                    <a href="community.html" class="mobile-link-clean">
+                        <i class="fas fa-hands-helping"></i>
+                        <span>Community Programs</span>
+                    </a>
+                    <a href="loocafe-impact.html" class="mobile-link-clean">
+                        <i class="fas fa-building"></i>
+                        <span>LooCafe Partnership</span>
+                    </a>
+                    <a href="frontline-workers.html" class="mobile-link-clean">
+                        <i class="fas fa-user-shield"></i>
+                        <span>Frontline Workers</span>
+                    </a>
+                </div>
+            </div>
+            <a href="faq.html" class="mobile-menu-item-clean">
+                <i class="fas fa-question-circle"></i>
+                <span>FAQ</span>
+            </a>
+            <a href="contact.html" class="mobile-menu-item-clean">
+                <i class="fas fa-envelope"></i>
+                <span>Contact Us</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="transparency-hero">
+        <div class="container">
+            <h1 data-aos="fade-up">Transparency & Accountability</h1>
+            <p data-aos="fade-up" data-aos-delay="100">We believe in complete openness about our operations, finances, and impact. Every rupee counts, and you deserve to know exactly how we create change.</p>
+            <div class="trust-badge" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fas fa-shield-alt" style="font-size: 1.5rem;"></i>
+                <span>Committed to Transparency & Evidence-Based Impact</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal & Registration -->
+    <section class="section" style="background: white;">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Legal Status & Registration</h2>
+            <p class="section-subtitle" data-aos="fade-up">Complete organizational information and regulatory compliance</p>
+
+            <div class="info-grid">
+                <div class="info-card" data-aos="fade-up">
+                    <h3><i class="fas fa-certificate"></i> Organization Details</h3>
+                    <div class="info-item">
+                        <span class="info-label">Legal Name:</span>
+                        <span class="info-value">Dr. Rabinder Nath Foundation</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Founded:</span>
+                        <span class="info-value">2020</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Founder:</span>
+                        <span class="info-value">Abhishek Nath</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Legal Structure:</span>
+                        <span class="info-value">Charitable Initiative</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Parent Organization:</span>
+                        <span class="info-value">Ixora Corporate Services Pvt Ltd</span>
+                    </div>
+                </div>
+
+                <div class="info-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3><i class="fas fa-map-marker-alt"></i> Registered Office</h3>
+                    <div class="info-item">
+                        <span class="info-label">Address:</span>
+                        <span class="info-value">Door No: 8, 2-293/82/J/A/101, Journalist Colony, Jubilee Hills, Hyderabad, Telangana 500033, India</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Phone:</span>
+                        <span class="info-value">+91 9966906781</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Email:</span>
+                        <span class="info-value">info@drnf.org</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Website:</span>
+                        <span class="info-value">https://drnf.org</span>
+                    </div>
+                </div>
+
+                <div class="info-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3><i class="fas fa-file-contract"></i> Tax & Compliance</h3>
+                    <p style="color: var(--text-secondary); font-style: italic; margin-bottom: 1.5rem;">
+                        As a charitable initiative of Ixora Corporate Services, DRNF operates under Ixora's established legal and tax framework. All donations and expenditures are processed through Ixora's compliant systems.
+                    </p>
+                    <div class="info-item">
+                        <span class="info-label">Compliance Status:</span>
+                        <span class="info-value" style="color: #27ae60; font-weight: 600;">✓ Active & Compliant</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Audit Status:</span>
+                        <span class="info-value">Audited through Ixora Group</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership & Governance -->
+    <section class="section" style="background: linear-gradient(to bottom, #f7fafc 0%, white 100%);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Leadership & Governance</h2>
+            <p class="section-subtitle" data-aos="fade-up">The team driving DRNF's mission with integrity and purpose</p>
+
+            <div class="info-grid">
+                <div class="info-card" data-aos="fade-up">
+                    <h3><i class="fas fa-user-tie"></i> Founder & Executive Leadership</h3>
+                    <div style="margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Abhishek Nath</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1rem;">
+                            <strong>Founder</strong><br>
+                            Managing Director & CEO of Ixora Corporate Services Pvt Ltd
+                        </p>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7;">
+                            Founded DRNF in 2020 to honor his father's legacy. Under his leadership, DRNF has served 500-600 people daily through free chai counters, created 70+ jobs, and supported frontline workers through COVID-19 and beyond.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="info-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3><i class="fas fa-users"></i> Advisory & Support</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem;">
+                        DRNF benefits from the expertise and support of Ixora Corporate Services' leadership team, which includes professionals in facilities management, operations, finance, and community engagement.
+                    </p>
+                    <div class="info-item">
+                        <span class="info-label">Operational Support:</span>
+                        <span class="info-value">Ixora Corporate Services</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Staff Count:</span>
+                        <span class="info-value">40+ full-time associates</span>
+                    </div>
+                </div>
+
+                <div class="info-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3><i class="fas fa-handshake"></i> Strategic Partners</h3>
+                    <div class="info-item">
+                        <span class="info-label">LooCafe:</span>
+                        <span class="info-value">Infrastructure & Location Partner (270+ facilities)</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Kadak Chai:</span>
+                        <span class="info-value">Chai Supply Partnership</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Abhi Sai Datta Trust:</span>
+                        <span class="info-value">Educational Workshop Partnership</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">GHMC:</span>
+                        <span class="info-value">COVID-19 PPE Distribution Partner</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Transparency -->
+    <section class="section" style="background: white;">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Financial Transparency</h2>
+            <p class="section-subtitle" data-aos="fade-up">See exactly how we allocate resources to maximize impact</p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; align-items: start;">
+                <div data-aos="fade-right">
+                    <h3 style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 2rem;">Fund Allocation (Est. 2024)</h3>
+                    <div class="chart-placeholder">
+                        <i class="fas fa-chart-pie" style="font-size: 4rem; color: #cbd5e0; margin-bottom: 1rem;"></i>
+                        <h4 style="color: var(--text-secondary); margin-bottom: 1rem;">Allocation Breakdown</h4>
+                        <div style="text-align: left; width: 100%; max-width: 400px;">
+                            <div style="padding: 1rem; background: white; border-radius: 8px; margin-bottom: 0.5rem;">
+                                <strong style="color: var(--primary-color);">~85%</strong> Program Services (Chai, Food, Direct Support)
+                            </div>
+                            <div style="padding: 1rem; background: white; border-radius: 8px; margin-bottom: 0.5rem;">
+                                <strong style="color: var(--secondary-color);">~10%</strong> Operations & Employment
+                            </div>
+                            <div style="padding: 1rem; background: white; border-radius: 8px;">
+                                <strong style="color: var(--accent-color);">~5%</strong> Administration & Overhead
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left">
+                    <h3 style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 2rem;">Key Financial Principles</h3>
+                    <div class="info-card" style="margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;"><i class="fas fa-chart-line"></i> Lean Operations</h4>
+                        <p style="color: var(--text-secondary); line-height: 1.7;">
+                            By partnering with LooCafe and leveraging existing infrastructure, we keep overhead costs minimal—typically under 5% of total spending.
+                        </p>
+                    </div>
+
+                    <div class="info-card" style="margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;"><i class="fas fa-users"></i> Job Creation as Impact</h4>
+                        <p style="color: var(--text-secondary); line-height: 1.7;">
+                            70+ jobs created means employment costs are <strong>program impact</strong>, not overhead. Every worker hired lifts a family out of poverty.
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;"><i class="fas fa-check-double"></i> Ixora Group Support</h4>
+                        <p style="color: var(--text-secondary); line-height: 1.7;">
+                            Many administrative costs are covered by Ixora Corporate Services, allowing more donated funds to go directly to programs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cost-Effectiveness -->
+    <section class="section" style="background: linear-gradient(135deg, rgba(102,126,234,0.05) 0%, rgba(118,75,162,0.05) 100%);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Cost-Effectiveness Analysis</h2>
+            <p class="section-subtitle" data-aos="fade-up">See exactly what your contribution accomplishes</p>
+
+            <div class="metric-grid">
+                <div class="metric-card" data-aos="zoom-in">
+                    <div class="metric-value">₹2</div>
+                    <div class="metric-label">Cost per Cup of Chai Served</div>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 1rem; line-height: 1.6;">
+                        Includes tea, sugar, milk, water, and cup. Bulk purchasing keeps costs low.
+                    </p>
+                </div>
+
+                <div class="metric-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="metric-value">₹1,000</div>
+                    <div class="metric-label">Serves 500 People</div>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 1rem; line-height: 1.6;">
+                        Your ₹1,000 donation provides warm chai to 500 individuals in need.
+                    </p>
+                </div>
+
+                <div class="metric-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="metric-value">₹30,000</div>
+                    <div class="metric-label">One Month at One Counter</div>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 1rem; line-height: 1.6;">
+                        Covers chai supplies + 2 staff salaries for one counter for one month.
+                    </p>
+                </div>
+
+                <div class="metric-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="metric-value">₹3,60,000</div>
+                    <div class="metric-label">Full Year Operation</div>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 1rem; line-height: 1.6;">
+                        Annual cost to run one counter: 180,000+ cups served, 2 jobs sustained.
+                    </p>
+                </div>
+            </div>
+
+            <div style="background: white; padding: 3rem; border-radius: 20px; margin-top: 3rem;" data-aos="fade-up">
+                <h3 style="font-size: 2rem; color: var(--primary-color); margin-bottom: 2rem; text-align: center;">Your Impact at Different Levels</h3>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h4 style="color: var(--primary-color); font-size: 1.3rem; margin-bottom: 1rem;">₹500 Donation</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="padding: 0.5rem 0; color: var(--text-secondary);">
+                                <i class="fas fa-check-circle" style="color: #27ae60; margin-right: 0.5rem;"></i>
+                                250 cups of chai served
+                            </li>
+                            <li style="padding: 0.5rem 0; color: var(--text-secondary);">
+                                <i class="fas fa-check-circle" style="color: #27ae60; margin-right: 0.5rem;"></i>
+                                ~125 people directly impacted
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h4 style="color: var(--primary-color); font-size: 1.3rem; margin-bottom: 1rem;">₹5,000 Donation</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="padding: 0.5rem 0; color: var(--text-secondary);">
+                                <i class="fas fa-check-circle" style="color: #27ae60; margin-right: 0.5rem;"></i>
+                                2,500 cups of chai served
+                            </li>
+                            <li style="padding: 0.5rem 0; color: var(--text-secondary);">
+                                <i class="fas fa-check-circle" style="color: #27ae60; margin-right: 0.5rem;"></i>
+                                ~1,250 people directly impacted
+                            </li>
+                            <li style="padding: 0.5rem 0; color: var(--text-secondary);">
+                                <i class="fas fa-check-circle" style="color: #27ae60; margin-right: 0.5rem;"></i>
+                                5 days of full counter operation
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h4 style="color: var(--primary-color); font-size: 1.3rem; margin-bottom: 1rem;">₹30,000 Donation</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="padding: 0.5rem 0; color: var(--text-secondary);">
+                                <i class="fas fa-check-circle" style="color: #27ae60; margin-right: 0.5rem;"></i>
+                                Full month of counter operation
+                            </li>
+                            <li style="padding: 0.5rem 0; color: var(--text-secondary);">
+                                <i class="fas fa-check-circle" style="color: #27ae60; margin-right: 0.5rem;"></i>
+                                15,000+ cups served
+                            </li>
+                            <li style="padding: 0.5rem 0; color: var(--text-secondary);">
+                                <i class="fas fa-check-circle" style="color: #27ae60; margin-right: 0.5rem;"></i>
+                                2 staff salaries for 1 month
+                            </li>
+                            <li style="padding: 0.5rem 0; color: var(--text-secondary);">
+                                <i class="fas fa-check-circle" style="color: #27ae60; margin-right: 0.5rem;"></i>
+                                ~7,500 individuals impacted
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Methodology -->
+    <section class="section" style="background: white;">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">How We Measure Impact</h2>
+            <p class="section-subtitle" data-aos="fade-up">Evidence-based approach to tracking and reporting our work</p>
+
+            <div class="info-grid" style="margin-top: 3rem;">
+                <div class="info-card" data-aos="fade-up">
+                    <h3><i class="fas fa-clipboard-check"></i> Data Collection</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid #eee;">
+                            <strong style="color: var(--primary-color);">Daily Counts:</strong>
+                            <span style="color: var(--text-secondary);"> Counter staff record cups served and beneficiaries</span>
+                        </li>
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid #eee;">
+                            <strong style="color: var(--primary-color);">Financial Tracking:</strong>
+                            <span style="color: var(--text-secondary);"> All expenses logged through Ixora's accounting system</span>
+                        </li>
+                        <li style="padding: 0.75rem 0;">
+                            <strong style="color: var(--primary-color);">Employment Records:</strong>
+                            <span style="color: var(--text-secondary);"> HR data tracks jobs created and sustained</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="info-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3><i class="fas fa-calculator"></i> Calculation Methods</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid #eee;">
+                            <strong style="color: var(--primary-color);">People Served:</strong>
+                            <span style="color: var(--text-secondary);"> Daily cups ÷ 2 (avg 2 cups/person) = unique individuals</span>
+                        </li>
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid #eee;">
+                            <strong style="color: var(--primary-color);">Cost/Cup:</strong>
+                            <span style="color: var(--text-secondary);"> Total supply cost ÷ total cups served</span>
+                        </li>
+                        <li style="padding: 0.75rem 0;">
+                            <strong style="color: var(--primary-color);">Jobs Created:</strong>
+                            <span style="color: var(--text-secondary);"> Direct headcount employed by DRNF programs</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="info-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3><i class="fas fa-search"></i> Verification & Auditing</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid #eee;">
+                            <strong style="color: var(--primary-color);">Monthly Reviews:</strong>
+                            <span style="color: var(--text-secondary);"> Leadership reviews all program data monthly</span>
+                        </li>
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid #eee;">
+                            <strong style="color: var(--primary-color);">External Audit:</strong>
+                            <span style="color: var(--text-secondary);"> Ixora's annual financial audit includes DRNF</span>
+                        </li>
+                        <li style="padding: 0.75rem 0;">
+                            <strong style="color: var(--primary-color);">Public Reporting:</strong>
+                            <span style="color: var(--text-secondary);"> Impact data updated on website quarterly</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%); padding: 3rem; border-radius: 20px; margin-top: 3rem; text-align: center;" data-aos="fade-up">
+                <h3 style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 1.5rem;">Commitment to Accuracy</h3>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8; max-width: 900px; margin: 0 auto;">
+                    We report <strong>conservative estimates</strong> whenever exact data is unavailable. For example, "500-600 people daily" reflects the range we can confidently document. We never inflate numbers to look better—transparency builds trust, and trust creates lasting impact.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reports & Downloads -->
+    <section class="section" style="background: linear-gradient(to bottom, #f7fafc 0%, white 100%);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Reports & Documentation</h2>
+            <p class="section-subtitle" data-aos="fade-up">Download our impact reports, financial statements, and program data</p>
+
+            <div class="download-section" data-aos="fade-up">
+                <h3 style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 1rem;">Available Reports (Coming Soon)</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+                    We're working on comprehensive annual and quarterly reports. Check back soon for downloadable PDFs including:
+                </p>
+
+                <div class="download-grid">
+                    <div class="download-item">
+                        <div class="download-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--primary-color); margin-bottom: 0.25rem;">Annual Impact Report 2024</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 0;">Complete impact data, stories, and outcomes</p>
+                            <p style="color: #cbd5e0; font-size: 0.85rem; margin-top: 0.25rem; font-style: italic;">Coming Q1 2025</p>
+                        </div>
+                    </div>
+
+                    <div class="download-item">
+                        <div class="download-icon">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--primary-color); margin-bottom: 0.25rem;">Financial Statements 2024</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 0;">Audited financials and expense breakdown</p>
+                            <p style="color: #cbd5e0; font-size: 0.85rem; margin-top: 0.25rem; font-style: italic;">Coming Q1 2025</p>
+                        </div>
+                    </div>
+
+                    <div class="download-item">
+                        <div class="download-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--primary-color); margin-bottom: 0.25rem;">Quarterly Updates</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 0;">Regular program progress reports</p>
+                            <p style="color: #cbd5e0; font-size: 0.85rem; margin-top: 0.25rem; font-style: italic;">Coming Q1 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: white; padding: 3rem; border-radius: 20px; margin-top: 3rem; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.08);" data-aos="fade-up">
+                <h3 style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 1rem;">Questions About Our Data?</h3>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.7;">
+                    We're committed to complete transparency. If you have questions about our financials, impact methodology, or want more detailed data, we're here to help.
+                </p>
+                <a href="contact.html" class="btn btn-primary btn-large">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="section-title" data-aos="fade-up">Support Evidence-Based Impact</h2>
+                <p class="section-subtitle" data-aos="fade-up">Your contribution funds programs backed by data, transparency, and evidence-based methodology</p>
+                <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
+                    <a href="contact.html" class="btn btn-primary btn-large">Get Involved</a>
+                    <a href="about.html" class="btn btn-secondary btn-large">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/DRNF_logo.jpg" alt="DRNF Logo">
+                        <h3>Dr. Rabinder Nath Foundation</h3>
+                    </div>
+                    <p>Dedicated to serving the community with compassion and care, continuing the legacy of Dr. Rabinder Nath.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/DrRabinderNathFoundation/" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/dr-rabinder-nath-foundation/mycompany/" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Our Initiatives</h4>
+                    <ul>
+                        <li><a href="chai-counters.html">Free Chai Counters</a></li>
+                        <li><a href="community.html">Community Work</a></li>
+                        <li><a href="community.html#workshops">Education Workshops</a></li>
+                        <li><a href="community.html#environment">Environmental Care</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="transparency.html">Transparency</a></li>
+                        <li><a href="book.html">Heritage Book</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="https://loocafe.com" target="_blank" rel="noopener">LooCafe Partnership</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/919966906781" target="_blank" rel="noopener">WhatsApp Us</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@drnf.org">info@drnf.org</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Jubilee Hills, Hyderabad, Telangana</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-credibility">
+                <p style="text-align: center; font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+                    <strong>Charitable Initiative</strong> | Operating since 2020 | Committed to Transparency & Evidence-Based Impact
+                </p>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Dr. Rabinder Nath Foundation. All Rights Reserved.</p>
+                <p>Designed with care for our community</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
