@@ -31,7 +31,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Organization Overview
 
 ### Dr. Rabinder Nath Foundation (DRNF)
-- **Founded**: 2020
+- **Founded**: 2016
 - **Location**: Hyderabad, Telangana, India
 - **Mission**: Community service organization dedicated to serving with compassion and care
 - **Named After**: Late Vijayshree Dr. Rabinder Nath (dental surgeon, social worker, and pioneer in Hyderabad)
