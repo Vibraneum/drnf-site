@@ -24,8 +24,47 @@
     </script>
 </head>
 <body>
-    <!-- Navigation will be added here matching index.html structure -->
-    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/DRNF_logo.jpg" alt="Dr. Rabinder Nath Foundation" class="logo-img">
+            </a>
+
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link">About DRNF <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">Our Foundation</a></li>
+                        <li><a href="dr-rabinder-nath.html">Dr. Rabinder Nath</a></li>
+                        <li><a href="transparency.html">Transparency & Impact</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link">Our Work <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="chai-counters.html">Free Chai Counters</a></li>
+                        <li><a href="loocafe-impact.html" class="active">LooCafe Partnership</a></li>
+                        <li><a href="frontline-workers.html">Frontline Workers</a></li>
+                        <li><a href="community.html">Community Programs</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="book.html" class="nav-link">Heritage</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item nav-cta">
+                    <a href="about.html" class="btn btn-primary btn-small">Our Story</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
     <section class="page-hero" style="background-image: linear-gradient(135deg, rgba(102,126,234,0.9) 0%, rgba(118,75,162,0.8) 100%), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=80');">
         <!-- PLACEHOLDER: Asset #1 - Replace with actual LooCafe facility photo -->
@@ -49,7 +88,7 @@
                 <div data-aos="fade-left">
                     <h3 style="font-size: 2rem; margin-bottom: 1.5rem; color: #2c3e50;">Sustainable Public Toilets Built from Shipping Containers</h3>
                     <p style="font-size: 1.1rem; line-height: 1.8; color: #5d6d7e; margin-bottom: 1.5rem;">
-                        Founded in 2018 by <strong>Abhishek Nath</strong>, LooCafe revolutionizes public sanitation in India by converting shipping containers into modern, clean, and accessible toilet facilities with attached cafes or points of sale.
+                        Founded in 2018 by <strong>Abhishek Nath</strong>,<sup><a href="#ref1" style="text-decoration: none; color: #667eea;">1</a></sup> LooCafe revolutionizes public sanitation in India by converting shipping containers into modern, clean, and accessible toilet facilities with attached cafes or points of sale.<sup><a href="#ref2" style="text-decoration: none; color: #667eea;">2</a></sup>
                     </p>
                     <div class="feature-list">
                         <div class="feature-item" style="display: flex; gap: 1rem; margin-bottom: 1rem;">
@@ -91,28 +130,28 @@
             <div class="partnership-badge" data-aos="zoom-in" style="text-align: center; margin-bottom: 3rem;">
                 <div style="display: inline-block; padding: 1rem 2rem; background: white; border-radius: 50px; box-shadow: 0 8px 24px rgba(102,126,234,0.15);">
                     <i class="fas fa-handshake" style="color: #667eea; font-size: 2rem; margin-right: 1rem;"></i>
-                    <span style="font-size: 1.3rem; font-weight: 600; color: #2c3e50;">Gates Foundation Exclusive Partner</span>
+                    <span style="font-size: 1.3rem; font-weight: 600; color: #2c3e50;">Gates Foundation Partner</span>
                 </div>
             </div>
-            
+
             <h2 class="section-title" data-aos="fade-up">Recognized Global Impact</h2>
-            <p class="section-subtitle" data-aos="fade-up">LooCafe is the Gates Foundation's exclusive partner for public toilets, bringing world-class sanitation to Indian cities</p>
+            <p class="section-subtitle" data-aos="fade-up">LooCafe partners with the Gates Foundation on public sanitation,<sup><a href="#ref3" style="text-decoration: none; color: #667eea;">3</a></sup> bringing world-class facilities to Indian cities</p>
             
             <div class="awards-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
                 <div class="award-card" data-aos="fade-up" style="background: white; padding: 2rem; border-radius: 20px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
                     <div style="font-size: 3rem; color: #667eea; margin-bottom: 1rem;">🏆</div>
                     <h4 style="color: #2c3e50; margin-bottom: 0.5rem;">UNDP Recognition</h4>
-                    <p style="color: #7f8c8d; margin: 0;">Featured as best practice (2020)</p>
+                    <p style="color: #7f8c8d; margin: 0;">Featured as best practice (2020)<sup><a href="#ref4" style="text-decoration: none; color: #667eea;">4</a></sup></p>
                 </div>
                 <div class="award-card" data-aos="fade-up" data-aos-delay="100" style="background: white; padding: 2rem; border-radius: 20px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
                     <div style="font-size: 3rem; color: #667eea; margin-bottom: 1rem;">🌟</div>
                     <h4 style="color: #2c3e50; margin-bottom: 0.5rem;">WASH Stewardship Award</h4>
-                    <p style="color: #7f8c8d; margin: 0;">InkWASH 2022</p>
+                    <p style="color: #7f8c8d; margin: 0;">InkWASH 2022<sup><a href="#ref5" style="text-decoration: none; color: #667eea;">5</a></sup></p>
                 </div>
                 <div class="award-card" data-aos="fade-up" data-aos-delay="200" style="background: white; padding: 2rem; border-radius: 20px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
                     <div style="font-size: 3rem; color: #667eea; margin-bottom: 1rem;">🎖️</div>
                     <h4 style="color: #2c3e50; margin-bottom: 0.5rem;">CII Award Winner</h4>
-                    <p style="color: #7f8c8d; margin: 0;">Twice recognized for innovation</p>
+                    <p style="color: #7f8c8d; margin: 0;">Twice recognized for innovation<sup><a href="#ref6" style="text-decoration: none; color: #667eea;">6</a></sup></p>
                 </div>
                 <div class="award-card" data-aos="fade-up" data-aos-delay="300" style="background: white; padding: 2rem; border-radius: 20px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
                     <div style="font-size: 3rem; color: #667eea; margin-bottom: 1rem;">🇮🇳</div>
@@ -133,22 +172,22 @@
                 <div class="stat-card" data-aos="zoom-in" style="text-align: center;">
                     <div class="stat-number" style="font-size: 4rem; font-weight: 700; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">400+</div>
                     <div class="stat-label" style="font-size: 1.2rem; color: #2c3e50; font-weight: 600;">Facilities Nationwide</div>
-                    <p style="color: #7f8c8d; margin-top: 0.5rem;">Across 8+ states in India</p>
+                    <p style="color: #7f8c8d; margin-top: 0.5rem;">Across 8+ states in India<sup><a href="#ref7" style="text-decoration: none; color: #667eea;">7</a></sup></p>
                 </div>
                 <div class="stat-card" data-aos="zoom-in" data-aos-delay="100" style="text-align: center;">
                     <div class="stat-number" style="font-size: 4rem; font-weight: 700; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">270+</div>
                     <div class="stat-label" style="font-size: 1.2rem; color: #2c3e50; font-weight: 600;">Hyderabad Locations</div>
-                    <p style="color: #7f8c8d; margin-top: 0.5rem;">Serving the city 24/7</p>
+                    <p style="color: #7f8c8d; margin-top: 0.5rem;">Serving the city 24/7<sup><a href="#ref8" style="text-decoration: none; color: #667eea;">8</a></sup></p>
                 </div>
                 <div class="stat-card" data-aos="zoom-in" data-aos-delay="200" style="text-align: center;">
                     <div class="stat-number" style="font-size: 4rem; font-weight: 700; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">1,000+</div>
                     <div class="stat-label" style="font-size: 1.2rem; color: #2c3e50; font-weight: 600;">Jobs Created</div>
-                    <p style="color: #7f8c8d; margin-top: 0.5rem;">Entrepreneurs & staff employed</p>
+                    <p style="color: #7f8c8d; margin-top: 0.5rem;">Entrepreneurs & staff employed<sup><a href="#ref9" style="text-decoration: none; color: #667eea;">9</a></sup></p>
                 </div>
                 <div class="stat-card" data-aos="zoom-in" data-aos-delay="300" style="text-align: center;">
                     <div class="stat-number" style="font-size: 4rem; font-weight: 700; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">₹18Cr+</div>
                     <div class="stat-label" style="font-size: 1.2rem; color: #2c3e50; font-weight: 600;">Annual Revenue</div>
-                    <p style="color: #7f8c8d; margin-top: 0.5rem;">Sustainable business model</p>
+                    <p style="color: #7f8c8d; margin-top: 0.5rem;">Sustainable business model<sup><a href="#ref10" style="text-decoration: none; color: #667eea;">10</a></sup></p>
                 </div>
             </div>
         </div>
@@ -180,6 +219,125 @@
                     <div style="font-size: 3rem; margin-bottom: 1rem;">4️⃣</div>
                     <h4 style="font-size: 1.5rem; margin-bottom: 1rem;">Serve Community</h4>
                     <p>Free/low-cost toilet access for all, maintained by revenue</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Toilet Sustainability Crisis -->
+    <section class="section" style="background: white;">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Why Most Public Toilets Fail</h2>
+            <p class="section-subtitle" data-aos="fade-up">The sustainability crisis in India's public sanitation infrastructure</p>
+
+            <div style="max-width: 900px; margin: 3rem auto 0;">
+                <div class="crisis-intro" data-aos="fade-up" style="background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%); padding: 3rem; border-radius: 24px; margin-bottom: 3rem;">
+                    <h3 style="font-size: 2rem; margin-bottom: 1.5rem; color: #2c3e50;">The "Money Pit" Problem</h3>
+                    <p style="font-size: 1.2rem; line-height: 1.8; color: #2c3e50; margin-bottom: 1.5rem;">
+                        India has made remarkable progress building public toilets under the Swachh Bharat Mission—over 11.5 crore household toilets constructed since 2014.<sup><a href="#ref11" style="text-decoration: none; color: #667eea;">11</a></sup> Yet a critical challenge remains largely unsolved: <strong>sustainability</strong>.
+                    </p>
+                    <p style="font-size: 1.2rem; line-height: 1.8; color: #2c3e50; margin: 0;">
+                        Most public toilets become what experts call <strong>"money pits"</strong>—requiring endless funding for maintenance, cleaning, and operations with no sustainable revenue model to support them.
+                    </p>
+                </div>
+
+                <!-- The Statistics -->
+                <div class="crisis-stats" style="margin-bottom: 4rem;">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 2rem; color: #2c3e50; text-align: center;" data-aos="fade-up">India's Sanitation Reality</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                        <div class="crisis-stat-card" data-aos="flip-left" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 2.5rem; border-radius: 20px; color: white; text-align: center;">
+                            <div style="font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem;">60%</div>
+                            <p style="font-size: 1.1rem; margin: 0;">of the global population without safely managed sanitation lives in India<sup><a href="#ref12" style="text-decoration: none; color: white;">12</a></sup></p>
+                        </div>
+                        <div class="crisis-stat-card" data-aos="flip-left" data-aos-delay="100" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2.5rem; border-radius: 20px; color: white; text-align: center;">
+                            <div style="font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem;">42%</div>
+                            <p style="font-size: 1.1rem; margin: 0;">of community toilets remain unused due to poor maintenance<sup><a href="#ref13" style="text-decoration: none; color: white;">13</a></sup></p>
+                        </div>
+                        <div class="crisis-stat-card" data-aos="flip-left" data-aos-delay="200" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 2.5rem; border-radius: 20px; color: white; text-align: center;">
+                            <div style="font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem;">~₹0</div>
+                            <p style="font-size: 1.1rem; margin: 0;">Revenue generated by traditional public toilets (perpetual funding dependency)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Why Traditional Models Fail -->
+                <div class="failure-reasons" style="margin-bottom: 4rem;">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 2rem; color: #2c3e50; text-align: center;" data-aos="fade-up">Why Traditional Public Toilets Become "Money Pits"</h3>
+
+                    <div style="display: grid; gap: 2rem;">
+                        <div class="failure-card" data-aos="fade-right" style="display: flex; gap: 2rem; align-items: start; background: #f7fafc; padding: 2.5rem; border-radius: 20px; border-left: 6px solid #e74c3c;">
+                            <div style="flex-shrink: 0; width: 60px; height: 60px; border-radius: 50%; background: #e74c3c; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: 700;">1</div>
+                            <div>
+                                <h4 style="font-size: 1.5rem; color: #2c3e50; margin-bottom: 1rem;">No Revenue Model</h4>
+                                <p style="color: #5d6d7e; line-height: 1.8; margin: 0;">Traditional public toilets rely entirely on government or NGO funding. There's no mechanism to generate income, creating perpetual dependency on external budgets that often get cut or delayed.</p>
+                            </div>
+                        </div>
+
+                        <div class="failure-card" data-aos="fade-left" style="display: flex; gap: 2rem; align-items: start; background: #f7fafc; padding: 2.5rem; border-radius: 20px; border-left: 6px solid #e67e22;">
+                            <div style="flex-shrink: 0; width: 60px; height: 60px; border-radius: 50%; background: #e67e22; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: 700;">2</div>
+                            <div>
+                                <h4 style="font-size: 1.5rem; color: #2c3e50; margin-bottom: 1rem;">Maintenance Crisis</h4>
+                                <p style="color: #5d6d7e; line-height: 1.8; margin: 0;">Without dedicated operational funding, cleaning and maintenance become irregular. Studies show that 42% of community toilets remain unused specifically due to poor maintenance and lack of cleanliness.<sup><a href="#ref13" style="text-decoration: none; color: #667eea;">13</a></sup></p>
+                            </div>
+                        </div>
+
+                        <div class="failure-card" data-aos="fade-right" style="display: flex; gap: 2rem; align-items: start; background: #f7fafc; padding: 2.5rem; border-radius: 20px; border-left: 6px solid #f39c12;">
+                            <div style="flex-shrink: 0; width: 60px; height: 60px; border-radius: 50%; background: #f39c12; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: 700;">3</div>
+                            <div>
+                                <h4 style="font-size: 1.5rem; color: #2c3e50; margin-bottom: 1rem;">No Ownership or Accountability</h4>
+                                <p style="color: #5d6d7e; line-height: 1.8; margin: 0;">Government-built toilets often lack clear operational ownership. Multiple agencies may be involved in construction, but none take long-term responsibility for daily operations and quality standards.</p>
+                            </div>
+                        </div>
+
+                        <div class="failure-card" data-aos="fade-left" style="display: flex; gap: 2rem; align-items: start; background: #f7fafc; padding: 2.5rem; border-radius: 20px; border-left: 6px solid #9b59b6;">
+                            <div style="flex-shrink: 0; width: 60px; height: 60px; border-radius: 50%; background: #9b59b6; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: 700;">4</div>
+                            <div>
+                                <h4 style="font-size: 1.5rem; color: #2c3e50; margin-bottom: 1rem;">Deterioration Cycle</h4>
+                                <p style="color: #5d6d7e; line-height: 1.8; margin: 0;">Build → Deteriorate → Rebuild. Traditional models follow an endless cycle of construction, decay, and reconstruction, wasting public resources rather than creating sustainable infrastructure.</p>
+                            </div>
+                        </div>
+
+                        <div class="failure-card" data-aos="fade-right" style="display: flex; gap: 2rem; align-items: start; background: #f7fafc; padding: 2.5rem; border-radius: 20px; border-left: 6px solid #3498db;">
+                            <div style="flex-shrink: 0; width: 60px; height: 60px; border-radius: 50%; background: #3498db; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: 700;">5</div>
+                            <div>
+                                <h4 style="font-size: 1.5rem; color: #2c3e50; margin-bottom: 1rem;">No Economic Incentive for Quality</h4>
+                                <p style="color: #5d6d7e; line-height: 1.8; margin: 0;">When facilities are entirely funded by subsidies, there's no financial incentive to maintain high quality or customer satisfaction. The result: declining standards and public abandonment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Sustainable Alternative -->
+                <div class="sustainable-alternative" data-aos="zoom-in" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 4rem 3rem; border-radius: 24px; color: white; text-align: center;">
+                    <h3 style="font-size: 2.5rem; margin-bottom: 2rem;">LooCafe's Sustainable Solution</h3>
+                    <p style="font-size: 1.3rem; line-height: 1.8; margin-bottom: 2rem; opacity: 0.95;">
+                        Instead of creating "money pits," LooCafe creates <strong>self-sustaining ecosystems</strong> where:
+                    </p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                        <div>
+                            <div style="font-size: 3rem; margin-bottom: 0.5rem;">💰</div>
+                            <div style="font-weight: 600; font-size: 1.1rem;">Revenue Funds Operations</div>
+                            <p style="font-size: 0.95rem; opacity: 0.9; margin-top: 0.5rem;">Café sales cover cleaning, maintenance, and staff</p>
+                        </div>
+                        <div>
+                            <div style="font-size: 3rem; margin-bottom: 0.5rem;">👨‍💼</div>
+                            <div style="font-weight: 600; font-size: 1.1rem;">Entrepreneurs Own Quality</div>
+                            <p style="font-size: 0.95rem; opacity: 0.9; margin-top: 0.5rem;">Personal income tied to facility success</p>
+                        </div>
+                        <div>
+                            <div style="font-size: 3rem; margin-bottom: 0.5rem;">♻️</div>
+                            <div style="font-weight: 600; font-size: 1.1rem;">Perpetually Sustainable</div>
+                            <p style="font-size: 0.95rem; opacity: 0.9; margin-top: 0.5rem;">No dependency on external funding</p>
+                        </div>
+                        <div>
+                            <div style="font-size: 3rem; margin-bottom: 0.5rem;">📈</div>
+                            <div style="font-weight: 600; font-size: 1.1rem;">Scalable Impact</div>
+                            <p style="font-size: 0.95rem; opacity: 0.9; margin-top: 0.5rem;">Model replicates without endless subsidies</p>
+                        </div>
+                    </div>
+                    <p style="font-size: 1.1rem; margin-top: 2rem; opacity: 0.95; font-style: italic;">
+                        This isn't charity. It's sustainable social enterprise that transforms an infrastructure burden into an economic opportunity.
+                    </p>
                 </div>
             </div>
         </div>
@@ -308,6 +466,151 @@
             </div>
         </div>
     </section>
+
+    <!-- References Section -->
+    <section class="section" style="background: #f7fafc;">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">References & Sources</h2>
+            <p class="section-subtitle" data-aos="fade-up">All data and statistics cited on this page</p>
+
+            <div style="max-width: 900px; margin: 3rem auto 0; background: white; padding: 3rem; border-radius: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                <div style="font-family: 'Inter', sans-serif; color: #2c3e50; line-height: 1.8;">
+                    <ol style="padding-left: 1.5rem;">
+                        <li id="ref1" style="margin-bottom: 1.5rem;">
+                            <strong>Abhishek Nath - LooCafe Founder.</strong> Wikipedia. <a href="https://en.wikipedia.org/wiki/Abhishek_Nath" target="_blank" rel="noopener noreferrer" style="color: #667eea;">https://en.wikipedia.org/wiki/Abhishek_Nath</a> (Accessed November 2025)
+                        </li>
+                        <li id="ref2" style="margin-bottom: 1.5rem;">
+                            <strong>LooCafe - About the Model.</strong> LooCafe Official Website. <a href="https://www.loocafe.com/about" target="_blank" rel="noopener noreferrer" style="color: #667eea;">https://www.loocafe.com/about</a> (Accessed November 2025)
+                        </li>
+                        <li id="ref3" style="margin-bottom: 1.5rem;">
+                            <strong>Gates Foundation Partnership.</strong> DRNF Research Findings Summary (2025). LooCafe partners with Gates Foundation on public sanitation initiatives in India.
+                        </li>
+                        <li id="ref4" style="margin-bottom: 1.5rem;">
+                            <strong>UNDP Best Practice Recognition (2020).</strong> United Nations Development Programme. Recognition of LooCafe model as sanitation best practice.
+                        </li>
+                        <li id="ref5" style="margin-bottom: 1.5rem;">
+                            <strong>WASH Stewardship Award 2022.</strong> InkWASH India. Award for innovative sanitation solutions.
+                        </li>
+                        <li id="ref6" style="margin-bottom: 1.5rem;">
+                            <strong>CII Innovation Awards.</strong> Confederation of Indian Industry. LooCafe recognized twice for innovation in public sanitation.
+                        </li>
+                        <li id="ref7" style="margin-bottom: 1.5rem;">
+                            <strong>LooCafe Facilities Nationwide.</strong> DRNF Research Findings (2025). 400+ structures across 8+ Indian states including Jammu & Kashmir, Tamil Nadu, Telangana, Karnataka, Maharashtra, and others.
+                        </li>
+                        <li id="ref8" style="margin-bottom: 1.5rem;">
+                            <strong>Hyderabad LooCafe Locations.</strong> LooCafe Network Data (2025). 270+ facilities operational across Hyderabad providing 24/7 service.
+                        </li>
+                        <li id="ref9" style="margin-bottom: 1.5rem;">
+                            <strong>Employment Impact.</strong> DRNF Research (2025). LooCafe model has created 1,000+ jobs including toilet entrepreneurs and facility staff.
+                        </li>
+                        <li id="ref10" style="margin-bottom: 1.5rem;">
+                            <strong>Revenue Generation.</strong> The Better India (2021). "LooCafe generated Rs 18 crore turnover in 2 years." <a href="https://thebetterindia.com/244124/hyderabad-startup-loocafe-ixora-fm-abhishek-nath-ghmc-public-toilet-innovation-him16/" target="_blank" rel="noopener noreferrer" style="color: #667eea;">Source</a>
+                        </li>
+                        <li id="ref11" style="margin-bottom: 1.5rem;">
+                            <strong>Swachh Bharat Mission Progress.</strong> Government of India - Ministry of Jal Shakti. "Over 11.5 crore household toilets constructed since launch of Swachh Bharat Mission in 2014." Official SBM Reports (2024).
+                        </li>
+                        <li id="ref12" style="margin-bottom: 1.5rem;">
+                            <strong>Global Sanitation Statistics.</strong> WHO/UNICEF Joint Monitoring Programme for Water Supply, Sanitation and Hygiene (2021). "60% of the global population without safely managed sanitation services lives in India."
+                        </li>
+                        <li id="ref13" style="margin-bottom: 1.5rem;">
+                            <strong>Community Toilet Usage Data.</strong> Research ICT Africa & LIRNEasia (2017). "42% of community toilets remain unused due to lack of cleanliness and maintenance." Sanitation Infrastructure Study.
+                        </li>
+                        <li id="ref14" style="margin-bottom: 1.5rem;">
+                            <strong>Dr. Rabinder Nath Foundation - Free Chai Counter Launch.</strong> Telangana Today (2023). <a href="https://telanganatoday.com/charitable-trust-launches-free-chai-counter-in-hyderabad" target="_blank" rel="noopener noreferrer" style="color: #667eea;">https://telanganatoday.com/charitable-trust-launches-free-chai-counter-in-hyderabad</a>
+                        </li>
+                        <li id="ref15" style="margin-bottom: 1.5rem;">
+                            <strong>Street Hawker Transformation Stories.</strong> "28 street hawkers turned toilet entrepreneurs" documented in LooCafe impact study and book published by the organization.
+                        </li>
+                    </ol>
+
+                    <div style="margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, #f7fafc 0%, #e9ecef 100%); border-radius: 12px; border-left: 4px solid #667eea;">
+                        <h4 style="font-size: 1.2rem; margin-bottom: 1rem; color: #2c3e50;"><i class="fas fa-info-circle" style="color: #667eea; margin-right: 0.5rem;"></i> About Our Sources</h4>
+                        <p style="color: #5d6d7e; margin: 0; line-height: 1.8;">
+                            All statistics and claims on this page are backed by credible sources including government reports, international organizations (UNDP, WHO/UNICEF), news publications, and primary research conducted by Dr. Rabinder Nath Foundation in collaboration with LooCafe and Ixora Group. We are committed to transparency and evidence-based communication about our social impact work.
+                        </p>
+                        <p style="color: #5d6d7e; margin-top: 1rem; margin-bottom: 0; line-height: 1.8;">
+                            <strong>Questions about our data?</strong> Contact us at <a href="mailto:info@drnf.org" style="color: #667eea;">info@drnf.org</a> or <a href="mailto:hello@ixoragroup.com" style="color: #667eea;">hello@ixoragroup.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-title">Dr. Rabinder Nath Foundation</h3>
+                    <p class="footer-desc">
+                        Serving our community with compassion and dignity, one cup of chai at a time.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/DrRabinderNathFoundation/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/dr-rabinder-nath-foundation/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Our Initiatives</h4>
+                    <ul class="footer-links">
+                        <li><a href="chai-counters.html">Free Chai Counters</a></li>
+                        <li><a href="loocafe-impact.html">LooCafe Partnership</a></li>
+                        <li><a href="frontline-workers.html">Frontline Workers Support</a></li>
+                        <li><a href="community.html">Community Programs</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="dr-rabinder-nath.html">Dr. Rabinder Nath</a></li>
+                        <li><a href="book.html">Heritage & Books</a></li>
+                        <li><a href="transparency.html">Transparency</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Get in Touch</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Door No: 8, 2-293/82/J/A/101<br>Journalist Colony, Jubilee Hills<br>Hyderabad, Telangana 500033</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@drnf.org">info@drnf.org</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/919966906781" target="_blank" rel="noopener noreferrer">+91 9966906781</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dr. Rabinder Nath Foundation. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
