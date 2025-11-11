@@ -1,43 +1,85 @@
-# Astro Starter Kit: Minimal
+# DRNF Astro Website
 
-```sh
-npm create astro@latest -- --template minimal
+Dr. Rabinder Nath Foundation website migrated to Astro with React Islands.
+
+## 🚀 Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 📁 Project Structure
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
+```
+drnf-astro/
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── layouts/          # Page layouts
+│   ├── pages/            # Astro pages (file-based routing)
+│   ├── components/       # Reusable components
+│   │   ├── astro/        # Astro components
+│   │   ├── react/        # React Islands
+│   │   └── sections/     # Section components
+│   ├── utils/            # Utility functions
+│   └── styles/           # Global styles
+├── public/               # Static assets
+├── docs/                 # Project documentation
+└── README.md             # This file
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 📚 Documentation
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- **Project Structure**: See `docs/PROJECT_STRUCTURE.md`
+- **Quick Start Guide**: See `docs/QUICK_START.md`
+- **Organization Summary**: See `ORGANIZATION_SUMMARY.md`
+- **All Documentation**: See `docs/README.md`
 
-Any static assets, like images, can be placed in the `public/` directory.
+## 🎯 Features
 
-## 🧞 Commands
+- ✅ Astro file-based routing
+- ✅ React Islands for interactive components
+- ✅ Original CSS and JavaScript preserved
+- ✅ SEO optimized with meta tags and structured data
+- ✅ Responsive design
+- ✅ Clean URL structure
 
-All commands are run from the root of the project, from a terminal:
+## 📄 Pages
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- `/` - Home page
+- `/about` - About DRNF
+- `/contact` - Contact form
+- `/faq` - Frequently Asked Questions
+- `/chai-counters` - Free Chai Counters program
+- `/privacy-policy` - Privacy Policy
+- `/terms-of-service` - Terms of Service
+- `/book` - Heritage Book
 
-## 👀 Want to learn more?
+## 🛠️ Technology Stack
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **Astro** - Static site generator
+- **React** - Interactive components (islands)
+- **TypeScript** - Type safety
+- **Original CSS/JS** - Preserved from original site
+
+## 📝 Development
+
+See `docs/` folder for detailed documentation on:
+- Component usage
+- Navigation structure
+- Project setup
+- Development reports
+
+## 🌐 Deployment
+
+The site is configured for GitHub Pages deployment via GitHub Actions.
+
+See `.github/workflows/deploy.yml` for deployment configuration.

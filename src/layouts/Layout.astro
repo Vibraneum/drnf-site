@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+// import { ViewTransitions } from 'astro:transitions';  // Disabled for performance optimization (15KB JS overhead)
 import SEO from '../components/astro/SEO.astro';
 import StructuredData from '../components/astro/StructuredData.astro';
 import '../styles/global.css';
@@ -101,8 +101,8 @@ const fullTitle = title.includes('Dr. Rabinder Nath Foundation') ? title : `${ti
       });
     </script>
 
-    <!-- View Transitions -->
-    <ViewTransitions />
+    <!-- View Transitions - DISABLED for performance -->
+    <!-- <ViewTransitions /> -->
 </head>
 <body>
     <!-- Main Content Slot -->

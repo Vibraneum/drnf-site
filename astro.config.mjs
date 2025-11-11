@@ -8,7 +8,25 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   integrations: [react()],
 
+  // Performance optimizations
+  output: 'static',
+  prefetch: true,
+  build: {
+    inlineStylesheets: 'auto',
+    format: 'file',
+    assets: 'assets'
+  },
+
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    build: {
+      minify: 'terser',
+      sourcemap: false,
+      rollupOptions: {
+        output: {
+          manualChunks: undefined
+        }
+      }
+    }
   }
 });
