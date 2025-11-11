@@ -1,0 +1,739 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/astro/Header.astro';
+import Footer from '../components/astro/Footer.astro';
+
+const pageTitle = 'LooCafe Social Impact Partnership | Dr. Rabinder Nath Foundation';
+const pageDescription = 'Discover how the LooCafe model creates sustainable public sanitation, empowers 1000+ entrepreneurs, and partners with DRNF to serve communities across Hyderabad.';
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Header activePage="loocafe-impact" />
+  
+<section class="page-hero" style="background-image: linear-gradient(135deg, rgba(102,126,234,0.9) 0%, rgba(118,75,162,0.8) 100%), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=80');">
+        <!-- PLACEHOLDER: Asset #1 - Replace with actual LooCafe facility photo -->
+        <div class="container">
+            <h1 data-aos="fade-up">The LooCafe Revolution</h1>
+            <p data-aos="fade-up" data-aos-delay="200">Transforming public sanitation into sustainable community impact through innovation and dignity</p>
+        </div>
+    </section>
+
+    <!-- What is LooCafe Section -->
+    <section class="section" style="background: white;">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">What is LooCafe?</h2>
+            <p class="section-subtitle" data-aos="fade-up">A revolutionary model combining public sanitation, entrepreneurship, and community service</p>
+            
+            <div class="content-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 3rem;">
+                <div data-aos="fade-right">
+                    <img src="https://res.cloudinary.com/dhupieu4x/image/upload/f_auto,q_auto:good/drnf-assets/drnf-assets/loocafe-exhibition-booth.jpg" alt="Ixora Corporate Services - LooCafe exhibition booth showcasing public toilet solutions" style="border-radius: 24px; box-shadow: 0 12px 40px rgba(102,126,234,0.2);">
+                </div>
+                <div data-aos="fade-left">
+                    <h3 style="font-size: 2rem; margin-bottom: 1.5rem; color: #2c3e50;">Sustainable Public Toilets Built from Shipping Containers</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: #5d6d7e; margin-bottom: 1.5rem;">
+                        Founded in 2018 by <strong>Abhishek Nath</strong>,<sup><a href="#ref1" style="text-decoration: none; color: #667eea;">1</a></sup> LooCafe revolutionizes public sanitation in India by converting shipping containers into modern, clean, and accessible toilet facilities with attached cafes or points of sale.<sup><a href="#ref2" style="text-decoration: none; color: #667eea;">2</a></sup>
+                    </p>
+                    <div class="feature-list">
+                        <div class="feature-item" style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                            <div style="flex-shrink: 0; width: 50px; height: 50px; border-radius: 12px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white;">
+                                <i class="fas fa-recycle"></i>
+                            </div>
+                            <div>
+                                <h4 style="color: #2c3e50; margin-bottom: 0.5rem;">Eco-Friendly Design</h4>
+                                <p style="color: #7f8c8d; margin: 0;">Recycled shipping containers reduce waste and construction costs</p>
+                            </div>
+                        </div>
+                        <div class="feature-item" style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                            <div style="flex-shrink: 0; width: 50px; height: 50px; border-radius: 12px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white;">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <div>
+                                <h4 style="color: #2c3e50; margin-bottom: 0.5rem;">Attached Cafe/Kiosk</h4>
+                                <p style="color: #7f8c8d; margin: 0;">Revenue-generating point of sale sustains free toilet access</p>
+                            </div>
+                        </div>
+                        <div class="feature-item" style="display: flex; gap: 1rem;">
+                            <div style="flex-shrink: 0; width: 50px; height: 50px; border-radius: 12px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white;">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 style="color: #2c3e50; margin-bottom: 0.5rem;">24/7 Accessibility</h4>
+                                <p style="color: #7f8c8d; margin: 0;">Always open, always clean, always dignified</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gates Foundation Partnership -->
+    <section class="section" style="background: linear-gradient(135deg, #f7fafc 0%, #e9ecef 100%);">
+        <div class="container">
+            <div class="partnership-badge" data-aos="zoom-in" style="text-align: center; margin-bottom: 3rem;">
+                <div style="display: inline-block; padding: 1rem 2rem; background: white; border-radius: 50px; box-shadow: 0 8px 24px rgba(102,126,234,0.15);">
+                    <i class="fas fa-handshake" style="color: #667eea; font-size: 2rem; margin-right: 1rem;"></i>
+                    <span style="font-size: 1.3rem; font-weight: 600; color: #2c3e50;">Gates Foundation Partner</span>
+                </div>
+            </div>
+
+            <h2 class="section-title" data-aos="fade-up">Recognized Global Impact</h2>
+            <p class="section-subtitle" data-aos="fade-up">LooCafe partners with the Gates Foundation on public sanitation,<sup><a href="#ref3" style="text-decoration: none; color: #667eea;">3</a></sup> bringing world-class facilities to Indian cities</p>
+            
+            <div class="awards-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div class="award-card" data-aos="fade-up" style="background: white; padding: 2rem; border-radius: 20px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                    <div style="font-size: 3rem; color: #667eea; margin-bottom: 1rem;">🏆</div>
+                    <h4 style="color: #2c3e50; margin-bottom: 0.5rem;">UNDP Recognition</h4>
+                    <p style="color: #7f8c8d; margin: 0;">Featured as best practice (2020)<sup><a href="#ref4" style="text-decoration: none; color: #667eea;">4</a></sup></p>
+                </div>
+                <div class="award-card" data-aos="fade-up" data-aos-delay="100" style="background: white; padding: 2rem; border-radius: 20px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                    <div style="font-size: 3rem; color: #667eea; margin-bottom: 1rem;">🌟</div>
+                    <h4 style="color: #2c3e50; margin-bottom: 0.5rem;">WASH Stewardship Award</h4>
+                    <p style="color: #7f8c8d; margin: 0;">InkWASH 2022<sup><a href="#ref5" style="text-decoration: none; color: #667eea;">5</a></sup></p>
+                </div>
+                <div class="award-card" data-aos="fade-up" data-aos-delay="200" style="background: white; padding: 2rem; border-radius: 20px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                    <div style="font-size: 3rem; color: #667eea; margin-bottom: 1rem;">🎖️</div>
+                    <h4 style="color: #2c3e50; margin-bottom: 0.5rem;">CII Award Winner</h4>
+                    <p style="color: #7f8c8d; margin: 0;">Twice recognized for innovation<sup><a href="#ref6" style="text-decoration: none; color: #667eea;">6</a></sup></p>
+                </div>
+                <div class="award-card" data-aos="fade-up" data-aos-delay="300" style="background: white; padding: 2rem; border-radius: 20px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                    <div style="font-size: 3rem; color: #667eea; margin-bottom: 1rem;">🇮🇳</div>
+                    <h4 style="color: #2c3e50; margin-bottom: 0.5rem;">Swachh Bharat</h4>
+                    <p style="color: #7f8c8d; margin: 0;">Supporting national mission</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact by Numbers -->
+    <section class="section" style="background: white;">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Impact by the Numbers</h2>
+            <p class="section-subtitle" data-aos="fade-up">Creating sustainable livelihoods while solving India's sanitation challenge</p>
+            
+            <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-top: 4rem;">
+                <div class="stat-card" data-aos="zoom-in" style="text-align: center;">
+                    <div class="stat-number" style="font-size: 4rem; font-weight: 700; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">400+</div>
+                    <div class="stat-label" style="font-size: 1.2rem; color: #2c3e50; font-weight: 600;">Facilities Nationwide</div>
+                    <p style="color: #7f8c8d; margin-top: 0.5rem;">Across 8+ states in India<sup><a href="#ref7" style="text-decoration: none; color: #667eea;">7</a></sup></p>
+                </div>
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="100" style="text-align: center;">
+                    <div class="stat-number" style="font-size: 4rem; font-weight: 700; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">270+</div>
+                    <div class="stat-label" style="font-size: 1.2rem; color: #2c3e50; font-weight: 600;">Hyderabad Locations</div>
+                    <p style="color: #7f8c8d; margin-top: 0.5rem;">Serving the city 24/7<sup><a href="#ref8" style="text-decoration: none; color: #667eea;">8</a></sup></p>
+                </div>
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="200" style="text-align: center;">
+                    <div class="stat-number" style="font-size: 4rem; font-weight: 700; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">1,000+</div>
+                    <div class="stat-label" style="font-size: 1.2rem; color: #2c3e50; font-weight: 600;">Jobs Created</div>
+                    <p style="color: #7f8c8d; margin-top: 0.5rem;">Entrepreneurs & staff employed<sup><a href="#ref9" style="text-decoration: none; color: #667eea;">9</a></sup></p>
+                </div>
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="300" style="text-align: center;">
+                    <div class="stat-number" style="font-size: 4rem; font-weight: 700; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">₹18Cr+</div>
+                    <div class="stat-label" style="font-size: 1.2rem; color: #2c3e50; font-weight: 600;">Annual Revenue</div>
+                    <p style="color: #7f8c8d; margin-top: 0.5rem;">Sustainable business model<sup><a href="#ref10" style="text-decoration: none; color: #667eea;">10</a></sup></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Sustainable Model -->
+    <section class="section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+        <div class="container">
+            <h2 class="section-title" style="color: white;" data-aos="fade-up">How the Model Works</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);" data-aos="fade-up">A self-sustaining cycle of dignity, employment, and community service</p>
+            
+            <div class="model-flow" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 4rem;">
+                <div class="flow-step" data-aos="fade-up" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); padding: 2.5rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2);">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">1️⃣</div>
+                    <h4 style="font-size: 1.5rem; margin-bottom: 1rem;">Build Facility</h4>
+                    <p>Convert shipping container into modern toilet + cafe kiosk</p>
+                </div>
+                <div class="flow-step" data-aos="fade-up" data-aos-delay="100" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); padding: 2.5rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2);">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">2️⃣</div>
+                    <h4 style="font-size: 1.5rem; margin-bottom: 1rem;">Empower Entrepreneur</h4>
+                    <p>Train local person to run facility, often street vendor or unemployed worker</p>
+                </div>
+                <div class="flow-step" data-aos="fade-up" data-aos-delay="200" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); padding: 2.5rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2);">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">3️⃣</div>
+                    <h4 style="font-size: 1.5rem; margin-bottom: 1rem;">Generate Revenue</h4>
+                    <p>Cafe sales (chai, snacks) create sustainable income</p>
+                </div>
+                <div class="flow-step" data-aos="fade-up" data-aos-delay="300" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); padding: 2.5rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2);">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">4️⃣</div>
+                    <h4 style="font-size: 1.5rem; margin-bottom: 1rem;">Serve Community</h4>
+                    <p>Free/low-cost toilet access for all, maintained by revenue</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Toilet Sustainability Crisis -->
+    <section class="section" style="background: white;">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Why Most Public Toilets Fail</h2>
+            <p class="section-subtitle" data-aos="fade-up">The sustainability crisis in India's public sanitation infrastructure</p>
+
+            <div style="max-width: 900px; margin: 3rem auto 0;">
+                <div class="crisis-intro" data-aos="fade-up" style="background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%); padding: 3rem; border-radius: 24px; margin-bottom: 3rem;">
+                    <h3 style="font-size: 2rem; margin-bottom: 1.5rem; color: #2c3e50;">The "Money Pit" Problem</h3>
+                    <p style="font-size: 1.2rem; line-height: 1.8; color: #2c3e50; margin-bottom: 1.5rem;">
+                        India has made remarkable progress building public toilets under the Swachh Bharat Mission—over 11.5 crore household toilets constructed since 2014.<sup><a href="#ref11" style="text-decoration: none; color: #667eea;">11</a></sup> Yet a critical challenge remains largely unsolved: <strong>sustainability</strong>.
+                    </p>
+                    <p style="font-size: 1.2rem; line-height: 1.8; color: #2c3e50; margin: 0;">
+                        Most public toilets become what experts call <strong>"money pits"</strong>—requiring endless funding for maintenance, cleaning, and operations with no sustainable revenue model to support them.
+                    </p>
+                </div>
+
+                <!-- The Statistics -->
+                <div class="crisis-stats" style="margin-bottom: 4rem;">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 2rem; color: #2c3e50; text-align: center;" data-aos="fade-up">India's Sanitation Reality</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                        <div class="crisis-stat-card" data-aos="flip-left" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 2.5rem; border-radius: 20px; color: white; text-align: center;">
+                            <div style="font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem;">60%</div>
+                            <p style="font-size: 1.1rem; margin: 0;">of the global population without safely managed sanitation lives in India<sup><a href="#ref12" style="text-decoration: none; color: white;">12</a></sup></p>
+                        </div>
+                        <div class="crisis-stat-card" data-aos="flip-left" data-aos-delay="100" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2.5rem; border-radius: 20px; color: white; text-align: center;">
+                            <div style="font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem;">42%</div>
+                            <p style="font-size: 1.1rem; margin: 0;">of community toilets remain unused due to poor maintenance<sup><a href="#ref13" style="text-decoration: none; color: white;">13</a></sup></p>
+                        </div>
+                        <div class="crisis-stat-card" data-aos="flip-left" data-aos-delay="200" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 2.5rem; border-radius: 20px; color: white; text-align: center;">
+                            <div style="font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem;">~₹0</div>
+                            <p style="font-size: 1.1rem; margin: 0;">Revenue generated by traditional public toilets (perpetual funding dependency)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Why Traditional Models Fail -->
+                <div class="failure-reasons" style="margin-bottom: 4rem;">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 2rem; color: #2c3e50; text-align: center;" data-aos="fade-up">Why Traditional Public Toilets Become "Money Pits"</h3>
+
+                    <div style="display: grid; gap: 2rem;">
+                        <div class="failure-card" data-aos="fade-right" style="display: flex; gap: 2rem; align-items: start; background: #f7fafc; padding: 2.5rem; border-radius: 20px; border-left: 6px solid #e74c3c;">
+                            <div style="flex-shrink: 0; width: 60px; height: 60px; border-radius: 50%; background: #e74c3c; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: 700;">1</div>
+                            <div>
+                                <h4 style="font-size: 1.5rem; color: #2c3e50; margin-bottom: 1rem;">No Revenue Model</h4>
+                                <p style="color: #5d6d7e; line-height: 1.8; margin: 0;">Traditional public toilets rely entirely on government or NGO funding. There's no mechanism to generate income, creating perpetual dependency on external budgets that often get cut or delayed.</p>
+                            </div>
+                        </div>
+
+                        <div class="failure-card" data-aos="fade-left" style="display: flex; gap: 2rem; align-items: start; background: #f7fafc; padding: 2.5rem; border-radius: 20px; border-left: 6px solid #e67e22;">
+                            <div style="flex-shrink: 0; width: 60px; height: 60px; border-radius: 50%; background: #e67e22; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: 700;">2</div>
+                            <div>
+                                <h4 style="font-size: 1.5rem; color: #2c3e50; margin-bottom: 1rem;">Maintenance Crisis</h4>
+                                <p style="color: #5d6d7e; line-height: 1.8; margin: 0;">Without dedicated operational funding, cleaning and maintenance become irregular. Studies show that 42% of community toilets remain unused specifically due to poor maintenance and lack of cleanliness.<sup><a href="#ref13" style="text-decoration: none; color: #667eea;">13</a></sup></p>
+                            </div>
+                        </div>
+
+                        <div class="failure-card" data-aos="fade-right" style="display: flex; gap: 2rem; align-items: start; background: #f7fafc; padding: 2.5rem; border-radius: 20px; border-left: 6px solid #f39c12;">
+                            <div style="flex-shrink: 0; width: 60px; height: 60px; border-radius: 50%; background: #f39c12; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: 700;">3</div>
+                            <div>
+                                <h4 style="font-size: 1.5rem; color: #2c3e50; margin-bottom: 1rem;">No Ownership or Accountability</h4>
+                                <p style="color: #5d6d7e; line-height: 1.8; margin: 0;">Government-built toilets often lack clear operational ownership. Multiple agencies may be involved in construction, but none take long-term responsibility for daily operations and quality standards.</p>
+                            </div>
+                        </div>
+
+                        <div class="failure-card" data-aos="fade-left" style="display: flex; gap: 2rem; align-items: start; background: #f7fafc; padding: 2.5rem; border-radius: 20px; border-left: 6px solid #9b59b6;">
+                            <div style="flex-shrink: 0; width: 60px; height: 60px; border-radius: 50%; background: #9b59b6; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: 700;">4</div>
+                            <div>
+                                <h4 style="font-size: 1.5rem; color: #2c3e50; margin-bottom: 1rem;">Deterioration Cycle</h4>
+                                <p style="color: #5d6d7e; line-height: 1.8; margin: 0;">Build → Deteriorate → Rebuild. Traditional models follow an endless cycle of construction, decay, and reconstruction, wasting public resources rather than creating sustainable infrastructure.</p>
+                            </div>
+                        </div>
+
+                        <div class="failure-card" data-aos="fade-right" style="display: flex; gap: 2rem; align-items: start; background: #f7fafc; padding: 2.5rem; border-radius: 20px; border-left: 6px solid #3498db;">
+                            <div style="flex-shrink: 0; width: 60px; height: 60px; border-radius: 50%; background: #3498db; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: 700;">5</div>
+                            <div>
+                                <h4 style="font-size: 1.5rem; color: #2c3e50; margin-bottom: 1rem;">No Economic Incentive for Quality</h4>
+                                <p style="color: #5d6d7e; line-height: 1.8; margin: 0;">When facilities are entirely funded by subsidies, there's no financial incentive to maintain high quality or customer satisfaction. The result: declining standards and public abandonment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Sustainable Alternative -->
+                <div class="sustainable-alternative" data-aos="zoom-in" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 4rem 3rem; border-radius: 24px; color: white; text-align: center;">
+                    <h3 style="font-size: 2.5rem; margin-bottom: 2rem;">LooCafe's Sustainable Solution</h3>
+                    <p style="font-size: 1.3rem; line-height: 1.8; margin-bottom: 2rem; opacity: 0.95;">
+                        Instead of creating "money pits," LooCafe creates <strong>self-sustaining ecosystems</strong> where:
+                    </p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                        <div>
+                            <div style="font-size: 3rem; margin-bottom: 0.5rem;">💰</div>
+                            <div style="font-weight: 600; font-size: 1.1rem;">Revenue Funds Operations</div>
+                            <p style="font-size: 0.95rem; opacity: 0.9; margin-top: 0.5rem;">Café sales cover cleaning, maintenance, and staff</p>
+                        </div>
+                        <div>
+                            <div style="font-size: 3rem; margin-bottom: 0.5rem;">👨‍💼</div>
+                            <div style="font-weight: 600; font-size: 1.1rem;">Entrepreneurs Own Quality</div>
+                            <p style="font-size: 0.95rem; opacity: 0.9; margin-top: 0.5rem;">Personal income tied to facility success</p>
+                        </div>
+                        <div>
+                            <div style="font-size: 3rem; margin-bottom: 0.5rem;">♻️</div>
+                            <div style="font-weight: 600; font-size: 1.1rem;">Perpetually Sustainable</div>
+                            <p style="font-size: 0.95rem; opacity: 0.9; margin-top: 0.5rem;">No dependency on external funding</p>
+                        </div>
+                        <div>
+                            <div style="font-size: 3rem; margin-bottom: 0.5rem;">📈</div>
+                            <div style="font-weight: 600; font-size: 1.1rem;">Scalable Impact</div>
+                            <p style="font-size: 0.95rem; opacity: 0.9; margin-top: 0.5rem;">Model replicates without endless subsidies</p>
+                        </div>
+                    </div>
+                    <p style="font-size: 1.1rem; margin-top: 2rem; opacity: 0.95; font-style: italic;">
+                        This isn't charity. It's sustainable social enterprise that transforms an infrastructure burden into an economic opportunity.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="section" style="background: white;">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Stories of Transformation</h2>
+            <p class="section-subtitle" data-aos="fade-up">From street vendors to dignified entrepreneurs</p>
+            
+            <div class="stories-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem; margin-top: 4rem;">
+                <div class="story-card" data-aos="fade-up" style="background: linear-gradient(145deg, #ffffff 0%, #f7fafc 100%); padding: 3rem; border-radius: 24px; box-shadow: 0 8px 32px rgba(102,126,234,0.15);">
+                    <!-- PLACEHOLDER: Asset #5 - Worker portrait -->
+                    <div style="width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); margin: 0 auto 2rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                        👩‍💼
+                    </div>
+                    <h4 style="font-size: 1.8rem; color: #2c3e50; text-align: center; margin-bottom: 1rem;">Kalavathi's Journey</h4>
+                    <p style="color: #5d6d7e; line-height: 1.8; text-align: center; margin-bottom: 1.5rem;">
+                        "I was selling flowers on the street for 15 years. LooCafe gave me training, a facility to run, and a dignified livelihood. Now I earn steady income and my children can go to school."
+                    </p>
+                    <div style="text-align: center; padding-top: 1.5rem; border-top: 2px solid #e9ecef;">
+                        <strong style="color: #667eea;">Toilet Entrepreneur since 2019</strong>
+                    </div>
+                </div>
+                
+                <div class="story-card" data-aos="fade-up" data-aos-delay="100" style="background: linear-gradient(145deg, #ffffff 0%, #f7fafc 100%); padding: 3rem; border-radius: 24px; box-shadow: 0 8px 32px rgba(102,126,234,0.15);">
+                    <div style="width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); margin: 0 auto 2rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                        👨‍💼
+                    </div>
+                    <h4 style="font-size: 1.8rem; color: #2c3e50; text-align: center; margin-bottom: 1rem;">Vijay Kumar's Success</h4>
+                    <p style="color: #5d6d7e; line-height: 1.8; text-align: center; margin-bottom: 1.5rem;">
+                        "From daily wage labor to running my own LooCafe. The training program taught me business skills, and now I serve my community with pride. This changed my family's future."
+                    </p>
+                    <div style="text-align: center; padding-top: 1.5rem; border-top: 2px solid #e9ecef;">
+                        <strong style="color: #667eea;">Entrepreneur & Business Owner</strong>
+                    </div>
+                </div>
+                
+                <div class="story-card" data-aos="fade-up" data-aos-delay="200" style="background: linear-gradient(145deg, #ffffff 0%, #f7fafc 100%); padding: 3rem; border-radius: 24px; box-shadow: 0 8px 32px rgba(102,126,234,0.15);">
+                    <div style="width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); margin: 0 auto 2rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                        📖
+                    </div>
+                    <h4 style="font-size: 1.8rem; color: #2c3e50; text-align: center; margin-bottom: 1rem;">28 More Stories</h4>
+                    <p style="color: #5d6d7e; line-height: 1.8; text-align: center; margin-bottom: 1.5rem;">
+                        A comprehensive book documents the journeys of 28 street hawkers who transformed into dignified toilet entrepreneurs through the LooCafe model, each story a testament to sustainable social impact.
+                    </p>
+                    <div style="text-align: center; padding-top: 1.5rem; border-top: 2px solid #e9ecef;">
+                        <strong style="color: #667eea;">Documented Impact</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daily Impact: Who We Serve -->
+    <section class="section" style="background: white;">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Who Benefits Every Day</h2>
+            <p class="section-subtitle" data-aos="fade-up">Real people, real dignity, real impact - 24 hours a day, 365 days a year</p>
+
+            <div class="beneficiary-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div class="beneficiary-card" data-aos="fade-up" style="background: linear-gradient(145deg, #fff5f5 0%, #ffffff 100%); padding: 2rem; border-radius: 16px; border-left: 4px solid #e74c3c;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🚗</div>
+                    <h4 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 1rem;">Auto & Taxi Drivers</h4>
+                    <p style="color: var(--text-secondary); line-height: 1.7;">On the road for 12+ hours daily, LooCafes provide clean restroom access and free chai from DRNF counters keeps them refreshed and going.</p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #f0f0f0;">
+                        <strong style="color: #e74c3c;">Impact: 150-200 drivers daily</strong>
+                    </div>
+                </div>
+
+                <div class="beneficiary-card" data-aos="fade-up" data-aos-delay="100" style="background: linear-gradient(145deg, #f0f9ff 0%, #ffffff 100%); padding: 2rem; border-radius: 16px; border-left: 4px solid #3498db;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">👷</div>
+                    <h4 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 1rem;">Construction Workers</h4>
+                    <p style="color: var(--text-secondary); line-height: 1.7;">Daily wage laborers building our city often lack access to clean toilets. LooCafes restore their dignity, DRNF chai provides warmth.</p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #f0f0f0;">
+                        <strong style="color: #3498db;">Impact: 100-150 workers daily</strong>
+                    </div>
+                </div>
+
+                <div class="beneficiary-card" data-aos="fade-up" data-aos-delay="200" style="background: linear-gradient(145deg, #f0fdf4 0%, #ffffff 100%); padding: 2rem; border-radius: 16px; border-left: 4px solid #27ae60;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🧹</div>
+                    <h4 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 1rem;">Sanitation Staff</h4>
+                    <p style="color: var(--text-secondary); line-height: 1.7;">Municipal and private sanitation workers keeping Hyderabad clean rely on LooCafe facilities and DRNF's free chai service during long shifts.</p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #f0f0f0;">
+                        <strong style="color: #27ae60;">Impact: 80-100 workers daily</strong>
+                    </div>
+                </div>
+
+                <div class="beneficiary-card" data-aos="fade-up" data-aos-delay="300" style="background: linear-gradient(145deg, #fef3f2 0%, #ffffff 100%); padding: 2rem; border-radius: 16px; border-left: 4px solid #f39c12;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">👵</div>
+                    <h4 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 1rem;">Homeless & Vulnerable</h4>
+                    <p style="color: var(--text-secondary); line-height: 1.7;">Those without a home find safety, cleanliness, and hot chai at our locations. No questions asked, just compassion.</p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #f0f0f0;">
+                        <strong style="color: #f39c12;">Impact: 60-80 people daily</strong>
+                    </div>
+                </div>
+
+                <div class="beneficiary-card" data-aos="fade-up" data-aos-delay="400" style="background: linear-gradient(145deg, #faf5ff 0%, #ffffff 100%); padding: 2rem; border-radius: 16px; border-left: 4px solid #9b59b6;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🛵</div>
+                    <h4 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 1rem;">Delivery Partners</h4>
+                    <p style="color: var(--text-secondary); line-height: 1.7;">Food delivery, e-commerce riders covering 100+ km daily find quick restroom access and refreshment at LooCafe-DRNF locations.</p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #f0f0f0;">
+                        <strong style="color: #9b59b6;">Impact: 50-70 riders daily</strong>
+                    </div>
+                </div>
+
+                <div class="beneficiary-card" data-aos="fade-up" data-aos-delay="500" style="background: linear-gradient(145deg, #fffbeb 0%, #ffffff 100%); padding: 2rem; border-radius: 16px; border-left: 4px solid #e67e22;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">👨‍👩‍👧</div>
+                    <h4 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 1rem;">Families & Travelers</h4>
+                    <p style="color: var(--text-secondary); line-height: 1.7;">Parents with young children, elderly travelers, anyone in need of clean, safe facilities - all welcome, all served with dignity.</p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #f0f0f0;">
+                        <strong style="color: #e67e22;">Impact: 60-100 people daily</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="total-impact" data-aos="zoom-in" style="margin-top: 4rem; padding: 3rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 24px; text-align: center; color: white;">
+                <h3 style="font-size: 2.5rem; margin-bottom: 1rem; color: white;">Total Daily Reach</h3>
+                <div style="font-size: 4.5rem; font-weight: 700; margin-bottom: 1rem;">500-600</div>
+                <p style="font-size: 1.3rem; margin-bottom: 1.5rem; opacity: 0.95;">People served EVERY SINGLE DAY across our 2 free chai counter locations</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2);">
+                    <div>
+                        <div style="font-size: 2.5rem; font-weight: 700;">116,800+</div>
+                        <div>Cups of Chai Served (To Date)</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 2.5rem; font-weight: 700;">730</div>
+                        <div>Consecutive Days of Service</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 2.5rem; font-weight: 700;">24/7</div>
+                        <div>Always Open, Always Caring</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DRNF Partnership -->
+    <section class="section" style="background: linear-gradient(135deg, #f7fafc 0%, #e9ecef 100%);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">How DRNF Leverages LooCafe Infrastructure</h2>
+            <p class="section-subtitle" data-aos="fade-up">Combining world-class sanitation infrastructure with compassionate community service</p>
+            
+            <div class="partnership-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 3rem;">
+                <div data-aos="fade-right">
+                    <h3 style="font-size: 2rem; color: #2c3e50; margin-bottom: 1.5rem;">Free Chai Counters Integration</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: #5d6d7e; margin-bottom: 1.5rem;">
+                        Dr. Rabinder Nath Foundation operates <strong>2 free chai counters</strong> within the LooCafe network, using the established infrastructure to serve <strong>500-600 people daily</strong> with dignity and compassion.
+                    </p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 1rem; background: white; border-radius: 12px; margin-bottom: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                            <i class="fas fa-check-circle" style="color: #26de81; margin-right: 0.5rem;"></i>
+                            <strong>Strategic Locations:</strong> Placed at high-footfall LooCafe sites
+                        </li>
+                        <li style="padding: 1rem; background: white; border-radius: 12px; margin-bottom: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                            <i class="fas fa-check-circle" style="color: #26de81; margin-right: 0.5rem;"></i>
+                            <strong>Shared Infrastructure:</strong> Leveraging existing facilities reduces costs
+                        </li>
+                        <li style="padding: 1rem; background: white; border-radius: 12px; margin-bottom: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                            <i class="fas fa-check-circle" style="color: #26de81; margin-right: 0.5rem;"></i>
+                            <strong>Dignity Maintained:</strong> Clean, safe environment for beneficiaries
+                        </li>
+                        <li style="padding: 1rem; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                            <i class="fas fa-check-circle" style="color: #26de81; margin-right: 0.5rem;"></i>
+                            <strong>24/7 Operations:</strong> Always available when people need it most
+                        </li>
+                    </ul>
+                </div>
+                <div data-aos="fade-left">
+                    <img src="https://res.cloudinary.com/dhupieu4x/image/upload/f_auto,q_auto:good/drnf-assets/drnf-assets/IMG-20250119-WA0056.jpg" alt="Swachh Telangana Swachh Hyderabad - LooCafe with Public Toilet Usage Guidelines" style="border-radius: 24px; box-shadow: 0 12px 40px rgba(102,126,234,0.2); width: 100%;">
+                    <p style="text-align: center; margin-top: 1rem; font-style: italic; color: #5d6d7e; font-size: 0.95rem;">LooCafe facility under Swachh Telangana initiative with public awareness signage</p>
+                </div>
+            </div>
+            
+            <div class="impact-callout" data-aos="zoom-in" style="margin-top: 4rem; padding: 3rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 24px; text-align: center; color: white;">
+                <h3 style="font-size: 2.5rem; margin-bottom: 1rem;">Combined Impact</h3>
+                <p style="font-size: 1.3rem; margin-bottom: 2rem; opacity: 0.95;">
+                    LooCafe provides the infrastructure. DRNF provides the compassion. Together, we transform lives.
+                </p>
+                <div style="display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap;">
+                    <div>
+                        <div style="font-size: 3rem; font-weight: 700;">116,800+</div>
+                        <div style="font-size: 1.1rem;">Cups of Chai Served</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 3rem; font-weight: 700;">270+</div>
+                        <div style="font-size: 1.1rem;">LooCafe Locations Available</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 3rem; font-weight: 700;">365</div>
+                        <div style="font-size: 1.1rem;">Days of Service</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Complete Impact Ecosystem -->
+    <section class="section" style="background: linear-gradient(to bottom, white 0%, #f7fafc 100%);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">The Complete Impact Ecosystem</h2>
+            <p class="section-subtitle" data-aos="fade-up">How infrastructure, entrepreneurship, and compassion come together to transform lives</p>
+
+            <div class="ecosystem-diagram" style="margin-top: 4rem;">
+                <!-- Central Hub -->
+                <div class="ecosystem-hub" data-aos="zoom-in" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 3rem; border-radius: 24px; text-align: center; color: white; margin-bottom: 3rem;">
+                    <h3 style="font-size: 2.5rem; margin-bottom: 1rem; color: white;">Sustainable Social Impact Model</h3>
+                    <p style="font-size: 1.2rem; opacity: 0.95; max-width: 800px; margin: 0 auto;">LooCafe provides infrastructure. Entrepreneurs gain livelihoods. DRNF adds free service. Communities receive dignity. A self-sustaining cycle of positive change.</p>
+                </div>
+
+                <!-- Four Pillars -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                    <div class="pillar-card" data-aos="fade-up" style="background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); border-top: 4px solid #667eea;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: white; font-size: 2rem;">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h4 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 1rem;">Infrastructure Layer</h4>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.7;">LooCafe: 400+ facilities providing clean, dignified sanitation and entrepreneurship opportunities</p>
+                        <div style="background: #f7fafc; padding: 1rem; border-radius: 12px;">
+                            <strong style="color: #667eea;">Contribution:</strong> Physical assets, 24/7 operations, technology monitoring
+                        </div>
+                    </div>
+
+                    <div class="pillar-card" data-aos="fade-up" data-aos-delay="100" style="background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); border-top: 4px solid #27ae60;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #27ae60 0%, #229954 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: white; font-size: 2rem;">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h4 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 1rem;">Entrepreneurship Layer</h4>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.7;">1,000+ jobs created, transforming street vendors into dignified business owners</p>
+                        <div style="background: #f0fdf4; padding: 1rem; border-radius: 12px;">
+                            <strong style="color: #27ae60;">Contribution:</strong> Sustainable livelihoods, skills training, business ownership
+                        </div>
+                    </div>
+
+                    <div class="pillar-card" data-aos="fade-up" data-aos-delay="200" style="background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); border-top: 4px solid #e74c3c;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: white; font-size: 2rem;">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 1rem;">Compassion Layer</h4>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.7;">DRNF: 500-600 people served daily with free chai, no conditions, just care</p>
+                        <div style="background: #fff5f5; padding: 1rem; border-radius: 12px;">
+                            <strong style="color: #e74c3c;">Contribution:</strong> Free service, community support, donation drives
+                        </div>
+                    </div>
+
+                    <div class="pillar-card" data-aos="fade-up" data-aos-delay="300" style="background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); border-top: 4px solid #f39c12;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: white; font-size: 2rem;">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 1rem;">Community Layer</h4>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.7;">Thousands of beneficiaries gain access to dignity, cleanliness, and support</p>
+                        <div style="background: #fffbeb; padding: 1rem; border-radius: 12px;">
+                            <strong style="color: #f39c12;">Contribution:</strong> Restored dignity, improved health, community connection
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Why This Model Works -->
+                <div class="model-explanation" data-aos="fade-up" style="background: white; padding: 3rem; border-radius: 20px; box-shadow: 0 8px 32px rgba(0,0,0,0.1);">
+                    <h3 style="font-size: 2rem; color: var(--primary-color); text-align: center; margin-bottom: 2rem;">Why This Model Works</h3>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+                        <div>
+                            <h4 style="color: #e74c3c; margin-bottom: 1rem; font-size: 1.5rem;">Traditional Charity Model ❌</h4>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0; color: var(--text-secondary); display: flex; align-items: start;">
+                                    <i class="fas fa-times-circle" style="color: #e74c3c; margin-right: 0.75rem; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                    <span>Depends on continuous donations</span>
+                                </li>
+                                <li style="padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0; color: var(--text-secondary); display: flex; align-items: start;">
+                                    <i class="fas fa-times-circle" style="color: #e74c3c; margin-right: 0.75rem; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                    <span>Doesn't create employment</span>
+                                </li>
+                                <li style="padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0; color: var(--text-secondary); display: flex; align-items: start;">
+                                    <i class="fas fa-times-circle" style="color: #e74c3c; margin-right: 0.75rem; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                    <span>Limited scalability</span>
+                                </li>
+                                <li style="padding: 0.75rem 0; color: var(--text-secondary); display: flex; align-items: start;">
+                                    <i class="fas fa-times-circle" style="color: #e74c3c; margin-right: 0.75rem; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                    <span>Single-purpose impact only</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 style="color: #27ae60; margin-bottom: 1rem; font-size: 1.5rem;">LooCafe-DRNF Model ✅</h4>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0; color: var(--text-secondary); display: flex; align-items: start;">
+                                    <i class="fas fa-check-circle" style="color: #27ae60; margin-right: 0.75rem; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                    <span>Self-sustaining revenue from cafe sales</span>
+                                </li>
+                                <li style="padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0; color: var(--text-secondary); display: flex; align-items: start;">
+                                    <i class="fas fa-check-circle" style="color: #27ae60; margin-right: 0.75rem; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                    <span>Creates 1,000+ dignified jobs</span>
+                                </li>
+                                <li style="padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0; color: var(--text-secondary); display: flex; align-items: start;">
+                                    <i class="fas fa-check-circle" style="color: #27ae60; margin-right: 0.75rem; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                    <span>Highly scalable (400+ locations, growing)</span>
+                                </li>
+                                <li style="padding: 0.75rem 0; color: var(--text-secondary); display: flex; align-items: start;">
+                                    <i class="fas fa-check-circle" style="color: #27ae60; margin-right: 0.75rem; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                    <span>Multi-layered impact (sanitation + jobs + free service + dignity)</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%); border-radius: 16px; text-align: center;">
+                        <h4 style="color: var(--primary-color); font-size: 1.8rem; margin-bottom: 1rem;">The Result</h4>
+                        <p style="font-size: 1.2rem; color: var(--text-secondary); line-height: 1.9; max-width: 800px; margin: 0 auto;">
+                            A virtuous cycle where <strong>business sustainability enables social impact</strong>, which builds community goodwill, which supports business growth, which enables even greater social impact. This is the future of charitable work.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Expansion Vision -->
+                <div class="vision-section" data-aos="fade-up" style="margin-top: 4rem; padding: 3rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 24px; color: white; text-align: center;">
+                    <h3 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: white;">The Vision: Scaling Impact</h3>
+                    <p style="font-size: 1.3rem; margin-bottom: 2rem; opacity: 0.95; max-width: 900px; margin-left: auto; margin-right: auto;">
+                        LooCafe has <strong>270+ locations in Hyderabad</strong> and <strong>400+ nationwide</strong>. DRNF currently operates <strong>2 free chai counters</strong>. Imagine the potential.
+                    </p>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                        <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 2rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.2);">
+                            <div style="font-size: 3rem; margin-bottom: 0.5rem;">🎯</div>
+                            <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem;">30 Counters</div>
+                            <p style="opacity: 0.95;">Short-term goal (2-3 years)</p>
+                            <p style="margin-top: 1rem; opacity: 0.9; font-size: 0.95rem;">7,500-9,000 people served daily</p>
+                        </div>
+
+                        <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 2rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.2);">
+                            <div style="font-size: 3rem; margin-bottom: 0.5rem;">🚀</div>
+                            <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem;">100 Counters</div>
+                            <p style="opacity: 0.95;">Medium-term goal (5 years)</p>
+                            <p style="margin-top: 1rem; opacity: 0.9; font-size: 0.95rem;">25,000-30,000 people served daily</p>
+                        </div>
+
+                        <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 2rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.2);">
+                            <div style="font-size: 3rem; margin-bottom: 0.5rem;">⭐</div>
+                            <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem;">270+ Counters</div>
+                            <p style="opacity: 0.95;">Ultimate vision (10 years)</p>
+                            <p style="margin-top: 1rem; opacity: 0.9; font-size: 0.95rem;">Every LooCafe = free chai, transforming Hyderabad</p>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 3rem; font-size: 1.2rem; opacity: 0.95; max-width: 700px; margin-left: auto; margin-right: auto;">
+                        <strong>This isn't just a dream. It's a scalable, proven model.</strong> Every new counter is another 250-300 lives touched daily. Join us in building this future.
+                    </p>
+
+                    <div style="margin-top: 2rem;">
+                        <a href="/frontline-workers" style="display: inline-block; padding: 1rem 2.5rem; background: white; color: #667eea; border-radius: 50px; font-weight: 600; text-decoration: none; margin: 0.5rem; box-shadow: 0 8px 24px rgba(0,0,0,0.2);">Learn About Frontline Workers Support</a>
+                        <a href="/contact" style="display: inline-block; padding: 1rem 2.5rem; background: rgba(255,255,255,0.2); color: white; border-radius: 50px; font-weight: 600; text-decoration: none; margin: 0.5rem; border: 2px solid white;">Partner With Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="section-title" data-aos="fade-up">Support This Sustainable Model</h2>
+                <p class="section-subtitle" data-aos="fade-up">Help us expand proven, sustainable sanitation and community service across more locations</p>
+                <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
+                    <a href="/contact" class="btn btn-primary btn-large">Partner With Us</a>
+                    <a href="/chai-counters" class="btn btn-secondary btn-large">Visit Chai Counters</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- References Section -->
+    <section class="section" style="background: #f7fafc;">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">References & Sources</h2>
+            <p class="section-subtitle" data-aos="fade-up">All data and statistics cited on this page</p>
+
+            <div style="max-width: 900px; margin: 3rem auto 0; background: white; padding: 3rem; border-radius: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                <div style="font-family: 'Inter', sans-serif; color: #2c3e50; line-height: 1.8;">
+                    <ol style="padding-left: 1.5rem;">
+                        <li id="ref1" style="margin-bottom: 1.5rem;">
+                            <strong>Abhishek Nath - LooCafe Founder.</strong> Wikipedia. <a href="https://en.wikipedia.org/wiki/Abhishek_Nath" target="_blank" rel="noopener noreferrer" style="color: #667eea;">https://en.wikipedia.org/wiki/Abhishek_Nath</a> (Accessed November 2025)
+                        </li>
+                        <li id="ref2" style="margin-bottom: 1.5rem;">
+                            <strong>LooCafe - About the Model.</strong> LooCafe Official Website. <a href="https://www.loocafe.com/about" target="_blank" rel="noopener noreferrer" style="color: #667eea;">https://www.loocafe.com/about</a> (Accessed November 2025)
+                        </li>
+                        <li id="ref3" style="margin-bottom: 1.5rem;">
+                            <strong>Gates Foundation Partnership.</strong> DRNF Research Findings Summary (2025). LooCafe partners with Gates Foundation on public sanitation initiatives in India.
+                        </li>
+                        <li id="ref4" style="margin-bottom: 1.5rem;">
+                            <strong>UNDP Best Practice Recognition (2020).</strong> United Nations Development Programme. Recognition of LooCafe model as sanitation best practice.
+                        </li>
+                        <li id="ref5" style="margin-bottom: 1.5rem;">
+                            <strong>WASH Stewardship Award 2022.</strong> InkWASH India. Award for innovative sanitation solutions.
+                        </li>
+                        <li id="ref6" style="margin-bottom: 1.5rem;">
+                            <strong>CII Innovation Awards.</strong> Confederation of Indian Industry. LooCafe recognized twice for innovation in public sanitation.
+                        </li>
+                        <li id="ref7" style="margin-bottom: 1.5rem;">
+                            <strong>LooCafe Facilities Nationwide.</strong> DRNF Research Findings (2025). 400+ structures across 8+ Indian states including Jammu & Kashmir, Tamil Nadu, Telangana, Karnataka, Maharashtra, and others.
+                        </li>
+                        <li id="ref8" style="margin-bottom: 1.5rem;">
+                            <strong>Hyderabad LooCafe Locations.</strong> LooCafe Network Data (2025). 270+ facilities operational across Hyderabad providing 24/7 service.
+                        </li>
+                        <li id="ref9" style="margin-bottom: 1.5rem;">
+                            <strong>Employment Impact.</strong> DRNF Research (2025). LooCafe model has created 1,000+ jobs including toilet entrepreneurs and facility staff.
+                        </li>
+                        <li id="ref10" style="margin-bottom: 1.5rem;">
+                            <strong>Revenue Generation.</strong> The Better India (2021). "LooCafe generated Rs 18 crore turnover in 2 years." <a href="https://thebetterindia.com/244124/hyderabad-startup-loocafe-ixora-fm-abhishek-nath-ghmc-public-toilet-innovation-him16/" target="_blank" rel="noopener noreferrer" style="color: #667eea;">Source</a>
+                        </li>
+                        <li id="ref11" style="margin-bottom: 1.5rem;">
+                            <strong>Swachh Bharat Mission Progress.</strong> Government of India - Ministry of Jal Shakti. "Over 11.5 crore household toilets constructed since launch of Swachh Bharat Mission in 2014." Official SBM Reports (2024).
+                        </li>
+                        <li id="ref12" style="margin-bottom: 1.5rem;">
+                            <strong>Global Sanitation Statistics.</strong> WHO/UNICEF Joint Monitoring Programme for Water Supply, Sanitation and Hygiene (2021). "60% of the global population without safely managed sanitation services lives in India."
+                        </li>
+                        <li id="ref13" style="margin-bottom: 1.5rem;">
+                            <strong>Community Toilet Usage Data.</strong> Research ICT Africa & LIRNEasia (2017). "42% of community toilets remain unused due to lack of cleanliness and maintenance." Sanitation Infrastructure Study.
+                        </li>
+                        <li id="ref14" style="margin-bottom: 1.5rem;">
+                            <strong>Dr. Rabinder Nath Foundation - Free Chai Counter Launch.</strong> Telangana Today (2023). <a href="https://telanganatoday.com/charitable-trust-launches-free-chai-counter-in-hyderabad" target="_blank" rel="noopener noreferrer" style="color: #667eea;">https://telanganatoday.com/charitable-trust-launches-free-chai-counter-in-hyderabad</a>
+                        </li>
+                        <li id="ref15" style="margin-bottom: 1.5rem;">
+                            <strong>Street Hawker Transformation Stories.</strong> "28 street hawkers turned toilet entrepreneurs" documented in LooCafe impact study and book published by the organization.
+                        </li>
+                    </ol>
+
+                    <div style="margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, #f7fafc 0%, #e9ecef 100%); border-radius: 12px; border-left: 4px solid #667eea;">
+                        <h4 style="font-size: 1.2rem; margin-bottom: 1rem; color: #2c3e50;"><i class="fas fa-info-circle" style="color: #667eea; margin-right: 0.5rem;"></i> About Our Sources</h4>
+                        <p style="color: #5d6d7e; margin: 0; line-height: 1.8;">
+                            All statistics and claims on this page are backed by credible sources including government reports, international organizations (UNDP, WHO/UNICEF), news publications, and primary research conducted by Dr. Rabinder Nath Foundation in collaboration with LooCafe and Ixora Group. We are committed to transparency and evidence-based communication about our social impact work.
+                        </p>
+                        <p style="color: #5d6d7e; margin-top: 1rem; margin-bottom: 0; line-height: 1.8;">
+                            <strong>Questions about our data?</strong> Contact us at <a href="mailto:info@drnf.org" style="color: #667eea;">info@drnf.org</a> or <a href="mailto:hello@ixoragroup.com" style="color: #667eea;">hello@ixoragroup.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+  <Footer />
+</Layout>
+
+<script>
+  // Current year in footer
+  if (typeof document !== 'undefined') {
+    const yearElement = document.getElementById('current-year');
+    if (yearElement) {
+      yearElement.textContent = new Date().getFullYear();
+    }
+  }
+</script>
