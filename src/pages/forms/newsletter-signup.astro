@@ -1,11 +1,15 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/astro/Header.astro';
+import Footer from '../../components/astro/Footer.astro';
 
 const pageTitle = 'Newsletter Signup | Dr. Rabinder Nath Foundation';
 const pageDescription = 'Get the latest updates on DRNF initiatives, impact stories, and upcoming events.';
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
+  <Header activePage="" />
+  
 <div class="form-page">
         <div class="form-container">
             <div class="form-header">
@@ -94,12 +98,13 @@ const pageDescription = 'Get the latest updates on DRNF initiatives, impact stor
 <style>
   /* Form Page Styles */
   .form-page {
-    min-height: 100vh;
+    min-height: calc(100vh - 200px);
     background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 2rem;
+    margin-top: 0;
   }
 
   .form-container {
@@ -334,6 +339,8 @@ const pageDescription = 'Get the latest updates on DRNF initiatives, impact stor
     }
   }
 </style>
+
+  <Footer />
 </Layout>
 
 <script>

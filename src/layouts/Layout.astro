@@ -2,6 +2,8 @@
 // import { ViewTransitions } from 'astro:transitions';  // Disabled for performance optimization (15KB JS overhead)
 import SEO from '../components/astro/SEO.astro';
 import StructuredData from '../components/astro/StructuredData.astro';
+import Header from '../components/astro/Header.astro';
+import Footer from '../components/astro/Footer.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -12,6 +14,8 @@ interface Props {
   canonicalUrl?: string;
   pageType?: string;
   structuredData?: object;
+  activePage?: string;
+  noHeaderFooter?: boolean; // For special pages like 404
 }
 
 const {
@@ -21,7 +25,9 @@ const {
   ogImage = 'https://res.cloudinary.com/dhupieu4x/image/upload/v1762599287/drnf-assets/drnf-assets/DRNF_logo.jpg',
   canonicalUrl,
   pageType = 'website',
-  structuredData
+  structuredData,
+  activePage = '',
+  noHeaderFooter = false
 } = Astro.props;
 
 const currentUrl = canonicalUrl || `https://drnf.org${Astro.url.pathname}`;
@@ -105,10 +111,16 @@ const fullTitle = title.includes('Dr. Rabinder Nath Foundation') ? title : `${ti
     <!-- <ViewTransitions /> -->
 </head>
 <body>
+    <!-- Header (unless disabled for special pages like 404) -->
+    {!noHeaderFooter && <Header activePage={activePage} />}
+
     <!-- Main Content Slot -->
     <main>
       <slot />
     </main>
+
+    <!-- Footer (unless disabled for special pages like 404) -->
+    {!noHeaderFooter && <Footer />}
 
     <!-- AOS Animation Initialization -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

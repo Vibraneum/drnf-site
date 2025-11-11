@@ -1,14 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/astro/Header.astro';
-import Footer from '../components/astro/Footer.astro';
 
 const pageTitle = 'LooCafe Social Impact Partnership | Dr. Rabinder Nath Foundation';
 const pageDescription = 'Discover how the LooCafe model creates sustainable public sanitation, empowers 1000+ entrepreneurs, and partners with DRNF to serve communities across Hyderabad.';
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
-  <Header activePage="loocafe-impact" />
   
 <section class="page-hero" style="background-image: linear-gradient(135deg, rgba(102,126,234,0.9) 0%, rgba(118,75,162,0.8) 100%), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=80');">
         <!-- PLACEHOLDER: Asset #1 - Replace with actual LooCafe facility photo -->
@@ -725,8 +722,71 @@ const pageDescription = 'Discover how the LooCafe model creates sustainable publ
         </div>
     </section>
   
-  <Footer />
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  
 </Layout>
+
+<style>
+  .back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+  
+  .back-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  }
+  
+  @media (max-width: 768px) {
+    .back-to-top {
+      bottom: 1.5rem;
+      right: 1.5rem;
+      width: 45px;
+      height: 45px;
+    }
+  }
+</style>
+
+<script>
+  // Back to top button functionality
+  if (typeof document !== 'undefined') {
+    const backToTopBtn = document.getElementById('backToTop');
+    if (backToTopBtn) {
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+          backToTopBtn.style.display = 'flex';
+        } else {
+          backToTopBtn.style.display = 'none';
+        }
+      });
+      
+      backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    }
+  }
+</script>
 
 <script>
   // Current year in footer

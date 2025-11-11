@@ -1,14 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/astro/Header.astro';
-import Footer from '../components/astro/Footer.astro';
 
 const pageTitle = 'FAQ - Dr. Rabinder Nath Foundation | Common Questions About Our Work';
 const pageDescription = "Frequently asked questions about DRNF's free chai counters, volunteer opportunities, donation process, and community programs in Hyderabad.";
 ---
 
-<Layout title={pageTitle} description={pageDescription}>
-  <Header activePage="faq" />
+<Layout title={pageTitle} description={pageDescription} activePage="faq">
   
 <section class="page-hero">
         <div class="container">
@@ -335,7 +332,6 @@ const pageDescription = "Frequently asked questions about DRNF's free chai count
     <i class="fas fa-arrow-up"></i>
   </button>
 
-  <Footer />
 </Layout>
 
 <script>

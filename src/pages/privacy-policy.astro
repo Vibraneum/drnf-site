@@ -1,14 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/astro/Header.astro';
-import Footer from '../components/astro/Footer.astro';
 
 const pageTitle = 'Privacy Policy - Dr. Rabinder Nath Foundation';
 const pageDescription = 'Privacy Policy for Dr. Rabinder Nath Foundation, detailing how we collect, use, and protect your personal information.';
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
-  <Header activePage="privacy-policy" />
   
 <!-- Header -->
         <div class="privacy-header" data-aos="fade-up">
@@ -261,7 +258,6 @@ const pageDescription = 'Privacy Policy for Dr. Rabinder Nath Foundation, detail
     <i class="fas fa-arrow-up"></i>
   </button>
 
-  <Footer />
 </Layout>
 
 <script>

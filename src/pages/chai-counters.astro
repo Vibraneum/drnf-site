@@ -1,14 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/astro/Header.astro';
-import Footer from '../components/astro/Footer.astro';
 
 const pageTitle = 'Free Chai Counters | Dr. Rabinder Nath Foundation';
 const pageDescription = 'DRNF operates 2 free chai counters in Hyderabad at KBR Park, LV Prasad, and Basavatarakam junctions, serving 500-600 people daily. Operating 9 AM to 9 PM, 365 days since July 2021.';
 ---
 
-<Layout title={pageTitle} description={pageDescription}>
-  <Header activePage="chai-counters" />
+<Layout title={pageTitle} description={pageDescription} activePage="chai-counters">
   
 <section class="page-hero">
         <div class="container">
@@ -341,8 +338,6 @@ const pageDescription = 'DRNF operates 2 free chai counters in Hyderabad at KBR 
   <button class="back-to-top" id="backToTop" aria-label="Back to top">
     <i class="fas fa-arrow-up"></i>
   </button>
-
-  <Footer />
 </Layout>
 
 <script>

@@ -1,14 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/astro/Header.astro';
-import Footer from '../components/astro/Footer.astro';
 
 const pageTitle = 'Supporting Frontline Workers | Dr. Rabinder Nath Foundation';
 const pageDescription = "DRNF's support for frontline facility management workers - donation drives, COVID-19 response, and family support through Ixora Corporate Services partnership.";
 ---
 
-<Layout title={pageTitle} description={pageDescription}>
-  <Header activePage="frontline-workers" />
+<Layout title={pageTitle} description={pageDescription} activePage="frontline-workers">
   
 <section class="page-hero" style="background: linear-gradient(135deg, rgba(44, 85, 48, 0.95) 0%, rgba(139, 69, 19, 0.9) 100%), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1920&q=80') center/cover; min-height: 60vh; display: flex; align-items: center; justify-content: center;">
         <div class="container" style="text-align: center;">
@@ -420,8 +417,71 @@ const pageDescription = "DRNF's support for frontline facility management worker
         </div>
     </section>
   
-  <Footer />
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  
 </Layout>
+
+<style>
+  .back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+  
+  .back-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  }
+  
+  @media (max-width: 768px) {
+    .back-to-top {
+      bottom: 1.5rem;
+      right: 1.5rem;
+      width: 45px;
+      height: 45px;
+    }
+  }
+</style>
+
+<script>
+  // Back to top button functionality
+  if (typeof document !== 'undefined') {
+    const backToTopBtn = document.getElementById('backToTop');
+    if (backToTopBtn) {
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+          backToTopBtn.style.display = 'flex';
+        } else {
+          backToTopBtn.style.display = 'none';
+        }
+      });
+      
+      backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    }
+  }
+</script>
 
 <script>
   // Current year in footer

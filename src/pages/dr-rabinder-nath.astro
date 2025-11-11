@@ -1,14 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/astro/Header.astro';
-import Footer from '../components/astro/Footer.astro';
 
 const pageTitle = 'Dr. Rabinder Nath - Dental Surgeon, Philanthropist, Pioneer | DRNF';
 const pageDescription = 'Comprehensive biography of Dr. Rabinder Nath (1951-present) - pioneering dental surgeon, rural healthcare innovator, and philanthropist.';
 ---
 
-<Layout title={pageTitle} description={pageDescription}>
-  <Header activePage="dr-rabinder-nath" />
+<Layout title={pageTitle} description={pageDescription} activePage="dr-rabinder-nath">
   
 <section class="page-header">
         <div class="container">
@@ -614,7 +611,11 @@ const pageDescription = 'Comprehensive biography of Dr. Rabinder Nath (1951-pres
         </div>
     </section>
   
-  <Footer />
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  
 </Layout>
 
 <style>
@@ -735,6 +736,41 @@ const pageDescription = 'Comprehensive biography of Dr. Rabinder Nath (1951-pres
     border-radius: 8px;
     display: inline-block;
   }
+
+  /* Back to top button */
+  .back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+  
+  .back-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  }
+  
+  @media (max-width: 768px) {
+    .back-to-top {
+      bottom: 1.5rem;
+      right: 1.5rem;
+      width: 45px;
+      height: 45px;
+    }
+  }
 </style>
 
 <script>
@@ -789,5 +825,24 @@ const pageDescription = 'Comprehensive biography of Dr. Rabinder Nath (1951-pres
     // Update on scroll
     window.addEventListener('scroll', updateActiveSection);
     updateActiveSection(); // Initial call
+
+    // Back to top button functionality
+    const backToTopBtn = document.getElementById('backToTop');
+    if (backToTopBtn) {
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+          backToTopBtn.style.display = 'flex';
+        } else {
+          backToTopBtn.style.display = 'none';
+        }
+      });
+      
+      backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    }
   }
 </script>

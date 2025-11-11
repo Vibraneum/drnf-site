@@ -1,14 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/astro/Header.astro';
-import Footer from '../components/astro/Footer.astro';
 
 const pageTitle = 'Heritage Book | Dr. Rabinder Nath Foundation';
 const pageDescription = 'Explore the heritage book documenting the life and legacy of Dr. Rabinder Nath and the founding story of DRNF.';
 ---
 
-<Layout title={pageTitle} description={pageDescription}>
-  <Header activePage="book" />
+<Layout title={pageTitle} description={pageDescription} activePage="book">
   
 <section class="book-hero">
         <div class="container">
@@ -3850,7 +3847,6 @@ const pageDescription = 'Explore the heritage book documenting the life and lega
     <i class="fas fa-arrow-up"></i>
   </button>
 
-  <Footer />
 </Layout>
 
 <script>

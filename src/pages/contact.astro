@@ -1,14 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/astro/Header.astro';
-import Footer from '../components/astro/Footer.astro';
 
 const pageTitle = 'Contact Us | Dr. Rabinder Nath Foundation';
 const pageDescription = 'Get in touch with Dr. Rabinder Nath Foundation. Contact us to volunteer, support our mission, or learn more about our community programs in Hyderabad.';
 ---
 
-<Layout title={pageTitle} description={pageDescription}>
-  <Header activePage="contact" />
+<Layout title={pageTitle} description={pageDescription} activePage="contact">
   
 <section class="page-hero">
         <div class="container">
@@ -222,8 +219,6 @@ const pageDescription = 'Get in touch with Dr. Rabinder Nath Foundation. Contact
   <button class="back-to-top" id="backToTop" aria-label="Back to top">
     <i class="fas fa-arrow-up"></i>
   </button>
-
-  <Footer />
 </Layout>
 
 <script src="/js/formValidation.js" is:inline></script>
