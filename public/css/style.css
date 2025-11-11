@@ -3211,26 +3211,34 @@ img {
     }
 }
 
-/* Enhanced Main Navigation */
+/* Enhanced Main Navigation - INFLUENTIAL DESIGN */
 .enhanced-nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    box-shadow: var(--shadow-sm);
+    background: linear-gradient(to bottom, rgba(255,255,255,0.98), rgba(255,255,255,0.95));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
     z-index: 1000;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-bottom: 1px solid rgba(44, 85, 48, 0.08);
 }
 
 .enhanced-nav.with-top-bar {
     top: 48px;
 }
 
+/* Shrink header on scroll for more content focus */
 .enhanced-nav.scrolled {
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: var(--shadow-md);
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12);
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(44, 85, 48, 0.12);
+}
+
+.enhanced-nav.scrolled .nav-container-enhanced {
+    min-height: 70px;
 }
 
 .nav-container-enhanced {
@@ -3243,13 +3251,14 @@ img {
     min-height: 80px;
 }
 
-/* Logo Section - Enhanced */
+/* Logo Section - Enhanced with Influence */
 .nav-logo-enhanced {
     display: flex;
     align-items: center;
     gap: 1rem;
     text-decoration: none;
     flex-shrink: 0;
+    transition: transform 0.3s ease;
 }
 
 .nav-logo-enhanced .logo-img {
@@ -3259,11 +3268,18 @@ img {
     box-shadow: var(--shadow-md);
     border: 3px solid #D4B258;
     transition: var(--transition-smooth);
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.nav-logo-enhanced:hover {
+    transform: scale(1.05);
 }
 
 .nav-logo-enhanced:hover .logo-img {
     transform: scale(1.05);
     box-shadow: var(--shadow-lg);
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+    border-color: #2c5530;
 }
 
 .nav-brand-text {
@@ -3302,21 +3318,43 @@ img {
     align-items: center;
     gap: 0.5rem;
     color: var(--text-primary);
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1rem;
     text-decoration: none;
     padding: 0.5rem 0;
-    transition: var(--transition-smooth);
+    transition: all 0.3s ease;
     cursor: pointer;
 }
 
-.nav-link-enhanced:hover {
-    color: #D4B258;
+/* Premium underline effect */
+.nav-link-enhanced::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #2c5530, #3d7545);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
 }
 
+.nav-link-enhanced:hover {
+    color: #2c5530;
+}
+
+.nav-link-enhanced:hover::after {
+    width: 100%;
+}
+
+/* Make active page obvious */
 .nav-link-enhanced.active {
-    color: #2c5530; /* Forest green for active state */
+    color: #2c5530;
     font-weight: 600;
+}
+
+.nav-link-enhanced.active::after {
+    width: 100%;
 }
 
 .nav-dropdown-trigger {
@@ -3391,19 +3429,32 @@ img {
     color: white;
 }
 
-/* Mega Menu Container */
+/* Mega Menu Container - Premium Feel */
 .mega-menu {
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
     background: white;
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    border-top: 3px solid #2c5530;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 999;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .mega-menu.active {
@@ -3517,28 +3568,29 @@ img {
     gap: 1rem;
     color: var(--text-secondary);
     text-decoration: none;
-    padding: 0.75rem;
+    padding: 0.75rem 1rem;
     border-radius: 8px;
-    transition: var(--transition-smooth);
+    transition: all 0.2s ease;
     group: hover;
 }
 
+/* Mega menu links with influence */
 .mega-menu-link:hover {
-    background: rgba(212, 178, 88, 0.1);
-    color: var(--text-primary);
-    transform: translateX(5px);
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    color: #2c5530;
+    transform: translateX(4px);
 }
 
 .mega-menu-icon {
     font-size: 1.5rem;
     color: #6b7280;
-    transition: var(--transition-smooth);
+    transition: transform 0.2s ease;
     min-width: 24px;
 }
 
 .mega-menu-link:hover .mega-menu-icon {
-    color: #D4B258;
-    transform: scale(1.1);
+    color: #2c5530;
+    transform: scale(1.1) rotate(5deg);
 }
 
 .mega-menu-text {
@@ -3583,17 +3635,23 @@ img {
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Mobile Menu Overlay */
+/* Mobile Menu Overlay - Full Screen Impact */
 .mobile-menu-overlay {
     position: fixed;
     top: 0;
     right: -100%;
     width: 100%;
     height: 100vh;
-    background: white;
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
     z-index: 9999;
     transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     overflow-y: auto;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .mobile-menu-overlay.active {
@@ -3625,6 +3683,16 @@ img {
 
 .mobile-menu-body {
     padding: 1.5rem;
+    animation: slideInRight 0.4s ease;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 .mobile-menu-item {
@@ -3715,20 +3783,24 @@ img {
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding: 1.1rem 1.5rem;
+    padding: 1.25rem 2rem;
     color: var(--text-primary);
     text-decoration: none;
     font-size: 1.05rem;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     border-radius: 12px;
     margin-bottom: 0.5rem;
+    border-left: 3px solid transparent;
 }
 
-.mobile-menu-item-clean:hover {
-    background: var(--background-light);
+/* Mobile menu items with influence */
+.mobile-menu-item-clean:hover,
+.mobile-menu-item-clean:active {
+    background: linear-gradient(90deg, rgba(44,85,48,0.1), transparent);
     color: var(--primary-color);
-    transform: translateX(5px);
+    transform: translateX(4px);
+    border-left-color: #2c5530;
 }
 
 .mobile-menu-item-clean i {
@@ -3748,7 +3820,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.1rem 1.5rem;
+    padding: 1.25rem 2rem;
     background: var(--background-light);
     border: none;
     border-radius: 12px;
@@ -3769,12 +3841,19 @@ img {
     color: white;
 }
 
+/* Accordion sections with smooth transitions */
+.mobile-section-header-clean[aria-expanded="true"] {
+    color: #2c5530;
+    background: rgba(44,85,48,0.05);
+}
+
 .mobile-chevron {
     font-size: 0.9rem;
     transition: transform 0.3s ease, color 0.3s ease;
     color: var(--text-secondary);
 }
 
+.mobile-section-header-clean[aria-expanded="true"] .mobile-chevron,
 .mobile-section-header-clean.active .mobile-chevron {
     transform: rotate(180deg);
 }
@@ -3783,7 +3862,7 @@ img {
 .mobile-section-content-clean {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, margin 0.3s ease;
     opacity: 0;
     margin-top: 0;
 }
@@ -3881,42 +3960,47 @@ img {
     }
 }
 
-/* Enhanced CTA Button Styling */
+/* Enhanced CTA Button - IRRESISTIBLE */
 .nav-cta-enhanced {
-    background: linear-gradient(135deg, #2c5530 0%, #1a7e22 100%);
+    background: linear-gradient(135deg, #2c5530, #3d7545);
     color: white;
-    padding: 0.7rem 1.8rem !important;
-    border-radius: 8px;
+    padding: 0.75rem 2rem !important;
+    border-radius: 50px;
     font-weight: 600;
     font-size: 0.95rem;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(44, 85, 48, 0.3);
     position: relative;
     overflow: hidden;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    text-decoration: none;
 }
 
+/* Ripple effect on hover */
 .nav-cta-enhanced::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-    transition: left 0.5s ease;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
 }
 
 .nav-cta-enhanced:hover::before {
-    left: 100%;
+    width: 300px;
+    height: 300px;
 }
 
 .nav-cta-enhanced:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 25px rgba(44, 85, 48, 0.4);
-    background: linear-gradient(135deg, #1a7e22 0%, #2c5530 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(44, 85, 48, 0.3);
+    color: white;
 }
 
 .nav-cta-enhanced:active {
@@ -4012,6 +4096,18 @@ body.mobile-menu-open {
 
 .mega-menu-card:hover .arrow-circle {
     animation: arrowRotate 0.3s ease forwards;
+}
+
+/* Scroll Progress Indicator */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #2c5530, #f39c12);
+    z-index: 10000;
+    transition: width 0.1s linear;
+    width: 0;
 }
 
 /* ========================================
@@ -4666,5 +4762,222 @@ body.mobile-menu-open {
 
     .share-btn span {
         display: none;
+    }
+}
+/* ===================================
+   ENHANCED NAVIGATION ANIMATIONS
+   =================================== */
+
+/* Smooth entrance animation for enhanced nav */
+.enhanced-nav {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.3s ease,
+                box-shadow 0.3s ease,
+                background 0.3s ease;
+}
+
+/* Chevron rotation animation for mega menus */
+.nav-dropdown-trigger .chevron {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Mega menu smooth entrance */
+.mega-menu {
+    transition: opacity 0.3s ease,
+                visibility 0.3s ease,
+                transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(-10px);
+}
+
+.mega-menu.active {
+    transform: translateY(0);
+}
+
+/* Mobile menu overlay smooth slide-in */
+.mobile-menu-overlay {
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.3s ease;
+    opacity: 0;
+}
+
+.mobile-menu-overlay.active {
+    opacity: 1;
+}
+
+/* Mobile accordion smooth expand/collapse */
+.mobile-section-content-clean {
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.3s ease,
+                margin 0.3s ease,
+                padding 0.3s ease;
+}
+
+.mobile-section-content-clean.active {
+    padding-top: 0.5rem;
+}
+
+/* Mobile chevron rotation */
+.mobile-chevron {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                color 0.3s ease;
+}
+
+/* Hover effects for navigation links */
+.nav-link-enhanced {
+    position: relative;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-link-enhanced::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    transform: translateX(-50%);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link-enhanced:hover::after,
+.nav-link-enhanced.active::after {
+    width: 100%;
+}
+
+.nav-link-enhanced:hover {
+    transform: translateY(-2px);
+}
+
+/* CTA button hover effect */
+.nav-cta-enhanced {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-cta-enhanced::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.nav-cta-enhanced:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.nav-cta-enhanced:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(44, 85, 48, 0.3);
+}
+
+/* Mobile menu links hover effects */
+.mobile-menu-item-clean,
+.mobile-link-clean {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Mega menu card hover animation */
+.mega-menu-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mega-menu-card:hover {
+    transform: translateY(-5px) scale(1.02);
+}
+
+/* Scroll progress bar */
+.scroll-progress {
+    transition: width 0.1s ease, opacity 0.3s ease;
+}
+
+/* Body scroll lock for mobile menu */
+body.mobile-menu-open {
+    overflow: hidden !important;
+    position: fixed;
+    width: 100%;
+}
+
+/* Entrance animation for nav items */
+@keyframes navItemEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pulse animation for important CTAs */
+@keyframes ctaPulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(44, 85, 48, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(44, 85, 48, 0);
+    }
+}
+
+.nav-cta-enhanced {
+    animation: ctaPulse 2s ease-in-out infinite;
+}
+
+.nav-cta-enhanced:hover {
+    animation: none;
+}
+
+/* Smooth scrolling for whole page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading state for navigation (optional) */
+.enhanced-nav.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Focus states for accessibility */
+.nav-link-enhanced:focus,
+.nav-cta-enhanced:focus,
+.mobile-menu-toggle:focus,
+.mobile-section-header-clean:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .mega-menu {
+        border: 2px solid currentColor;
+    }
+
+    .mobile-menu-overlay {
+        border-left: 2px solid currentColor;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .enhanced-nav {
+        transform: none !important;
     }
 }

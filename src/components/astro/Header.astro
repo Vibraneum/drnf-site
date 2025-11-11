@@ -1,22 +1,15 @@
 ---
+import MobileNav from '../react/MobileNav';
+
 /**
  * Header Component - DRNF Website Navigation
  *
- * Complete navigation header extracted from current DRNF website (index.html lines 150-420)
- *
- * Features:
- * - Desktop navigation with mega menus (About, Our Programs)
- * - Mobile hamburger menu with expandable accordion sections
- * - Sticky header with glassmorphism effect
- * - Active page highlighting
- * - "Our Story" CTA button (per CLAUDE.md: NOT "Volunteer Today")
- * - Social media links in mobile menu
- *
- * Props:
- * - activePage (optional): Current active page identifier for highlighting
- *
- * Note: This component preserves the exact navigation structure from the current site.
- * Mobile menu interactivity (accordion toggles) handled by existing /js/main.js
+ * Redesigned with Ixora Group-style navigation:
+ * - Hover-based mega menus (smooth transitions, no box opening)
+ * - Icons for all navigation links
+ * - Comprehensive navigation with more backlinks
+ * - React-powered mobile menu with full client-side interactivity
+ * - Smooth, polished UX
  */
 
 interface Props {
@@ -26,7 +19,6 @@ interface Props {
 const { activePage = '' } = Astro.props;
 const currentPath = Astro.url.pathname;
 
-// Helper function to check if current page matches
 const isActive = (path: string) => {
   if (path === '/' || path === '/index.html') {
     return currentPath === '/' || currentPath === '/index.html' || currentPath === '/index';
@@ -34,6 +26,22 @@ const isActive = (path: string) => {
   return currentPath.includes(path.replace('.html', ''));
 };
 ---
+
+<!-- Top Contact Bar (Desktop Only) -->
+<div class="top-bar-enhanced">
+    <div class="container">
+        <div class="top-bar-content">
+            <a href="tel:+919966906781" class="top-bar-link">
+                <i class="fas fa-phone"></i>
+                <span>Call us on <strong>+91 99669 06781</strong></span>
+            </a>
+            <a href="https://wa.me/919966906781" target="_blank" rel="noopener" class="top-bar-link">
+                <i class="fab fa-whatsapp"></i>
+                <span>Chat on <strong>WhatsApp</strong></span>
+            </a>
+        </div>
+    </div>
+</div>
 
 <!-- Main Enhanced Navigation -->
 <nav class="enhanced-nav" id="enhancedNav">
@@ -60,25 +68,47 @@ const isActive = (path: string) => {
                     href="/"
                     class:list={["nav-link-enhanced", { active: isActive('/') }]}
                 >
-                    Home
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
                 </a>
             </li>
 
             <!-- About Dropdown -->
-            <li>
-                <div
+            <li class="nav-dropdown-wrapper">
+                <a
+                    href="/about"
                     class:list={[
                         "nav-link-enhanced",
                         "nav-dropdown-trigger",
-                        { active: activePage === "about" }
+                        { active: activePage === "about" || isActive('/about') || isActive('/dr-rabinder-nath') || isActive('/book') }
                     ]}
                     data-menu="about-mega-menu"
                 >
+                    <i class="fas fa-info-circle"></i>
                     <span>About</span>
-                    <svg class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16">
+                    <svg class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="14" height="14">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
-                </div>
+                </a>
+            </li>
+
+            <!-- Programs Dropdown -->
+            <li class="nav-dropdown-wrapper">
+                <a
+                    href="/chai-counters"
+                    class:list={[
+                        "nav-link-enhanced",
+                        "nav-dropdown-trigger",
+                        { active: activePage === "programs" || isActive('/chai-counters') || isActive('/community') || isActive('/loocafe-impact') || isActive('/frontline-workers') }
+                    ]}
+                    data-menu="programs-mega-menu"
+                >
+                    <i class="fas fa-hands-helping"></i>
+                    <span>Our Programs</span>
+                    <svg class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="14" height="14">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </a>
             </li>
 
             <li>
@@ -86,25 +116,19 @@ const isActive = (path: string) => {
                     href="/book"
                     class:list={["nav-link-enhanced", { active: isActive('/book') }]}
                 >
-                    Heritage Book
+                    <i class="fas fa-book"></i>
+                    <span>Heritage Book</span>
                 </a>
             </li>
 
-            <!-- Programs Dropdown -->
             <li>
-                <div
-                    class:list={[
-                        "nav-link-enhanced",
-                        "nav-dropdown-trigger",
-                        { active: activePage === "programs" }
-                    ]}
-                    data-menu="programs-mega-menu"
+                <a
+                    href="/transparency"
+                    class:list={["nav-link-enhanced", { active: isActive('/transparency') }]}
                 >
-                    <span>Our Programs</span>
-                    <svg class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </div>
+                    <i class="fas fa-chart-line"></i>
+                    <span>Transparency</span>
+                </a>
             </li>
 
             <li>
@@ -112,7 +136,8 @@ const isActive = (path: string) => {
                     href="/contact"
                     class:list={["nav-link-enhanced", { active: isActive('/contact') }]}
                 >
-                    Contact
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
                 </a>
             </li>
 
@@ -121,15 +146,18 @@ const isActive = (path: string) => {
                     href="/faq"
                     class:list={["nav-link-enhanced", { active: isActive('/faq') }]}
                 >
-                    FAQ
+                    <i class="fas fa-question-circle"></i>
+                    <span>FAQ</span>
                 </a>
             </li>
         </ul>
 
         <!-- Navigation Actions -->
         <div class="nav-actions-enhanced">
-            <!-- IMPORTANT: "Our Story" CTA per CLAUDE.md (NOT "Volunteer Today") -->
-            <a href="/about" class="nav-cta-enhanced">Our Story</a>
+            <a href="/about" class="nav-cta-enhanced">
+                <i class="fas fa-heart"></i>
+                <span>Our Story</span>
+            </a>
             <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
                 <span></span>
                 <span></span>
@@ -138,12 +166,12 @@ const isActive = (path: string) => {
         </div>
     </div>
 
-    <!-- About Mega Menu -->
-    <div class="mega-menu" id="about-mega-menu">
-        <div class="mega-menu-container">
-            <div class="mega-menu-content">
+    <!-- About Mega Menu - Hover-based -->
+    <div class="mega-menu-enhanced" id="about-mega-menu">
+        <div class="mega-menu-container-enhanced">
+            <div class="mega-menu-content-enhanced">
                 <!-- Left Side Card -->
-                <div class="mega-menu-card">
+                <a href="/about" class="mega-menu-card-enhanced">
                     <img
                         src="https://res.cloudinary.com/dhupieu4x/image/upload/v1762599308/drnf-assets/drnf-assets/rabinder_nath2.1.jpg"
                         alt="About Us"
@@ -151,58 +179,68 @@ const isActive = (path: string) => {
                         height="200"
                         loading="lazy"
                     />
-                    <h3>About Us</h3>
-                    <p>Learn about our story, mission, and the legacy of Dr. Rabinder Nath.</p>
-                    <div class="arrow-circle">
-                        <i class="fas fa-arrow-right"></i>
+                    <div class="mega-menu-card-content">
+                        <h3>About Us</h3>
+                        <p>Learn about our story, mission, and the legacy of Dr. Rabinder Nath.</p>
+                        <div class="mega-menu-card-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Right Side Grid -->
-                <div class="mega-menu-grid">
-                    <div class="mega-menu-header">
+                <div class="mega-menu-grid-enhanced">
+                    <div class="mega-menu-header-enhanced">
                         <h3>Discover Our Foundation</h3>
                         <p>Learn more about our mission, values, and the legacy we continue.</p>
                     </div>
 
-                    <div class="mega-menu-columns">
+                    <div class="mega-menu-columns-enhanced">
                         <!-- Column 1 -->
-                        <div>
-                            <a href="/about" class="mega-menu-link">
-                                <i class="fas fa-book-open mega-menu-icon"></i>
-                                <span class="mega-menu-text">Our Story</span>
+                        <div class="mega-menu-column">
+                            <a href="/about" class="mega-menu-link-enhanced">
+                                <i class="fas fa-book-open mega-menu-icon-enhanced"></i>
+                                <span class="mega-menu-text-enhanced">Our Story</span>
                             </a>
-                            <a href="/dr-rabinder-nath" class="mega-menu-link">
-                                <i class="fas fa-user-md mega-menu-icon"></i>
-                                <span class="mega-menu-text">Dr. Rabinder Nath</span>
+                            <a href="/dr-rabinder-nath" class="mega-menu-link-enhanced">
+                                <i class="fas fa-user-md mega-menu-icon-enhanced"></i>
+                                <span class="mega-menu-text-enhanced">Dr. Rabinder Nath</span>
                             </a>
-                            <a href="/book" class="mega-menu-link">
-                                <i class="fas fa-book mega-menu-icon"></i>
-                                <span class="mega-menu-text">Heritage Book</span>
+                            <a href="/book" class="mega-menu-link-enhanced">
+                                <i class="fas fa-book mega-menu-icon-enhanced"></i>
+                                <span class="mega-menu-text-enhanced">Heritage Book</span>
                             </a>
-                            <a href="/about#team" class="mega-menu-link">
-                                <i class="fas fa-users mega-menu-icon"></i>
-                                <span class="mega-menu-text">Our Team</span>
+                            <a href="/about#team" class="mega-menu-link-enhanced">
+                                <i class="fas fa-users mega-menu-icon-enhanced"></i>
+                                <span class="mega-menu-text-enhanced">Our Team</span>
+                            </a>
+                            <a href="/partition-story" class="mega-menu-link-enhanced">
+                                <i class="fas fa-history mega-menu-icon-enhanced"></i>
+                                <span class="mega-menu-text-enhanced">Partition Story</span>
                             </a>
                         </div>
 
                         <!-- Column 2 -->
-                        <div>
-                            <a href="/about#mission" class="mega-menu-link">
-                                <i class="fas fa-bullseye mega-menu-icon"></i>
-                                <span class="mega-menu-text">Vision & Mission</span>
+                        <div class="mega-menu-column">
+                            <a href="/about#mission" class="mega-menu-link-enhanced">
+                                <i class="fas fa-bullseye mega-menu-icon-enhanced"></i>
+                                <span class="mega-menu-text-enhanced">Vision & Mission</span>
                             </a>
-                            <a href="/about#impact" class="mega-menu-link">
-                                <i class="fas fa-trophy mega-menu-icon"></i>
-                                <span class="mega-menu-text">Impact & Stats</span>
+                            <a href="/about#impact" class="mega-menu-link-enhanced">
+                                <i class="fas fa-trophy mega-menu-icon-enhanced"></i>
+                                <span class="mega-menu-text-enhanced">Impact & Stats</span>
                             </a>
-                            <a href="/about#values" class="mega-menu-link">
-                                <i class="fas fa-star mega-menu-icon"></i>
-                                <span class="mega-menu-text">Our Values</span>
+                            <a href="/about#values" class="mega-menu-link-enhanced">
+                                <i class="fas fa-star mega-menu-icon-enhanced"></i>
+                                <span class="mega-menu-text-enhanced">Our Values</span>
                             </a>
-                            <a href="/contact" class="mega-menu-link">
-                                <i class="fas fa-envelope mega-menu-icon"></i>
-                                <span class="mega-menu-text">Contact Us</span>
+                            <a href="/transparency" class="mega-menu-link-enhanced">
+                                <i class="fas fa-chart-line mega-menu-icon-enhanced"></i>
+                                <span class="mega-menu-text-enhanced">Transparency Report</span>
+                            </a>
+                            <a href="/contact" class="mega-menu-link-enhanced">
+                                <i class="fas fa-envelope mega-menu-icon-enhanced"></i>
+                                <span class="mega-menu-text-enhanced">Contact Us</span>
                             </a>
                         </div>
                     </div>
@@ -211,12 +249,12 @@ const isActive = (path: string) => {
         </div>
     </div>
 
-    <!-- Programs Mega Menu -->
-    <div class="mega-menu" id="programs-mega-menu">
-        <div class="mega-menu-container">
-            <div class="mega-menu-content">
+    <!-- Programs Mega Menu - Hover-based -->
+    <div class="mega-menu-enhanced" id="programs-mega-menu">
+        <div class="mega-menu-container-enhanced">
+            <div class="mega-menu-content-enhanced">
                 <!-- Left Side Card -->
-                <div class="mega-menu-card">
+                <a href="/chai-counters" class="mega-menu-card-enhanced">
                     <img
                         src="https://res.cloudinary.com/dhupieu4x/image/upload/f_auto,q_auto:good/drnf-assets/drnf-assets/drnf-chai-counter-banjara-hills-active.jpg"
                         alt="Our Programs - Free Chai Counter"
@@ -224,58 +262,68 @@ const isActive = (path: string) => {
                         height="200"
                         loading="lazy"
                     />
-                    <h3>Our Programs</h3>
-                    <p>Explore our community service initiatives and programs making a difference.</p>
-                    <div class="arrow-circle">
-                        <i class="fas fa-arrow-right"></i>
+                    <div class="mega-menu-card-content">
+                        <h3>Our Programs</h3>
+                        <p>Explore our community service initiatives and programs making a difference.</p>
+                        <div class="mega-menu-card-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Right Side Grid -->
-                <div class="mega-menu-grid">
-                    <div class="mega-menu-header">
+                <div class="mega-menu-grid-enhanced">
+                    <div class="mega-menu-header-enhanced">
                         <h3>Community Service Programs</h3>
                         <p>Making a difference through dedicated community initiatives.</p>
                     </div>
 
-                    <div class="mega-menu-columns">
+                    <div class="mega-menu-columns-enhanced">
                         <!-- Column 1 -->
-                        <div>
-                            <a href="/chai-counters" class="mega-menu-link">
-                                <i class="fas fa-coffee mega-menu-icon"></i>
-                                <span class="mega-menu-text">Free Chai Counters</span>
+                        <div class="mega-menu-column">
+                            <a href="/chai-counters" class="mega-menu-link-enhanced">
+                                <i class="fas fa-coffee mega-menu-icon-enhanced"></i>
+                                <span class="mega-menu-text-enhanced">Free Chai Counters</span>
                             </a>
-                            <a href="/loocafe-impact" class="mega-menu-link">
-                                <i class="fas fa-building mega-menu-icon"></i>
-                                <span class="mega-menu-text">LooCafe Partnership</span>
+                            <a href="/loocafe-impact" class="mega-menu-link-enhanced">
+                                <i class="fas fa-building mega-menu-icon-enhanced"></i>
+                                <span class="mega-menu-text-enhanced">LooCafe Partnership</span>
                             </a>
-                            <a href="/frontline-workers" class="mega-menu-link">
-                                <i class="fas fa-user-shield mega-menu-icon"></i>
-                                <span class="mega-menu-text">Frontline Workers</span>
+                            <a href="/frontline-workers" class="mega-menu-link-enhanced">
+                                <i class="fas fa-user-shield mega-menu-icon-enhanced"></i>
+                                <span class="mega-menu-text-enhanced">Frontline Workers</span>
                             </a>
-                            <a href="/community" class="mega-menu-link">
-                                <i class="fas fa-hands-helping mega-menu-icon"></i>
-                                <span class="mega-menu-text">Community Support</span>
+                            <a href="/community" class="mega-menu-link-enhanced">
+                                <i class="fas fa-hands-helping mega-menu-icon-enhanced"></i>
+                                <span class="mega-menu-text-enhanced">Community Support</span>
                             </a>
-                            <a href="/community#workshops" class="mega-menu-link">
-                                <i class="fas fa-graduation-cap mega-menu-icon"></i>
-                                <span class="mega-menu-text">Education Workshops</span>
+                            <a href="/community#workshops" class="mega-menu-link-enhanced">
+                                <i class="fas fa-graduation-cap mega-menu-icon-enhanced"></i>
+                                <span class="mega-menu-text-enhanced">Education Workshops</span>
                             </a>
                         </div>
 
                         <!-- Column 2 -->
-                        <div>
-                            <a href="/community#environment" class="mega-menu-link">
-                                <i class="fas fa-leaf mega-menu-icon"></i>
-                                <span class="mega-menu-text">Environmental Care</span>
+                        <div class="mega-menu-column">
+                            <a href="/community#environment" class="mega-menu-link-enhanced">
+                                <i class="fas fa-leaf mega-menu-icon-enhanced"></i>
+                                <span class="mega-menu-text-enhanced">Environmental Care</span>
                             </a>
-                            <a href="/community#animal-welfare" class="mega-menu-link">
-                                <i class="fas fa-paw mega-menu-icon"></i>
-                                <span class="mega-menu-text">Animal Welfare</span>
+                            <a href="/community#animal-welfare" class="mega-menu-link-enhanced">
+                                <i class="fas fa-paw mega-menu-icon-enhanced"></i>
+                                <span class="mega-menu-text-enhanced">Animal Welfare</span>
                             </a>
-                            <a href="/contact" class="mega-menu-link">
-                                <i class="fas fa-envelope mega-menu-icon"></i>
-                                <span class="mega-menu-text">Get in Touch</span>
+                            <a href="/forms/food-donation-form" class="mega-menu-link-enhanced">
+                                <i class="fas fa-hand-holding-heart mega-menu-icon-enhanced"></i>
+                                <span class="mega-menu-text-enhanced">Food Donation</span>
+                            </a>
+                            <a href="/forms/newsletter-signup" class="mega-menu-link-enhanced">
+                                <i class="fas fa-envelope-open-text mega-menu-icon-enhanced"></i>
+                                <span class="mega-menu-text-enhanced">Newsletter</span>
+                            </a>
+                            <a href="/contact" class="mega-menu-link-enhanced">
+                                <i class="fas fa-envelope mega-menu-icon-enhanced"></i>
+                                <span class="mega-menu-text-enhanced">Get in Touch</span>
                             </a>
                         </div>
                     </div>
@@ -285,122 +333,714 @@ const isActive = (path: string) => {
     </div>
 </nav>
 
-<!-- Mobile Menu Overlay - REDESIGNED FOR INFORMATION (per Nov 2025 refocus) -->
-<div class="mobile-menu-overlay">
-    <div class="mobile-menu-header">
-        <a href="/" class="nav-logo-enhanced">
-            <img
-                src="https://res.cloudinary.com/dhupieu4x/image/upload/v1762599287/drnf-assets/drnf-assets/DRNF_logo.jpg"
-                alt="DRNF Logo"
-                class="logo-img"
-                width="40"
-                height="40"
-            />
-            <div class="nav-brand-text">
-                <h1 class="brand-title">DRNF</h1>
-            </div>
-        </a>
-        <button class="mobile-menu-close" aria-label="Close mobile menu">
-            <i class="fas fa-times"></i>
-        </button>
-    </div>
+<!-- React Mobile Navigation Component -->
+<!-- Uses client:load to enable full React interactivity on page load -->
+<MobileNav client:load currentPage={activePage} />
 
-    <div class="mobile-menu-body">
-        <!-- Home -->
-        <a href="/" class="mobile-menu-item-clean">
-            <i class="fas fa-home"></i>
-            <span>Home</span>
-        </a>
+<style>
+/* Top Bar Styles */
+.top-bar-enhanced {
+    display: none;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+}
 
-        <!-- About DRNF Section -->
-        <div class="mobile-section-clean">
-            <button class="mobile-section-header-clean" data-toggle="about-section" type="button">
-                <span>About DRNF</span>
-                <i class="fas fa-chevron-down mobile-chevron"></i>
-            </button>
-            <div class="mobile-section-content-clean" id="about-section">
-                <a href="/about" class="mobile-link-clean">
-                    <i class="fas fa-heart"></i>
-                    <span>Our Story & Mission</span>
-                </a>
-                <a href="/dr-rabinder-nath" class="mobile-link-clean">
-                    <i class="fas fa-user-md"></i>
-                    <span>Dr. Rabinder Nath</span>
-                </a>
-                <a href="/book" class="mobile-link-clean">
-                    <i class="fas fa-book"></i>
-                    <span>Heritage Book</span>
-                </a>
-            </div>
-        </div>
+@media (min-width: 1024px) {
+    .top-bar-enhanced {
+        display: block;
+    }
+}
 
-        <!-- Our Work Section -->
-        <div class="mobile-section-clean">
-            <button class="mobile-section-header-clean" data-toggle="work-section" type="button">
-                <span>Our Work</span>
-                <i class="fas fa-chevron-down mobile-chevron"></i>
-            </button>
-            <div class="mobile-section-content-clean" id="work-section">
-                <a href="/chai-counters" class="mobile-link-clean">
-                    <i class="fas fa-mug-hot"></i>
-                    <span>Free Chai Counters</span>
-                </a>
-                <a href="/community" class="mobile-link-clean">
-                    <i class="fas fa-hands-helping"></i>
-                    <span>Community Programs</span>
-                </a>
-            </div>
-        </div>
+.top-bar-content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    padding: 0.75rem 0;
+    font-size: 0.875rem;
+}
 
-        <!-- Direct Links -->
-        <a href="/faq" class="mobile-menu-item-clean">
-            <i class="fas fa-question-circle"></i>
-            <span>FAQ</span>
-        </a>
+.top-bar-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #374151;
+    text-decoration: none;
+    transition: color 0.2s;
+}
 
-        <a href="/contact" class="mobile-menu-item-clean">
-            <i class="fas fa-envelope"></i>
-            <span>Contact Us</span>
-        </a>
+.top-bar-link:hover {
+    color: #D4B258;
+}
 
-        <!-- Social Links -->
-        <div class="mobile-social-clean">
-            <a href="https://www.facebook.com/DrRabinderNathFoundation/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.linkedin.com/company/dr-rabinder-nath-foundation/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-        </div>
-    </div>
-</div>
+.top-bar-link i {
+    font-size: 0.875rem;
+}
 
-<!--
-INTEGRATION NOTES:
-=================
-This component requires the following to be fully functional:
+/* Enhanced Navigation Styles */
+.enhanced-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
 
-1. CSS Styles (from /DRNF_website/css/style.css):
-   - .enhanced-nav, .nav-container-enhanced (glassmorphism header)
-   - .mega-menu, .mega-menu-card, .mega-menu-grid (dropdown menus)
-   - .mobile-menu-overlay, .mobile-section-clean (mobile navigation)
-   - All navigation-related classes
+.enhanced-nav.scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
 
-2. JavaScript (from /DRNF_website/js/main.js):
-   - Mobile menu toggle functionality (lines 772-802)
-   - Mega menu hover/click interactions
-   - Mobile accordion section toggles
-   - Active section highlighting on scroll
+.nav-container-enhanced {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
 
-3. External Dependencies (linked in BaseLayout):
-   - Font Awesome 6.4.0 (for icons)
-   - Google Fonts (Inter + Playfair Display)
+.nav-logo-enhanced {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: inherit;
+}
 
-4. Future Enhancement:
-   - Mobile menu will be converted to React Island (MobileNav.tsx)
-   - This will enable client-side interactivity with React state management
-   - For now, relies on vanilla JS from main.js
+.logo-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
 
-STATUS: ✅ Component-based structure complete
-TODO: Copy CSS styles from original site, ensure JS integration works
--->
+.nav-brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.brand-tagline {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+.nav-links-enhanced {
+    display: none;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 1024px) {
+    .nav-links-enhanced {
+        display: flex;
+    }
+}
+
+.nav-link-enhanced {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    color: #374151;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.nav-link-enhanced:hover {
+    color: #D4B258;
+    background: rgba(212, 180, 88, 0.1);
+}
+
+.nav-link-enhanced.active {
+    color: #D4B258;
+    background: rgba(212, 180, 88, 0.15);
+}
+
+.nav-link-enhanced i {
+    font-size: 0.875rem;
+}
+
+.nav-dropdown-wrapper {
+    position: relative;
+}
+
+.nav-dropdown-trigger .chevron {
+    transition: transform 0.2s;
+    margin-left: 0.25rem;
+}
+
+.nav-dropdown-wrapper:hover .chevron {
+    transform: rotate(180deg);
+}
+
+.nav-actions-enhanced {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-cta-enhanced {
+    display: none;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #D4B258 0%, #C3A24B 100%);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 2rem;
+    transition: all 0.3s;
+    box-shadow: 0 2px 8px rgba(212, 180, 88, 0.3);
+}
+
+@media (min-width: 1024px) {
+    .nav-cta-enhanced {
+        display: flex;
+    }
+}
+
+.nav-cta-enhanced:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(212, 180, 88, 0.4);
+    background: linear-gradient(135deg, #C3A24B 0%, #B8943A 100%);
+}
+
+.mobile-menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+    .mobile-menu-toggle {
+        display: none;
+    }
+}
+
+.mobile-menu-toggle span {
+    width: 24px;
+    height: 2px;
+    background: #374151;
+    transition: all 0.3s;
+    border-radius: 2px;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mega Menu Styles - Hover-based */
+.mega-menu-enhanced {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    z-index: 999;
+}
+
+.nav-dropdown-wrapper:hover .mega-menu-enhanced {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.mega-menu-container-enhanced {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.mega-menu-content-enhanced {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+@media (max-width: 1200px) {
+    .mega-menu-content-enhanced {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+.mega-menu-card-enhanced {
+    display: block;
+    background: #f9fafb;
+    border-radius: 1rem;
+    overflow: hidden;
+    text-decoration: none;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.mega-menu-card-enhanced:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.mega-menu-card-enhanced img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.mega-menu-card-content {
+    padding: 1.5rem;
+}
+
+.mega-menu-card-content h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 0.5rem 0;
+}
+
+.mega-menu-card-content p {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin: 0 0 1rem 0;
+    line-height: 1.5;
+}
+
+.mega-menu-card-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #D4B258;
+    color: white;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.mega-menu-card-enhanced:hover .mega-menu-card-arrow {
+    background: #C3A24B;
+    transform: translateX(4px);
+}
+
+.mega-menu-grid-enhanced {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.mega-menu-header-enhanced h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 0.5rem 0;
+}
+
+.mega-menu-header-enhanced p {
+    font-size: 0.9375rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+.mega-menu-columns-enhanced {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .mega-menu-columns-enhanced {
+        grid-template-columns: 1fr;
+    }
+}
+
+.mega-menu-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.mega-menu-link-enhanced {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    color: #374151;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+}
+
+.mega-menu-link-enhanced:hover {
+    background: rgba(212, 180, 88, 0.1);
+    color: #D4B258;
+    transform: translateX(4px);
+}
+
+.mega-menu-icon-enhanced {
+    font-size: 1.125rem;
+    width: 24px;
+    text-align: center;
+    color: #6b7280;
+    transition: color 0.2s;
+}
+
+.mega-menu-link-enhanced:hover .mega-menu-icon-enhanced {
+    color: #D4B258;
+}
+
+.mega-menu-text-enhanced {
+    font-weight: 500;
+    font-size: 0.9375rem;
+}
+
+/* Mobile Menu Styles */
+.mobile-menu-overlay-enhanced {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+    background: white;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 2000;
+    overflow-y: auto;
+}
+
+.mobile-menu-overlay-enhanced.active {
+    transform: translateX(0);
+}
+
+.mobile-menu-header-enhanced {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.mobile-menu-close-enhanced {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #374151;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.2s;
+}
+
+.mobile-menu-close-enhanced:hover {
+    color: #D4B258;
+}
+
+.mobile-menu-body-enhanced {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.mobile-menu-item-enhanced {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    color: #374151;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+}
+
+.mobile-menu-item-enhanced:hover {
+    background: rgba(212, 180, 88, 0.1);
+    color: #D4B258;
+}
+
+.mobile-menu-item-enhanced i {
+    font-size: 1.125rem;
+    width: 24px;
+    text-align: center;
+}
+
+.mobile-section-enhanced {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.mobile-section-header-enhanced {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+    background: none;
+    border: none;
+    text-align: left;
+    font-weight: 600;
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 0.5rem;
+}
+
+.mobile-section-header-enhanced:hover {
+    background: rgba(212, 180, 88, 0.1);
+    color: #D4B258;
+}
+
+.mobile-section-header-enhanced i:first-child {
+    font-size: 1.125rem;
+    width: 24px;
+    text-align: center;
+}
+
+.mobile-chevron-enhanced {
+    margin-left: auto;
+    transition: transform 0.3s;
+    font-size: 0.875rem;
+}
+
+.mobile-section-header-enhanced.active .mobile-chevron-enhanced {
+    transform: rotate(180deg);
+}
+
+.mobile-section-content-enhanced {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.mobile-section-content-enhanced.active {
+    max-height: 1000px;
+}
+
+.mobile-link-enhanced {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.875rem 1rem 0.875rem 3rem;
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 0.9375rem;
+    transition: all 0.2s;
+    border-radius: 0.5rem;
+}
+
+.mobile-link-enhanced:hover {
+    background: rgba(212, 180, 88, 0.1);
+    color: #D4B258;
+}
+
+.mobile-link-enhanced i {
+    font-size: 1rem;
+    width: 20px;
+    text-align: center;
+}
+
+.mobile-cta-enhanced {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #D4B258 0%, #C3A24B 100%);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+}
+
+.mobile-cta-enhanced:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(212, 180, 88, 0.4);
+}
+
+.mobile-social-enhanced {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.mobile-social-enhanced a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: #f3f4f6;
+    color: #374151;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.2s;
+    font-size: 1.25rem;
+}
+
+.mobile-social-enhanced a:hover {
+    background: #D4B258;
+    color: white;
+    transform: translateY(-2px);
+}
+</style>
+
+<script>
+// Enhanced Navigation Script - Hover-based mega menus
+if (typeof document !== 'undefined') {
+    document.addEventListener('DOMContentLoaded', function() {
+        const enhancedNav = document.querySelector('.enhanced-nav');
+        const navDropdownWrappers = document.querySelectorAll('.nav-dropdown-wrapper');
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay-enhanced');
+        const mobileMenuClose = document.querySelector('.mobile-menu-close-enhanced');
+        const mobileSectionHeaders = document.querySelectorAll('.mobile-section-header-enhanced');
+
+        // Scroll effect
+        if (enhancedNav) {
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 50) {
+                    enhancedNav.classList.add('scrolled');
+                } else {
+                    enhancedNav.classList.remove('scrolled');
+                }
+            });
+        }
+
+        // Mobile menu toggle
+        if (mobileMenuToggle && mobileMenuOverlay) {
+            mobileMenuToggle.addEventListener('click', function() {
+                mobileMenuOverlay.classList.add('active');
+                mobileMenuToggle.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        }
+
+        if (mobileMenuClose && mobileMenuOverlay) {
+            mobileMenuClose.addEventListener('click', function() {
+                mobileMenuOverlay.classList.remove('active');
+                if (mobileMenuToggle) {
+                    mobileMenuToggle.classList.remove('active');
+                }
+                document.body.style.overflow = '';
+            });
+        }
+
+        // Close mobile menu when clicking outside
+        if (mobileMenuOverlay) {
+            mobileMenuOverlay.addEventListener('click', function(e) {
+                if (e.target === mobileMenuOverlay) {
+                    mobileMenuOverlay.classList.remove('active');
+                    if (mobileMenuToggle) {
+                        mobileMenuToggle.classList.remove('active');
+                    }
+                    document.body.style.overflow = '';
+                }
+            });
+        }
+
+        // Mobile accordion sections
+        mobileSectionHeaders.forEach(header => {
+            header.addEventListener('click', function() {
+                const toggleId = this.getAttribute('data-toggle');
+                const content = document.getElementById(toggleId);
+                const isActive = this.classList.contains('active');
+
+                // Close all other sections
+                mobileSectionHeaders.forEach(h => {
+                    if (h !== this) {
+                        h.classList.remove('active');
+                        const otherContent = document.getElementById(h.getAttribute('data-toggle'));
+                        if (otherContent) {
+                            otherContent.classList.remove('active');
+                        }
+                    }
+                });
+
+                // Toggle current section
+                if (isActive) {
+                    this.classList.remove('active');
+                    if (content) {
+                        content.classList.remove('active');
+                    }
+                } else {
+                    this.classList.add('active');
+                    if (content) {
+                        content.classList.add('active');
+                    }
+                }
+            });
+        });
+
+        // Close mobile menu on link click
+        const mobileLinks = document.querySelectorAll('.mobile-menu-item-enhanced, .mobile-link-enhanced, .mobile-cta-enhanced');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (mobileMenuOverlay) {
+                    mobileMenuOverlay.classList.remove('active');
+                    if (mobileMenuToggle) {
+                        mobileMenuToggle.classList.remove('active');
+                    }
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+
+        // Close mega menus when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.nav-dropdown-wrapper') && !e.target.closest('.mega-menu-enhanced')) {
+                const megaMenus = document.querySelectorAll('.mega-menu-enhanced');
+                megaMenus.forEach(menu => {
+                    menu.style.opacity = '0';
+                    menu.style.visibility = 'hidden';
+                    menu.style.transform = 'translateY(-10px)';
+                    menu.style.pointerEvents = 'none';
+                });
+            }
+        });
+    });
+}
+</script>
