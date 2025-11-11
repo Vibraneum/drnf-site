@@ -107,6 +107,16 @@ const MobileNav: React.FC<MobileNavProps> = ({ currentPage = '' }) => {
             <span>Home</span>
           </a>
 
+          {/* Search Link */}
+          <a
+            href="/search"
+            className="mobile-menu-item-clean"
+            onClick={handleLinkClick}
+          >
+            <i className="fas fa-search"></i>
+            <span>Search</span>
+          </a>
+
           {/* About DRNF Section */}
           <div className="mobile-section-clean">
             <button

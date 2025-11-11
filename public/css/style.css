@@ -3409,6 +3409,32 @@ img {
     transform: scale(1.1);
 }
 
+/* Search Button Styling */
+.search-button {
+    padding: 0.5rem 0.75rem !important;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    min-width: 40px;
+}
+
+.search-button:hover {
+    background-color: rgba(212, 178, 88, 0.1);
+    transform: scale(1.1);
+}
+
+.search-button i {
+    font-size: 1rem;
+}
+
+.search-button span {
+    display: none;
+}
+
 .nav-cta-enhanced {
     background: #2c5530;
     color: white;

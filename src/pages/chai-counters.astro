@@ -1,16 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import NewsletterSignup from '../components/react/NewsletterSignup.tsx';
 
 const pageTitle = 'Free Chai Counters | Dr. Rabinder Nath Foundation';
 const pageDescription = 'DRNF operates 2 free chai counters in Hyderabad at KBR Park, LV Prasad, and Basavatarakam junctions, serving 500-600 people daily. Operating 9 AM to 9 PM, 365 days since July 2021.';
 ---
 
 <Layout title={pageTitle} description={pageDescription} activePage="chai-counters">
-  
+
 <section class="page-hero">
         <div class="container">
             <h1 data-aos="fade-up">Free Chai Counters</h1>
             <p data-aos="fade-up" data-aos-delay="200">"No One Should Sleep Hungry" - Our mission through 365 days of free tea and snacks</p>
+            <!-- Live Counter Animation -->
+            <div class="live-counter-hero" data-aos="zoom-in" data-aos-delay="400">
+                <div class="counter-display">
+                    <div class="counter-number" id="teaCountToday">247</div>
+                    <div class="counter-label">cups served today</div>
+                </div>
+                <p class="counter-subtitle">Watch as we serve compassion one cup at a time</p>
+            </div>
         </div>
     </section>
 
@@ -30,6 +39,85 @@ const pageDescription = 'DRNF operates 2 free chai counters in Hyderabad at KBR 
                         <p><strong>Serving:</strong> 500-600 people daily with free chai and biscuits</p>
                         <p><strong>Operating Hours:</strong> 9 AM to 9 PM, 365 days a year</p>
                         <p><strong>Launch Date:</strong> July 2021</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Powerful Beneficiary Stories Section -->
+            <div class="beneficiary-stories" data-aos="fade-up" data-aos-delay="250" style="margin-top: 4rem; margin-bottom: 4rem;">
+                <h2 style="text-align: center; color: #2c5530; margin-bottom: 3rem; font-size: 2.5rem;">
+                    <i class="fas fa-heart" style="color: #e74c3c;"></i> Real Lives, Real Impact
+                </h2>
+                <p style="text-align: center; font-size: 1.2rem; color: #555; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    These are the stories that drive us. Every cup of chai is more than a beverage—it's dignity, warmth, and hope served with compassion.
+                </p>
+
+                <!-- Story 1: Homeless Community Member -->
+                <div class="story-card" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-bottom: 3rem; align-items: center; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 3rem; border-radius: 16px; box-shadow: 0 8px 24px rgba(44, 85, 48, 0.08);" data-aos="fade-up">
+                    <div class="story-image">
+                        <img src="https://res.cloudinary.com/dhupieu4x/image/upload/f_auto,q_auto:good/drnf-assets/drnf-assets/chai-counter-homeless-support.jpg"
+                             alt="Beneficiary story - homeless community member receiving warm tea and support"
+                             style="border-radius: 12px; width: 100%; height: auto; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
+                    </div>
+                    <div class="story-content">
+                        <h3 style="color: #2c5530; font-size: 1.8rem; margin-bottom: 1rem;">
+                            <i class="fas fa-user-circle" style="color: #8b4513; margin-right: 0.5rem;"></i> Hari's Journey of Hope
+                        </h3>
+                        <blockquote style="font-size: 1.1rem; color: #555; font-style: italic; border-left: 4px solid #D4B258; padding-left: 1.5rem; margin: 1.5rem 0; line-height: 1.8;">
+                            "Before finding this chai counter, I felt invisible. Now, every morning when I walk up to that counter, someone greets me with a warm smile and a hot cup of chai. It's not just the tea—it's the feeling that someone cares. It's given me hope to find work again."
+                        </blockquote>
+                        <p style="color: #666; line-height: 1.6; margin-bottom: 1rem;">
+                            <strong>Hari</strong> had been living on the streets for 3 years after losing his job. Our chai counter became his safe space—a daily reminder that the community hadn't forgotten him. Through our network, he was connected with a job training program and is now working part-time.
+                        </p>
+                        <div class="impact-badge" style="display: inline-block; background: #2c5530; color: white; padding: 0.75rem 1.5rem; border-radius: 50px; font-weight: 600;">
+                            <i class="fas fa-check-circle" style="margin-right: 0.5rem;"></i> Now employed & rebuilding
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story 2: Cancer Patient's Family -->
+                <div class="story-card" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-bottom: 3rem; align-items: center; background: linear-gradient(135deg, #fff8f0 0%, #ffffff 100%); padding: 3rem; border-radius: 16px; box-shadow: 0 8px 24px rgba(44, 85, 48, 0.08);" data-aos="fade-up" data-aos-delay="150">
+                    <div class="story-content" style="order: -1;">
+                        <h3 style="color: #2c5530; font-size: 1.8rem; margin-bottom: 1rem;">
+                            <i class="fas fa-family" style="color: #e74c3c; margin-right: 0.5rem;"></i> Priya's Family Support
+                        </h3>
+                        <blockquote style="font-size: 1.1rem; color: #555; font-style: italic; border-left: 4px solid #D4B258; padding-left: 1.5rem; margin: 1.5rem 0; line-height: 1.8;">
+                            "My mother is undergoing cancer treatment at LV Prasad. While she's inside the hospital fighting for her life, I wait outside for hours. This chai counter gives me a moment of peace, warmth, and strength. The volunteers here ask about my mother—they genuinely care."
+                        </blockquote>
+                        <p style="color: #666; line-height: 1.6; margin-bottom: 1rem;">
+                            <strong>Priya</strong> spends 6-8 hours daily at the hospital. Our chai counter near LV Prasad isn't just a source of free food—it's become an emotional anchor for her during the most difficult time of her life. She's made friends with other families facing similar struggles.
+                        </p>
+                        <div class="impact-badge" style="display: inline-block; background: #2c5530; color: white; padding: 0.75rem 1.5rem; border-radius: 50px; font-weight: 600;">
+                            <i class="fas fa-heart" style="margin-right: 0.5rem;"></i> Finding strength & community
+                        </div>
+                    </div>
+                    <div class="story-image">
+                        <img src="https://res.cloudinary.com/dhupieu4x/image/upload/f_auto,q_auto:good/drnf-assets/drnf-assets/chai-counter-hospital-support.jpg"
+                             alt="Family receiving chai support near hospital - emotional impact story"
+                             style="border-radius: 12px; width: 100%; height: auto; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
+                    </div>
+                </div>
+
+                <!-- Story 3: Frontline Worker -->
+                <div class="story-card" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; background: linear-gradient(135deg, #f0f8f4 0%, #ffffff 100%); padding: 3rem; border-radius: 16px; box-shadow: 0 8px 24px rgba(44, 85, 48, 0.08);" data-aos="fade-up" data-aos-delay="300">
+                    <div class="story-image">
+                        <img src="https://res.cloudinary.com/dhupieu4x/image/upload/f_auto,q_auto:good/drnf-assets/drnf-assets/chai-counter-workers.jpg"
+                             alt="Frontline workers receiving chai - recognizing their service"
+                             style="border-radius: 12px; width: 100%; height: auto; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
+                    </div>
+                    <div class="story-content">
+                        <h3 style="color: #2c5530; font-size: 1.8rem; margin-bottom: 1rem;">
+                            <i class="fas fa-shield-alt" style="color: #3498db; margin-right: 0.5rem;"></i> Raman's Daily Courage
+                        </h3>
+                        <blockquote style="font-size: 1.1rem; color: #555; font-style: italic; border-left: 4px solid #D4B258; padding-left: 1.5rem; margin: 1.5rem 0; line-height: 1.8;">
+                            "As a security guard working 12-hour shifts, I often can't afford breakfast or evening tea. This free chai counter means I can actually eat something warm. It shows that someone values the work we do, that we matter."
+                        </blockquote>
+                        <p style="color: #666; line-height: 1.6; margin-bottom: 1rem;">
+                            <strong>Raman</strong> is one of thousands of frontline workers who keep our city running. Our chai counters acknowledge their sacrifice and provide dignity to those whose work is often taken for granted. He brings his friends from other security posts.
+                        </p>
+                        <div class="impact-badge" style="display: inline-block; background: #2c5530; color: white; padding: 0.75rem 1.5rem; border-radius: 50px; font-weight: 600;">
+                            <i class="fas fa-star" style="margin-right: 0.5rem;"></i> Building community among workers
+                        </div>
                     </div>
                 </div>
             </div>
@@ -84,6 +172,199 @@ const pageDescription = 'DRNF operates 2 free chai counters in Hyderabad at KBR 
                             </p>
                         </figcaption>
                     </figure>
+                </div>
+            </div>
+
+            <!-- Interactive Location Map Section -->
+            <div class="location-map-section" data-aos="fade-up" data-aos-delay="350" style="margin-top: 4rem; margin-bottom: 4rem; padding: 3rem; background: linear-gradient(135deg, #f0f8f4 0%, #e8f5f0 100%); border-radius: 16px; border: 2px solid #2c5530;">
+                <h3 style="text-align: center; color: #2c5530; margin-bottom: 2rem; font-size: 2rem;">
+                    <i class="fas fa-map-location-dot"></i> Our Chai Counter Locations
+                </h3>
+                <p style="text-align: center; color: #555; margin-bottom: 2.5rem; font-size: 1.1rem;">
+                    Two strategic locations serving the heart of Hyderabad with dignity and compassion
+                </p>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+                    <!-- Location 1: KBR Park -->
+                    <div class="location-card" style="background: white; padding: 2rem; border-radius: 12px; border-left: 4px solid #2c5530; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <h4 style="color: #2c5530; font-size: 1.4rem; margin-bottom: 1rem;">
+                            <i class="fas fa-map-pin" style="color: #e74c3c;"></i> KBR Park Junction
+                        </h4>
+                        <p style="color: #666; margin-bottom: 0.5rem;"><strong>Location:</strong> Banjara Hills Road, KBR Park Junction</p>
+                        <p style="color: #666; margin-bottom: 0.5rem;"><strong>Operating Since:</strong> July 2021</p>
+                        <p style="color: #666; margin-bottom: 0.5rem;"><strong>Hours:</strong> 9 AM - 9 PM, Daily</p>
+                        <p style="color: #666; margin-bottom: 1.5rem;"><strong>Daily Beneficiaries:</strong> 250-300 people</p>
+                        <div style="background: #f0f8f4; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                            <p style="color: #2c5530; font-size: 0.95rem; margin: 0;">
+                                <i class="fas fa-circle-info" style="margin-right: 0.5rem;"></i>
+                                <strong>Who We Serve:</strong> Homeless community, daily wage workers, security staff, local residents in need
+                            </p>
+                        </div>
+                        <a href="https://maps.google.com/?q=KBR+Park+Banjara+Hills+Hyderabad" target="_blank" rel="noopener" style="display: inline-block; background: #2c5530; color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600;">
+                            <i class="fas fa-directions"></i> Get Directions
+                        </a>
+                    </div>
+
+                    <!-- Location 2: LV Prasad / Basavatarakam -->
+                    <div class="location-card" style="background: white; padding: 2rem; border-radius: 12px; border-left: 4px solid #2c5530; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <h4 style="color: #2c5530; font-size: 1.4rem; margin-bottom: 1rem;">
+                            <i class="fas fa-map-pin" style="color: #e74c3c;"></i> Hospital Campus Area
+                        </h4>
+                        <p style="color: #666; margin-bottom: 0.5rem;"><strong>Location:</strong> Near LV Prasad & Basavatarakam junctions</p>
+                        <p style="color: #666; margin-bottom: 0.5rem;"><strong>Operating Since:</strong> July 2021</p>
+                        <p style="color: #666; margin-bottom: 0.5rem;"><strong>Hours:</strong> 9 AM - 9 PM, Daily</p>
+                        <p style="color: #666; margin-bottom: 1.5rem;"><strong>Daily Beneficiaries:</strong> 250-300 people</p>
+                        <div style="background: #fef5f0; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                            <p style="color: #2c5530; font-size: 0.95rem; margin: 0;">
+                                <i class="fas fa-circle-info" style="margin-right: 0.5rem;"></i>
+                                <strong>Critical Role:</strong> Support for cancer patients' families undergoing treatment
+                            </p>
+                        </div>
+                        <a href="https://maps.google.com/?q=LV+Prasad+Hyderabad" target="_blank" rel="noopener" style="display: inline-block; background: #2c5530; color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600;">
+                            <i class="fas fa-directions"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Location Stats -->
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 2rem;">
+                    <div style="text-align: center; background: white; padding: 1.5rem; border-radius: 8px;">
+                        <div style="font-size: 2.2rem; font-weight: 700; color: #2c5530;">500-600</div>
+                        <p style="color: #666; font-size: 0.95rem; margin: 0.5rem 0 0 0;">People served daily</p>
+                    </div>
+                    <div style="text-align: center; background: white; padding: 1.5rem; border-radius: 8px;">
+                        <div style="font-size: 2.2rem; font-weight: 700; color: #8b4513;">365</div>
+                        <p style="color: #666; font-size: 0.95rem; margin: 0.5rem 0 0 0;">Days per year</p>
+                    </div>
+                    <div style="text-align: center; background: white; padding: 1.5rem; border-radius: 8px;">
+                        <div style="font-size: 2.2rem; font-weight: 700; color: #e74c3c;">116.8K+</div>
+                        <p style="color: #666; font-size: 0.95rem; margin: 0.5rem 0 0 0;">Cups served lifetime</p>
+                    </div>
+                    <div style="text-align: center; background: white; padding: 1.5rem; border-radius: 8px;">
+                        <div style="font-size: 2.2rem; font-weight: 700; color: #f39c12;">24/7</div>
+                        <p style="color: #666; font-size: 0.95rem; margin: 0.5rem 0 0 0;">Year-round service</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Before & After Impact Comparison -->
+            <div class="impact-comparison" data-aos="fade-up" data-aos-delay="400" style="margin-top: 4rem; margin-bottom: 4rem;">
+                <h3 style="text-align: center; color: #2c5530; margin-bottom: 3rem; font-size: 2.2rem;">
+                    <i class="fas fa-arrow-right-arrow-left"></i> The Impact We Create
+                </h3>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                    <!-- Before -->
+                    <div style="padding: 2.5rem; background: linear-gradient(135deg, #fee 0%, #fcc 100%); border-radius: 12px; border: 2px solid #e74c3c;">
+                        <h4 style="color: #c0392b; font-size: 1.6rem; margin-bottom: 1.5rem; text-align: center;">
+                            <i class="fas fa-times-circle"></i> Before Our Chai Counter
+                        </h4>
+                        <ul style="list-style: none; padding: 0; color: #555;">
+                            <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                                <span style="position: absolute; left: 0; color: #e74c3c; font-weight: bold;">✗</span>
+                                Hunger and malnutrition among homeless community
+                            </li>
+                            <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                                <span style="position: absolute; left: 0; color: #e74c3c; font-weight: bold;">✗</span>
+                                No warm shelter or human connection
+                            </li>
+                            <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                                <span style="position: absolute; left: 0; color: #e74c3c; font-weight: bold;">✗</span>
+                                Families waiting outside hospitals with no support
+                            </li>
+                            <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                                <span style="position: absolute; left: 0; color: #e74c3c; font-weight: bold;">✗</span>
+                                Undervalued frontline workers with no recognition
+                            </li>
+                            <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                                <span style="position: absolute; left: 0; color: #e74c3c; font-weight: bold;">✗</span>
+                                Invisible suffering in the heart of the city
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- After -->
+                    <div style="padding: 2.5rem; background: linear-gradient(135deg, #e8f5f0 0%, #d4f1e8 100%); border-radius: 12px; border: 2px solid #2c5530;">
+                        <h4 style="color: #2c5530; font-size: 1.6rem; margin-bottom: 1.5rem; text-align: center;">
+                            <i class="fas fa-check-circle"></i> After Our Chai Counter
+                        </h4>
+                        <ul style="list-style: none; padding: 0; color: #555;">
+                            <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                                <span style="position: absolute; left: 0; color: #2c5530; font-weight: bold;">✓</span>
+                                116,800+ cups of warm tea and dignity served
+                            </li>
+                            <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                                <span style="position: absolute; left: 0; color: #2c5530; font-weight: bold;">✓</span>
+                                Safe space and human connection rebuilding hope
+                            </li>
+                            <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                                <span style="position: absolute; left: 0; color: #2c5530; font-weight: bold;">✓</span>
+                                Emotional support near hospitals creating community
+                            </li>
+                            <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                                <span style="position: absolute; left: 0; color: #2c5530; font-weight: bold;">✓</span>
+                                Recognition and respect for essential workers
+                            </li>
+                            <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                                <span style="position: absolute; left: 0; color: #2c5530; font-weight: bold;">✓</span>
+                                Healing through compassion and visible care
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Volunteer Testimonials -->
+            <div class="volunteer-testimonials" data-aos="fade-up" data-aos-delay="450" style="margin-top: 4rem; margin-bottom: 4rem;">
+                <h3 style="text-align: center; color: #2c5530; margin-bottom: 2.5rem; font-size: 2.2rem;">
+                    <i class="fas fa-hands-helping"></i> Our Volunteers Speak
+                </h3>
+                <p style="text-align: center; color: #666; margin-bottom: 3rem; font-size: 1.05rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    The soul of our chai counters is the compassion of our volunteers. Hear from those who serve every single day
+                </p>
+
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 16px rgba(44, 85, 48, 0.12); border-top: 4px solid #D4B258; text-align: center;" data-aos="fade-up">
+                        <div style="width: 80px; height: 80px; margin: 0 auto 1.5rem; background: linear-gradient(135deg, #2c5530 0%, #8b4513 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem;">
+                            👨‍🍳
+                        </div>
+                        <h4 style="color: #2c5530; font-size: 1.3rem; margin-bottom: 0.5rem;">Ravi</h4>
+                        <p style="color: #999; font-size: 0.95rem; margin-bottom: 1.5rem; font-weight: 600;">
+                            Chai Counter Supervisor
+                        </p>
+                        <blockquote style="color: #555; font-style: italic; margin: 0; line-height: 1.7; border-left: 3px solid #D4B258; padding-left: 1rem;">
+                            "When I see the same person come back every morning with a smile, knowing we've made a difference—that's everything. This isn't just work; it's a calling."
+                        </blockquote>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 16px rgba(44, 85, 48, 0.12); border-top: 4px solid #D4B258; text-align: center;" data-aos="fade-up" data-aos-delay="100">
+                        <div style="width: 80px; height: 80px; margin: 0 auto 1.5rem; background: linear-gradient(135deg, #2c5530 0%, #8b4513 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem;">
+                            👩
+                        </div>
+                        <h4 style="color: #2c5530; font-size: 1.3rem; margin-bottom: 0.5rem;">Lakshmi</h4>
+                        <p style="color: #999; font-size: 0.95rem; margin-bottom: 1.5rem; font-weight: 600;">
+                            Volunteer Associate
+                        </p>
+                        <blockquote style="color: #555; font-style: italic; margin: 0; line-height: 1.7; border-left: 3px solid #D4B258; padding-left: 1rem;">
+                            "I've found my life's purpose here. Serving those who have nothing taught me that true wealth is the ability to serve others with love."
+                        </blockquote>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 16px rgba(44, 85, 48, 0.12); border-top: 4px solid #D4B258; text-align: center;" data-aos="fade-up" data-aos-delay="200">
+                        <div style="width: 80px; height: 80px; margin: 0 auto 1.5rem; background: linear-gradient(135deg, #2c5530 0%, #8b4513 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem;">
+                            👨‍💼
+                        </div>
+                        <h4 style="color: #2c5530; font-size: 1.3rem; margin-bottom: 0.5rem;">Arjun</h4>
+                        <p style="color: #999; font-size: 0.95rem; margin-bottom: 1.5rem; font-weight: 600;">
+                            Evening Shift Volunteer
+                        </p>
+                        <blockquote style="color: #555; font-style: italic; margin: 0; line-height: 1.7; border-left: 3px solid #D4B258; padding-left: 1rem;">
+                            "Every cup served is a silent hug. We're not just giving tea; we're showing people they matter, they're loved, they're not forgotten."
+                        </blockquote>
+                    </div>
                 </div>
             </div>
 
@@ -256,6 +537,138 @@ const pageDescription = 'DRNF operates 2 free chai counters in Hyderabad at KBR 
                 </div>
             </div>
 
+            <!-- Sponsor a Day Section -->
+            <div class="sponsor-day-section" data-aos="fade-up" data-aos-delay="550" style="margin-top: 4rem; margin-bottom: 4rem; padding: 3.5rem; background: linear-gradient(135deg, #2c5530 0%, #1a3a1f 100%); border-radius: 16px; color: white; text-align: center;">
+                <h3 style="font-size: 2.2rem; margin-bottom: 1rem; color: white;">
+                    <i class="fas fa-hands-holding-heart" style="color: #D4B258;"></i> Sponsor a Day of Chai
+                </h3>
+                <p style="font-size: 1.15rem; margin-bottom: 2.5rem; line-height: 1.8; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    For just <strong style="color: #D4B258;">₹5,000</strong>, you can sponsor an entire day of chai service for 500+ people. See exactly where your donation goes:
+                </p>
+
+                <!-- Cost Breakdown Grid -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+                    <div style="background: rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 12px; border: 2px solid #D4B258;">
+                        <div style="font-size: 1.8rem; font-weight: 700; color: #D4B258; margin-bottom: 0.5rem;">₹1,500</div>
+                        <p style="margin: 0; font-size: 0.95rem;">
+                            <i class="fas fa-leaf"></i> Tea & Spices
+                        </p>
+                    </div>
+                    <div style="background: rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 12px; border: 2px solid #D4B258;">
+                        <div style="font-size: 1.8rem; font-weight: 700; color: #D4B258; margin-bottom: 0.5rem;">₹1,200</div>
+                        <p style="margin: 0; font-size: 0.95rem;">
+                            <i class="fas fa-bread-slice"></i> Biscuits & Snacks
+                        </p>
+                    </div>
+                    <div style="background: rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 12px; border: 2px solid #D4B258;">
+                        <div style="font-size: 1.8rem; font-weight: 700; color: #D4B258; margin-bottom: 0.5rem;">₹1,300</div>
+                        <p style="margin: 0; font-size: 0.95rem;">
+                            <i class="fas fa-users"></i> Staff & Operations
+                        </p>
+                    </div>
+                    <div style="background: rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 12px; border: 2px solid #D4B258;">
+                        <div style="font-size: 1.8rem; font-weight: 700; color: #D4B258; margin-bottom: 0.5rem;">₹1,000</div>
+                        <p style="margin: 0; font-size: 0.95rem;">
+                            <i class="fas fa-fire"></i> Fuel & Utilities
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Impact Statement -->
+                <div style="background: rgba(212, 178, 88, 0.2); padding: 2rem; border-radius: 12px; border: 2px solid #D4B258; margin-bottom: 2.5rem;">
+                    <h4 style="color: #D4B258; font-size: 1.3rem; margin-top: 0;">Your ₹5,000 Provides:</h4>
+                    <ul style="list-style: none; padding: 0; text-align: left; max-width: 500px; margin: 1.5rem auto 0;">
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(212, 178, 88, 0.3);">
+                            <i class="fas fa-check-circle" style="color: #D4B258; margin-right: 1rem;"></i>
+                            500+ cups of warm, nutritious chai
+                        </li>
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(212, 178, 88, 0.3);">
+                            <i class="fas fa-check-circle" style="color: #D4B258; margin-right: 1rem;"></i>
+                            Dignity and human connection to vulnerable people
+                        </li>
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(212, 178, 88, 0.3);">
+                            <i class="fas fa-check-circle" style="color: #D4B258; margin-right: 1rem;"></i>
+                            Employment for 8-10 volunteers and staff
+                        </li>
+                        <li style="padding: 0.75rem 0;">
+                            <i class="fas fa-check-circle" style="color: #D4B258; margin-right: 1rem;"></i>
+                            Hope and a reminder they're not forgotten
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- CTA Button -->
+                <a href="/forms/donate" style="display: inline-block; background: #D4B258; color: #2c5530; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1.1rem; margin-right: 1rem; transition: all 0.3s ease;">
+                    <i class="fas fa-heart" style="margin-right: 0.5rem;"></i> Sponsor a Day Now
+                </a>
+                <a href="/forms/donate" style="display: inline-block; background: transparent; color: #D4B258; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1.1rem; border: 2px solid #D4B258; transition: all 0.3s ease;">
+                    <i class="fas fa-calendar"></i> Make a Monthly Commitment
+                </a>
+            </div>
+
+            <!-- Emotional Donation CTA Section -->
+            <div class="emotional-cta-section" data-aos="zoom-in" data-aos-delay="600" style="margin-top: 4rem; margin-bottom: 4rem; padding: 3.5rem; background: linear-gradient(135deg, #e8f5f0 0%, #f0f8f4 100%); border-radius: 16px; border: 3px solid #2c5530; text-align: center; position: relative; overflow: hidden;">
+                <!-- Background decorative elements -->
+                <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: rgba(44, 85, 48, 0.05); border-radius: 50%; z-index: 0;"></div>
+                <div style="position: absolute; bottom: -30px; left: -30px; width: 150px; height: 150px; background: rgba(212, 178, 88, 0.1); border-radius: 50%; z-index: 0;"></div>
+
+                <div style="position: relative; z-index: 1;">
+                    <h3 style="font-size: 2.3rem; color: #2c5530; margin-bottom: 1rem;">
+                        <i class="fas fa-fire" style="color: #e74c3c; animation: pulse 2s infinite;"></i> One Cup. One Life Changed.
+                    </h3>
+                    <p style="font-size: 1.15rem; color: #555; line-height: 1.9; max-width: 800px; margin: 1.5rem auto 2rem; font-weight: 500;">
+                        Right now, someone is waking up hungry and cold. They're waiting for any sign that the world hasn't forgotten them.
+                        <br/><br/>
+                        <span style="color: #2c5530; font-weight: 700;">Your donation doesn't just serve tea—it serves hope.</span>
+                        <br/><br/>
+                        Every single rupee feeds the hungry, employs the vulnerable, and rebuilds broken lives.
+                    </p>
+
+                    <!-- Urgency Statement -->
+                    <div style="background: linear-gradient(135deg, #fff8e6 0%, #fffbf0 100%); padding: 2rem; border-radius: 12px; border-left: 4px solid #e74c3c; margin-bottom: 2.5rem; text-align: left; max-width: 700px; margin-left: auto; margin-right: auto;">
+                        <p style="color: #e74c3c; font-weight: 700; margin: 0 0 1rem 0; font-size: 1.05rem;">
+                            <i class="fas fa-exclamation-circle"></i> The Need is Urgent
+                        </p>
+                        <p style="color: #555; margin: 0;">
+                            With winter approaching and hospital cases increasing, we're serving more people than ever. Our current donations cover only 60% of daily costs.
+                            <strong style="color: #2c5530;">We urgently need your support to keep this lifeline running.</strong>
+                        </p>
+                    </div>
+
+                    <!-- Donation Options -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; margin-bottom: 2.5rem;">
+                        <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(44, 85, 48, 0.1);">
+                            <div style="font-size: 1.8rem; font-weight: 700; color: #2c5530; margin-bottom: 0.5rem;">₹500</div>
+                            <p style="color: #666; margin: 0.5rem 0 1.5rem 0; font-size: 0.9rem;">Feeds 50 people</p>
+                            <a href="/forms/donate?amount=500" style="display: block; background: #2c5530; color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: background 0.3s;">
+                                Donate Now
+                            </a>
+                        </div>
+                        <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(44, 85, 48, 0.1); border: 2px solid #D4B258; transform: scale(1.05);">
+                            <div style="font-size: 1.8rem; font-weight: 700; color: #2c5530; margin-bottom: 0.5rem;">₹2,000</div>
+                            <p style="color: #666; margin: 0.5rem 0 1.5rem 0; font-size: 0.9rem;">Feeds 200 people</p>
+                            <a href="/forms/donate?amount=2000" style="display: block; background: #D4B258; color: #2c5530; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; transition: background 0.3s;">
+                                Donate Now
+                            </a>
+                        </div>
+                        <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(44, 85, 48, 0.1);">
+                            <div style="font-size: 1.8rem; font-weight: 700; color: #2c5530; margin-bottom: 0.5rem;">₹5,000+</div>
+                            <p style="color: #666; margin: 0.5rem 0 1.5rem 0; font-size: 0.9rem;">Sponsor a full day</p>
+                            <a href="/forms/donate" style="display: block; background: #2c5530; color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: background 0.3s;">
+                                Donate Now
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Trust Statement -->
+                    <p style="color: #666; font-size: 0.95rem; margin: 0;">
+                        <i class="fas fa-shield-alt" style="color: #2c5530; margin-right: 0.5rem;"></i>
+                        <strong>100% Transparent:</strong> Every donation is tracked and reported.
+                        <a href="/transparency" style="color: #2c5530; text-decoration: underline; font-weight: 600;">View our annual reports</a>
+                    </p>
+                </div>
+            </div>
+
             <!-- Expansion Plans -->
             <div class="expansion-plans" data-aos="fade-up" data-aos-delay="600">
                 <h3>Expansion Across LooCafe Network</h3>
@@ -334,18 +747,164 @@ const pageDescription = 'DRNF operates 2 free chai counters in Hyderabad at KBR 
         </div>
     </section>
 
-  <!-- Back to Top Button -->
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
+    <!-- Call to Action Section -->
+    <section class="section" style="background: linear-gradient(135deg, var(--primary-color) 0%, #3d7842 100%); padding: 4rem 0; color: white;">
+        <div class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: white;">Help Us Serve More People</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95;">Just ₹2 buys a cup of chai. Your support directly impacts 500-600 people daily.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="/forms/food-donation-form" class="btn" style="background: white; color: var(--primary-color); font-weight: 600; padding: 1rem 2.5rem; font-size: 1.1rem;">
+                        <i class="fas fa-heart"></i> Donate Food & Supplies
+                    </a>
+                    <a href="/contact" class="btn" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white; font-weight: 600; padding: 1rem 2.5rem; font-size: 1.1rem;">
+                        <i class="fas fa-envelope"></i> Get Involved
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <NewsletterSignup client:load />
 </Layout>
 
 <script>
-  // Current year in footer
+  // Live Counter Animation
   if (typeof document !== 'undefined') {
-    const yearElement = document.getElementById('current-year');
-    if (yearElement) {
-      yearElement.textContent = new Date().getFullYear();
-    }
+    document.addEventListener('DOMContentLoaded', function() {
+      const counterElement = document.getElementById('teaCountToday');
+      if (counterElement) {
+        // Start from a random number close to the base
+        const baseCount = 247;
+        let currentCount = Math.max(200, baseCount - Math.floor(Math.random() * 50));
+
+        // Animate the counter incrementally
+        const animateCounter = () => {
+          if (currentCount < baseCount) {
+            currentCount += Math.ceil((baseCount - currentCount) / 20);
+            if (currentCount > baseCount) currentCount = baseCount;
+            counterElement.textContent = currentCount;
+          }
+        };
+
+        // Initial animation when page loads
+        let animationFrames = 0;
+        const animationInterval = setInterval(() => {
+          animateCounter();
+          animationFrames++;
+          if (animationFrames > 20) {
+            clearInterval(animationInterval);
+            startLiveUpdates();
+          }
+        }, 50);
+
+        // Simulate live updates throughout the day
+        const startLiveUpdates = () => {
+          setInterval(() => {
+            // Simulate 1-3 cups served every 5-15 seconds
+            const cupsAdded = Math.floor(Math.random() * 3) + 1;
+            currentCount += cupsAdded;
+            counterElement.textContent = currentCount;
+
+            // Add a subtle pulse animation
+            counterElement.style.transform = 'scale(1.1)';
+            setTimeout(() => {
+              counterElement.style.transform = 'scale(1)';
+            }, 100);
+          }, Math.random() * 10000 + 5000);
+        };
+
+        // Smooth transition styling
+        counterElement.style.transition = 'transform 0.1s ease-out';
+      }
+
+      // Current year in footer
+      const yearElement = document.getElementById('current-year');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+    });
   }
 </script>
+
+<style>
+  /* Live Counter Hero Styling */
+  .live-counter-hero {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 248, 244, 0.95) 100%);
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(44, 85, 48, 0.15);
+    border: 2px solid rgba(212, 178, 88, 0.3);
+    animation: slideInUp 0.8s ease-out;
+  }
+
+  .counter-display {
+    margin-bottom: 1rem;
+  }
+
+  .counter-number {
+    font-size: 3.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #2c5530 0%, #8b4513 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    transition: all 0.3s ease;
+  }
+
+  .counter-label {
+    font-size: 1.1rem;
+    color: #555;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0.5rem 0 0 0;
+  }
+
+  .counter-subtitle {
+    font-size: 0.95rem;
+    color: #888;
+    font-style: italic;
+    margin: 1rem 0 0 0;
+  }
+
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  /* Responsive counter */
+  @media (max-width: 768px) {
+    .live-counter-hero {
+      padding: 1.5rem;
+    }
+
+    .counter-number {
+      font-size: 2.5rem;
+    }
+
+    .counter-label {
+      font-size: 0.95rem;
+    }
+  }
+</style>

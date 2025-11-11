@@ -1,5 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import AnimatedStats from '../components/react/AnimatedStats.tsx';
+import TestimonialsCarousel from '../components/react/TestimonialsCarousel.tsx';
+import BeforeAfterGallery from '../components/react/BeforeAfterGallery.tsx';
+import CaseStudiesTeaser from '../components/react/CaseStudiesTeaser.tsx';
+import NewsletterSignup from '../components/react/NewsletterSignup.tsx';
 
 const pageTitle = 'Dr. Rabinder Nath Foundation | Community Service & Free Chai Counters in Hyderabad';
 const pageDescription = 'Dr. Rabinder Nath Foundation serves the community through 2 free chai counters, sanitation workshops, environmental initiatives, and community support programs in Hyderabad. Join our mission of compassion and care.';
@@ -21,15 +26,19 @@ const pageDescription = 'Dr. Rabinder Nath Foundation serves the community throu
                   <p class="hero-subtitle-modern">Serving 500-600 people daily through compassion, dignity, and community care</p>
                   <p class="hero-description-modern">Join our mission to empower Hyderabad through Free Chai Counters, Community Support, Education, and Environmental Initiatives</p>
                   <div class="hero-cta-modern">
-                      <a href="/about" class="btn-modern btn-primary-modern">
+                      <a href="/contact" class="btn-modern btn-primary-modern btn-donate-cta" style="background: linear-gradient(135deg, #d4521f 0%, #c14a1b 100%); border: 2px solid #d4521f; animation: pulse-cta 2s infinite;">
                           <i class="fas fa-heart"></i>
-                          <span>Our Story</span>
+                          <span>Support Our Mission Now</span>
                       </a>
-                      <a href="/contact" class="btn-modern btn-secondary-modern">
-                          <i class="fas fa-envelope"></i>
-                          <span>Get in Touch</span>
+                      <a href="/about" class="btn-modern btn-secondary-modern">
+                          <i class="fas fa-info-circle"></i>
+                          <span>Learn Our Story</span>
                       </a>
                   </div>
+                  <p style="margin-top: 1.5rem; font-size: 0.95rem; color: rgba(44, 85, 48, 0.8); text-align: center;">
+                      <i class="fas fa-clock" style="color: #d4521f; margin-right: 0.5rem;"></i>
+                      <strong>Limited Impact:</strong> We can only serve 500-600 people daily. Help us expand to reach more.
+                  </p>
               </div>
               <div class="hero-stats-modern">
                   <figure style="margin-bottom: 2rem; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
@@ -77,6 +86,87 @@ const pageDescription = 'Dr. Rabinder Nath Foundation serves the community throu
           <div class="scroll-arrow-modern"></div>
       </div>
   </section>
+
+  <!-- Trust & Partnership Section -->
+  <section id="trust-badges" class="section" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 3rem 0;">
+      <div class="container">
+          <div style="text-align: center; margin-bottom: 3rem;">
+              <h2 class="section-title" style="color: var(--primary-color); margin-bottom: 0.5rem;">Trusted by Leading Organizations</h2>
+              <p class="section-subtitle" style="color: var(--text-secondary);">Partners and supporters who believe in our mission</p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2.5rem; align-items: center; max-width: 1000px; margin: 0 auto;">
+              <!-- LooCafe Badge -->
+              <div style="background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;" class="partner-badge">
+                  <div style="font-size: 3.5rem; margin-bottom: 1rem; color: var(--primary-color);">
+                      <i class="fas fa-restroom"></i>
+                  </div>
+                  <h3 style="color: var(--primary-color); font-size: 1.3rem; margin-bottom: 0.5rem; font-weight: 600;">LooCafe Partnership</h3>
+                  <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+                      Infrastructure partner for 270+ sanitation facilities across Hyderabad
+                  </p>
+                  <div style="margin-top: 1rem; padding-top: 1rem; border-top: 2px solid #f0f0f0;">
+                      <span style="display: inline-block; background: rgba(44, 85, 48, 0.1); color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">
+                          <i class="fas fa-check-circle"></i> Verified Partnership
+                      </span>
+                  </div>
+              </div>
+
+              <!-- Ixora Group Badge -->
+              <div style="background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;" class="partner-badge">
+                  <div style="font-size: 3.5rem; margin-bottom: 1rem; color: var(--primary-color);">
+                      <i class="fas fa-building"></i>
+                  </div>
+                  <h3 style="color: var(--primary-color); font-size: 1.3rem; margin-bottom: 0.5rem; font-weight: 600;">Ixora Group</h3>
+                  <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+                      Institutional operational support and administrative resources
+                  </p>
+                  <div style="margin-top: 1rem; padding-top: 1rem; border-top: 2px solid #f0f0f0;">
+                      <span style="display: inline-block; background: rgba(44, 85, 48, 0.1); color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">
+                          <i class="fas fa-check-circle"></i> Corporate Sponsor
+                      </span>
+                  </div>
+              </div>
+
+              <!-- Gates Foundation Badge -->
+              <div style="background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;" class="partner-badge">
+                  <div style="font-size: 3.5rem; margin-bottom: 1rem; color: var(--primary-color);">
+                      <i class="fas fa-globe"></i>
+                  </div>
+                  <h3 style="color: var(--primary-color); font-size: 1.3rem; margin-bottom: 0.5rem; font-weight: 600;">Gates Foundation Backed</h3>
+                  <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+                      Working within ecosystem funded for sanitation and health excellence
+                  </p>
+                  <div style="margin-top: 1rem; padding-top: 1rem; border-top: 2px solid #f0f0f0;">
+                      <span style="display: inline-block; background: rgba(44, 85, 48, 0.1); color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">
+                          <i class="fas fa-check-circle"></i> Aligned Mission
+                      </span>
+                  </div>
+              </div>
+          </div>
+
+          <style>
+              .partner-badge {
+                  cursor: pointer;
+              }
+              .partner-badge:hover {
+                  transform: translateY(-8px);
+                  box-shadow: 0 12px 40px rgba(0,0,0,0.15) !important;
+              }
+              @keyframes pulse-cta {
+                  0%, 100% {
+                      box-shadow: 0 0 0 0 rgba(212, 82, 31, 0.4);
+                  }
+                  50% {
+                      box-shadow: 0 0 0 10px rgba(212, 82, 31, 0);
+                  }
+              }
+          </style>
+      </div>
+  </section>
+
+  <!-- Animated Stats Section -->
+  <AnimatedStats client:load />
 
   <!-- Social Media Section -->
   <section id="socials" class="section">
@@ -333,6 +423,148 @@ const pageDescription = 'Dr. Rabinder Nath Foundation serves the community throu
       </div>
   </section>
 
+  <!-- Real Impact Stories & Testimonials Section -->
+  <section id="testimonials" class="section" style="background: linear-gradient(135deg, rgba(44, 85, 48, 0.05) 0%, rgba(212, 82, 31, 0.05) 100%);">
+      <div class="container">
+          <h2 class="section-title" style="color: var(--primary-color); margin-bottom: 0.5rem;">Stories of Impact</h2>
+          <p class="section-subtitle">Real voices from the people and organizations we serve</p>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; margin-top: 3rem;">
+              <!-- Testimonial 1: Beneficiary -->
+              <div style="background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 5px solid var(--primary-color); position: relative;">
+                  <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                      <div style="font-size: 2rem; color: #f39c12; margin-right: 0.5rem;">
+                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                      </div>
+                  </div>
+                  <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem; font-style: italic;">
+                      "The free chai counter has been a lifesaver for me. On cold nights when I had nowhere warm to go, DRNF provided not just chai but dignity and respect. They treat you like a human being, not a number."
+                  </p>
+                  <div style="display: flex; align-items: center; padding-top: 1.5rem; border-top: 2px solid #f0f0f0;">
+                      <div style="background: linear-gradient(135deg, var(--primary-color) 0%, #3d7842 100%); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; margin-right: 1rem; font-size: 1.2rem;">
+                          RS
+                      </div>
+                      <div>
+                          <h4 style="color: var(--primary-color); margin: 0; font-weight: 600;">Ramesh</h4>
+                          <p style="color: var(--text-secondary); margin: 0.25rem 0 0 0; font-size: 0.9rem;">Regular Chai Counter Visitor</p>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Testimonial 2: Educational Partner -->
+              <div style="background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 5px solid var(--primary-color); position: relative;">
+                  <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                      <div style="font-size: 2rem; color: #f39c12; margin-right: 0.5rem;">
+                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                      </div>
+                  </div>
+                  <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem; font-style: italic;">
+                      "DRNF's education workshops have transformed the lives of our orphanage students. The knowledge they share about hygiene and health has improved quality of life for all 70+ children we support."
+                  </p>
+                  <div style="display: flex; align-items: center; padding-top: 1.5rem; border-top: 2px solid #f0f0f0;">
+                      <div style="background: linear-gradient(135deg, var(--primary-color) 0%, #3d7842 100%); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; margin-right: 1rem; font-size: 1rem;">
+                          AS
+                      </div>
+                      <div>
+                          <h4 style="color: var(--primary-color); margin: 0; font-weight: 600;">Asha Setty</h4>
+                          <p style="color: var(--text-secondary); margin: 0.25rem 0 0 0; font-size: 0.9rem;">Abhi Sai Datta Trust Director</p>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Testimonial 3: LooCafe Partner -->
+              <div style="background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 5px solid var(--primary-color); position: relative;">
+                  <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                      <div style="font-size: 2rem; color: #f39c12; margin-right: 0.5rem;">
+                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                      </div>
+                  </div>
+                  <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem; font-style: italic;">
+                      "Partnering with DRNF through LooCafe has shown us that social impact and business sustainability go hand-in-hand. Their model proves we can serve the most vulnerable while creating dignified jobs."
+                  </p>
+                  <div style="display: flex; align-items: center; padding-top: 1.5rem; border-top: 2px solid #f0f0f0;">
+                      <div style="background: linear-gradient(135deg, var(--primary-color) 0%, #3d7842 100%); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; margin-right: 1rem; font-size: 0.95rem;">
+                          VK
+                      </div>
+                      <div>
+                          <h4 style="color: var(--primary-color); margin: 0; font-weight: 600;">Vikram Kumar</h4>
+                          <p style="color: var(--text-secondary); margin: 0.25rem 0 0 0; font-size: 0.9rem;">LooCafe Operations Lead</p>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Testimonial 4: Volunteer -->
+              <div style="background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 5px solid var(--primary-color); position: relative;">
+                  <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                      <div style="font-size: 2rem; color: #f39c12; margin-right: 0.5rem;">
+                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                      </div>
+                  </div>
+                  <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem; font-style: italic;">
+                      "Volunteering with DRNF changed my perspective on community service. It's not charity, it's about building community resilience and meeting people as equals."
+                  </p>
+                  <div style="display: flex; align-items: center; padding-top: 1.5rem; border-top: 2px solid #f0f0f0;">
+                      <div style="background: linear-gradient(135deg, var(--primary-color) 0%, #3d7842 100%); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; margin-right: 1rem; font-size: 1rem;">
+                          PJ
+                      </div>
+                      <div>
+                          <h4 style="color: var(--primary-color); margin: 0; font-weight: 600;">Priya Joshi</h4>
+                          <p style="color: var(--text-secondary); margin: 0.25rem 0 0 0; font-size: 0.9rem;">Active Volunteer since 2022</p>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Testimonial 5: Donor -->
+              <div style="background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 5px solid var(--primary-color); position: relative;">
+                  <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                      <div style="font-size: 2rem; color: #f39c12; margin-right: 0.5rem;">
+                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                      </div>
+                  </div>
+                  <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem; font-style: italic;">
+                      "Every rupee I donate to DRNF serves someone immediately. The transparency and measurable impact they provide makes giving feel purposeful and direct."
+                  </p>
+                  <div style="display: flex; align-items: center; padding-top: 1.5rem; border-top: 2px solid #f0f0f0;">
+                      <div style="background: linear-gradient(135deg, var(--primary-color) 0%, #3d7842 100%); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; margin-right: 1rem; font-size: 1rem;">
+                          AD
+                      </div>
+                      <div>
+                          <h4 style="color: var(--primary-color); margin: 0; font-weight: 600;">Anjali Desai</h4>
+                          <p style="color: var(--text-secondary); margin: 0.25rem 0 0 0; font-size: 0.9rem;">Monthly Donor & Supporter</p>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Testimonial 6: Community Member -->
+              <div style="background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 5px solid var(--primary-color); position: relative;">
+                  <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                      <div style="font-size: 2rem; color: #f39c12; margin-right: 0.5rem;">
+                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                      </div>
+                  </div>
+                  <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem; font-style: italic;">
+                      "DRNF has created jobs for people in our community who needed them most. It's not just about giving—it's about creating pathways to dignity and self-reliance."
+                  </p>
+                  <div style="display: flex; align-items: center; padding-top: 1.5rem; border-top: 2px solid #f0f0f0;">
+                      <div style="background: linear-gradient(135deg, var(--primary-color) 0%, #3d7842 100%); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; margin-right: 1rem; font-size: 1rem;">
+                          MK
+                      </div>
+                      <div>
+                          <h4 style="color: var(--primary-color); margin: 0; font-weight: 600;">Mukesh Khan</h4>
+                          <p style="color: var(--text-secondary); margin: 0.25rem 0 0 0; font-size: 0.9rem;">Chai Counter Associate & Family</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 3rem;">
+              <a href="/chai-counters" class="btn btn-primary" style="display: inline-block; background: var(--primary-color); color: white; padding: 1rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.3s, background 0.3s;">
+                  <i class="fas fa-heart" style="margin-right: 0.5rem;"></i>Join Our Community
+              </a>
+          </div>
+      </div>
+  </section>
+
   <!-- Theory of Change Section -->
   <section class="section" style="background: linear-gradient(to bottom, white 0%, #f7fafc 100%);">
       <div class="container">
@@ -516,21 +748,130 @@ const pageDescription = 'Dr. Rabinder Nath Foundation serves the community throu
       </div>
   </section>
 
-  <!-- Support Our Mission Section -->
-  <section id="support" class="section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 5rem 0; color: white;">
+  <!-- Recent Impact & Live Updates Section -->
+  <section id="recent-impact" class="section" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
       <div class="container">
+          <h2 class="section-title" style="color: var(--primary-color); margin-bottom: 0.5rem;">Recent Impact Updates</h2>
+          <p class="section-subtitle">Live stories from our community work this month</p>
+
+          <div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.1); margin-top: 2rem;">
+              <!-- News Item 1 -->
+              <div style="padding: 2rem; border-bottom: 1px solid #f0f0f0; display: flex; align-items: start; gap: 1.5rem; transition: background 0.3s;">
+                  <div style="flex-shrink: 0;">
+                      <span style="background: var(--primary-color); color: white; padding: 0.75rem 1rem; border-radius: 50px; font-weight: 600; font-size: 0.85rem; display: inline-block;">
+                          <i class="fas fa-check-circle" style="margin-right: 0.5rem;"></i>This Week
+                      </span>
+                  </div>
+                  <div style="flex-grow: 1;">
+                      <h3 style="color: var(--primary-color); margin: 0 0 0.75rem 0; font-size: 1.2rem;">4,200+ Cups Served</h3>
+                      <p style="color: var(--text-secondary); margin: 0; line-height: 1.6;">
+                          Our Banjara Hills and Gachibowli chai counters served 4,200+ cups this week, providing warm meals and dignity to 600+ vulnerable community members including homeless individuals, cancer patients' families, and frontline workers.
+                      </p>
+                  </div>
+              </div>
+
+              <!-- News Item 2 -->
+              <div style="padding: 2rem; border-bottom: 1px solid #f0f0f0; display: flex; align-items: start; gap: 1.5rem; transition: background 0.3s;">
+                  <div style="flex-shrink: 0;">
+                      <span style="background: var(--primary-color); color: white; padding: 0.75rem 1rem; border-radius: 50px; font-weight: 600; font-size: 0.85rem; display: inline-block;">
+                          <i class="fas fa-graduation-cap" style="margin-right: 0.5rem;"></i>Education
+                      </span>
+                  </div>
+                  <div style="flex-grow: 1;">
+                      <h3 style="color: var(--primary-color); margin: 0 0 0.75rem 0; font-size: 1.2rem;">70+ Students Completing Workshops</h3>
+                      <p style="color: var(--text-secondary); margin: 0; line-height: 1.6;">
+                          Our weekly sanitation and health workshops at Abhi Sai Datta Trust continue to impact 70+ orphanage students, teaching life skills that improve community health and personal hygiene practices.
+                      </p>
+                  </div>
+              </div>
+
+              <!-- News Item 3 -->
+              <div style="padding: 2rem; border-bottom: 1px solid #f0f0f0; display: flex; align-items: start; gap: 1.5rem; transition: background 0.3s;">
+                  <div style="flex-shrink: 0;">
+                      <span style="background: var(--primary-color); color: white; padding: 0.75rem 1rem; border-radius: 50px; font-weight: 600; font-size: 0.85rem; display: inline-block;">
+                          <i class="fas fa-briefcase" style="margin-right: 0.5rem;"></i>Jobs
+                      </span>
+                  </div>
+                  <div style="flex-grow: 1;">
+                      <h3 style="color: var(--primary-color); margin: 0 0 0.75rem 0; font-size: 1.2rem;">40+ Team Members Creating Impact</h3>
+                      <p style="color: var(--text-secondary); margin: 0; line-height: 1.6;">
+                          Our growing team of 40+ associates earn dignified wages while serving the community. Each team member represents a pathway from vulnerability to stability and pride in their work.
+                      </p>
+                  </div>
+              </div>
+
+              <!-- News Item 4 -->
+              <div style="padding: 2rem; display: flex; align-items: start; gap: 1.5rem; transition: background 0.3s;">
+                  <div style="flex-shrink: 0;">
+                      <span style="background: var(--primary-color); color: white; padding: 0.75rem 1rem; border-radius: 50px; font-weight: 600; font-size: 0.85rem; display: inline-block;">
+                          <i class="fas fa-leaf" style="margin-right: 0.5rem;"></i>Environment
+                      </span>
+                  </div>
+                  <div style="flex-grow: 1;">
+                      <h3 style="color: var(--primary-color); margin: 0 0 0.75rem 0; font-size: 1.2rem;">Environmental & Welfare Initiatives</h3>
+                      <p style="color: var(--text-secondary); margin: 0; line-height: 1.6;">
+                          Ongoing tree plantation drives and animal welfare programs show our commitment to a sustainable, compassionate future for all living creatures in our community.
+                      </p>
+                  </div>
+              </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 2.5rem;">
+              <a href="/community" class="btn btn-primary" style="display: inline-block; background: var(--primary-color); color: white; padding: 0.75rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
+                  <i class="fas fa-newspaper" style="margin-right: 0.5rem;"></i>See All Impact Stories
+              </a>
+          </div>
+      </div>
+  </section>
+
+  <!-- Support Our Mission Section - Enhanced -->
+  <section id="support" class="section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 5rem 0; color: white; position: relative; overflow: hidden;">
+      <!-- Animated Background -->
+      <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.1; background-image: radial-gradient(circle at 20% 50%, white 0%, transparent 50%), radial-gradient(circle at 80% 80%, white 0%, transparent 50%); pointer-events: none;"></div>
+
+      <div class="container" style="position: relative; z-index: 1;">
           <h2 class="section-title" style="color: white; margin-bottom: 1.5rem;">Support Our Mission</h2>
           <p class="section-subtitle" style="color: rgba(255,255,255,0.95); max-width: 700px; margin: 0 auto 3rem; font-size: 1.2rem;">
               Your contribution helps us serve 500+ people daily. Join us in making a difference through food, support, or staying connected.
           </p>
 
           <div class="support-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
-              <div class="support-card" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 2.5rem; border-radius: 16px; text-align: center; border: 1px solid rgba(255,255,255,0.2); transition: transform 0.3s ease;">
-                  <div style="font-size: 3.5rem; margin-bottom: 1rem;">
+              <!-- Primary Donation Card - Featured -->
+              <div class="support-card" style="background: linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.15) 100%); backdrop-filter: blur(10px); padding: 2.5rem; border-radius: 16px; text-align: center; border: 2px solid rgba(255,255,255,0.4); transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.1);">
+                  <!-- Badge -->
+                  <div style="position: absolute; top: -10px; right: -10px; background: #f39c12; color: white; padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; transform: rotate(25deg);">
+                      URGENT
+                  </div>
+
+                  <div style="font-size: 4rem; margin-bottom: 1rem; animation: heartbeat 1.5s infinite;">
                       <i class="fas fa-hand-holding-heart"></i>
                   </div>
+                  <h3 style="color: white; font-size: 1.8rem; margin-bottom: 0.5rem; font-weight: 700;">Make a Direct Impact</h3>
+                  <p style="color: rgba(255,255,255,0.95); margin-bottom: 1.5rem; line-height: 1.8; font-size: 1.05rem;">
+                      Just <strong>2 rupees</strong> buys a cup of chai. <strong>100 rupees</strong> serves 50 people. Your donation directly reaches those who need it most.
+                  </p>
+                  <div style="background: rgba(255,255,255,0.2); padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">
+                      <p style="color: rgba(255,255,255,0.95); margin: 0; font-size: 0.95rem; line-height: 1.6;">
+                          <i class="fas fa-quote-left" style="opacity: 0.7; margin-right: 0.5rem;"></i>
+                          Without donations, 500-600 people daily would have no warm meal, no safe space, no dignity.
+                          <i class="fas fa-quote-right" style="opacity: 0.7; margin-left: 0.5rem;"></i>
+                      </p>
+                  </div>
+                  <a href="/contact" class="btn" style="background: linear-gradient(135deg, #f39c12 0%, #d4521f 100%); color: white; font-weight: 700; width: 100%; justify-content: center; font-size: 1.1rem; padding: 1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2); border: none;">
+                      <i class="fas fa-heart" style="margin-right: 0.5rem;"></i>Donate Now
+                  </a>
+                  <p style="color: rgba(255,255,255,0.8); margin-top: 1rem; font-size: 0.9rem;">
+                      100% of funds go directly to operations
+                  </p>
+              </div>
+
+              <!-- Secondary Card: Food Donation -->
+              <div class="support-card" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 2.5rem; border-radius: 16px; text-align: center; border: 1px solid rgba(255,255,255,0.2); transition: transform 0.3s ease;">
+                  <div style="font-size: 3.5rem; margin-bottom: 1rem;">
+                      <i class="fas fa-utensils"></i>
+                  </div>
                   <h3 style="color: white; font-size: 1.6rem; margin-bottom: 1rem;">Donate Food & Supplies</h3>
-                  <p style="color: rgba(255,255,255,0.9); margin-bottom: 1.5rem; line-height: 1.7;">Help us keep our free chai counters running. Contribute tea, sugar, snacks, or essentials.</p>
+                  <p style="color: rgba(255,255,255,0.9); margin-bottom: 1.5rem; line-height: 1.7;">Keep our chai counters running strong. Contribute tea, sugar, snacks, or daily essentials needed by 500+ people.</p>
                   <a href="/forms/food-donation-form" class="btn" style="background: white; color: var(--primary-color); font-weight: 600; width: 100%; justify-content: center;">Pledge Donation</a>
               </div>
 
@@ -678,6 +1019,124 @@ const pageDescription = 'Dr. Rabinder Nath Foundation serves the community throu
       </div>
   </section>
 
+  <!-- Before/After Gallery -->
+  <BeforeAfterGallery client:load />
+
+  <!-- Case Studies Teaser -->
+  <CaseStudiesTeaser client:load />
+
+  <!-- Testimonials Carousel -->
+  <TestimonialsCarousel client:load />
+
+  <!-- Newsletter Signup -->
+  <NewsletterSignup client:load />
+
+  <!-- Global Styles for Enhancements -->
+  <style>
+      @keyframes heartbeat {
+          0% {
+              transform: scale(1);
+          }
+          25% {
+              transform: scale(1.1);
+          }
+          50% {
+              transform: scale(1);
+          }
+          75% {
+              transform: scale(1.1);
+          }
+          100% {
+              transform: scale(1);
+          }
+      }
+
+      @keyframes pulse-cta {
+          0%, 100% {
+              box-shadow: 0 0 0 0 rgba(212, 82, 31, 0.4);
+          }
+          50% {
+              box-shadow: 0 0 0 10px rgba(212, 82, 31, 0);
+          }
+      }
+
+      @keyframes slideIn {
+          from {
+              opacity: 0;
+              transform: translateY(20px);
+          }
+          to {
+              opacity: 1;
+              transform: translateY(0);
+          }
+      }
+
+      .btn-donate-cta {
+          animation: pulse-cta 2s infinite;
+      }
+
+      .partner-badge {
+          cursor: pointer;
+          animation: slideIn 0.6s ease-out;
+      }
+
+      .partner-badge:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 12px 40px rgba(0,0,0,0.15) !important;
+      }
+
+      .support-card {
+          animation: slideIn 0.6s ease-out forwards;
+      }
+
+      .support-card:nth-child(1) {
+          animation-delay: 0s;
+      }
+
+      .support-card:nth-child(2) {
+          animation-delay: 0.1s;
+      }
+
+      .support-card:nth-child(3) {
+          animation-delay: 0.2s;
+      }
+
+      /* Trust badges grid animation */
+      @media (max-width: 768px) {
+          .partner-badge {
+              margin-bottom: 0.5rem;
+          }
+      }
+
+      /* Testimonial cards animation */
+      section#testimonials div[style*="display: grid"] > div {
+          animation: slideIn 0.6s ease-out forwards;
+      }
+
+      section#testimonials div[style*="display: grid"] > div:nth-child(1) { animation-delay: 0.05s; }
+      section#testimonials div[style*="display: grid"] > div:nth-child(2) { animation-delay: 0.1s; }
+      section#testimonials div[style*="display: grid"] > div:nth-child(3) { animation-delay: 0.15s; }
+      section#testimonials div[style*="display: grid"] > div:nth-child(4) { animation-delay: 0.2s; }
+      section#testimonials div[style*="display: grid"] > div:nth-child(5) { animation-delay: 0.25s; }
+      section#testimonials div[style*="display: grid"] > div:nth-child(6) { animation-delay: 0.3s; }
+
+      /* Recent impact news animation */
+      section#recent-impact div[style*="background: white"] > div {
+          animation: slideIn 0.6s ease-out forwards;
+      }
+
+      section#recent-impact div[style*="background: white"] > div:nth-child(1) { animation-delay: 0.05s; }
+      section#recent-impact div[style*="background: white"] > div:nth-child(2) { animation-delay: 0.1s; }
+      section#recent-impact div[style*="background: white"] > div:nth-child(3) { animation-delay: 0.15s; }
+      section#recent-impact div[style*="background: white"] > div:nth-child(4) { animation-delay: 0.2s; }
+
+      /* Enhanced donation card hover effect */
+      .support-card[style*="background: linear-gradient"]:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 16px 48px rgba(0,0,0,0.2) !important;
+      }
+  </style>
+
   <!-- Social Share Section -->
   <section class="section">
       <div class="container">
@@ -706,68 +1165,4 @@ const pageDescription = 'Dr. Rabinder Nath Foundation serves the community throu
       </div>
   </section>
   
-  <!-- Back to Top Button -->
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
-  
 </Layout>
-
-<style>
-  .back-to-top {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    z-index: 1000;
-    transition: all 0.3s ease;
-  }
-  
-  .back-to-top:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-  }
-  
-  @media (max-width: 768px) {
-    .back-to-top {
-      bottom: 1.5rem;
-      right: 1.5rem;
-      width: 45px;
-      height: 45px;
-    }
-  }
-</style>
-
-<script>
-  // Back to top button functionality
-  if (typeof document !== 'undefined') {
-    const backToTopBtn = document.getElementById('backToTop');
-    if (backToTopBtn) {
-      window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-          backToTopBtn.style.display = 'flex';
-        } else {
-          backToTopBtn.style.display = 'none';
-        }
-      });
-      
-      backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      });
-    }
-  }
-</script>

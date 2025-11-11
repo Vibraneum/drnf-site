@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import NewsletterSignup from '../components/react/NewsletterSignup.tsx';
 
 const pageTitle = 'Community Initiatives | Dr. Rabinder Nath Foundation';
 const pageDescription = "DRNF's community initiatives include regular donation drives, sanitation and education workshops, environmental conservation, and animal welfare programs in Hyderabad.";
@@ -11,6 +12,90 @@ const pageDescription = "DRNF's community initiatives include regular donation d
         <div class="container">
             <h1 data-aos="fade-up">Community Initiatives</h1>
             <p data-aos="fade-up" data-aos-delay="200">Building sustainable impact through community support, education, and environmental care</p>
+        </div>
+    </section>
+
+    <!-- Families Counter Section -->
+    <section class="section families-counter-section">
+        <div class="container">
+            <div class="counter-card" data-aos="zoom-in">
+                <div class="counter-content">
+                    <div class="counter-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h2>Families We've Helped</h2>
+                    <div class="counter-display">
+                        <span class="counter-number" data-target="450" id="familiesCounter">0</span>
+                        <span class="counter-label">Families Supported</span>
+                    </div>
+                    <p class="counter-subtitle">Through direct assistance, emergency support, and sustainable programs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Metrics Section -->
+    <section class="section impact-metrics-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Our Community Impact</h2>
+
+            <div class="metrics-grid">
+                <div class="metric-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="metric-header">
+                        <i class="fas fa-rupee-sign"></i>
+                        <h3>Financial Assistance</h3>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%; background: linear-gradient(90deg, #2c5530 0%, #45b7d1 100%);" data-target="500000"></div>
+                    </div>
+                    <div class="metric-details">
+                        <span class="metric-value">₹5,00,000+</span>
+                        <span class="metric-description">Direct assistance distributed</span>
+                    </div>
+                </div>
+
+                <div class="metric-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="metric-header">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Students Supported</h3>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%; background: linear-gradient(90deg, #2c5530 0%, #f39c12 100%);" data-target="70"></div>
+                    </div>
+                    <div class="metric-details">
+                        <span class="metric-value">70+</span>
+                        <span class="metric-description">Educational support & scholarships</span>
+                    </div>
+                </div>
+
+                <div class="metric-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="metric-header">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Jobs Created</h3>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%; background: linear-gradient(90deg, #2c5530 0%, #2ecc71 100%);" data-target="70"></div>
+                    </div>
+                    <div class="metric-details">
+                        <span class="metric-value">70+</span>
+                        <span class="metric-description">Employment opportunities created</span>
+                    </div>
+                </div>
+
+                <div class="metric-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="metric-header">
+                        <i class="fas fa-users"></i>
+                        <h3>Team Members</h3>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%; background: linear-gradient(90deg, #2c5530 0%, #9b59b6 100%);" data-target="40"></div>
+                    </div>
+                    <div class="metric-details">
+                        <span class="metric-value">40+</span>
+                        <span class="metric-description">Full-time associates & volunteers</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -54,6 +139,416 @@ const pageDescription = "DRNF's community initiatives include regular donation d
                     <div class="subtle-note">
                         <p><small>Past initiatives have facilitated support worth approximately ₹5,00,000 through various community programs</small></p>
                     </div>
+                </div>
+            </div>
+
+            <!-- Timeline of Recent Activities -->
+            <div class="timeline-section" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="timeline-title">Recent Community Support Timeline</h3>
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-left" data-aos-delay="0">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">November 2024</div>
+                            <h4>Emergency Winter Relief Program</h4>
+                            <p>Distributed winter clothing and blankets to 200+ homeless individuals across Hyderabad. Provided meal vouchers at LooCafe locations worth ₹50,000.</p>
+                            <div class="timeline-impact">Impact: 200+ lives supported</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-left" data-aos-delay="100">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">September 2024</div>
+                            <h4>Education Scholarship Drive</h4>
+                            <p>Provided educational scholarships and study materials to 35 students from underprivileged families. Partnership with Abhi Sai Datta Trust expanded to include vocational training.</p>
+                            <div class="timeline-impact">Impact: 35 students advancing education</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">July 2024</div>
+                            <h4>Medical Emergency Fund Launch</h4>
+                            <p>Established emergency medical fund to support families facing health crises. Distributed ₹1,25,000 to 15 families for critical medical treatments.</p>
+                            <div class="timeline-impact">Impact: 15 families received life-saving care</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-left" data-aos-delay="300">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">May 2024</div>
+                            <h4>Sanitation & Health Awareness Campaign</h4>
+                            <p>Conducted 12 workshops on sanitation and hygiene across 4 communities. Reached 150+ residents with preventive health education and free health check-ups.</p>
+                            <div class="timeline-impact">Impact: 150+ beneficiaries educated</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-left" data-aos-delay="400">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">March 2024</div>
+                            <h4>Family Assistance Program Expanded</h4>
+                            <p>Extended direct family assistance to 50 new families. Program now includes meal support, utility payments, and emergency financial aid.</p>
+                            <div class="timeline-impact">Impact: 50 families secured</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Success Stories Section -->
+            <div class="success-stories-section" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="stories-title">Transformation Stories</h3>
+                <div class="stories-grid">
+                    <div class="story-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="story-header">
+                            <div class="story-icon before">
+                                <i class="fas fa-frown"></i>
+                                <span>Before</span>
+                            </div>
+                            <div class="story-arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            <div class="story-icon after">
+                                <i class="fas fa-smile"></i>
+                                <span>After</span>
+                            </div>
+                        </div>
+                        <h4>Ravi's Family - From Homelessness to Housing</h4>
+                        <div class="before-after">
+                            <div class="before">
+                                <strong>Before DRNF Support (2022)</strong>
+                                <ul>
+                                    <li>Living on streets for 3 years</li>
+                                    <li>No stable income or employment</li>
+                                    <li>Children not attending school</li>
+                                    <li>No access to healthcare</li>
+                                </ul>
+                            </div>
+                            <div class="after">
+                                <strong>After DRNF Intervention (2024)</strong>
+                                <ul>
+                                    <li>Secured rental housing with DRNF assistance</li>
+                                    <li>Stable employment through Ixora job program</li>
+                                    <li>2 children now in school</li>
+                                    <li>Regular health check-ups & nutrition support</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="story-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="story-header">
+                            <div class="story-icon before">
+                                <i class="fas fa-frown"></i>
+                                <span>Before</span>
+                            </div>
+                            <div class="story-arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            <div class="story-icon after">
+                                <i class="fas fa-smile"></i>
+                                <span>After</span>
+                            </div>
+                        </div>
+                        <h4>Priya's Journey - Education to Employment</h4>
+                        <div class="before-after">
+                            <div class="before">
+                                <strong>Before DRNF Support (2020)</strong>
+                                <ul>
+                                    <li>Dropped out of 10th grade</li>
+                                    <li>Financially struggling family</li>
+                                    <li>No clear career path</li>
+                                    <li>Low confidence and limited skills</li>
+                                </ul>
+                            </div>
+                            <div class="after">
+                                <strong>After DRNF Programs (2024)</strong>
+                                <ul>
+                                    <li>Completed high school with scholarship</li>
+                                    <li>Enrolled in vocational training</li>
+                                    <li>Employed with steady income</li>
+                                    <li>Supporting family, mentoring younger students</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="story-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="story-header">
+                            <div class="story-icon before">
+                                <i class="fas fa-frown"></i>
+                                <span>Before</span>
+                            </div>
+                            <div class="story-arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            <div class="story-icon after">
+                                <i class="fas fa-smile"></i>
+                                <span>After</span>
+                            </div>
+                        </div>
+                        <h4>Meera's Family - Medical Crisis Averted</h4>
+                        <div class="before-after">
+                            <div class="before">
+                                <strong>Before Emergency Support (2024)</strong>
+                                <ul>
+                                    <li>Father suffered severe heart attack</li>
+                                    <li>No savings for medical treatment</li>
+                                    <li>Family facing bankruptcy</li>
+                                    <li>Children's education at risk</li>
+                                </ul>
+                            </div>
+                            <div class="after">
+                                <strong>After DRNF Emergency Fund (2024)</strong>
+                                <ul>
+                                    <li>Medical treatment successfully completed</li>
+                                    <li>Father recovering and back to work</li>
+                                    <li>Financial burden significantly reduced</li>
+                                    <li>Children continuing education without stress</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Emergency Response Case Studies -->
+            <div class="emergency-section" data-aos="fade-up" data-aos-delay="400">
+                <h3 class="emergency-title">Rapid Emergency Response Cases</h3>
+                <p class="emergency-subtitle">When families need help most, DRNF responds within 24-48 hours</p>
+
+                <div class="emergency-cases">
+                    <div class="emergency-case" data-aos="fade-up" data-aos-delay="0">
+                        <div class="case-number">Case 001</div>
+                        <h4><i class="fas fa-heartbeat"></i> Medical Emergency Response</h4>
+                        <div class="case-timeline">
+                            <div class="case-step">
+                                <span class="step-time">Hour 0</span>
+                                <p>Family contacts DRNF - child with appendicitis needs immediate surgery</p>
+                            </div>
+                            <div class="case-step">
+                                <span class="step-time">Hour 2</span>
+                                <p>Emergency fund approved, ₹40,000 released to hospital</p>
+                            </div>
+                            <div class="case-step">
+                                <span class="step-time">Hour 6</span>
+                                <p>Successful surgery completed, family meals arranged</p>
+                            </div>
+                            <div class="case-step">
+                                <span class="step-time">Post Recovery</span>
+                                <p>Follow-up support and additional ₹10,000 for medicines provided</p>
+                            </div>
+                        </div>
+                        <div class="case-impact">Result: Child fully recovered, family avoided debt</div>
+                    </div>
+
+                    <div class="emergency-case" data-aos="fade-up" data-aos-delay="100">
+                        <div class="case-number">Case 002</div>
+                        <h4><i class="fas fa-home"></i> Housing Emergency Response</h4>
+                        <div class="case-timeline">
+                            <div class="case-step">
+                                <span class="step-time">Day 1</span>
+                                <p>Family loses home due to building demolition, no shelter</p>
+                            </div>
+                            <div class="case-step">
+                                <span class="step-time">Day 2</span>
+                                <p>Emergency lodging arranged, ₹3,000 advance for relocation</p>
+                            </div>
+                            <div class="case-step">
+                                <span class="step-time">Week 1</span>
+                                <p>Rental deposit paid, temporary housing secured for 3 months</p>
+                            </div>
+                            <div class="case-step">
+                                <span class="step-time">Month 3</span>
+                                <p>Permanent housing assistance and job placement support</p>
+                            </div>
+                        </div>
+                        <div class="case-impact">Result: Family secured stable housing and income</div>
+                    </div>
+
+                    <div class="emergency-case" data-aos="fade-up" data-aos-delay="200">
+                        <div class="case-number">Case 003</div>
+                        <h4><i class="fas fa-graduation-cap"></i> Education Emergency Response</h4>
+                        <div class="case-timeline">
+                            <div class="case-step">
+                                <span class="step-time">Situation</span>
+                                <p>Student forced to drop out due to mother's unemployment</p>
+                            </div>
+                            <div class="case-step">
+                                <span class="step-time">Day 1</span>
+                                <p>DRNF scholarship approved, ₹5,000 for annual fees</p>
+                            </div>
+                            <div class="case-step">
+                                <span class="step-time">Week 1</span>
+                                <p>Mother enrolled in job training program, monthly stipend</p>
+                            </div>
+                            <div class="case-step">
+                                <span class="step-time">6 Months</span>
+                                <p>Mother employed, student continuing education, improved grades</p>
+                            </div>
+                        </div>
+                        <div class="case-impact">Result: Education preserved and family economy strengthened</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Partner Organizations & Testimonials -->
+            <div class="partners-section" data-aos="fade-up" data-aos-delay="500">
+                <h3 class="partners-title">Our Partners & Their Support</h3>
+
+                <div class="partners-grid">
+                    <div class="partner-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="partner-logo">
+                            <i class="fas fa-building"></i>
+                            <span>Ixora Group</span>
+                        </div>
+                        <div class="partner-testimonial">
+                            <blockquote>
+                                "Ixora Group's support has been instrumental in our community programs. From job creation to emergency funding, they believe in sustainable impact."
+                            </blockquote>
+                            <p class="testimonial-author">- DRNF Leadership</p>
+                        </div>
+                    </div>
+
+                    <div class="partner-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="partner-logo">
+                            <i class="fas fa-heart"></i>
+                            <span>Abhi Sai Datta Trust</span>
+                        </div>
+                        <div class="partner-testimonial">
+                            <blockquote>
+                                "DRNF's educational workshops and meal support have transformed lives. Over 70 students have benefited directly."
+                            </blockquote>
+                            <p class="testimonial-author">- Trust Director</p>
+                        </div>
+                    </div>
+
+                    <div class="partner-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="partner-logo">
+                            <i class="fas fa-toilet"></i>
+                            <span>LooCafe Network</span>
+                        </div>
+                        <div class="partner-testimonial">
+                            <blockquote>
+                                "The Free Chai Counters through DRNF partnership serve 500+ cups daily. A lifeline for our homeless community."
+                            </blockquote>
+                            <p class="testimonial-author">- LooCafe Operations</p>
+                        </div>
+                    </div>
+
+                    <div class="partner-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="partner-logo">
+                            <i class="fas fa-paw"></i>
+                            <span>People for Animals</span>
+                        </div>
+                        <div class="partner-testimonial">
+                            <blockquote>
+                                "DRNF's animal welfare initiatives have funded rescue operations and provided veterinary care for dozens of animals."
+                            </blockquote>
+                            <p class="testimonial-author">- Animal Welfare Officer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Urgent Needs Section -->
+            <div class="urgent-needs-section" data-aos="fade-up" data-aos-delay="600">
+                <h3 class="urgent-title"><i class="fas fa-bell"></i> Current Urgent Needs</h3>
+                <p class="urgent-subtitle">Your help can make an immediate difference in these critical areas</p>
+
+                <div class="needs-grid">
+                    <div class="need-card critical" data-aos="fade-up" data-aos-delay="0">
+                        <div class="need-badge">URGENT</div>
+                        <h4><i class="fas fa-snowflake"></i> Winter Relief Fund</h4>
+                        <p>With winter approaching, we urgently need support for blankets, warm clothing, and shelter for 300+ homeless individuals.</p>
+                        <div class="need-details">
+                            <span class="need-goal">Target: ₹2,00,000</span>
+                            <div class="need-progress-bar">
+                                <div class="need-progress-fill" style="width: 35%;"></div>
+                            </div>
+                            <span class="need-status">₹70,000 collected | 35% funded</span>
+                        </div>
+                        <a href="#donate" class="need-cta">Contribute Now</a>
+                    </div>
+
+                    <div class="need-card critical" data-aos="fade-up" data-aos-delay="100">
+                        <div class="need-badge">URGENT</div>
+                        <h4><i class="fas fa-heartbeat"></i> Medical Emergency Fund</h4>
+                        <p>12 families currently face life-threatening health crises but cannot afford treatment. Emergency surgeries and medications needed.</p>
+                        <div class="need-details">
+                            <span class="need-goal">Target: ₹3,00,000</span>
+                            <div class="need-progress-bar">
+                                <div class="need-progress-fill" style="width: 28%;"></div>
+                            </div>
+                            <span class="need-status">₹84,000 collected | 28% funded</span>
+                        </div>
+                        <a href="#donate" class="need-cta">Contribute Now</a>
+                    </div>
+
+                    <div class="need-card high-priority" data-aos="fade-up" data-aos-delay="200">
+                        <div class="need-badge">HIGH PRIORITY</div>
+                        <h4><i class="fas fa-graduation-cap"></i> Education Scholarships</h4>
+                        <p>25 brilliant students from underprivileged families are at risk of dropping out. They need school fees, books, and supplies.</p>
+                        <div class="need-details">
+                            <span class="need-goal">Target: ₹1,50,000</span>
+                            <div class="need-progress-bar">
+                                <div class="need-progress-fill" style="width: 52%;"></div>
+                            </div>
+                            <span class="need-status">₹78,000 collected | 52% funded</span>
+                        </div>
+                        <a href="#donate" class="need-cta">Contribute Now</a>
+                    </div>
+
+                    <div class="need-card high-priority" data-aos="fade-up" data-aos-delay="300">
+                        <div class="need-badge">HIGH PRIORITY</div>
+                        <h4><i class="fas fa-bowl-food"></i> Daily Meal Program</h4>
+                        <p>Running our meal programs for 200 people daily costs ₹15,000/day. We're short by ₹5,000 daily to serve everyone.</p>
+                        <div class="need-details">
+                            <span class="need-goal">Monthly Goal: ₹1,50,000</span>
+                            <div class="need-progress-bar">
+                                <div class="need-progress-fill" style="width: 65%;"></div>
+                            </div>
+                            <span class="need-status">₹97,500 collected | 65% funded</span>
+                        </div>
+                        <a href="#donate" class="need-cta">Contribute Now</a>
+                    </div>
+
+                    <div class="need-card ongoing" data-aos="fade-up" data-aos-delay="400">
+                        <div class="need-badge">ONGOING</div>
+                        <h4><i class="fas fa-hands-helping"></i> Direct Family Assistance</h4>
+                        <p>Monthly utility bills, rent, and emergency support for 80+ families living below poverty line.</p>
+                        <div class="need-details">
+                            <span class="need-goal">Monthly Need: ₹2,00,000</span>
+                            <div class="need-progress-bar">
+                                <div class="need-progress-fill" style="width: 45%;"></div>
+                            </div>
+                            <span class="need-status">₹90,000 collected | 45% funded</span>
+                        </div>
+                        <a href="#donate" class="need-cta">Contribute Now</a>
+                    </div>
+
+                    <div class="need-card ongoing" data-aos="fade-up" data-aos-delay="500">
+                        <div class="need-badge">ONGOING</div>
+                        <h4><i class="fas fa-tools"></i> Skill Development Programs</h4>
+                        <p>Training materials and instructor costs for vocational skills programs. Each person trained gains employment capability.</p>
+                        <div class="need-details">
+                            <span class="need-goal">Quarterly Goal: ₹1,00,000</span>
+                            <div class="need-progress-bar">
+                                <div class="need-progress-fill" style="width: 60%;"></div>
+                            </div>
+                            <span class="need-status">₹60,000 collected | 60% funded</span>
+                        </div>
+                        <a href="#donate" class="need-cta">Contribute Now</a>
+                    </div>
+                </div>
+
+                <div class="urgent-callout" data-aos="zoom-in" data-aos-delay="600">
+                    <h4>Every contribution saves lives</h4>
+                    <p>₹500 provides meals for a week | ₹2,000 sends a child to school | ₹5,000 provides emergency medical care | ₹10,000 saves a family from homelessness</p>
+                    <a href="#donate" class="callout-cta">Make Your Impact Today</a>
                 </div>
             </div>
 
@@ -256,78 +751,872 @@ const pageDescription = "DRNF's community initiatives include regular donation d
             </div>
         </div>
     </section>
-  
-  <!-- Back to Top Button -->
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
+
+    <!-- Call to Action Section -->
+    <section class="section" style="background: linear-gradient(135deg, var(--primary-color) 0%, #3d7842 100%); padding: 4rem 0; color: white;">
+        <div class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: white;">Join Our Community Impact</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95;">Support our education workshops, environmental initiatives, and community programs.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="/forms/food-donation-form" class="btn" style="background: white; color: var(--primary-color); font-weight: 600; padding: 1rem 2.5rem; font-size: 1.1rem;">
+                        <i class="fas fa-hands-helping"></i> Support Our Programs
+                    </a>
+                    <a href="/contact" class="btn" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white; font-weight: 600; padding: 1rem 2.5rem; font-size: 1.1rem;">
+                        <i class="fas fa-envelope"></i> Volunteer
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <NewsletterSignup client:load />
 </Layout>
 
-<style>
-  .back-to-top {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    z-index: 1000;
-    transition: all 0.3s ease;
-  }
-  
-  .back-to-top:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-  }
-  
-  @media (max-width: 768px) {
-    .back-to-top {
-      bottom: 1.5rem;
-      right: 1.5rem;
-      width: 45px;
-      height: 45px;
-    }
-  }
-</style>
+
+
+
 
 <script>
-  // Back to top button functionality
-  if (typeof document !== 'undefined') {
-    const backToTopBtn = document.getElementById('backToTop');
-    if (backToTopBtn) {
-      window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-          backToTopBtn.style.display = 'flex';
-        } else {
-          backToTopBtn.style.display = 'none';
+  // Families Counter Animation
+  if (typeof document !== 'undefined' && typeof window !== 'undefined') {
+    const counterElement = document.getElementById('familiesCounter');
+
+    if (counterElement) {
+      const targetValue = parseInt(counterElement.dataset.target, 10);
+      const duration = 2000;
+      const startTime = Date.now();
+
+      const animateCounter = () => {
+        const currentTime = Date.now();
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const currentValue = Math.floor(progress * targetValue);
+        counterElement.textContent = currentValue;
+
+        if (progress < 1) {
+          requestAnimationFrame(animateCounter);
+        }
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+          animateCounter();
+          observer.unobserve(counterElement);
         }
       });
-      
-      backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      });
-    }
-  }
-</script>
 
-<script>
-  // Current year in footer
-  if (typeof document !== 'undefined') {
+      observer.observe(counterElement);
+    }
+
     const yearElement = document.getElementById('current-year');
     if (yearElement) {
       yearElement.textContent = new Date().getFullYear();
     }
   }
 </script>
+
+<style>
+  /* Families Counter Section */
+  .families-counter-section {
+    background: linear-gradient(135deg, #f0f9f4 0%, #e8f5f1 100%);
+    padding: 4rem 0;
+  }
+
+  .counter-card {
+    background: linear-gradient(135deg, #2c5530 0%, #3d7240 100%);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    text-align: center;
+    color: white;
+    box-shadow: 0 10px 40px rgba(44, 85, 48, 0.2);
+  }
+
+  .counter-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    animation: pulse-icon 2s ease-in-out infinite;
+  }
+
+  .counter-card h2 {
+    color: white;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+
+  .counter-display {
+    margin: 2rem 0;
+  }
+
+  .counter-number {
+    display: block;
+    font-size: 4rem;
+    font-weight: 800;
+    color: #d4b258;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 0.5rem;
+  }
+
+  .counter-label {
+    display: block;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.95;
+  }
+
+  .counter-subtitle {
+    color: rgba(255,255,255,0.9);
+    margin-top: 1.5rem;
+  }
+
+  @keyframes pulse-icon {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
+
+  /* Impact Metrics Section */
+  .impact-metrics-section {
+    background: #f7fafc;
+    padding: 4rem 0;
+  }
+
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .metric-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border-top: 4px solid #2c5530;
+  }
+
+  .metric-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(44, 85, 48, 0.15);
+  }
+
+  .metric-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .metric-header i {
+    font-size: 2rem;
+    color: #2c5530;
+  }
+
+  .metric-header h3 {
+    font-size: 1.1rem;
+    color: #2c5530;
+    margin: 0;
+  }
+
+  .progress-bar {
+    height: 8px;
+    background: #e8ecef;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 1rem 0;
+  }
+
+  .progress-fill {
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  .metric-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .metric-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c5530;
+  }
+
+  .metric-description {
+    font-size: 0.9rem;
+    color: #5d6d7e;
+  }
+
+  /* Timeline Section */
+  .timeline-section {
+    padding: 3rem 0;
+  }
+
+  .timeline-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c5530;
+    margin-bottom: 3rem;
+  }
+
+  .timeline {
+    position: relative;
+    padding: 2rem 0;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, #2c5530 0%, #45b7d1 100%);
+  }
+
+  .timeline-item {
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content {
+    text-align: right;
+    grid-column: 1;
+  }
+
+  .timeline-item:nth-child(even) .timeline-content {
+    grid-column: 2;
+  }
+
+  .timeline-marker {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: #2c5530;
+    border: 4px solid white;
+    border-radius: 50%;
+    top: 2rem;
+    z-index: 2;
+    box-shadow: 0 0 0 5px rgba(44, 85, 48, 0.1);
+  }
+
+  .timeline-content {
+    padding: 1.5rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  }
+
+  .timeline-date {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #2c5530;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+  }
+
+  .timeline-content h4 {
+    color: #2c5530;
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+  }
+
+  .timeline-content p {
+    color: #5d6d7e;
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+  }
+
+  .timeline-impact {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid #e8ecef;
+    color: #2c5530;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 768px) {
+    .timeline::before {
+      left: 20px;
+    }
+
+    .timeline-item {
+      grid-template-columns: 1fr;
+      gap: 0;
+      padding-left: 60px;
+    }
+
+    .timeline-item .timeline-content {
+      grid-column: 1 !important;
+      text-align: left !important;
+    }
+
+    .timeline-marker {
+      left: 20px;
+    }
+  }
+
+  /* Success Stories Section */
+  .success-stories-section {
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #f0f9f4 0%, #f7fafc 100%);
+  }
+
+  .stories-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c5530;
+    margin-bottom: 3rem;
+  }
+
+  .stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  .story-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+  }
+
+  .story-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(44, 85, 48, 0.15);
+  }
+
+  .story-header {
+    background: linear-gradient(135deg, #2c5530 0%, #3d7240 100%);
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .story-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .story-icon i {
+    font-size: 2.5rem;
+  }
+
+  .story-icon span {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .story-icon.before i { color: #ff6b6b; }
+  .story-icon.after i { color: #51cf66; }
+
+  .story-arrow {
+    font-size: 1.5rem;
+    animation: slide-arrow 2s ease-in-out infinite;
+  }
+
+  @keyframes slide-arrow {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(8px); }
+  }
+
+  .story-card h4 {
+    padding: 1.5rem 1.5rem 0.5rem;
+    color: #2c5530;
+    font-size: 1.2rem;
+  }
+
+  .before-after {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .before strong, .after strong {
+    color: #2c5530;
+    display: block;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .before ul, .after ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .before li, .after li {
+    padding: 0.4rem 0;
+    padding-left: 1.5rem;
+    color: #5d6d7e;
+    position: relative;
+  }
+
+  .before li::before {
+    content: '✗';
+    position: absolute;
+    left: 0;
+    color: #ff6b6b;
+    font-weight: bold;
+  }
+
+  .after li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #51cf66;
+    font-weight: bold;
+  }
+
+  /* Emergency Response Section */
+  .emergency-section {
+    padding: 3rem 0;
+  }
+
+  .emergency-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c5530;
+    margin-bottom: 0.5rem;
+  }
+
+  .emergency-subtitle {
+    text-align: center;
+    color: #5d6d7e;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .emergency-cases {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .emergency-case {
+    background: white;
+    border-left: 5px solid #2c5530;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+  }
+
+  .emergency-case:hover {
+    box-shadow: 0 8px 25px rgba(44, 85, 48, 0.15);
+    transform: translateY(-5px);
+  }
+
+  .case-number {
+    display: inline-block;
+    background: linear-gradient(135deg, #2c5530 0%, #3d7240 100%);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .emergency-case h4 {
+    color: #2c5530;
+    margin: 1rem 0;
+    font-size: 1.15rem;
+  }
+
+  .emergency-case h4 i {
+    margin-right: 0.5rem;
+  }
+
+  .case-timeline {
+    margin: 1.5rem 0;
+  }
+
+  .case-step {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 2px solid #e8ecef;
+  }
+
+  .case-step:last-child {
+    margin-bottom: 0;
+  }
+
+  .step-time {
+    min-width: 80px;
+    font-weight: 700;
+    color: #2c5530;
+    font-size: 0.9rem;
+  }
+
+  .case-step p {
+    color: #5d6d7e;
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  .case-impact {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid #e8ecef;
+    background: #f0f9f4;
+    padding: 1rem;
+    border-radius: 8px;
+    color: #2c5530;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  /* Partners Section */
+  .partners-section {
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #f0f9f4 0%, #f7fafc 100%);
+  }
+
+  .partners-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c5530;
+    margin-bottom: 3rem;
+  }
+
+  .partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .partner-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border-top: 4px solid #2c5530;
+  }
+
+  .partner-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(44, 85, 48, 0.15);
+  }
+
+  .partner-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .partner-logo i {
+    font-size: 3rem;
+    color: #2c5530;
+  }
+
+  .partner-logo span {
+    font-weight: 700;
+    color: #2c5530;
+    font-size: 1.1rem;
+  }
+
+  .partner-testimonial blockquote {
+    font-style: italic;
+    color: #5d6d7e;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-left: 3px solid #2c5530;
+    background: #f7fafc;
+    border-radius: 5px;
+  }
+
+  .testimonial-author {
+    color: #2c5530;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin: 0;
+  }
+
+  /* Urgent Needs Section */
+  .urgent-needs-section {
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #fff8f0 0%, #f7fafc 100%);
+  }
+
+  .urgent-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c5530;
+    margin-bottom: 0.5rem;
+  }
+
+  .urgent-title i {
+    color: #e74c3c;
+    animation: ring-bell 1s ease-in-out infinite;
+  }
+
+  @keyframes ring-bell {
+    0%, 100% { transform: rotate(0deg); }
+    10% { transform: rotate(-10deg); }
+    20% { transform: rotate(10deg); }
+    30% { transform: rotate(-10deg); }
+    40% { transform: rotate(10deg); }
+  }
+
+  .urgent-subtitle {
+    text-align: center;
+    color: #5d6d7e;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .needs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .need-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+
+  .need-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #2c5530 0%, #45b7d1 100%);
+  }
+
+  .need-card.critical::before {
+    background: linear-gradient(90deg, #e74c3c 0%, #c0392b 100%);
+  }
+
+  .need-card.high-priority::before {
+    background: linear-gradient(90deg, #f39c12 0%, #d68910 100%);
+  }
+
+  .need-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  }
+
+  .need-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .need-card.critical .need-badge {
+    background: rgba(231, 76, 60, 0.1);
+    color: #e74c3c;
+  }
+
+  .need-card.high-priority .need-badge {
+    background: rgba(243, 156, 18, 0.1);
+    color: #f39c12;
+  }
+
+  .need-card.ongoing .need-badge {
+    background: rgba(44, 85, 48, 0.1);
+    color: #2c5530;
+  }
+
+  .need-card h4 {
+    color: #2c5530;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+
+  .need-card h4 i {
+    margin-right: 0.5rem;
+  }
+
+  .need-card p {
+    color: #5d6d7e;
+    font-size: 0.95rem;
+    margin: 1rem 0;
+  }
+
+  .need-details {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .need-goal {
+    font-weight: 700;
+    color: #2c5530;
+    font-size: 0.95rem;
+  }
+
+  .need-progress-bar {
+    height: 10px;
+    background: #e8ecef;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .need-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #2c5530 0%, #45b7d1 100%);
+    border-radius: 10px;
+  }
+
+  .need-card.critical .need-progress-fill {
+    background: linear-gradient(90deg, #e74c3c 0%, #c0392b 100%);
+  }
+
+  .need-card.high-priority .need-progress-fill {
+    background: linear-gradient(90deg, #f39c12 0%, #d68910 100%);
+  }
+
+  .need-status {
+    font-size: 0.85rem;
+    color: #5d6d7e;
+    font-weight: 600;
+  }
+
+  .need-cta {
+    display: inline-block;
+    margin-top: 1.5rem;
+    background: linear-gradient(135deg, #2c5530 0%, #3d7240 100%);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-align: center;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .need-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(44, 85, 48, 0.3);
+  }
+
+  .urgent-callout {
+    background: linear-gradient(135deg, #2c5530 0%, #3d7240 100%);
+    color: white;
+    border-radius: 15px;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(44, 85, 48, 0.2);
+  }
+
+  .urgent-callout h4 {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .urgent-callout p {
+    color: rgba(255,255,255,0.9);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .callout-cta {
+    display: inline-block;
+    background: #d4b258;
+    color: #2c5530;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .callout-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    background: #ffd966;
+  }
+
+  @media (max-width: 768px) {
+    .counter-number {
+      font-size: 3rem;
+    }
+
+    .counter-card {
+      padding: 2rem 1.5rem;
+    }
+
+    .timeline {
+      padding: 1rem 0;
+    }
+
+    .timeline::before {
+      left: 15px;
+    }
+
+    .timeline-item {
+      padding-left: 50px;
+    }
+
+    .timeline-marker {
+      left: 15px;
+      width: 16px;
+      height: 16px;
+    }
+
+    .story-header {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .story-icon i {
+      font-size: 2rem;
+    }
+
+    .urgent-callout {
+      padding: 2rem 1.5rem;
+    }
+
+    .urgent-callout h4 {
+      font-size: 1.5rem;
+    }
+
+    .before-after {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

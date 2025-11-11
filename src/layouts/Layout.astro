@@ -4,6 +4,9 @@ import SEO from '../components/astro/SEO.astro';
 import StructuredData from '../components/astro/StructuredData.astro';
 import Header from '../components/astro/Header.astro';
 import Footer from '../components/astro/Footer.astro';
+import StickyCtaBar from '../components/react/StickyCtaBar.tsx';
+import ExitIntentPopup from '../components/react/ExitIntentPopup.tsx';
+import BackToTop from '../components/react/BackToTop.tsx';
 import '../styles/global.css';
 
 interface Props {
@@ -121,6 +124,15 @@ const fullTitle = title.includes('Dr. Rabinder Nath Foundation') ? title : `${ti
 
     <!-- Footer (unless disabled for special pages like 404) -->
     {!noHeaderFooter && <Footer />}
+
+    <!-- Global React Components -->
+    {!noHeaderFooter && (
+      <>
+        <StickyCtaBar client:load currentPage={activePage} />
+        <ExitIntentPopup client:load currentPage={activePage} />
+        <BackToTop client:load />
+      </>
+    )}
 
     <!-- AOS Animation Initialization -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
