@@ -182,3 +182,4 @@ const AnimatedStats: React.FC = () => {
 
 export default AnimatedStats;
 
+

@@ -7,52 +7,644 @@ const pageDescription = "Learn about the vision behind DRNF, founded by Abhishek
 ---
 
 <Layout title={pageTitle} description={pageDescription} activePage="about">
-  
+
   <!-- Page Hero Section -->
-    <section class="page-hero">
-        <div class="container">
-            <h1 data-aos="fade-up">Our Story</h1>
-            <p data-aos="fade-up" data-aos-delay="200">A vision of compassion, a legacy of service, and a commitment to community</p>
-        </div>
-    </section>
+  <section class="page-hero">
+      <div class="container">
+          <h1 data-aos="fade-up">Our Story</h1>
+          <p data-aos="fade-up" data-aos-delay="200">A vision of compassion, a legacy of service, and a commitment to community</p>
+      </div>
+  </section>
 
-    <!-- Founder's Vision Section -->
-    <section class="section about-section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text" data-aos="fade-right">
-                    <h2 class="section-title">Founder's Vision</h2>
-                    <p class="about-description">
-                        The Dr. Rabinder Nath Foundation was founded in 2016 by Abhishek Nath, driven by a deeply personal mission to honor the memory and continue the legacy of his father, the late Dr. Rabinder Nath.
-                    </p>
-                    <p>
-                        Growing up witnessing his father's unwavering commitment to community service, Abhishek understood that true impact comes not just from good intentions, but from creating sustainable systems that serve people with dignity and compassion.
-                    </p>
-                    <p>
-                        "My father believed that no act of kindness, however small, is ever wasted. He spent his life serving others, and through this foundation, we ensure that his spirit of giving continues to touch lives every single day."
-                    </p>
-                    <div class="about-highlights">
-                        <div class="highlight-item">
-                            <i class="fas fa-heart"></i>
-                            <span>Family Legacy</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-hands-helping"></i>
-                            <span>Sustainable Impact</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-users"></i>
-                            <span>Community First</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-media" data-aos="fade-left">
-                    <img src="https://res.cloudinary.com/dhupieu4x/image/upload/v1762599308/drnf-assets/drnf-assets/rabinder_nath2.1.jpg" alt="Dr. Rabinder Nath" class="about-image">
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Founder's Vision Section -->
+  <section class="section about-section">
+      <div class="container">
+          <div class="about-content">
+              <div class="about-text" data-aos="fade-right">
+                  <h2 class="section-title">Founder's Vision</h2>
+                  <p class="about-description">
+                      The Dr. Rabinder Nath Foundation was founded in 2016 by Abhishek Nath, driven by a deeply personal mission to honor the memory and continue the legacy of his father, the late Dr. Rabinder Nath.
+                  </p>
+                  <p>
+                      Growing up witnessing his father's unwavering commitment to community service, Abhishek understood that true impact comes not just from good intentions, but from creating sustainable systems that serve people with dignity and compassion.
+                  </p>
+                  <p>
+                      "My father believed that no act of kindness, however small, is ever wasted. He spent his life serving others, and through this foundation, we ensure that his spirit of giving continues to touch lives every single day."
+                  </p>
+                  <div class="about-highlights">
+                      <div class="highlight-item">
+                          <i class="fas fa-heart"></i>
+                          <span>Family Legacy</span>
+                      </div>
+                      <div class="highlight-item">
+                          <i class="fas fa-hands-helping"></i>
+                          <span>Sustainable Impact</span>
+                      </div>
+                      <div class="highlight-item">
+                          <i class="fas fa-users"></i>
+                          <span>Community First</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="about-media" data-aos="fade-left">
+                  <img src="https://res.cloudinary.com/dhupieu4x/image/upload/v1762599308/drnf-assets/drnf-assets/rabinder_nath2.1.jpg" alt="Dr. Rabinder Nath" class="about-image">
+              </div>
+          </div>
+      </div>
+  </section>
 
-    <!-- Newsletter Signup -->
-    <NewsletterSignup client:load />
+  <!-- Self-Made Journey Section -->
+  <section class="section" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+      <div class="container">
+          <h2 class="section-title" data-aos="fade-up">A Self-Made Legacy</h2>
+          <div class="community-overview" data-aos="fade-up" data-aos-delay="100">
+              <div class="overview-content">
+                  <p style="font-size: 1.2rem; line-height: 1.8; max-width: 900px; margin: 0 auto;">
+                      While Dr. Rabinder Nath's great-great-grandfather, Rai Bahadur Mul Raj, was a towering figure in India's freedom movement—founding Punjab National Bank and the D.A.V. College movement—the family's fortunes did not pass down untouched. Through the upheavals of partition and the passage of time, the family rebuilt from scratch, relying not on inherited wealth, but on <strong>education and determination</strong>.
+                  </p>
+
+                  <div class="initiative-stats" style="margin-top: 2rem;">
+                      <div class="stat-card">
+                          <div class="stat-icon">
+                              <i class="fas fa-graduation-cap"></i>
+                          </div>
+                          <h4>Education as Foundation</h4>
+                          <p>Dr. Rabinder Nath pursued excellence through education, earning his dental degree (B.D.S.) from Osmania Medical College, where he served as Chairman of the Dental Students Federation of India. He completed advanced training in oral surgery at Lucknow Dental College (1974) and earned M.R.S.H. from the Royal College of Surgeons, England.</p>
+                          <div style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-secondary);">
+                              <p><strong>Academic Leadership:</strong> First Union President at A.V. College</p>
+                          </div>
+                      </div>
+
+                      <div class="stat-card">
+                          <div class="stat-icon">
+                              <i class="fas fa-hammer"></i>
+                          </div>
+                          <h4>Built from Scratch</h4>
+                          <p>Every achievement—his dental practice, his books, his social impact—was earned through his own hard work, not inherited privilege</p>
+                      </div>
+
+                      <div class="stat-card">
+                          <div class="stat-icon">
+                              <i class="fas fa-star"></i>
+                          </div>
+                          <h4>His Own Legacy</h4>
+                          <p>Dr. Rabinder Nath became beloved across Hyderabad on his own merits, creating a legacy that is entirely his own</p>
+                      </div>
+                  </div>
+
+                  <p style="margin-top: 2rem; font-style: italic; text-align: center; color: var(--text-secondary);">
+                      The ancestral story connects him to a proud history, but Dr. Rabinder Nath's achievements are a testament to his personal dedication, brilliance, and compassion. He proved that true legacy is not inherited—it is earned.
+                  </p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Community Impact Through Healthcare Section -->
+  <section class="section donations-section">
+      <div class="container">
+          <h2 class="section-title" data-aos="fade-up">Community Impact Through Healthcare</h2>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+              Beyond his dental practice, Dr. Rabinder Nath dedicated his life to serving rural and underserved communities
+          </p>
+
+          <div class="community-overview" data-aos="fade-up" data-aos-delay="200">
+              <div class="overview-content">
+                  <div class="initiative-stats">
+                      <div class="stat-card">
+                          <div class="stat-icon">
+                              <i class="fas fa-ambulance"></i>
+                          </div>
+                          <h4>Portadent Mobile Dental Unit</h4>
+                          <p>Pioneered mobile dental healthcare by establishing "Portadent," bringing professional dental care to rural populations who had no access to dental services.</p>
+                      </div>
+
+                      <div class="stat-card">
+                          <div class="stat-icon">
+                              <i class="fas fa-hospital"></i>
+                          </div>
+                          <h4>Rani Nath Memorial Hospital</h4>
+                          <p>Founded in 1992 at Shamirpet, this rural hospital provided completely free treatment and medicines, serving over 80,000 patients from underserved communities.</p>
+                      </div>
+
+                      <div class="stat-card">
+                          <div class="stat-icon">
+                              <i class="fas fa-flask"></i>
+                          </div>
+                          <h4>Medical Research Contributions</h4>
+                          <p>Conducted successful field trials on Mefenamic acid (anti-inflammatory), leading to the development of Tromaril drug by R.R. Labs, Hyderabad.</p>
+                      </div>
+
+                      <div class="stat-card">
+                          <div class="stat-icon">
+                              <i class="fas fa-clinic-medical"></i>
+                          </div>
+                          <h4>Mahabubnagar Rural Hospital</h4>
+                          <p>Established another rural dental hospital in Mahabubnagar district, extending quality dental care to remote areas.</p>
+                      </div>
+                  </div>
+
+                  <div class="awards-section" style="margin-top: 3rem; text-align: center; padding: 2rem; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 12px;">
+                      <h3 style="margin-bottom: 1.5rem;"><i class="fas fa-award"></i> Recognition & Awards</h3>
+                      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                          <div>
+                              <h4 style="color: var(--primary-color);">Vijayshree Award</h4>
+                              <p>For exceptional service to healthcare</p>
+                          </div>
+                          <div>
+                              <h4 style="color: var(--primary-color);">Glory of India International Award</h4>
+                              <p>Recommended by American and Canadian doctors</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- The Legacy Section -->
+  <section class="section donations-section">
+      <div class="container">
+          <h2 class="section-title" data-aos="fade-up">Dr. Rabinder Nath: The Man and His Impact</h2>
+          <div class="community-overview" data-aos="fade-up" data-aos-delay="100">
+              <div class="overview-content">
+                  <p>
+                      Dr. Rabinder Nath was more than a dental surgeon—he was a social worker, pioneer, and beloved figure across Hyderabad. Known by families throughout the city, Dr. Nath dedicated his life to serving others with compassion and dignity.
+                  </p>
+
+                  <div class="initiative-stats">
+                      <div class="stat-card">
+                          <div class="stat-icon">
+                              <i class="fas fa-user-md"></i>
+                          </div>
+                          <h4>Dental Surgeon</h4>
+                          <p>Practiced dentistry with care and excellence, treating patients across all walks of life</p>
+                      </div>
+
+                      <div class="stat-card">
+                          <div class="stat-icon">
+                              <i class="fas fa-hands-helping"></i>
+                          </div>
+                          <h4>Social Worker</h4>
+                          <p>Dedicated countless hours to community service and social causes</p>
+                      </div>
+
+                      <div class="stat-card">
+                          <div class="stat-icon">
+                              <i class="fas fa-book"></i>
+                          </div>
+                          <h4>Author & Pioneer</h4>
+                          <p>Published 7+ books, including works on Punjabi history and culture</p>
+                      </div>
+                  </div>
+
+                  <p style="margin-top: 2rem;">
+                      His well-wishers and the community came together to create this foundation, ensuring that his spirit of service would continue to uplift and support those in need for generations to come.
+                  </p>
+              </div>
+          </div>
+
+          <!-- Video Section -->
+          <div class="video-section" data-aos="fade-up" data-aos-delay="200" style="margin-top: 3rem;">
+              <h3 style="text-align: center; margin-bottom: 2rem;">Learn About Dr. Rabinder Nath's Legacy</h3>
+              <div class="video-grid">
+                  <div class="video-embed">
+                      <iframe src="https://www.youtube.com/embed/a6LDWTYpLBY?enablejsapi=1&origin=https://drrabindernathfoundation.org" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                      <p class="video-caption">Watch Story (English)</p>
+                  </div>
+                  <div class="video-embed">
+                      <iframe src="https://www.youtube.com/embed/4amQYIZNh4g?start=26&enablejsapi=1&origin=https://drrabindernathfoundation.org" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                      <p class="video-caption">With Subtitles</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Continuing Legacy Section -->
+  <section class="section" style="background: #f8f9fa;">
+      <div class="container">
+          <h2 class="section-title" data-aos="fade-up">The Legacy Continues</h2>
+          <div class="legacy-content">
+              <div class="three-generations-timeline" data-aos="fade-up" style="margin-bottom: 3rem;">
+                  <h3 style="text-align: center; margin-bottom: 2rem;"><i class="fas fa-users"></i> Three Generations of Medical Service</h3>
+                  <div style="max-width: 800px; margin: 0 auto;">
+                      <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                          <!-- Generation 1 -->
+                          <div style="padding: 1.5rem; background: white; border-left: 4px solid var(--primary-color); border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                              <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Dr. Prem Nath</h4>
+                              <p style="font-weight: 600; margin-bottom: 0.5rem;">India's First Qualified Dental Surgeon</p>
+                              <p style="font-size: 0.95rem; color: var(--text-secondary);">Pioneer who established dental surgery as a professional medical discipline in India</p>
+                          </div>
+
+                          <!-- Generation 2 -->
+                          <div style="padding: 1.5rem; background: white; border-left: 4px solid var(--primary-color); border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                              <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Dr. Upendra Nath</h4>
+                              <p style="font-weight: 600; margin-bottom: 0.5rem;">Personal Dental Physician to the Nizam of Hyderabad</p>
+                              <p style="font-size: 0.95rem; color: var(--text-secondary);">Served as Royal Surgeon to the Nizam and subsequent Governors of Andhra Pradesh. Founded Nath Dental & Oral Surgery Clinic in 1956.</p>
+                          </div>
+
+                          <!-- Generation 3 -->
+                          <div style="padding: 1.5rem; background: white; border-left: 4px solid var(--primary-color); border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                              <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Dr. Rabinder Nath (1951-present)</h4>
+                              <p style="font-weight: 600; margin-bottom: 0.5rem;">Pioneering Rural Healthcare & Philanthropy</p>
+                              <p style="font-size: 0.95rem; color: var(--text-secondary);">Revolutionized rural dental care through mobile units, established free hospitals serving 80,000+ patients, and created the foundation that continues his legacy of compassionate service.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="dental-clinic-info" data-aos="fade-right">
+                  <h3><i class="fas fa-tooth"></i> Nath Dental & Oral Surgery Clinic</h3>
+                  <p>Dr. Rabinder Nath's dental practice continues to serve the community at the historic Nath Dental & Oral Surgery Clinic, established in 1956 by his father Dr. Upendra Nath.</p>
+
+                  <div class="clinic-details">
+                      <h4>Clinic Information:</h4>
+                      <ul>
+                          <li><strong>Established:</strong> 1956 (68+ years of service)</li>
+                          <li><strong>Address:</strong> 3-5-809, Nath Nivas, King Koti Road, Hyderguda, Hyderabad - 500029</li>
+                          <li><strong>Landmark:</strong> Beside Bahar Cafe, Basheerbagh</li>
+                          <li><strong>Currently Led by:</strong> Dr. Niharika Nath (BDS, 26+ years experience)</li>
+                          <li><strong>Services:</strong> General Dentistry, Oral Surgery, Dental Restoration</li>
+                      </ul>
+                  </div>
+
+                  <div class="family-physicians">
+                      <p><strong>Dr. Narendra Nath</strong>, Dr. Rabinder Nath's younger brother, also continues the family tradition of medical service as a renowned physician in Hyderabad, operating his clinic at the same Nath Nivas complex.</p>
+                  </div>
+
+                  <!-- Google Maps Embed -->
+                  <div class="map-embed" style="margin-top: 2rem;">
+                      <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.5981!2d78.4691!3d17.3829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sNath%20Nivas%2C%20Hyderguda!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+                          width="100%"
+                          height="350"
+                          style="border:0; border-radius: 12px;"
+                          allowfullscreen=""
+                          loading="lazy">
+                      </iframe>
+                  </div>
+
+                  <div class="media-links" style="margin-top: 2rem;">
+                      <h4>Learn More:</h4>
+                      <a href="https://www.1mg.com/doctors/dr-rabinder-nath-dental-surgery-in-hyderabad/DR-19z5o" target="_blank" rel="noopener" class="btn btn-secondary">View Dr. Rabinder Nath's Profile</a>
+                      <a href="https://timesofindia.indiatimes.com/entertainment/events/hyderabad/dr-rabinder-naths-61st-birthday-bash/articleshow/11926993.cms" target="_blank" rel="noopener" class="btn btn-secondary">Times of India Feature</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Our Approach: Partnership for Impact Section -->
+  <section class="section">
+      <div class="container">
+          <h2 class="section-title" data-aos="fade-up">Our Approach: Partnership for Impact</h2>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+              Leveraging innovative infrastructure to maximize community reach and sustainable impact
+          </p>
+
+          <div class="loocafe-partnership" data-aos="fade-up" data-aos-delay="200" style="margin-top: 3rem;">
+              <h3><i class="fas fa-handshake"></i> Strategic Partnership with LooCafe</h3>
+              <div class="partnership-content">
+                  <div class="partnership-text">
+                      <p>
+                          At DRNF, we believe that maximizing social impact requires thinking beyond traditional charity models. Rather than building separate infrastructure from scratch, we strategically partner with <a href="https://loocafe.com" target="_blank" rel="noopener" class="loocafe-link">LooCafe</a>—founded in 2018, now operating 270+ community-accessible facilities across Hyderabad.
+                      </p>
+
+                      <p>
+                          Our partnership with LooCafe began after their establishment in 2018, allowing us to place our free chai counters where people naturally gather, ensuring our services reach those who need them most. By utilizing existing infrastructure, we can focus our resources directly on community service rather than construction and maintenance.
+                      </p>
+
+                      <p>
+                          The collaboration is documented in <a href="https://loocafe.com/toilettales" target="_blank" rel="noopener" class="loocafe-link">LooCafe's Toilet Tales</a>, showcasing how community-driven NGO initiatives like ours can create meaningful impact through smart partnerships with infrastructure providers.
+                      </p>
+
+                      <div class="partnership-highlights">
+                          <div class="highlight-item">
+                              <i class="fas fa-network-wired"></i>
+                              <span>Access to 270+ strategic locations across the city</span>
+                          </div>
+                          <div class="highlight-item">
+                              <i class="fas fa-clock"></i>
+                              <span>24/7 accessibility for maximum community reach</span>
+                          </div>
+                          <div class="highlight-item">
+                              <i class="fas fa-chart-line"></i>
+                              <span>Sustainable model allowing focus on social impact</span>
+                          </div>
+                          <div class="highlight-item">
+                              <i class="fas fa-users"></i>
+                              <span>Community-centered approach with dignity</span>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="partnership-visual">
+                      <img src="https://res.cloudinary.com/dhupieu4x/image/upload/v1762599305/drnf-assets/drnf-assets/loocafe_no_bg_collage.png" alt="LooCafe Network Partnership">
+                      <p class="image-caption">Strategic infrastructure partnership enables wider community reach</p>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Pilot Program Success -->
+          <div class="expansion-plans" data-aos="fade-up" data-aos-delay="300" style="margin-top: 3rem;">
+              <h3>Proven Model: Successful Pilot Program</h3>
+              <div class="expansion-content">
+                  <div class="expansion-text">
+                      <p>
+                          In 2022-2023, we successfully piloted our Free Chai Counter program across 30 locations, validating our approach and refining our operational model. The results exceeded our expectations:
+                      </p>
+                      <div class="expansion-highlights">
+                          <div class="expansion-item">
+                              <i class="fas fa-check-circle"></i>
+                              <span>Now serving 500-600 people daily with free chai and snacks</span>
+                          </div>
+                          <div class="expansion-item">
+                              <i class="fas fa-check-circle"></i>
+                              <span>Created 70+ sustainable employment opportunities</span>
+                          </div>
+                          <div class="expansion-item">
+                              <i class="fas fa-check-circle"></i>
+                              <span>Built strong relationships with local communities</span>
+                          </div>
+                          <div class="expansion-item">
+                              <i class="fas fa-check-circle"></i>
+                              <span>Demonstrated scalable, sustainable model</span>
+                          </div>
+                      </div>
+                      <p class="update-note" style="margin-top: 2rem;">
+                          <strong>Current Status:</strong> We now operate 2 permanent free chai counters, with plans to expand across the network as resources allow. Our focus remains on quality of service and community impact, ensuring every cup served comes with dignity and compassion.
+                      </p>
+                  </div>
+                  <div class="expansion-visual">
+                      <img src="https://res.cloudinary.com/dhupieu4x/image/upload/v1762599302/drnf-assets/drnf-assets/Untitled.jpg" alt="Free Chai Counter in Action">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Recognition & Awards Section -->
+  <section id="awards" class="section" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+      <div class="container">
+          <h2 class="section-title" data-aos="fade-up">Recognition & Awards</h2>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+              Our commitment to environmental and social excellence has been recognized by leading organizations
+          </p>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; margin-top: 3rem;" data-aos="fade-up" data-aos-delay="200">
+              <figure style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); text-align: center;">
+                  <img src="/images/awards/5-star-garbage-free-city-award.jpg"
+                       alt="DRNF receives 5-star Garbage Free City Award for environmental excellence and waste management"
+                       loading="lazy"
+                       style="width: 100%; height: auto; border-radius: 12px; margin-bottom: 1.5rem;">
+                  <figcaption>
+                      <h3 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.3rem;">5-Star Garbage Free City Award</h3>
+                      <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+                          Recognized for environmental excellence and waste management initiatives through our LooCafe partnership
+                      </p>
+                  </figcaption>
+              </figure>
+
+              <figure style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); text-align: center;">
+                  <img src="/images/awards/team-receiving-award.jpg"
+                       alt="DRNF team receiving recognition award for community service and social impact"
+                       loading="lazy"
+                       style="width: 100%; height: auto; border-radius: 12px; margin-bottom: 1.5rem;">
+                  <figcaption>
+                      <h3 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.3rem;">Community Service Recognition</h3>
+                      <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+                          Our team receiving recognition for dedication to community service and social impact in Hyderabad
+                      </p>
+                  </figcaption>
+              </figure>
+          </div>
+      </div>
+  </section>
+
+  <!-- Our Team Section -->
+  <section id="team" class="section">
+      <div class="container">
+          <h2 class="section-title" data-aos="fade-up">Our Team</h2>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+              Dedicated volunteers and staff working together to serve the community
+          </p>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem;">
+              <figure style="background: white; padding: 1.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" data-aos="fade-up" data-aos-delay="200">
+                  <img src="/images/team/team-gathering-1.jpg"
+                       alt="DRNF team gathering - volunteers and staff celebrating community impact and social service"
+                       loading="lazy"
+                       style="width: 100%; height: auto; border-radius: 12px; margin-bottom: 1rem;">
+                  <figcaption>
+                      <h4 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.1rem; text-align: center;">Team Gathering</h4>
+                      <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; text-align: center;">
+                          Our dedicated volunteers and staff members coming together
+                      </p>
+                  </figcaption>
+              </figure>
+
+              <figure style="background: white; padding: 1.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" data-aos="fade-up" data-aos-delay="300">
+                  <img src="/images/team/team-gathering-2.jpg"
+                       alt="DRNF team members at community event - building relationships and serving with compassion"
+                       loading="lazy"
+                       style="width: 100%; height: auto; border-radius: 12px; margin-bottom: 1rem;">
+                  <figcaption>
+                      <h4 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.1rem; text-align: center;">Community Engagement</h4>
+                      <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; text-align: center;">
+                          Engaging with the community at local events
+                      </p>
+                  </figcaption>
+              </figure>
+
+              <figure style="background: white; padding: 1.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" data-aos="fade-up" data-aos-delay="400">
+                  <img src="/images/team/employee-birthday-celebration.jpg"
+                       alt="DRNF team celebrating together - building community spirit and caring organizational culture"
+                       loading="lazy"
+                       style="width: 100%; height: auto; border-radius: 12px; margin-bottom: 1rem;">
+                  <figcaption>
+                      <h4 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.1rem; text-align: center;">Team Celebration</h4>
+                      <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; text-align: center;">
+                          Celebrating milestones together as a community
+                      </p>
+                  </figcaption>
+              </figure>
+          </div>
+      </div>
+  </section>
+
+  <!-- Impact Statistics Section -->
+  <section id="impact" class="section about-section" style="background: #f8f9fa;">
+      <div class="container">
+          <h2 class="section-title" data-aos="fade-up">Our Impact</h2>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+              Measurable outcomes of compassion and commitment
+          </p>
+
+          <div class="hero-stats" style="margin-top: 3rem;">
+              <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                  <div class="stat-number">500-600</div>
+                  <div class="stat-label">People Served Daily</div>
+              </div>
+              <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                  <div class="stat-number">2</div>
+                  <div class="stat-label">Active Chai Counters</div>
+              </div>
+              <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                  <div class="stat-number">Since July 2021</div>
+                  <div class="stat-label">Free Chai Counter Launch</div>
+              </div>
+              <div class="stat-item" data-aos="fade-up" data-aos-delay="500">
+                  <div class="stat-number">70+</div>
+                  <div class="stat-label">Jobs Created</div>
+              </div>
+          </div>
+
+          <div class="about-highlights" style="margin-top: 3rem; justify-content: center;" data-aos="fade-up" data-aos-delay="600">
+              <div class="highlight-item">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span>70+ Students Supported</span>
+              </div>
+              <div class="highlight-item">
+                  <i class="fas fa-tree"></i>
+                  <span>Environmental Conservation</span>
+              </div>
+              <div class="highlight-item">
+                  <i class="fas fa-paw"></i>
+                  <span>Animal Welfare Support</span>
+              </div>
+              <div class="highlight-item">
+                  <i class="fas fa-hands-helping"></i>
+                  <span>Ongoing Community Programs</span>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Our Team Section -->
+  <section id="team" class="section" style="background: linear-gradient(135deg, #f7fafc 0%, #ffffff 100%);">
+      <div class="container">
+          <h2 class="section-title" data-aos="fade-up">Our Team</h2>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100" style="max-width: 800px; margin: 0 auto 3rem;">
+              A dedicated group of individuals committed to continuing Dr. Rabinder Nath's legacy of service and compassion
+          </p>
+
+          <div class="team-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; margin-top: 3rem;">
+              <div class="team-member" data-aos="fade-up" style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease;">
+                  <div class="team-avatar" style="width: 120px; height: 120px; margin: 0 auto 1.5rem; border-radius: 50%; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white;">
+                      <i class="fas fa-user"></i>
+                  </div>
+                  <h3 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.5rem;">Abhishek Nath</h3>
+                  <p style="color: var(--accent-color); font-weight: 600; margin-bottom: 1rem;">Founder & Director</p>
+                  <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;">
+                      Founded DRNF to honor his father Dr. Rabinder Nath's legacy and continue the family tradition of community service.
+                  </p>
+              </div>
+
+              <div class="team-member" data-aos="fade-up" data-aos-delay="100" style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease;">
+                  <div class="team-avatar" style="width: 120px; height: 120px; margin: 0 auto 1.5rem; border-radius: 50%; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white;">
+                      <i class="fas fa-users"></i>
+                  </div>
+                  <h3 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.5rem;">Volunteers & Partners</h3>
+                  <p style="color: var(--accent-color); font-weight: 600; margin-bottom: 1rem;">Community Champions</p>
+                  <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;">
+                      Dedicated volunteers, LooCafe partners, and community members who make our daily impact possible.
+                  </p>
+              </div>
+
+              <div class="team-member" data-aos="fade-up" data-aos-delay="200" style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease;">
+                  <div class="team-avatar" style="width: 120px; height: 120px; margin: 0 auto 1.5rem; border-radius: 50%; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white;">
+                      <i class="fas fa-hands-helping"></i>
+                  </div>
+                  <h3 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.5rem;">Well-Wishers</h3>
+                  <p style="color: var(--accent-color); font-weight: 600; margin-bottom: 1rem;">Supporters & Donors</p>
+                  <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;">
+                      Generous supporters and donors who believe in our mission and help us serve 500-600 people daily.
+                  </p>
+              </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 3rem;" data-aos="fade-up">
+              <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+                  Interested in joining our team or volunteering?
+              </p>
+              <a href="/contact" class="btn btn-primary">Get Involved</a>
+          </div>
+      </div>
+  </section>
+
+  <!-- Literary Legacy Section -->
+  <section id="books" class="section">
+      <div class="container">
+          <h2 class="section-title" data-aos="fade-up">Literary Legacy</h2>
+
+          <div class="books-content">
+              <div class="author-section" data-aos="fade-right">
+                  <h3>Dr. Rabinder Nath's Publications</h3>
+                  <p>Dr. Rabinder Nath was a recognized author, publishing over 7 books. Lists to be compiled here soon, or for immediate requests please contact us.</p>
+              </div>
+
+              <div class="book-relaunch" data-aos="fade-left">
+                  <h3>DRNF Relaunches Historic Book</h3>
+                  <h4>"Beginning of the Punjabi Nationalism" by Dr. Rai Bahadur Mul Raj</h4>
+                  <p>Rich in Indian and Punjabi history, this book recalls the roots of the widespread Punjabi community. This relaunch also marked the official launch of Dr. Rabinder Nath Foundation.</p>
+
+                  <div class="book-videos">
+                      <iframe src="https://www.youtube.com/embed/G5082UlntJI" allowfullscreen></iframe>
+                      <p>Book Launch Event Coverage</p>
+                  </div>
+
+                  <div style="text-align: center; margin-top: 2rem;">
+                      <a href="/book" class="btn btn-primary">Explore the Book & Legacy</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="section" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white;">
+      <div class="container" style="text-align: center;">
+          <h2 class="section-title" data-aos="fade-up" style="color: white;">Join Our Mission</h2>
+          <p data-aos="fade-up" data-aos-delay="100" style="max-width: 700px; margin: 0 auto 2rem; font-size: 1.1rem;">
+              Explore our programs and initiatives that continue Dr. Rabinder Nath's legacy of compassionate community service. From daily chai service to education support, discover how we're making a meaningful difference.
+          </p>
+          <div class="hero-cta" data-aos="fade-up" data-aos-delay="200">
+              <a href="/chai-counters" class="btn btn-primary" style="background: white; color: var(--primary-color);">See Our Impact</a>
+              <a href="/contact" class="btn btn-secondary">Get in Touch</a>
+          </div>
+      </div>
+  </section>
+
+  <!-- Social Share Section -->
+  <section class="section">
+      <div class="container">
+          <div class="social-share-section" data-aos="fade-up">
+              <h3>Share Our Story</h3>
+              <p>Help us spread the legacy of Dr. Rabinder Nath and our mission of compassion</p>
+              <div class="share-buttons">
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" rel="noopener noreferrer" data-share="facebook">
+                      <i class="fab fa-facebook-f"></i>
+                      <span>Facebook</span>
+                  </a>
+                  <a href="https://twitter.com/intent/tweet?url=" class="share-btn twitter" target="_blank" rel="noopener noreferrer" data-share="twitter">
+                      <i class="fab fa-x-twitter"></i>
+                      <span>Twitter</span>
+                  </a>
+                  <a href="https://www.linkedin.com/sharing/share-offsite/?url=" class="share-btn linkedin" target="_blank" rel="noopener noreferrer" data-share="linkedin">
+                      <i class="fab fa-linkedin-in"></i>
+                      <span>LinkedIn</span>
+                  </a>
+                  <a href="https://wa.me/?text=Check%20out%20DRNF's%20inspiring%20story%20-%20" class="share-btn whatsapp" target="_blank" rel="noopener noreferrer" data-share="whatsapp">
+                      <i class="fab fa-whatsapp"></i>
+                      <span>WhatsApp</span>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Newsletter Signup -->
+  <NewsletterSignup client:load />
+
 </Layout>

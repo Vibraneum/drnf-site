@@ -300,3 +300,4 @@ const SearchPage: React.FC<SearchPageProps> = ({ navigate }) => {
 
 export default SearchPage;
 
+

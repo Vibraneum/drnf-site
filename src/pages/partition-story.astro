@@ -6,7 +6,7 @@ const pageDescription = 'Discover how the 1947 Partition scattered a family, del
 ---
 
 <Layout title={pageTitle} description={pageDescription} activePage="partition-story">
-  
+
   <!-- The Partition Story Section -->
   <section class="section" style="background: linear-gradient(135deg, #f7fafc 0%, #ffffff 100%);">
     <div class="container">
@@ -17,7 +17,39 @@ const pageDescription = 'Discover how the 1947 Partition scattered a family, del
         How the holocaust of 1947 scattered a family, delayed a book for 30 years, and nearly erased a legacy
       </p>
 
+      <!-- Table of Contents Navigation -->
+      <nav class="page-toc" data-aos="fade-right">
+        <h3 class="toc-title">Navigate the Story</h3>
+        <ul class="toc-list">
+          <li><a href="#life-in-lahore" class="toc-link active">
+            <i class="fas fa-home"></i> Life in Lahore Before Partition
+          </a></li>
+          <li><a href="#narrow-escape" class="toc-link">
+            <i class="fas fa-exclamation-triangle"></i> The Narrow Escape (1947)
+          </a></li>
+          <li><a href="#arrival-hyderabad" class="toc-link">
+            <i class="fas fa-seedling"></i> Arrival in Hyderabad
+          </a></li>
+          <li><a href="#lost-manuscript" class="toc-link">
+            <i class="fas fa-scroll"></i> The Lost Manuscript (1942-1975)
+          </a></li>
+          <li><a href="#three-generations" class="toc-link">
+            <i class="fas fa-volume-mute"></i> Three Generations of Silence
+          </a></li>
+          <li><a href="#rediscovery" class="toc-link">
+            <i class="fas fa-search"></i> The Rediscovery (2016)
+          </a></li>
+          <li><a href="#reflections" class="toc-link">
+            <i class="fas fa-brain"></i> Reflections
+          </a></li>
+          <li><a href="#family-tree" class="toc-link">
+            <i class="fas fa-project-diagram"></i> Family Tree
+          </a></li>
+        </ul>
+      </nav>
+
       <!-- 1. Life in Lahore Before Partition -->
+      <div id="life-in-lahore" class="content-section">
       <div class="highlight-section" data-aos="fade-up" style="margin-top: 3rem; border-left: 5px solid var(--primary-color);">
         <h3 style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1.5rem;">
           <i class="fas fa-home"></i> Life in Lahore Before Partition
@@ -88,8 +120,10 @@ const pageDescription = 'Discover how the 1947 Partition scattered a family, del
           </p>
         </div>
       </div>
+      </div>
 
       <!-- 2. The Narrow Escape (1947) -->
+      <div id="narrow-escape" class="content-section">
       <div class="highlight-section" data-aos="fade-up" style="margin-top: 4rem; background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%); border-left: 5px solid #e53e3e;">
         <h3 style="font-size: 2rem; color: #e53e3e; margin-bottom: 1.5rem;">
           <i class="fas fa-exclamation-triangle"></i> The Narrow Escape (1947)
@@ -174,8 +208,10 @@ const pageDescription = 'Discover how the 1947 Partition scattered a family, del
           </p>
         </div>
       </div>
+      </div>
 
       <!-- 3. Arrival in Hyderabad: Starting from Zero -->
+      <div id="arrival-hyderabad" class="content-section">
       <div class="highlight-section" data-aos="fade-up" style="margin-top: 4rem; background: linear-gradient(135deg, #e6fffa 0%, #ffffff 100%); border-left: 5px solid #319795;">
         <h3 style="font-size: 2rem; color: #319795; margin-bottom: 1.5rem;">
           <i class="fas fa-seedling"></i> Arrival in Hyderabad: Starting from Zero
@@ -222,8 +258,10 @@ const pageDescription = 'Discover how the 1947 Partition scattered a family, del
           </p>
         </div>
       </div>
+      </div>
 
       <!-- 4. The Lost Manuscript (1942-1975) -->
+      <div id="lost-manuscript" class="content-section">
       <div class="highlight-section" data-aos="fade-up" style="margin-top: 4rem; border-left: 5px solid var(--primary-color);">
         <h3 style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1.5rem;">
           <i class="fas fa-scroll"></i> The Lost Manuscript (1942-1975)
@@ -311,8 +349,10 @@ const pageDescription = 'Discover how the 1947 Partition scattered a family, del
           </div>
         </div>
       </div>
+      </div>
 
       <!-- 5. Three Generations of Silence (1975-2016) -->
+      <div id="three-generations" class="content-section">
       <div class="highlight-section" data-aos="fade-up" style="margin-top: 4rem; background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%); border-left: 5px solid #c53030;">
         <h3 style="font-size: 2rem; color: #c53030; margin-bottom: 1.5rem;">
           <i class="fas fa-volume-mute"></i> Three Generations of Silence (1975-2016)
@@ -413,8 +453,10 @@ const pageDescription = 'Discover how the 1947 Partition scattered a family, del
           </div>
         </div>
       </div>
+      </div>
 
       <!-- 6. The Rediscovery (2016) -->
+      <div id="rediscovery" class="content-section">
       <div class="highlight-section" data-aos="fade-up" style="margin-top: 4rem; background: linear-gradient(135deg, #f0fff4 0%, #ffffff 100%); border-left: 5px solid #38a169;">
         <h3 style="font-size: 2rem; color: #38a169; margin-bottom: 1.5rem;">
           <i class="fas fa-search"></i> The Rediscovery (2016)
@@ -508,6 +550,229 @@ const pageDescription = 'Discover how the 1947 Partition scattered a family, del
           </div>
         </div>
       </div>
+      </div>
+
+      <!-- 7. Reflections: What Partition Took Away -->
+      <div id="reflections" class="content-section">
+      <div class="highlight-section" data-aos="fade-up" style="margin-top: 4rem; background: linear-gradient(135deg, #faf5ff 0%, #ffffff 100%); border-left: 5px solid #805ad5;">
+        <h3 style="font-size: 2rem; color: #805ad5; margin-bottom: 1.5rem;">
+          <i class="fas fa-brain"></i> Reflections: What Partition Took Away
+        </h3>
+
+        <div style="background: linear-gradient(135deg, #805ad5 0%, #6b46c1 100%); padding: 3rem; border-radius: var(--border-radius-lg); margin-bottom: 3rem; box-shadow: var(--shadow-lg);">
+          <i class="fas fa-quote-left" style="font-size: 3rem; color: rgba(255,255,255,0.3); display: block; margin-bottom: 1rem;"></i>
+          <p style="font-size: 1.3rem; line-height: 1.9; color: white; text-align: center; font-style: italic; margin: 0;">
+            The holocaust that delayed this book's publication for years did more than scatter families - it fractured the continuity of thought and purpose that Mul Raj's generation had carefully constructed. In the rush to rebuild and move forward, the deeper heritage of ideas was overshadowed by simpler narratives of identity and belonging.
+          </p>
+        </div>
+
+        <h4 style="font-size: 1.5rem; color: #805ad5; margin-bottom: 1.5rem;">
+          <i class="fas fa-question-circle"></i> The Current Generation's Challenge
+        </h4>
+
+        <div style="background: white; padding: 2rem; border-radius: var(--border-radius); box-shadow: var(--shadow-md); margin-bottom: 2rem;">
+          <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+            Today's generation carries the weight of heritage without understanding its substance. They know they're "Punjabi," they know they have "blue blood," but the connection to what that actually means has been severed.
+          </p>
+
+          <h5 style="color: #805ad5; font-size: 1.2rem; margin: 2rem 0 1rem 0;">
+            <i class="fas fa-unlink"></i> The Disconnect Despite Heritage
+          </h5>
+
+          <ul style="text-align: left; padding-left: 2rem; line-height: 2; font-size: 1.1rem;">
+            <li>They know <strong>THAT</strong> Punjab National Bank was founded, but not <strong>WHY</strong> or <strong>HOW</strong></li>
+            <li>They know <strong>THAT</strong> D.A.V. schools exist, but not the vision behind them</li>
+            <li>They know <strong>THAT</strong> Swadeshi happened, but not that it started in 1893, 30 years before Gandhi</li>
+            <li>They know <strong>THAT</strong> they have heritage, but not what principles guided it</li>
+          </ul>
+
+          <div style="margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, rgba(128,90,213,0.1) 0%, rgba(128,90,213,0.05) 100%); border-left: 4px solid #805ad5; border-radius: 8px;">
+            <p style="font-size: 1.1rem; line-height: 1.8; font-style: italic; margin: 0;">
+              The heritage became a badge of pride rather than a guide for action. Identity replaced understanding.
+            </p>
+          </div>
+        </div>
+
+        <h4 style="font-size: 1.5rem; color: #805ad5; margin: 3rem 0 1.5rem 0;">
+          <i class="fas fa-calendar-day"></i> Relevance Today
+        </h4>
+
+        <div class="achievement-grid">
+          <div class="achievement-card" style="border-top: 4px solid #805ad5;">
+            <div class="achievement-icon" style="color: #805ad5;"><i class="fas fa-industry"></i></div>
+            <h4>Swadeshi to Make in India</h4>
+            <p>Economic nationalism didn't start with modern campaigns. Understanding the 1893 Swadeshi movement provides context for today's debates about self-reliance and globalization.</p>
+          </div>
+
+          <div class="achievement-card" style="border-top: 4px solid #805ad5;">
+            <div class="achievement-icon" style="color: #805ad5;"><i class="fas fa-university"></i></div>
+            <h4>PNB Founding to Banking Integrity</h4>
+            <p>When modern banks face scandals, understanding the founding vision of institutions like PNB - built to serve the nation, not extract from it - becomes crucial.</p>
+          </div>
+
+          <div class="achievement-card" style="border-top: 4px solid #805ad5;">
+            <div class="achievement-icon" style="color: #805ad5;"><i class="fas fa-graduation-cap"></i></div>
+            <h4>D.A.V. System to Education Reform</h4>
+            <p>Today's education reform debates echo the original D.A.V. vision: accessible, value-based education that builds character while teaching skills.</p>
+          </div>
+
+          <div class="achievement-card" style="border-top: 4px solid #805ad5;">
+            <div class="achievement-icon" style="color: #805ad5;"><i class="fas fa-hands-helping"></i></div>
+            <h4>Service Tradition to DRNF Work</h4>
+            <p>From founding national banks to running free chai counters - the scale changes, but the principle remains: service to community without expectation of return.</p>
+          </div>
+        </div>
+
+        <div style="background: linear-gradient(135deg, rgba(128,90,213,0.15) 0%, rgba(128,90,213,0.05) 100%); padding: 2.5rem; border-radius: var(--border-radius-lg); margin-top: 3rem;">
+          <p style="font-size: 1.2rem; line-height: 1.8; text-align: center; font-weight: 600; color: var(--text-primary);">
+            The challenge for current and future generations is to understand not just WHAT their ancestors did, but HOW and WHY they did it - to carry forward principles, not just pride.
+          </p>
+        </div>
+      </div>
+      </div>
+
+      <!-- 8. Family Tree Visual: Before and After Partition -->
+      <div id="family-tree" class="content-section">
+      <div class="highlight-section" data-aos="fade-up" style="margin-top: 4rem; border-left: 5px solid var(--primary-color);">
+        <h3 style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1.5rem;">
+          <i class="fas fa-project-diagram"></i> Family Tree: Before and After Partition
+        </h3>
+
+        <div style="background: white; padding: 2.5rem; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-lg); margin-bottom: 2rem;">
+          <h4 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 2rem; text-align: center;">
+            BEFORE PARTITION - Lahore (United Family)
+          </h4>
+
+          <div style="background: linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(102,126,234,0.05) 100%); padding: 2rem; border-radius: var(--border-radius); margin-bottom: 1.5rem;">
+            <div style="text-align: center; font-size: 1.1rem; line-height: 2;">
+              <div style="font-weight: 700; font-size: 1.3rem; color: var(--primary-color); margin-bottom: 1rem;">
+                Rai Bahadur Mul Raj (1855-1945)
+              </div>
+              <div style="margin: 1rem 0; color: var(--text-secondary);">
+                <i class="fas fa-arrow-down" style="font-size: 1.5rem;"></i>
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                <div style="padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid var(--primary-color);">
+                  <strong>Dr. Prem Nath</strong><br>
+                  <span style="font-size: 0.95rem; color: var(--text-secondary);">Son, Dentist</span>
+                  <div style="margin-top: 0.5rem; font-size: 0.9rem;">
+                    <i class="fas fa-arrow-down"></i> Dr. Upender Nath (grandson)
+                  </div>
+                </div>
+                <div style="padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid var(--primary-color);">
+                  <strong>Air Marshal Ajit Nath</strong><br>
+                  <span style="font-size: 0.95rem; color: var(--text-secondary);">Son, Indian Armed Forces</span>
+                  <div style="margin-top: 0.5rem; font-size: 0.9rem;">
+                    Would save family in 1947
+                  </div>
+                </div>
+                <div style="padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid var(--primary-color);">
+                  <strong>Other Siblings</strong><br>
+                  <span style="font-size: 0.95rem; color: var(--text-secondary);">Extended family across Punjab</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p style="text-align: center; font-style: italic; color: var(--text-secondary); font-size: 1.05rem;">
+            A united family in Lahore - wealthy, connected, at the center of Punjab's transformation
+          </p>
+        </div>
+
+        <!-- PARTITION DIVIDER -->
+        <div style="background: linear-gradient(135deg, #e53e3e 0%, #c53030 100%); padding: 2rem; border-radius: var(--border-radius-lg); margin: 3rem 0; box-shadow: var(--shadow-lg); text-align: center;">
+          <i class="fas fa-bolt" style="font-size: 3rem; color: white; margin-bottom: 1rem; display: block;"></i>
+          <h4 style="color: white; font-size: 1.8rem; margin-bottom: 0.5rem; font-weight: 700;">PARTITION 1947</h4>
+          <p style="color: rgba(255,255,255,0.95); font-size: 1.2rem; font-style: italic; margin: 0;">
+            The holocaust that shattered everything
+          </p>
+        </div>
+
+        <div style="background: white; padding: 2.5rem; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-lg);">
+          <h4 style="color: #e53e3e; font-size: 1.5rem; margin-bottom: 2rem; text-align: center;">
+            AFTER PARTITION - Scattered Across India
+          </h4>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+            <!-- Hyderabad Branch -->
+            <div style="background: linear-gradient(135deg, rgba(49,151,149,0.1) 0%, rgba(49,151,149,0.05) 100%); padding: 1.5rem; border-radius: var(--border-radius); border: 2px solid #319795;">
+              <h5 style="color: #319795; font-size: 1.2rem; margin-bottom: 1rem; text-align: center;">
+                <i class="fas fa-map-pin"></i> HYDERABAD BRANCH
+              </h5>
+              <div style="font-size: 1rem; line-height: 1.8;">
+                <div style="margin-bottom: 0.8rem;">Dr. Prem Nath<br><span style="font-size: 0.9rem; color: var(--text-secondary);">(arrived 1947, died shortly after)</span></div>
+                <div style="text-align: center; margin: 0.5rem 0;"><i class="fas fa-arrow-down" style="color: #319795;"></i></div>
+                <div style="margin-bottom: 0.8rem;">Dr. Upender Nath<br><span style="font-size: 0.9rem; color: var(--text-secondary);">(rebuilt family, Royal Surgeon)</span></div>
+                <div style="text-align: center; margin: 0.5rem 0;"><i class="fas fa-arrow-down" style="color: #319795;"></i></div>
+                <div style="margin-bottom: 0.8rem;">Dr. Rabinder Nath<br><span style="font-size: 0.9rem; color: var(--text-secondary);">(1930s-2015, Hyderabad-born)</span></div>
+                <div style="text-align: center; margin: 0.5rem 0;"><i class="fas fa-arrow-down" style="color: #319795;"></i></div>
+                <div style="margin-bottom: 0.8rem; padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid var(--accent-color);"><strong>Abhishek Nath</strong><br><span style="font-size: 0.9rem; color: var(--text-secondary);">(Founder DRNF, rediscovered book 2016)</span></div>
+                <div style="text-align: center; margin: 0.5rem 0;"><i class="fas fa-arrow-down" style="color: #319795;"></i></div>
+                <div>Current Generation<br><span style="font-size: 0.9rem; color: var(--text-secondary);">(Hyderabad-born, reconnecting with heritage)</span></div>
+              </div>
+            </div>
+
+            <!-- Delhi Branch -->
+            <div style="background: linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(102,126,234,0.05) 100%); padding: 1.5rem; border-radius: var(--border-radius); border: 2px solid var(--primary-color);">
+              <h5 style="color: var(--primary-color); font-size: 1.2rem; margin-bottom: 1rem; text-align: center;">
+                <i class="fas fa-map-pin"></i> DELHI BRANCH
+              </h5>
+              <div style="font-size: 1rem; line-height: 1.8;">
+                <div style="margin-bottom: 0.8rem;">Air Marshal Ajit Nath<br><span style="font-size: 0.9rem; color: var(--text-secondary);">(arranged airlift, hero of 1947)</span></div>
+                <div style="text-align: center; margin: 0.5rem 0;"><i class="fas fa-arrow-down" style="color: var(--primary-color);"></i></div>
+                <div style="margin-bottom: 0.8rem;">His Children<br><span style="font-size: 0.9rem; color: var(--text-secondary);">(co-editors of 1975 book publication)</span></div>
+                <div style="text-align: center; margin: 0.5rem 0;"><i class="fas fa-arrow-down" style="color: var(--primary-color);"></i></div>
+                <div style="margin-bottom: 0.8rem;">Subsequent Generations<br><span style="font-size: 0.9rem; color: var(--text-secondary);">(Connection maintained but weakened)</span></div>
+              </div>
+              <p style="margin-top: 1rem; font-size: 0.95rem; font-style: italic; color: var(--text-secondary); text-align: center;">
+                Connection maintained but weakened over generations
+              </p>
+            </div>
+
+            <!-- Scattered Relatives -->
+            <div style="background: linear-gradient(135deg, rgba(160,174,192,0.15) 0%, rgba(160,174,192,0.05) 100%); padding: 1.5rem; border-radius: var(--border-radius); border: 2px solid #718096;">
+              <h5 style="color: #718096; font-size: 1.2rem; margin-bottom: 1rem; text-align: center;">
+                <i class="fas fa-globe"></i> SCATTERED RELATIVES
+              </h5>
+              <div style="font-size: 1rem; line-height: 1.8;">
+                <div style="margin-bottom: 0.8rem;"><strong>London Branch:</strong><br><span style="font-size: 0.9rem; color: var(--text-secondary);">Vishveshwar Nath's descendants</span></div>
+                <div style="margin-bottom: 0.8rem;"><strong>Other Parts of India:</strong><br><span style="font-size: 0.9rem; color: var(--text-secondary);">Cousins, extended family</span></div>
+              </div>
+              <div style="margin-top: 1rem; padding: 1rem; background: #fff5f5; border-radius: 8px; border-left: 4px solid #e53e3e;">
+                <p style="margin: 0; font-size: 0.95rem; color: #e53e3e; font-weight: 600;">
+                  <i class="fas fa-exclamation-circle"></i> Most connections lost over time
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- The Human Cost -->
+        <div style="margin-top: 3rem; background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%); padding: 2rem; border-radius: var(--border-radius-lg); border: 2px solid #e53e3e;">
+          <h4 style="color: #e53e3e; font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center;">
+            <i class="fas fa-heart-broken"></i> The Human Cost
+          </h4>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; text-align: center;">
+            <div>
+              <i class="fas fa-home" style="font-size: 2rem; color: #e53e3e; margin-bottom: 0.5rem;"></i>
+              <p style="margin: 0; font-size: 1rem;"><strong>One Home</strong> → Three scattered branches</p>
+            </div>
+            <div>
+              <i class="fas fa-network-wired" style="font-size: 2rem; color: #e53e3e; margin-bottom: 0.5rem;"></i>
+              <p style="margin: 0; font-size: 1rem;"><strong>Strong Networks</strong> → Weak connections</p>
+            </div>
+            <div>
+              <i class="fas fa-book-open" style="font-size: 2rem; color: #e53e3e; margin-bottom: 0.5rem;"></i>
+              <p style="margin: 0; font-size: 1rem;"><strong>Living Heritage</strong> → Forgotten book</p>
+            </div>
+            <div>
+              <i class="fas fa-brain" style="font-size: 2rem; color: #e53e3e; margin-bottom: 0.5rem;"></i>
+              <p style="margin: 0; font-size: 1rem;"><strong>Deep Understanding</strong> → Superficial pride</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
 
       <!-- Final Hope Section -->
       <div style="background: var(--gradient-primary); color: white; padding: 3rem; border-radius: var(--border-radius-lg); text-align: center; margin-top: 4rem;" data-aos="fade-up">
@@ -520,10 +785,149 @@ const pageDescription = 'Discover how the 1947 Partition scattered a family, del
       </div>
     </div>
   </section>
-  
-  
-  
 </Layout>
+
+<style is:global>
+  /* Table of Contents Styling */
+  .page-toc {
+    position: sticky;
+    top: 120px;
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(44, 85, 48, 0.1);
+    margin: 2rem 0 3rem 0;
+    border-left: 4px solid var(--primary-color);
+    max-width: 350px;
+    float: right;
+    margin-left: 2rem;
+    z-index: 10;
+  }
+
+  .toc-title {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #e8f5e9;
+  }
+
+  .toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .toc-list li {
+    margin-bottom: 0.5rem;
+  }
+
+  .toc-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .toc-link i {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+  }
+
+  .toc-link:hover {
+    background: linear-gradient(135deg, rgba(44, 85, 48, 0.1) 0%, rgba(44, 85, 48, 0.05) 100%);
+    transform: translateX(4px);
+  }
+
+  .toc-link:hover i {
+    transform: scale(1.15);
+  }
+
+  .toc-link.active {
+    background: linear-gradient(135deg, #2c5530 0%, #3a6b3e 100%);
+    color: white;
+    font-weight: 600;
+  }
+
+  .toc-link.active i {
+    color: #f39c12;
+  }
+
+  /* Content Section Styling */
+  .content-section {
+    scroll-margin-top: 120px;
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .page-toc {
+      position: static;
+      float: none;
+      max-width: 100%;
+      margin: 2rem 0;
+    }
+
+    .toc-link {
+      font-size: 0.9rem;
+      padding: 0.65rem 0.85rem;
+    }
+  }
+</style>
+
+<script>
+  // Smooth scrolling for TOC links
+  document.querySelectorAll('.toc-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetSection = document.querySelector(targetId);
+
+      if (targetSection) {
+        const yOffset = -120;
+        const y = targetSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Active section highlighting on scroll
+  function updateActiveTocLink() {
+    const sections = document.querySelectorAll('.content-section');
+    const tocLinks = document.querySelectorAll('.toc-link');
+
+    let currentSection = '';
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+
+      if (window.pageYOffset >= sectionTop - 150) {
+        currentSection = section.getAttribute('id');
+      }
+    });
+
+    tocLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${currentSection}`) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  // Update on scroll
+  window.addEventListener('scroll', updateActiveTocLink);
+
+  // Update on load
+  updateActiveTocLink();
+</script>
 
 
 

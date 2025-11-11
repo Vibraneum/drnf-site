@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SearchPage from '../components/react/SearchPage.tsx';
+
+const pageTitle = 'Search - Dr. Rabinder Nath Foundation';
+const pageDescription = 'Search for programs, initiatives, and information across the Dr. Rabinder Nath Foundation website.';
+---
+
+<Layout title={pageTitle} description={pageDescription} activePage="search">
+  <SearchPage client:load />
+</Layout>
+

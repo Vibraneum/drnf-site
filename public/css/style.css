@@ -3836,6 +3836,14 @@ img {
     color: var(--primary-color);
 }
 
+.mobile-menu-item-clean > span:first-child:not(:last-child) {
+    font-size: 1.25rem;
+    width: 28px;
+    text-align: center;
+    display: inline-block;
+    line-height: 1;
+}
+
 /* Mobile Section Headers */
 .mobile-section-clean {
     margin-bottom: 0.5rem;
@@ -3924,6 +3932,14 @@ img {
     width: 20px;
     text-align: center;
     color: var(--accent-color);
+}
+
+.mobile-link-clean > span:first-child:not(:last-child) {
+    font-size: 1.25rem;
+    width: 28px;
+    text-align: center;
+    display: inline-block;
+    line-height: 1;
 }
 
 /* Mobile Social Links */

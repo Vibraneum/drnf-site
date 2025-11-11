@@ -627,8 +627,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Enhanced Navigation Initialization
 function initializeEnhancedNavigation() {
-    console.log('🚀 Initializing Enhanced Navigation System...');
-
     const enhancedNav = document.querySelector('.enhanced-nav');
     const topBar = document.querySelector('.top-bar');
     const megaMenus = document.querySelectorAll('.mega-menu');
@@ -638,38 +636,17 @@ function initializeEnhancedNavigation() {
     const mobileMenuClose = document.querySelector('.mobile-menu-close');
     const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
 
-    // Scroll effect for enhanced navigation with smooth transitions
+    // Scroll effect for enhanced navigation
     if (enhancedNav) {
-        let lastScrollTop = 0;
-        const scrollThreshold = 50;
-
         window.addEventListener('scroll', function() {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-            // Add/remove scrolled class for styling
-            if (scrollTop > scrollThreshold) {
+            if (scrollTop > 50) {
                 enhancedNav.classList.add('scrolled');
             } else {
                 enhancedNav.classList.remove('scrolled');
             }
-
-            // Add hide/show effect when scrolling
-            if (scrollTop > lastScrollTop && scrollTop > 200) {
-                // Scrolling down - hide navbar
-                enhancedNav.style.transform = 'translateY(-100%)';
-            } else {
-                // Scrolling up - show navbar
-                enhancedNav.style.transform = 'translateY(0)';
-            }
-
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
         });
-
-        // Smooth entrance animation on page load
-        setTimeout(() => {
-            enhancedNav.style.opacity = '1';
-            enhancedNav.style.transform = 'translateY(0)';
-        }, 100);
 
         // Set top-bar class if top bar exists
         if (topBar) {
@@ -677,122 +654,55 @@ function initializeEnhancedNavigation() {
         }
     }
 
-    // Mega Menu Functionality with enhanced interactions
+    // Mega Menu Functionality
     navDropdownTriggers.forEach(trigger => {
         const menuId = trigger.getAttribute('data-menu');
         const megaMenu = document.getElementById(menuId);
-        const chevron = trigger.querySelector('.chevron');
-        let closeTimeout = null;
 
         if (megaMenu) {
-            // Click to toggle (better for accessibility and mobile/tablet)
+            // Click to toggle (better for accessibility and mobile)
             trigger.addEventListener('click', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
 
                 const isActive = megaMenu.classList.contains('active');
 
-                // Close all mega menus first
                 closeMegaMenus();
 
-                // Open this one if it wasn't active
                 if (!isActive) {
                     megaMenu.classList.add('active');
                     trigger.classList.add('active');
-
-                    // Rotate chevron smoothly
-                    if (chevron) {
-                        chevron.style.transform = 'rotate(180deg)';
-                    }
-
-                    // Track mega menu open event
-                    trackEvent('mega_menu_open', {
-                        'menu_id': menuId,
-                        'page': window.location.pathname
-                    });
-                } else {
-                    // Reset chevron
-                    if (chevron) {
-                        chevron.style.transform = 'rotate(0deg)';
-                    }
                 }
             });
 
-            // Mouse enter (for desktop hover) - with slight delay
+            // Mouse enter (for desktop hover)
             trigger.addEventListener('mouseenter', function() {
-                // Clear any pending close timeout
-                if (closeTimeout) {
-                    clearTimeout(closeTimeout);
-                    closeTimeout = null;
-                }
-
-                // Only activate on desktop (not tablets)
-                if (window.innerWidth >= 1024) {
-                    closeMegaMenus();
-
-                    // Small delay for better UX
-                    setTimeout(() => {
-                        megaMenu.classList.add('active');
-                        trigger.classList.add('active');
-
-                        // Rotate chevron
-                        if (chevron) {
-                            chevron.style.transform = 'rotate(180deg)';
-                        }
-                    }, 150);
-                }
+                closeMegaMenus();
+                megaMenu.classList.add('active');
+                trigger.classList.add('active');
             });
 
             // Keep mega menu open when hovering over it
             megaMenu.addEventListener('mouseenter', function() {
-                // Clear any pending close timeout
-                if (closeTimeout) {
-                    clearTimeout(closeTimeout);
-                    closeTimeout = null;
-                }
+                megaMenu.classList.add('active');
+                trigger.classList.add('active');
             });
 
-            // Close on mouse leave from trigger with delay
-            trigger.addEventListener('mouseleave', function() {
-                if (window.innerWidth >= 1024) {
-                    closeTimeout = setTimeout(() => {
-                        if (!megaMenu.matches(':hover') && !trigger.matches(':hover')) {
-                            megaMenu.classList.remove('active');
-                            trigger.classList.remove('active');
-
-                            // Reset chevron
-                            if (chevron) {
-                                chevron.style.transform = 'rotate(0deg)';
-                            }
-                        }
-                    }, 200); // 200ms delay before closing
-                }
-            });
-
-            // Close on mouse leave from mega menu with delay
-            megaMenu.addEventListener('mouseleave', function() {
-                if (window.innerWidth >= 1024) {
-                    closeTimeout = setTimeout(() => {
+            // Close on mouse leave from trigger
+            trigger.addEventListener('mouseleave', function(e) {
+                // Check if we're not moving to the mega menu
+                setTimeout(() => {
+                    if (!megaMenu.matches(':hover') && !trigger.matches(':hover')) {
                         megaMenu.classList.remove('active');
                         trigger.classList.remove('active');
-
-                        // Reset chevron
-                        if (chevron) {
-                            chevron.style.transform = 'rotate(0deg)';
-                        }
-                    }, 200); // 200ms delay before closing
-                }
+                    }
+                }, 100);
             });
 
-            // Track mega menu link clicks
-            megaMenu.querySelectorAll('.mega-menu-link').forEach(link => {
-                link.addEventListener('click', function() {
-                    trackEvent('mega_menu_link_click', {
-                        'link_text': this.textContent.trim(),
-                        'menu_id': menuId,
-                        'page': window.location.pathname
-                    });
-                });
+            // Close on mouse leave from mega menu
+            megaMenu.addEventListener('mouseleave', function() {
+                megaMenu.classList.remove('active');
+                trigger.classList.remove('active');
             });
         }
     });
@@ -814,140 +724,30 @@ function initializeEnhancedNavigation() {
 
     function closeMegaMenus() {
         megaMenus.forEach(menu => menu.classList.remove('active'));
-        navDropdownTriggers.forEach(trigger => {
-            trigger.classList.remove('active');
-            const chevron = trigger.querySelector('.chevron');
-            if (chevron) {
-                chevron.style.transform = 'rotate(0deg)';
-            }
-        });
+        navDropdownTriggers.forEach(trigger => trigger.classList.remove('active'));
     }
 
-    // Mobile Menu Toggle - FIXED
+    // Mobile Menu Toggle
     if (mobileMenuToggle && mobileMenuOverlay) {
-        console.log('✅ Mobile menu toggle button found');
-
         mobileMenuToggle.addEventListener('click', function(e) {
-            console.log('🔘 Mobile menu toggle clicked');
-            e.preventDefault();
             e.stopPropagation();
-
-            const isActive = mobileMenuOverlay.classList.contains('active');
-
-            if (isActive) {
-                closeMobileMenu();
-            } else {
-                openMobileMenu();
-            }
-        });
-    } else {
-        console.warn('⚠️ Mobile menu elements not found:', {
-            toggle: !!mobileMenuToggle,
-            overlay: !!mobileMenuOverlay
+            openMobileMenu();
         });
     }
 
     if (mobileMenuClose) {
-        console.log('✅ Mobile menu close button found');
-
-        mobileMenuClose.addEventListener('click', function(e) {
-            console.log('❌ Mobile menu close clicked');
-            e.preventDefault();
-            e.stopPropagation();
+        mobileMenuClose.addEventListener('click', function() {
             closeMobileMenu();
         });
     }
 
-    // Mobile Menu Accordion - ENHANCED
-    const mobileMenuSections = document.querySelectorAll('.mobile-section-header-clean');
-    console.log(`📱 Found ${mobileMenuSections.length} mobile menu sections`);
-
-    mobileMenuSections.forEach(header => {
-        header.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            const toggleId = this.getAttribute('data-toggle');
-            const content = document.getElementById(toggleId);
-            const chevron = this.querySelector('.mobile-chevron');
-            const isActive = this.classList.contains('active');
-
-            console.log(`🔽 Mobile section clicked: ${toggleId}, currently active: ${isActive}`);
-
-            // Toggle current section
-            if (isActive) {
-                // Close this section
-                this.classList.remove('active');
-                if (content) {
-                    content.classList.remove('active');
-                    content.style.maxHeight = '0px';
-                }
-                if (chevron) {
-                    chevron.style.transform = 'rotate(0deg)';
-                }
-            } else {
-                // Close all other sections first (optional - remove for multi-open)
-                document.querySelectorAll('.mobile-section-content-clean').forEach(section => {
-                    if (section.id !== toggleId) {
-                        section.classList.remove('active');
-                        section.style.maxHeight = '0px';
-                        const otherHeader = document.querySelector(`[data-toggle="${section.id}"]`);
-                        if (otherHeader) {
-                            otherHeader.classList.remove('active');
-                            const otherChevron = otherHeader.querySelector('.mobile-chevron');
-                            if (otherChevron) {
-                                otherChevron.style.transform = 'rotate(0deg)';
-                            }
-                        }
-                    }
-                });
-
-                // Open this section
-                this.classList.add('active');
-                if (content) {
-                    content.classList.add('active');
-                    // Set max-height for smooth animation
-                    content.style.maxHeight = content.scrollHeight + 'px';
-                }
-                if (chevron) {
-                    chevron.style.transform = 'rotate(180deg)';
-                }
-
-                // Track accordion open
-                trackEvent('mobile_accordion_open', {
-                    'section_id': toggleId,
-                    'page': window.location.pathname
-                });
-            }
-        });
-    });
-
-    // Close mobile menu when clicking on clean links
-    document.querySelectorAll('.mobile-menu-item-clean, .mobile-link-clean').forEach(link => {
-        link.addEventListener('click', function() {
-            console.log('🔗 Mobile menu link clicked:', this.textContent.trim());
-
-            // Track mobile menu click
-            trackEvent('mobile_menu_link_click', {
-                'link_text': this.textContent.trim(),
-                'page': window.location.pathname
-            });
-
-            // Close menu after small delay for visual feedback
-            setTimeout(() => {
-                closeMobileMenu();
-            }, 150);
-        });
-    });
-
-    // Old accordion support (if exists)
+    // Mobile Menu Accordion
     mobileMenuLinks.forEach(link => {
         const hasSubmenu = link.nextElementSibling && link.nextElementSibling.classList.contains('mobile-submenu');
 
         if (hasSubmenu) {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
-                e.stopPropagation();
 
                 const submenu = this.nextElementSibling;
                 const isActive = submenu.classList.contains('active');
@@ -969,53 +769,63 @@ function initializeEnhancedNavigation() {
         }
     });
 
-    // Close mobile menu when clicking on submenu links
+    // Close mobile menu when clicking on a link without submenu
     document.querySelectorAll('.mobile-submenu-link').forEach(link => {
         link.addEventListener('click', function() {
-            setTimeout(() => closeMobileMenu(), 150);
+            closeMobileMenu();
         });
     });
 
-    // Close mobile menu when clicking on direct links (old style)
+    // Close mobile menu when clicking on direct links
     document.querySelectorAll('.mobile-menu-link:not([data-submenu])').forEach(link => {
         link.addEventListener('click', function() {
             if (!this.nextElementSibling || !this.nextElementSibling.classList.contains('mobile-submenu')) {
-                setTimeout(() => closeMobileMenu(), 150);
+                closeMobileMenu();
             }
         });
     });
 
     function openMobileMenu() {
-        console.log('📱 Opening mobile menu...');
-
         if (mobileMenuOverlay) {
-            // Add smooth entrance
-            mobileMenuOverlay.style.display = 'block';
-
-            // Force reflow for animation
-            mobileMenuOverlay.offsetHeight;
-
             mobileMenuOverlay.classList.add('active');
-            if (mobileMenuToggle) {
-                mobileMenuToggle.classList.add('active');
-            }
+            mobileMenuToggle.classList.add('active');
             document.body.classList.add('mobile-menu-open');
-
-            // Prevent body scroll
-            document.body.style.overflow = 'hidden';
-
-            // Track mobile menu open
-            trackEvent('mobile_menu_open', {
-                'page': window.location.pathname
-            });
-
-            console.log('✅ Mobile menu opened');
         }
     }
 
-    function closeMobileMenu() {
-        console.log('📱 Closing mobile menu...');
+    // New Clean Mobile Menu Section Toggles
+    document.querySelectorAll('.mobile-section-header-clean').forEach(header => {
+        header.addEventListener('click', function() {
+            const toggleId = this.getAttribute('data-toggle');
+            const content = document.getElementById(toggleId);
 
+            // Close all other sections
+            document.querySelectorAll('.mobile-section-content-clean').forEach(section => {
+                if (section.id !== toggleId) {
+                    section.classList.remove('active');
+                    const otherHeader = document.querySelector(`[data-toggle="${section.id}"]`);
+                    if (otherHeader) {
+                        otherHeader.classList.remove('active');
+                    }
+                }
+            });
+
+            // Toggle current section
+            this.classList.toggle('active');
+            if (content) {
+                content.classList.toggle('active');
+            }
+        });
+    });
+
+    // Close mobile menu when clicking on clean links
+    document.querySelectorAll('.mobile-menu-item-clean, .mobile-link-clean').forEach(link => {
+        link.addEventListener('click', function() {
+            closeMobileMenu();
+        });
+    });
+
+    function closeMobileMenu() {
         if (mobileMenuOverlay) {
             mobileMenuOverlay.classList.remove('active');
             if (mobileMenuToggle) {
@@ -1023,47 +833,20 @@ function initializeEnhancedNavigation() {
             }
             document.body.classList.remove('mobile-menu-open');
 
-            // Re-enable body scroll
-            document.body.style.overflow = '';
-
-            // Close all accordion sections
-            document.querySelectorAll('.mobile-section-content-clean').forEach(section => {
-                section.classList.remove('active');
-                section.style.maxHeight = '0px';
-            });
-            document.querySelectorAll('.mobile-section-header-clean').forEach(header => {
-                header.classList.remove('active');
-                const chevron = header.querySelector('.mobile-chevron');
-                if (chevron) {
-                    chevron.style.transform = 'rotate(0deg)';
-                }
-            });
-
-            // Close all old-style submenus
+            // Close all submenus
             document.querySelectorAll('.mobile-submenu').forEach(sub => {
                 sub.classList.remove('active');
             });
             document.querySelectorAll('.mobile-menu-link').forEach(l => {
                 l.classList.remove('active');
             });
-
-            // Hide overlay after animation completes
-            setTimeout(() => {
-                if (!mobileMenuOverlay.classList.contains('active')) {
-                    mobileMenuOverlay.style.display = 'none';
-                }
-            }, 300);
-
-            console.log('✅ Mobile menu closed');
         }
     }
 
     // Close mobile menu when clicking overlay background
     if (mobileMenuOverlay) {
         mobileMenuOverlay.addEventListener('click', function(e) {
-            // Only close if clicking directly on overlay (not on menu content)
-            if (e.target === mobileMenuOverlay || e.target.classList.contains('mobile-menu-overlay')) {
-                console.log('🎯 Clicked outside mobile menu - closing');
+            if (e.target === mobileMenuOverlay) {
                 closeMobileMenu();
             }
         });
@@ -1071,65 +854,14 @@ function initializeEnhancedNavigation() {
 
     // Active link highlighting for enhanced nav
     const currentPath = window.location.pathname;
-    document.querySelectorAll('.nav-link-enhanced, .mobile-menu-link, .mobile-submenu-link, .mobile-link-clean').forEach(link => {
+    document.querySelectorAll('.nav-link-enhanced, .mobile-menu-link, .mobile-submenu-link').forEach(link => {
         const href = link.getAttribute('href');
-        if (href) {
-            // Normalize paths for comparison
-            const normalizedHref = href.replace(/\.html$/, '').replace(/\/$/, '') || '/';
-            const normalizedPath = currentPath.replace(/\.html$/, '').replace(/\/$/, '') || '/';
-
-            if (normalizedPath === normalizedHref ||
-                (normalizedHref !== '/' && normalizedPath.includes(normalizedHref))) {
-                link.classList.add('active');
-            }
+        if (href && (currentPath === href || currentPath.includes(href.replace('.html', '')))) {
+            link.classList.add('active');
         }
     });
 
-    // Add entrance animations to nav items
-    if (enhancedNav) {
-        const navLinks = enhancedNav.querySelectorAll('.nav-link-enhanced');
-        navLinks.forEach((link, index) => {
-            link.style.opacity = '0';
-            link.style.transform = 'translateY(-10px)';
-
-            setTimeout(() => {
-                link.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-                link.style.opacity = '1';
-                link.style.transform = 'translateY(0)';
-            }, 100 + (index * 50));
-        });
-    }
-
-    // Add scroll progress indicator
-    const progressBar = document.createElement('div');
-    progressBar.className = 'scroll-progress';
-    progressBar.style.cssText = `
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 0%;
-        height: 3px;
-        background: linear-gradient(90deg, var(--primary-color, #2c5530), var(--accent-color, #f39c12));
-        z-index: 10001;
-        transition: width 0.1s ease;
-    `;
-    document.body.appendChild(progressBar);
-
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-        progressBar.style.width = scrollPercent + '%';
-    });
-
-    console.log('✨ Enhanced Navigation System initialized successfully!');
-    console.log('📊 Navigation Stats:', {
-        megaMenus: megaMenus.length,
-        navTriggers: navDropdownTriggers.length,
-        mobileSections: mobileMenuSections.length,
-        mobileToggleFound: !!mobileMenuToggle,
-        mobileOverlayFound: !!mobileMenuOverlay
-    });
+    console.log('Enhanced Navigation System initialized! ✨');
 }
 
 // Add CSS for lightbox and notifications

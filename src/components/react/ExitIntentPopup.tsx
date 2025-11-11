@@ -217,3 +217,4 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({ currentPage = '' }) =
 
 export default ExitIntentPopup;
 
+

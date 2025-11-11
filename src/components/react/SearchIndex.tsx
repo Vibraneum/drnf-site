@@ -243,3 +243,4 @@ export function clearRecentSearches(): void {
   localStorage.removeItem('drnf_recent_searches');
 }
 
+

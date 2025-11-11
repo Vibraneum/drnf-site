@@ -40,18 +40,23 @@ const MobileNav: React.FC<MobileNavProps> = ({ currentPage = '' }) => {
     );
   };
 
-  // Navigation items
+  // Navigation items with emojis
   const aboutItems: NavItem[] = [
-    { href: '/about', icon: 'fas fa-heart', text: 'Our Story & Mission' },
-    { href: '/dr-rabinder-nath', icon: 'fas fa-user-md', text: 'Dr. Rabinder Nath' },
-    { href: '/book', icon: 'fas fa-book', text: 'Heritage Book' },
+    { href: '/about', icon: '📖', text: 'Our Story & Mission' },
+    { href: '/dr-rabinder-nath', icon: '👨‍⚕️', text: 'Dr. Rabinder Nath' },
+    { href: '/book', icon: '📚', text: 'Heritage Book' },
+    { href: '/about#team', icon: '👥', text: 'Our Team' },
+    { href: '/partition-story', icon: '🕰️', text: 'Partition Story' },
+    { href: '/transparency', icon: '📊', text: 'Transparency' },
   ];
 
   const workItems: NavItem[] = [
-    { href: '/chai-counters', icon: 'fas fa-mug-hot', text: 'Free Chai Counters' },
-    { href: '/community', icon: 'fas fa-hands-helping', text: 'Community Programs' },
-    { href: '/loocafe-impact', icon: 'fas fa-building', text: 'LooCafe Partnership' },
-    { href: '/frontline-workers', icon: 'fas fa-user-shield', text: 'Frontline Workers' },
+    { href: '/chai-counters', icon: '☕', text: 'Free Chai Counters' },
+    { href: '/community', icon: '🤝', text: 'Community Programs' },
+    { href: '/loocafe-impact', icon: '🏢', text: 'LooCafe Partnership' },
+    { href: '/frontline-workers', icon: '🛡️', text: 'Frontline Workers' },
+    { href: '/community#workshops', icon: '🎓', text: 'Education Workshops' },
+    { href: '/community#environment', icon: '🌱', text: 'Environmental Care' },
   ];
 
   return (
@@ -103,7 +108,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ currentPage = '' }) => {
             className={`mobile-menu-item-clean ${currentPage === 'home' ? 'active' : ''}`}
             onClick={handleLinkClick}
           >
-            <i className="fas fa-home"></i>
+            <span>🏠</span>
             <span>Home</span>
           </a>
 
@@ -125,7 +130,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ currentPage = '' }) => {
               aria-expanded={expandedSections.includes('about')}
               type="button"
             >
-              <span>About DRNF</span>
+              <span>ℹ️ About DRNF</span>
               <i
                 className={`fas fa-chevron-down mobile-chevron ${
                   expandedSections.includes('about') ? 'rotated' : ''
@@ -144,7 +149,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ currentPage = '' }) => {
                   className="mobile-link-clean"
                   onClick={handleLinkClick}
                 >
-                  <i className={item.icon}></i>
+                  <span style={{ fontSize: '1.25rem', width: '28px', textAlign: 'center', display: 'inline-block' }}>{item.icon}</span>
                   <span>{item.text}</span>
                 </a>
               ))}
@@ -159,7 +164,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ currentPage = '' }) => {
               aria-expanded={expandedSections.includes('work')}
               type="button"
             >
-              <span>Our Work</span>
+              <span>🤝 Our Programs</span>
               <i
                 className={`fas fa-chevron-down mobile-chevron ${
                   expandedSections.includes('work') ? 'rotated' : ''
@@ -178,7 +183,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ currentPage = '' }) => {
                   className="mobile-link-clean"
                   onClick={handleLinkClick}
                 >
-                  <i className={item.icon}></i>
+                  <span style={{ fontSize: '1.25rem', width: '28px', textAlign: 'center', display: 'inline-block' }}>{item.icon}</span>
                   <span>{item.text}</span>
                 </a>
               ))}
@@ -191,7 +196,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ currentPage = '' }) => {
             className="mobile-menu-item-clean"
             onClick={handleLinkClick}
           >
-            <i className="fas fa-question-circle"></i>
+            <span>❓</span>
             <span>FAQ</span>
           </a>
 
@@ -200,7 +205,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ currentPage = '' }) => {
             className="mobile-menu-item-clean"
             onClick={handleLinkClick}
           >
-            <i className="fas fa-envelope"></i>
+            <span>✉️</span>
             <span>Contact Us</span>
           </a>
 
