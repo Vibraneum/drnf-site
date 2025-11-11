@@ -1,0 +1,199 @@
+---
+/**
+ * Test Page for Header Component
+ *
+ * This page tests the newly created Header.astro component
+ * to verify navigation structure and functionality.
+ */
+
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/astro/Header.astro';
+
+const pageTitle = 'Header Component Test - DRNF';
+const pageDescription = 'Testing the Header component for DRNF Astro migration';
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <!-- Header Component -->
+  <Header activePage="home" />
+
+  <!-- Test Content -->
+  <main class="min-h-screen bg-gray-50 py-16">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <section class="bg-white rounded-lg shadow-md p-8 mb-8">
+        <h1 class="text-4xl font-bold text-green-800 mb-4">
+          Header Component Test Page
+        </h1>
+        <p class="text-lg text-gray-700 mb-6">
+          This page demonstrates the newly created Header.astro component for the DRNF Astro migration.
+        </p>
+      </section>
+
+      <section class="bg-white rounded-lg shadow-md p-8 mb-8">
+        <h2 class="text-2xl font-semibold text-orange-600 mb-4">
+          Navigation Structure
+        </h2>
+
+        <div class="space-y-4">
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">Desktop Navigation (Main Menu):</h3>
+            <ul class="list-disc list-inside text-gray-600 space-y-1 ml-4">
+              <li>Home</li>
+              <li>About (Dropdown with mega menu)</li>
+              <li>Heritage Book</li>
+              <li>Our Programs (Dropdown with mega menu)</li>
+              <li>Contact</li>
+              <li>FAQ</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">CTA Button:</h3>
+            <p class="text-gray-600 ml-4">"Our Story" (NOT "Volunteer Today" per CLAUDE.md refocus)</p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">About Mega Menu Links:</h3>
+            <ul class="list-disc list-inside text-gray-600 space-y-1 ml-4">
+              <li>Our Story</li>
+              <li>Dr. Rabinder Nath</li>
+              <li>Heritage Book</li>
+              <li>Our Team</li>
+              <li>Vision & Mission</li>
+              <li>Impact & Stats</li>
+              <li>Our Values</li>
+              <li>Contact Us</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">Programs Mega Menu Links:</h3>
+            <ul class="list-disc list-inside text-gray-600 space-y-1 ml-4">
+              <li>Free Chai Counters</li>
+              <li>LooCafe Partnership</li>
+              <li>Frontline Workers</li>
+              <li>Community Support</li>
+              <li>Education Workshops</li>
+              <li>Environmental Care</li>
+              <li>Animal Welfare</li>
+              <li>Get in Touch</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">Mobile Menu:</h3>
+            <ul class="list-disc list-inside text-gray-600 space-y-1 ml-4">
+              <li>Home</li>
+              <li>About DRNF (expandable accordion with 3 links)</li>
+              <li>Our Work (expandable accordion with 2 links)</li>
+              <li>FAQ</li>
+              <li>Contact Us</li>
+              <li>Social Links (Facebook, LinkedIn)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white rounded-lg shadow-md p-8 mb-8">
+        <h2 class="text-2xl font-semibold text-orange-600 mb-4">
+          Component Features
+        </h2>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="border-l-4 border-green-500 pl-4">
+            <h3 class="font-bold text-gray-800 mb-2">Styling Approach:</h3>
+            <ul class="text-gray-600 space-y-1">
+              <li>✓ Glassmorphism effect</li>
+              <li>✓ Sticky header</li>
+              <li>✓ Active page highlighting</li>
+              <li>✓ Responsive design (desktop/mobile)</li>
+            </ul>
+          </div>
+
+          <div class="border-l-4 border-orange-500 pl-4">
+            <h3 class="font-bold text-gray-800 mb-2">Interactivity:</h3>
+            <ul class="text-gray-600 space-y-1">
+              <li>✓ Mega menu dropdowns</li>
+              <li>✓ Mobile hamburger menu</li>
+              <li>✓ Accordion sections (mobile)</li>
+              <li>✓ Smooth transitions</li>
+            </ul>
+          </div>
+
+          <div class="border-l-4 border-blue-500 pl-4">
+            <h3 class="font-bold text-gray-800 mb-2">Props Interface:</h3>
+            <ul class="text-gray-600 space-y-1">
+              <li>✓ activePage (optional string)</li>
+              <li>✓ TypeScript strict mode</li>
+              <li>✓ Auto path detection</li>
+            </ul>
+          </div>
+
+          <div class="border-l-4 border-purple-500 pl-4">
+            <h3 class="font-bold text-gray-800 mb-2">Integration Notes:</h3>
+            <ul class="text-gray-600 space-y-1">
+              <li>→ Requires CSS from style.css</li>
+              <li>→ Requires JS from main.js</li>
+              <li>→ Font Awesome icons needed</li>
+              <li>→ Future: React Island for mobile</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white rounded-lg shadow-md p-8">
+        <h2 class="text-2xl font-semibold text-orange-600 mb-4">
+          Testing Checklist
+        </h2>
+        <div class="space-y-3">
+          <label class="flex items-center space-x-3">
+            <input type="checkbox" class="form-checkbox h-5 w-5 text-green-600" />
+            <span class="text-gray-700">Desktop navigation displays correctly</span>
+          </label>
+          <label class="flex items-center space-x-3">
+            <input type="checkbox" class="form-checkbox h-5 w-5 text-green-600" />
+            <span class="text-gray-700">Mobile hamburger menu appears on small screens</span>
+          </label>
+          <label class="flex items-center space-x-3">
+            <input type="checkbox" class="form-checkbox h-5 w-5 text-green-600" />
+            <span class="text-gray-700">Mega menus work on hover/click (desktop)</span>
+          </label>
+          <label class="flex items-center space-x-3">
+            <input type="checkbox" class="form-checkbox h-5 w-5 text-green-600" />
+            <span class="text-gray-700">Mobile accordion sections expand/collapse</span>
+          </label>
+          <label class="flex items-center space-x-3">
+            <input type="checkbox" class="form-checkbox h-5 w-5 text-green-600" />
+            <span class="text-gray-700">All navigation links point to correct routes</span>
+          </label>
+          <label class="flex items-center space-x-3">
+            <input type="checkbox" class="form-checkbox h-5 w-5 text-green-600" />
+            <span class="text-gray-700">"Our Story" CTA button works</span>
+          </label>
+          <label class="flex items-center space-x-3">
+            <input type="checkbox" class="form-checkbox h-5 w-5 text-green-600" />
+            <span class="text-gray-700">Social links (Facebook, LinkedIn) open in new tab</span>
+          </label>
+          <label class="flex items-center space-x-3">
+            <input type="checkbox" class="form-checkbox h-5 w-5 text-green-600" />
+            <span class="text-gray-700">Active page highlighting works</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="bg-gradient-to-r from-green-50 to-orange-50 rounded-lg p-8 mt-8">
+        <h2 class="text-2xl font-semibold text-green-800 mb-4">
+          Next Steps
+        </h2>
+        <ol class="list-decimal list-inside text-gray-700 space-y-2">
+          <li>Copy CSS styles from /DRNF_website/css/style.css (navigation sections)</li>
+          <li>Copy JavaScript from /DRNF_website/js/main.js (mobile menu, mega menu logic)</li>
+          <li>Link Font Awesome 6.4.0 in BaseLayout</li>
+          <li>Test responsive behavior on multiple screen sizes</li>
+          <li>Verify all links resolve correctly</li>
+          <li>Run production build (npm run build)</li>
+          <li>Deploy and test on actual devices</li>
+        </ol>
+      </section>
+    </div>
+  </main>
+</Layout>

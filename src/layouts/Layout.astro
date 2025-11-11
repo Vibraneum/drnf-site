@@ -1,0 +1,129 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import SEO from '../components/astro/SEO.astro';
+import StructuredData from '../components/astro/StructuredData.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  keywords?: string;
+  ogImage?: string;
+  canonicalUrl?: string;
+  pageType?: string;
+  structuredData?: object;
+}
+
+const {
+  title,
+  description,
+  keywords = 'Dr. Rabinder Nath Foundation, DRNF, community service, Hyderabad, free chai counters, NGO, charitable organization, LooCafe partnership',
+  ogImage = 'https://res.cloudinary.com/dhupieu4x/image/upload/v1762599287/drnf-assets/drnf-assets/DRNF_logo.jpg',
+  canonicalUrl,
+  pageType = 'website',
+  structuredData
+} = Astro.props;
+
+const currentUrl = canonicalUrl || `https://drnf.org${Astro.url.pathname}`;
+const fullTitle = title.includes('Dr. Rabinder Nath Foundation') ? title : `${title} - Dr. Rabinder Nath Foundation`;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2c5530">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Primary Meta Tags -->
+    <title>{fullTitle}</title>
+    <meta name="title" content={fullTitle}>
+    <meta name="description" content={description}>
+    <meta name="keywords" content={keywords}>
+    <meta name="author" content="Dr. Rabinder Nath Foundation">
+    <meta name="generator" content={Astro.generator}>
+
+    <!-- SEO Component (Open Graph, Twitter Cards, Canonical URL) -->
+    <SEO
+      title={fullTitle}
+      description={description}
+      image={ogImage}
+      url={currentUrl}
+      type={pageType}
+    />
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/dhupieu4x/image/upload/v1762599287/drnf-assets/drnf-assets/DRNF_logo.jpg">
+    <link rel="apple-touch-icon" href="https://res.cloudinary.com/dhupieu4x/image/upload/v1762599287/drnf-assets/drnf-assets/DRNF_logo.jpg">
+
+    <!-- Structured Data -->
+    <StructuredData structuredData={structuredData} />
+
+    <!-- Performance Hints -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+
+    <!-- Fonts - Optimized Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BKRC1PBFTM"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BKRC1PBFTM', {
+        'page_title': document.title,
+        'page_path': window.location.pathname,
+        'send_page_view': true
+      });
+    </script>
+
+    <!-- View Transitions -->
+    <ViewTransitions />
+</head>
+<body>
+    <!-- Main Content Slot -->
+    <main>
+      <slot />
+    </main>
+
+    <!-- AOS Animation Initialization -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script is:inline>
+      // Initialize AOS animations
+      if (typeof AOS !== 'undefined') {
+        AOS.init({
+          duration: 800,
+          once: true,
+          offset: 100
+        });
+      }
+
+      // Dynamic copyright year
+      document.addEventListener('DOMContentLoaded', () => {
+        const yearElement = document.getElementById('current-year');
+        if (yearElement) {
+          yearElement.textContent = new Date().getFullYear();
+        }
+      });
+    </script>
+</body>
+</html>

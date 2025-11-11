@@ -1,0 +1,143 @@
+---
+/**
+ * Test Page for Footer Component
+ *
+ * This page tests the Footer.astro component in isolation
+ * to verify all links, styles, and responsiveness work correctly.
+ */
+import Footer from '../components/astro/Footer.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Component Test - DRNF</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Main Stylesheet (existing CSS) -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <style>
+        /* Test page specific styles */
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: #f8f9fa;
+        }
+
+        .test-content {
+            flex: 1;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .test-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+        }
+
+        .test-section {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .test-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .test-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .test-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .test-list li:last-child {
+            border-bottom: none;
+        }
+
+        .test-list i {
+            margin-right: 0.5rem;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="test-content">
+        <div class="test-header">
+            <h1>Footer Component Test Page</h1>
+            <p>Testing the Footer.astro component for DRNF Astro Migration</p>
+        </div>
+
+        <div class="test-section">
+            <h2><i class="fas fa-check-circle"></i> Test Instructions</h2>
+            <ul class="test-list">
+                <li><i class="fas fa-link"></i> Verify all footer links work correctly</li>
+                <li><i class="fas fa-mobile-alt"></i> Test responsive behavior (resize browser)</li>
+                <li><i class="fas fa-share-alt"></i> Check social media links open in new tabs</li>
+                <li><i class="fas fa-phone"></i> Test contact links (WhatsApp, Email, Ixora Group)</li>
+                <li><i class="fas fa-shield-alt"></i> Verify credibility badges display properly</li>
+                <li><i class="fas fa-calendar"></i> Confirm copyright year displays dynamically</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h2><i class="fas fa-list"></i> Footer Structure</h2>
+            <p><strong>5-Column Layout:</strong></p>
+            <ul class="test-list">
+                <li><strong>Column 1:</strong> About - Logo, description, social media</li>
+                <li><strong>Column 2:</strong> Quick Links - About, Chai Counters, Community, Education, Environment</li>
+                <li><strong>Column 3:</strong> Get Involved - Volunteer, Donate, Partner, Corporate CSR</li>
+                <li><strong>Column 4:</strong> Contact - WhatsApp, Email, Address, Ixora Group</li>
+                <li><strong>Column 5:</strong> Legal - Privacy Policy, Terms, FAQ</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h2><i class="fas fa-info-circle"></i> Expected Elements</h2>
+            <ul class="test-list">
+                <li><i class="fab fa-facebook-f"></i> Facebook: https://www.facebook.com/DrRabinderNathFoundation/</li>
+                <li><i class="fab fa-linkedin-in"></i> LinkedIn: https://www.linkedin.com/company/dr-rabinder-nath-foundation/</li>
+                <li><i class="fab fa-whatsapp"></i> WhatsApp: +91 9966906781</li>
+                <li><i class="fas fa-envelope"></i> Email: info@drnf.org</li>
+                <li><i class="fas fa-map-marker-alt"></i> Office: Jubilee Hills, Hyderabad</li>
+                <li><i class="fas fa-building"></i> Powered by: Ixora Corporate Services Pvt Ltd</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h2><i class="fas fa-palette"></i> Design Notes</h2>
+            <ul class="test-list">
+                <li>Background: Dark theme for footer contrast</li>
+                <li>Text: Light gray for readability</li>
+                <li>Links: Hover state with accent color</li>
+                <li>Responsive: Columns stack on mobile devices</li>
+                <li>Social icons: Font Awesome (Facebook, LinkedIn)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer Component Under Test -->
+    <Footer />
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+---
+/**
+ * Structured Data Component
+ * Provides JSON-LD schema markup for DRNF organization
+ */
+
+interface Props {
+  structuredData?: object;
+}
+
+const { structuredData } = Astro.props;
+
+// Default organization structured data
+const defaultStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  "name": "Dr. Rabinder Nath Foundation",
+  "alternateName": "DRNF",
+  "url": "https://drnf.org",
+  "logo": "https://res.cloudinary.com/dhupieu4x/image/upload/v1762599287/drnf-assets/drnf-assets/DRNF_logo.jpg",
+  "description": "Community service organization dedicated to serving with compassion, focusing on free chai counters, education, and community support programs in Hyderabad.",
+  "foundingDate": "2020",
+  "founder": {
+    "@type": "Person",
+    "name": "Abhishek Nath"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Door No: 8, 2-293/82/J/A/101, Journalist Colony",
+    "addressLocality": "Jubilee Hills",
+    "addressRegion": "Telangana",
+    "postalCode": "500033",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "17.3850",
+    "longitude": "78.4867"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-9966906781",
+    "contactType": "General Inquiries",
+    "email": "info@drnf.org",
+    "availableLanguage": ["English", "Hindi", "Telugu"]
+  },
+  "sameAs": [
+    "https://www.facebook.com/DrRabinderNathFoundation/",
+    "https://www.linkedin.com/company/dr-rabinder-nath-foundation/"
+  ],
+  "areaServed": {
+    "@type": "City",
+    "name": "Hyderabad",
+    "containedIn": {
+      "@type": "State",
+      "name": "Telangana"
+    }
+  },
+  "knowsAbout": [
+    "Community Service",
+    "Charitable Activities",
+    "Education Support",
+    "Food Distribution",
+    "Environmental Conservation",
+    "Social Work"
+  ],
+  "namedBy": {
+    "@type": "Person",
+    "name": "Dr. Rabinder Nath",
+    "description": "Late Vijayshree Dr. Rabinder Nath, dental surgeon and social worker in Hyderabad"
+  }
+};
+
+// Use custom structured data if provided, otherwise use default
+const finalStructuredData = structuredData || defaultStructuredData;
+---
+
+<!-- Structured Data JSON-LD -->
+<script type="application/ld+json" set:html={JSON.stringify(finalStructuredData)} />

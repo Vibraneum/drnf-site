@@ -1,0 +1,156 @@
+---
+/**
+ * Footer Component
+ *
+ * Reusable footer for all DRNF pages with 5-column responsive layout.
+ * Includes: Logo, Initiatives, Quick Links, Media, and Contact Info.
+ *
+ * Features:
+ * - Social media links (Facebook, LinkedIn)
+ * - Credibility badges (Transparency, Cost-Effective, Audited, Evidence-Based)
+ * - Dynamic copyright year
+ * - Full contact information
+ * - Ixora Group partnership mention
+ */
+---
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <!-- Column 1: About -->
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img
+                        src="https://res.cloudinary.com/dhupieu4x/image/upload/v1762599287/drnf-assets/drnf-assets/DRNF_logo.jpg"
+                        alt="Dr. Rabinder Nath Foundation Logo"
+                        loading="lazy"
+                    />
+                    <h3>Dr. Rabinder Nath Foundation</h3>
+                </div>
+                <p>Dedicated to serving the community with compassion and care, continuing the legacy of Dr. Rabinder Nath.</p>
+                <div class="footer-social">
+                    <a
+                        href="https://www.facebook.com/DrRabinderNathFoundation/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Follow us on Facebook"
+                    >
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/company/dr-rabinder-nath-foundation/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Connect with us on LinkedIn"
+                    >
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/chai-counters.html">Chai Counters</a></li>
+                    <li><a href="/community.html">Community Support</a></li>
+                    <li><a href="/community.html#workshops">Education Programs</a></li>
+                    <li><a href="/community.html#environment">Environmental Work</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Get Involved -->
+            <div class="footer-section">
+                <h4>Get Involved</h4>
+                <ul>
+                    <li><a href="/contact.html?interest=volunteering">Volunteer</a></li>
+                    <li><a href="/contact.html?interest=donation">Donate</a></li>
+                    <li><a href="/contact.html?interest=partnership">Partner with Us</a></li>
+                    <li><a href="/contact.html?interest=corporate">Corporate CSR</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact -->
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <a href="https://wa.me/919966906781" target="_blank" rel="noopener noreferrer">+91 9966906781</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:info@drnf.org">info@drnf.org</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Jubilee Hills, Hyderabad</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-building"></i>
+                    <a href="https://ixoragroup.com" target="_blank" rel="noopener noreferrer">Ixora Corporate Services Pvt Ltd</a>
+                </div>
+            </div>
+
+            <!-- Column 5: Legal -->
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="/terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="/faq.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Credibility Section -->
+        <div class="footer-credibility">
+            <p style="text-align: center; font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+                <strong>Charitable Initiative</strong> | Founded 2020 | Serving Hyderabad with compassion & transparency
+            </p>
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 1.5rem;">
+                <div style="text-align: center;">
+                    <i class="fas fa-shield-alt" style="font-size: 1.5rem; color: var(--primary-color); margin-bottom: 0.5rem;"></i>
+                    <p style="margin: 0; font-size: 0.85rem; color: var(--text-secondary);">
+                        <a href="/transparency.html" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">Full Transparency</a>
+                    </p>
+                </div>
+                <div style="text-align: center;">
+                    <i class="fas fa-chart-line" style="font-size: 1.5rem; color: var(--primary-color); margin-bottom: 0.5rem;"></i>
+                    <p style="margin: 0; font-size: 0.85rem; color: var(--text-secondary);">
+                        <a href="/transparency.html#cost-effectiveness" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">Cost-Effective</a>
+                    </p>
+                </div>
+                <div style="text-align: center;">
+                    <i class="fas fa-check-double" style="font-size: 1.5rem; color: var(--primary-color); margin-bottom: 0.5rem;"></i>
+                    <p style="margin: 0; font-size: 0.85rem; color: var(--text-secondary);">Audited Financials</p>
+                </div>
+                <div style="text-align: center;">
+                    <i class="fas fa-balance-scale" style="font-size: 1.5rem; color: var(--primary-color); margin-bottom: 0.5rem;"></i>
+                    <p style="margin: 0; font-size: 0.85rem; color: var(--text-secondary);">Evidence-Based</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Dr. Rabinder Nath Foundation. All Rights Reserved.</p>
+            <p>Designed with care for our community</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+/* Footer base styles are already in /public/css/style.css */
+/* This component uses existing CSS classes */
+</style>
+
+<script>
+// Dynamic copyright year
+if (typeof window !== 'undefined') {
+    const yearElement = document.getElementById('current-year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear().toString();
+    }
+}
+</script>

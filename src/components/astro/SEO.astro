@@ -1,0 +1,47 @@
+---
+/**
+ * SEO Component
+ * Handles Open Graph, Twitter Cards, and Canonical URLs
+ */
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  url?: string;
+  type?: string;
+}
+
+const {
+  title,
+  description,
+  image = 'https://res.cloudinary.com/dhupieu4x/image/upload/v1762599287/drnf-assets/drnf-assets/DRNF_logo.jpg',
+  url = 'https://drnf.org',
+  type = 'website'
+} = Astro.props;
+---
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={type}>
+<meta property="og:url" content={url}>
+<meta property="og:title" content={title}>
+<meta property="og:description" content={description}>
+<meta property="og:image" content={image}>
+<meta property="og:site_name" content="Dr. Rabinder Nath Foundation">
+<meta property="og:locale" content="en_IN">
+
+<!-- Twitter Card -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content={url}>
+<meta property="twitter:title" content={title}>
+<meta property="twitter:description" content={description}>
+<meta property="twitter:image" content={image}>
+
+<!-- Canonical URL -->
+<link rel="canonical" href={url}>
+
+<!-- Geo Tags for Hyderabad, Telangana -->
+<meta name="geo.region" content="IN-TG">
+<meta name="geo.placename" content="Hyderabad">
+<meta name="geo.position" content="17.3850;78.4867">
+<meta name="ICBM" content="17.3850, 78.4867">

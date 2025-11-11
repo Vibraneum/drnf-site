@@ -1,0 +1,234 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/astro/Header.astro';
+import Footer from '../components/astro/Footer.astro';
+
+const pageTitle = 'About Us - Dr. Rabinder Nath Foundation | Our Story & Vision';
+const pageDescription = 'Learn about the vision behind DRNF, founded by Abhishek Nath to honor his father Dr. Rabinder Nath\'s legacy of community service. Discover how we partner with LooCafe to maximize social impact across Hyderabad.';
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Header />
+
+  <!-- Page Hero -->
+  <section class="bg-gradient-to-br from-purple-600 to-blue-600 text-white py-20 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Our Story</h1>
+      <p class="text-xl md:text-2xl text-purple-100">A vision of compassion, a legacy of service, and a commitment to community</p>
+    </div>
+  </section>
+
+  <!-- Founder's Vision Section -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Founder's Vision</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            The Dr. Rabinder Nath Foundation was founded in 2016 by Abhishek Nath, driven by a deeply personal mission to honor the memory and continue the legacy of his father, the late Dr. Rabinder Nath.
+          </p>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            Growing up witnessing his father's unwavering commitment to community service, Abhishek understood that true impact comes not just from good intentions, but from creating sustainable systems that serve people with dignity and compassion.
+          </p>
+          <blockquote class="border-l-4 border-purple-600 pl-6 italic text-gray-700 text-lg">
+            "My father believed that no act of kindness, however small, is ever wasted. He spent his life serving others, and through this foundation, we ensure that his spirit of giving continues to touch lives every single day."
+          </blockquote>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-2xl">
+          <img
+            src="https://res.cloudinary.com/dhupieu4x/image/upload/v1762599308/drnf-assets/drnf-assets/rabinder_nath2.1.jpg"
+            alt="Dr. Rabinder Nath"
+            class="w-full h-auto"
+            loading="eager"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Self-Made Journey Section -->
+  <section class="py-16 px-4 bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">A Self-Made Legacy</h2>
+      <p class="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto mb-12">
+        While Dr. Rabinder Nath's great-great-grandfather, Rai Bahadur Mul Raj, was a towering figure in India's freedom movement—founding Punjab National Bank and the D.A.V. College movement—the family's fortunes did not pass down untouched. Through the upheavals of partition and the passage of time, the family rebuilt from scratch, relying not on inherited wealth, but on <strong>education and determination</strong>.
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-8 rounded-xl shadow-lg">
+          <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 text-3xl mb-4">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Education as Foundation</h3>
+          <p class="text-gray-600">
+            Dr. Rabinder Nath pursued excellence through education, earning his dental degree (B.D.S.) from Osmania Medical College, where he served as Chairman of the Dental Students Federation of India. He completed advanced training in oral surgery at Lucknow Dental College (1974) and earned M.R.S.H. from the Royal College of Surgeons, England.
+          </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-lg">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-3xl mb-4">
+            <i class="fas fa-hammer"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Built from Scratch</h3>
+          <p class="text-gray-600">
+            Every achievement—his dental practice, his books, his social impact—was earned through his own hard work, not inherited privilege
+          </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-lg">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-3xl mb-4">
+            <i class="fas fa-star"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">His Own Legacy</h3>
+          <p class="text-gray-600">
+            Dr. Rabinder Nath became beloved across Hyderabad on his own merits, creating a legacy that is entirely his own
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Impact Through Healthcare -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">Community Impact Through Healthcare</h2>
+      <p class="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+        Beyond his dental practice, Dr. Rabinder Nath dedicated his life to serving rural and underserved communities
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+          <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center text-red-600 text-3xl mb-4">
+            <i class="fas fa-ambulance"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Portadent Mobile Dental Unit</h3>
+          <p class="text-gray-600">
+            Pioneered mobile dental healthcare by establishing "Portadent," bringing professional dental care to rural populations who had no access to dental services.
+          </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-3xl mb-4">
+            <i class="fas fa-hospital"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Rani Nath Memorial Hospital</h3>
+          <p class="text-gray-600">
+            Founded in 1992 at Shamirpet, this rural hospital provided completely free treatment and medicines, serving over 80,000 patients from underserved communities.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="py-16 px-4 bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Learn About Dr. Rabinder Nath's Legacy</h2>
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Video Embed 1 -->
+        <div class="rounded-xl overflow-hidden shadow-2xl bg-white">
+          <div class="aspect-video bg-gray-200">
+            <iframe
+              src="https://www.youtube.com/embed/a6LDWTYpLBY?enablejsapi=1&origin=https://drrabindernathfoundation.org"
+              allowfullscreen
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              class="w-full h-full"
+            ></iframe>
+          </div>
+          <p class="p-4 text-center text-gray-600 font-medium">Watch Story (English)</p>
+        </div>
+
+        <!-- Video Embed 2 -->
+        <div class="rounded-xl overflow-hidden shadow-2xl bg-white">
+          <div class="aspect-video bg-gray-200">
+            <iframe
+              src="https://www.youtube.com/embed/4amQYIZNh4g?start=26&enablejsapi=1&origin=https://drrabindernathfoundation.org"
+              allowfullscreen
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              class="w-full h-full"
+            ></iframe>
+          </div>
+          <p class="p-4 text-center text-gray-600 font-medium">With Subtitles</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Approach: Partnership for Impact -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">Our Approach: Partnership for Impact</h2>
+      <p class="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+        Leveraging innovative infrastructure to maximize community reach and sustainable impact
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <h3 class="text-2xl font-bold text-gray-900 flex items-center gap-3">
+            <i class="fas fa-handshake text-purple-600"></i>
+            Strategic Partnership with LooCafe
+          </h3>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            At DRNF, we believe that maximizing social impact requires thinking beyond traditional charity models. Rather than building separate infrastructure from scratch, we strategically partner with <a href="https://loocafe.com" target="_blank" rel="noopener" class="text-purple-600 hover:underline font-semibold">LooCafe</a>—founded in 2018, now operating 270+ community-accessible facilities across Hyderabad.
+          </p>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            Our partnership with LooCafe began after their establishment in 2018, allowing us to place our free chai counters where people naturally gather, ensuring our services reach those who need them most.
+          </p>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-2xl">
+          <img
+            src="https://res.cloudinary.com/dhupieu4x/image/upload/v1762599305/drnf-assets/drnf-assets/loocafe_no_bg_collage.png"
+            alt="LooCafe Network Partnership"
+            class="w-full h-auto"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Statistics -->
+  <section class="py-16 px-4 bg-gradient-to-br from-purple-600 to-blue-600 text-white">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Our Impact</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="text-center">
+          <div class="text-4xl font-bold mb-2">500-600</div>
+          <div class="text-purple-200">People Served Daily</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold mb-2">2</div>
+          <div class="text-purple-200">Active Chai Counters</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold mb-2">Since July 2021</div>
+          <div class="text-purple-200">Free Chai Counter Launch</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold mb-2">70+</div>
+          <div class="text-purple-200">Jobs Created</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Join Our Mission</h2>
+      <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+        Explore our programs and initiatives that continue Dr. Rabinder Nath's legacy of compassionate community service. From daily chai service to education support, discover how we're making a meaningful difference.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/chai-counters" class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
+          See Our Impact
+        </a>
+        <a href="/contact" class="bg-white hover:bg-gray-50 text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg border-2 border-purple-600 transition-colors">
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,171 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/astro/Header.astro';
+import Footer from '../components/astro/Footer.astro';
+
+const pageTitle = 'Dr. Rabinder Nath Foundation | Community Service & Free Chai Counters in Hyderabad';
+const pageDescription = 'Dr. Rabinder Nath Foundation serves the community through 2 free chai counters, sanitation workshops, environmental initiatives, and community support programs in Hyderabad. Join our mission of compassion and care.';
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-blue-50 via-purple-50 to-blue-100 py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Hero Content -->
+        <div class="space-y-6">
+          <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
+            <i class="fas fa-heart text-purple-600"></i>
+            <span class="text-sm font-semibold text-gray-700">Serving Since 2016</span>
+          </div>
+
+          <h1 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
+            Dr. Rabinder Nath Foundation
+          </h1>
+
+          <p class="text-xl md:text-2xl text-gray-700 font-medium">
+            Serving 500-600 people daily through compassion, dignity, and community care
+          </p>
+
+          <p class="text-lg text-gray-600 leading-relaxed">
+            Join our mission to empower Hyderabad through Free Chai Counters, Community Support, Education, and Environmental Initiatives
+          </p>
+
+          <div class="flex flex-wrap gap-4">
+            <a href="/about" class="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+              <i class="fas fa-heart"></i>
+              <span>Our Story</span>
+            </a>
+            <a href="/contact" class="inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-purple-600 px-6 py-3 rounded-lg font-semibold border-2 border-purple-600 transition-colors">
+              <i class="fas fa-envelope"></i>
+              <span>Get in Touch</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Stats -->
+        <div class="space-y-4">
+          <figure class="mb-8 rounded-xl overflow-hidden shadow-2xl">
+            <img
+              src="https://res.cloudinary.com/dhupieu4x/image/upload/v1762599308/drnf-assets/drnf-assets/rabinder_nath2.1.jpg"
+              alt="DRNF Free Chai Counter serving tea to community members"
+              class="w-full h-auto"
+              loading="eager"
+            />
+            <figcaption class="p-4 bg-white text-sm text-gray-600 text-center">
+              Free Chai Counter - Serving 500-600 people daily
+            </figcaption>
+          </figure>
+
+          <div class="grid grid-cols-2 gap-4">
+            <!-- CounterAnimation.tsx - React Island placeholder -->
+            <div class="bg-white p-6 rounded-xl shadow-lg">
+              <div class="text-purple-600 text-3xl mb-2">
+                <i class="fas fa-mug-hot"></i>
+              </div>
+              <div class="text-3xl font-bold text-gray-900">500-600</div>
+              <div class="text-sm text-gray-600">People Served Daily</div>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-lg">
+              <div class="text-purple-600 text-3xl mb-2">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <div class="text-xl font-bold text-gray-900">July 2021</div>
+              <div class="text-sm text-gray-600">Free Chai Counter Started</div>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-lg">
+              <div class="text-purple-600 text-3xl mb-2">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="text-3xl font-bold text-gray-900">2</div>
+              <div class="text-sm text-gray-600">Active Locations</div>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-lg">
+              <div class="text-purple-600 text-3xl mb-2">
+                <i class="fas fa-users"></i>
+              </div>
+              <div class="text-3xl font-bold text-gray-900">70+</div>
+              <div class="text-sm text-gray-600">Lives Impacted</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Media Section -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Connect With Us</h2>
+      <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        <a href="https://www.facebook.com/DrRabinderNathFoundation/" target="_blank" rel="noopener noreferrer"
+           class="flex items-center gap-4 p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+          <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white text-2xl">
+            <i class="fab fa-facebook-f"></i>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900">Facebook</h3>
+            <p class="text-gray-600">Follow our daily updates and community stories</p>
+            <span class="text-sm text-gray-500">@DrRabinderNathFoundation</span>
+          </div>
+        </a>
+
+        <a href="https://www.linkedin.com/company/dr-rabinder-nath-foundation/mycompany/" target="_blank" rel="noopener noreferrer"
+           class="flex items-center gap-4 p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+          <div class="w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center text-white text-2xl">
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900">LinkedIn</h3>
+            <p class="text-gray-600">Professional updates and partnership opportunities</p>
+            <span class="text-sm text-gray-500">Dr. Rabinder Nath Foundation</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Are Section -->
+  <section class="py-16 px-4 bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Who We Are</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            Created in the memory of the Late Vijayshree Dr. Rabinder Nath, the Dr. Rabinder Nath Foundation honors his legacy as a Dental Surgeon, Social Worker, and Pioneer in Hyderabad and across India.
+          </p>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            A beloved figure cherished by families across the city, our foundation was established by his well-wishers and community to continue his mission of service and compassion.
+          </p>
+          <div class="flex flex-wrap gap-4 mt-8">
+            <a href="/about" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+              See Our Impact
+            </a>
+            <a href="/contact" class="bg-white hover:bg-gray-50 text-purple-600 px-6 py-3 rounded-lg font-semibold border-2 border-purple-600 transition-colors">
+              Join Us Today
+            </a>
+          </div>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-2xl">
+          <img
+            src="https://res.cloudinary.com/dhupieu4x/image/upload/v1762599308/drnf-assets/drnf-assets/rabinder_nath2.1.jpg"
+            alt="Dr. Rabinder Nath"
+            class="w-full h-auto"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Note: Interactive features marked for Phase 4 React Islands -->
+  <!-- ContactForm.tsx - Contact form with validation -->
+  <!-- CounterAnimation.tsx - Animated statistics -->
+
+  <Footer />
+</Layout>
