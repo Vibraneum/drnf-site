@@ -1,0 +1,468 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/astro/Header.astro';
+import Footer from '../components/astro/Footer.astro';
+
+const pageTitle = 'Contact Us | Dr. Rabinder Nath Foundation';
+const pageDescription = 'Get in touch with Dr. Rabinder Nath Foundation. Contact us to volunteer, support our mission, or learn more about our community programs in Hyderabad.';
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Header activePage="contact" />
+  
+<section class="page-hero">
+        <div class="container">
+            <h1 data-aos="fade-up">Join Our Mission</h1>
+            <p data-aos="fade-up" data-aos-delay="200">Become part of a community making a real difference in Hyderabad</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="contact-intro" data-aos="fade-up" data-aos-delay="100">
+                <p>Whether you want to volunteer, donate, explore partnership opportunities, or simply learn more about our work, we'd love to hear from you! Every connection leads to greater impact.</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>WhatsApp</h3>
+                        <p><a href="https://wa.me/919966906781" target="_blank" rel="noopener" class="btn btn-primary">Message Us</a></p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <div class="email-list">
+                            <a href="mailto:info@drnf.org">info@drnf.org</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Office Location</h3>
+                        <div class="address-details">
+                            <p><strong><a href="https://ixoragroup.com" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">Ixora Corporate Services Pvt Ltd</a></strong></p>
+                            <p>Door No: 8, 2-293/82/J/A/101<br>
+                            Journalist Colony, Jubilee Hills<br>
+                            Hyderabad, Telangana 500033</p>
+                            <a href="https://maps.google.com/?q=17.4239,78.4738" target="_blank" class="map-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                View on Google Maps
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-facebook"></i>
+                        </div>
+                        <h3>Social Media</h3>
+                        <p>Message us on <a href="https://www.facebook.com/DrRabinderNathFoundation/" target="_blank">Facebook</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper" data-aos="fade-left">
+                    <div class="contact-form-card">
+                        <h3><i class="fas fa-paper-plane"></i> Tell Us How You Want to Help</h3>
+                        <p style="margin-bottom: 2rem;">Fill out the form below and we'll reach out within 24 hours with next steps tailored to your interests.</p>
+
+                        <!-- Honeypot field for spam prevention (hidden from users) -->
+                        <input type="text" name="website" value="" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+                        <form class="contact-form" id="contactForm">
+
+                            <div class="form-group">
+                                <label for="name"><i class="fas fa-user"></i> Full Name *</label>
+                                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email"><i class="fas fa-envelope"></i> Email Address <span style="font-size: 0.85em; color: #666;">(Email or Phone required)</span></label>
+                                    <input type="email" id="email" name="email" placeholder="your.email@example.com">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone"><i class="fas fa-phone"></i> Phone Number <span style="font-size: 0.85em; color: #666;">(Email or Phone required)</span></label>
+                                    <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="interest"><i class="fas fa-tag"></i> I'm Interested In *</label>
+                                <select id="interest" name="interest" required>
+                                    <option value="">-- Select an option --</option>
+                                    <option value="Volunteering">Volunteering with DRNF</option>
+                                    <option value="Partnership">Partnership Opportunities</option>
+                                    <option value="Donation">Supporting Our Mission (Donations)</option>
+                                    <option value="Corporate CSR">Corporate CSR Collaboration</option>
+                                    <option value="Media">Media & Press Inquiries</option>
+                                    <option value="General">General Inquiry</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message"><i class="fas fa-comment-dots"></i> Your Message *</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Tell us more about how you'd like to connect with DRNF..."></textarea>
+                            </div>
+
+                            <!-- Terms Acceptance Checkbox -->
+                            <div class="form-group" style="background: linear-gradient(135deg, #fff7e6 0%, #ffe4b3 100%); border-left: 4px solid var(--accent-color); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+                                <label style="display: flex; align-items: flex-start; gap: 12px; cursor: pointer; margin-bottom: 0;">
+                                    <input
+                                        type="checkbox"
+                                        id="terms"
+                                        name="terms"
+                                        required
+                                        style="margin-top: 4px; width: 18px; height: 18px; cursor: pointer; flex-shrink: 0;"
+                                    >
+                                    <span style="font-size: 0.95rem; line-height: 1.6; color: #2c3e50;">
+                                        I agree to the
+                                        <a href="/terms-of-service" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); font-weight: 600; text-decoration: underline;">Terms of Service</a>
+                                        and
+                                        <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); font-weight: 600; text-decoration: underline;">Privacy Policy</a>,
+                                        including <strong>automatic subscription to updates</strong> (emails, SMS, WhatsApp, newsletters). You may unsubscribe at any time. *
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="form-submit">
+                                <button type="submit" class="btn btn-primary btn-large">
+                                    <i class="fas fa-paper-plane"></i> Send Message
+                                </button>
+                                <p class="form-note">We respect your privacy and will never share your information.</p>
+                            </div>
+                        </form>
+
+                        <!-- Success Message (hidden by default) -->
+                        <div class="form-success" id="formSuccess" style="display: none;">
+                            <i class="fas fa-check-circle"></i>
+                            <h4>Thank You!</h4>
+                            <p>Your message has been received. We'll get back to you within 24 hours.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Volunteer Section Below Form -->
+            <div class="volunteer-section-full" data-aos="fade-up" style="margin-top: 4rem;">
+                <div class="volunteer-card-large">
+                    <h3><i class="fas fa-hands-helping"></i> Multiple Ways to Make a Difference</h3>
+                    <p style="font-size: 1.1rem; margin-bottom: 2rem;">Whether you have a few hours or a passion for sustained impact, we have opportunities that match your availability and skills. You're welcome here!</p>
+                    <div class="volunteer-grid">
+                        <div class="volunteer-item">
+                            <i class="fas fa-coffee"></i>
+                            <span>Free Chai Counter Operations</span>
+                        </div>
+                        <div class="volunteer-item">
+                            <i class="fas fa-gift"></i>
+                            <span>Community Support Programs</span>
+                        </div>
+                        <div class="volunteer-item">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>Educational Workshops</span>
+                        </div>
+                        <div class="volunteer-item">
+                            <i class="fas fa-leaf"></i>
+                            <span>Environmental Initiatives</span>
+                        </div>
+                        <div class="volunteer-item">
+                            <i class="fas fa-paw"></i>
+                            <span>Animal Welfare Activities</span>
+                        </div>
+                        <div class="volunteer-item">
+                            <i class="fas fa-camera"></i>
+                            <span>Social Media & Content</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Share Section -->
+    <section class="section">
+        <div class="container">
+            <div class="social-share-section" data-aos="fade-up">
+                <h3>Get Involved with Our Mission</h3>
+                <p>Help us reach more people who want to make a difference</p>
+                <div class="share-buttons">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" rel="noopener noreferrer" data-share="facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url=" class="share-btn twitter" target="_blank" rel="noopener noreferrer" data-share="twitter">
+                        <i class="fab fa-x-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=" class="share-btn linkedin" target="_blank" rel="noopener noreferrer" data-share="linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://wa.me/?text=Get%20involved%20with%20Dr.%20Rabinder%20Nath%20Foundation%20-%20" class="share-btn whatsapp" target="_blank" rel="noopener noreferrer" data-share="whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <Footer />
+</Layout>
+
+<script src="/js/formValidation.js" is:inline></script>
+<script>
+  // Current year in footer
+  if (typeof document !== 'undefined') {
+    const yearElement = document.getElementById('current-year');
+    if (yearElement) {
+      yearElement.textContent = new Date().getFullYear();
+    }
+
+    // Contact Form Handling
+    const form = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+
+    if (form && FormValidation) {
+      // Start form timer for spam prevention
+      FormValidation.startFormTimer();
+
+      // Auto-focus first field
+      const nameField = document.getElementById('name');
+      if (nameField) nameField.focus();
+
+      // Check for success parameter in URL
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('success') === 'true') {
+        form.style.display = 'none';
+        if (formSuccess) {
+          formSuccess.style.display = 'block';
+          setTimeout(() => {
+            formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 300);
+        }
+      }
+
+      // Real-time validation on blur
+      const nameInput = document.getElementById('name');
+      const emailInput = document.getElementById('email');
+      const phoneInput = document.getElementById('phone');
+      const messageInput = document.getElementById('message');
+
+      if (nameInput) {
+        nameInput.addEventListener('blur', function() {
+          const result = FormValidation.validateName(this.value);
+          if (result.isValid) {
+            FormValidation.showSuccess('name');
+          } else {
+            FormValidation.showError('name', result.error);
+          }
+        });
+      }
+
+      if (emailInput) {
+        emailInput.addEventListener('blur', function() {
+          const result = FormValidation.validateEmail(this.value);
+          if (result.isValid) {
+            FormValidation.hideError('email');
+            if (this.value && FormValidation.isPersonalEmail(this.value)) {
+              FormValidation.showWarning('email', 'Consider using your organizational email for faster service');
+            } else {
+              FormValidation.hideWarning('email');
+            }
+            if (this.value) FormValidation.showSuccess('email');
+          } else {
+            FormValidation.showError('email', result.error);
+            FormValidation.hideWarning('email');
+          }
+        });
+      }
+
+      if (phoneInput) {
+        phoneInput.addEventListener('blur', function() {
+          const result = FormValidation.validatePhone(this.value);
+          if (result.isValid) {
+            FormValidation.hideError('phone');
+            if (this.value) FormValidation.showSuccess('phone');
+          } else {
+            FormValidation.showError('phone', result.error);
+          }
+        });
+      }
+
+      if (messageInput) {
+        messageInput.addEventListener('blur', function() {
+          const result = FormValidation.validateMessage(this.value);
+          if (result.isValid) {
+            FormValidation.showSuccess('message');
+          } else {
+            FormValidation.showError('message', result.error);
+          }
+        });
+
+        // Character counter for message
+        messageInput.addEventListener('input', function() {
+          const charCount = this.value.length;
+          const charCountMessage = FormValidation.getCharacterCountMessage(charCount, 10, 1000);
+
+          let counterElement = this.parentElement.querySelector('.character-counter');
+          if (!counterElement) {
+            counterElement = document.createElement('div');
+            counterElement.className = 'character-counter';
+            this.parentElement.appendChild(counterElement);
+          }
+
+          counterElement.textContent = charCountMessage;
+
+          // Update counter color
+          if (charCount < 10) {
+            counterElement.classList.add('warning');
+            counterElement.classList.remove('error');
+          } else if (charCount > 1000) {
+            counterElement.classList.add('error');
+            counterElement.classList.remove('warning');
+          } else {
+            counterElement.classList.remove('warning', 'error');
+          }
+        });
+      }
+
+      // Form submission handling
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const submitButton = form.querySelector('button[type="submit"]');
+        const originalText = submitButton.innerHTML;
+
+        // Collect form data
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const message = document.getElementById('message').value.trim();
+        const honeypot = document.querySelector('input[name="website"]').value;
+
+        // Comprehensive validation
+        let hasErrors = false;
+
+        // Validate name
+        const nameResult = FormValidation.validateName(name);
+        if (!nameResult.isValid) {
+          FormValidation.showError('name', nameResult.error);
+          hasErrors = true;
+        } else {
+          FormValidation.showSuccess('name');
+        }
+
+        // Validate email if provided
+        if (email) {
+          const emailResult = FormValidation.validateEmail(email);
+          if (!emailResult.isValid) {
+            FormValidation.showError('email', emailResult.error);
+            hasErrors = true;
+          } else {
+            FormValidation.showSuccess('email');
+          }
+        }
+
+        // Validate phone if provided
+        if (phone) {
+          const phoneResult = FormValidation.validatePhone(phone);
+          if (!phoneResult.isValid) {
+            FormValidation.showError('phone', phoneResult.error);
+            hasErrors = true;
+          } else {
+            FormValidation.showSuccess('phone');
+          }
+        }
+
+        // Validate email OR phone
+        const emailOrPhoneResult = FormValidation.validateEmailOrPhone(email, phone);
+        if (!emailOrPhoneResult.isValid) {
+          alert('⚠️ ' + emailOrPhoneResult.error);
+          hasErrors = true;
+        }
+
+        // Validate message
+        const messageResult = FormValidation.validateMessage(message);
+        if (!messageResult.isValid) {
+          FormValidation.showError('message', messageResult.error);
+          hasErrors = true;
+        } else {
+          FormValidation.showSuccess('message');
+        }
+
+        // Honeypot spam check
+        if (!FormValidation.validateHoneypot(honeypot)) {
+          console.log('Spam detected via honeypot');
+          return;
+        }
+
+        // Time-based spam check
+        const timeResult = FormValidation.validateFormSubmissionTime();
+        if (!timeResult.isValid) {
+          alert('⚠️ ' + timeResult.error);
+          return;
+        }
+
+        // If there are errors, scroll to first error and stop
+        if (hasErrors) {
+          const firstError = form.querySelector('.error');
+          if (firstError) {
+            firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+          return;
+        }
+
+        // Update button to show loading state
+        submitButton.innerHTML = '<span class="spinner"></span> Sending...';
+        submitButton.disabled = true;
+
+        try {
+          const formData = {
+            name: FormValidation.sanitizeInput(name),
+            email: FormValidation.sanitizeInput(email),
+            phone: phone ? FormValidation.formatPhoneNumber(phone) : '',
+            queryType: document.getElementById('interest').value,
+            message: FormValidation.sanitizeInput(message),
+            source: 'drnf'  // IMPORTANT: Routes to DRNF Leads tab
+          };
+
+          // Send to Google Sheets CRM
+          await fetch('https://script.google.com/macros/s/AKfycbwMgsa8DrTHl2xOhpLYCzv-JY61t5RIeMXTAmxiDD2Sue8ukCZuEuKdonH2w9P87PAY/exec', {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+          });
+
+          // Success - redirect to success page
+          window.location.href = '/contact?success=true';
+
+        } catch (error) {
+          console.error('Form submission error:', error);
+          alert('Something went wrong. Please try again or contact us directly via WhatsApp.');
+          submitButton.innerHTML = originalText;
+          submitButton.disabled = false;
+        }
+      });
+    }
+  }
+</script>
