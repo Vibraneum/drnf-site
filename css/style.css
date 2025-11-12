@@ -8,65 +8,68 @@
 }
 
 :root {
-    /* Beautiful Color Palette - Purple-Blue Theme */
-    --primary-color: #667eea;
-    --primary-light: #7c8bef;
-    --secondary-color: #764ba2;
-    --accent-color: #45b7d1;
-    --accent-secondary: #4ecdc4;
-    --text-primary: #2c3e50;
-    --text-secondary: #5d6d7e;
-    --text-light: #ecf0f1;
-    --background-light: #f7fafc;
-    --background-white: #ffffff;
-    --background-dark: #2c3e50;
-    --border-light: #e8ecef;
-    --success-color: #26de81;
-    --info-color: #45b7d1;
-    --warning-color: #feca57;
-    
-    /* Beautiful Purple-Blue Gradients */
-    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --gradient-secondary: linear-gradient(135deg, #a855f7 0%, #667eea 100%);
-    --gradient-tertiary: linear-gradient(135deg, #4ecdc4 0%, #45b7d1 100%);
-    --gradient-hero: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(135,206,250,0.3) 50%, rgba(70,130,180,0.2) 100%);
-    --gradient-hero-overlay: linear-gradient(135deg, rgba(102,126,234,0.85) 0%, rgba(118,75,162,0.75) 50%, rgba(69,183,209,0.85) 100%);
+    /* Modern DRNF Color Palette - Green Theme */
+    --primary-color: #2c5530;        /* Forest Green - main brand color */
+    --primary-light: #3d7545;        /* Lighter green for hover states */
+    --primary-dark: #1a3320;         /* Darker green for depth */
+    --secondary-color: #8b4513;      /* Saddle Brown - complementary */
+    --accent-color: #f39c12;         /* Orange - call-to-action */
+    --accent-hover: #e67e22;         /* Darker orange for hover */
+    --text-primary: #1a202c;         /* Almost black for maximum readability */
+    --text-secondary: #4a5568;       /* Medium gray for secondary text */
+    --text-light: #718096;           /* Light gray for subtle text */
+    --background-light: #f7fafc;     /* Very light gray */
+    --background-white: #ffffff;     /* Pure white */
+    --background-dark: #2d3748;      /* Dark gray for dark sections */
+    --border-light: #e2e8f0;         /* Light border color */
+    --success-color: #38a169;        /* Green for success states */
+    --info-color: #3182ce;           /* Blue for informational content */
+    --warning-color: #dd6b20;        /* Orange for warnings */
+
+    /* Modern Green-Themed Gradients */
+    --gradient-primary: linear-gradient(135deg, #2c5530 0%, #3d7545 100%);
+    --gradient-secondary: linear-gradient(135deg, #8b4513 0%, #a0522d 100%);
+    --gradient-accent: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+    --gradient-hero: linear-gradient(135deg, #f7fafc 0%, #ffffff 50%, #f0f4f8 100%);
     --gradient-card: linear-gradient(145deg, #ffffff 0%, #f7fafc 100%);
-    --gradient-colorful: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #4ecdc4 50%, #45b7d1 75%, #a855f7 100%);
-    
-    /* Enhanced Shadows with Purple-Blue Theme */
-    --shadow-sm: 0 2px 8px rgba(102,126,234,0.15);
-    --shadow-md: 0 4px 20px rgba(102,126,234,0.20);
-    --shadow-lg: 0 8px 32px rgba(102,126,234,0.25);
-    --shadow-xl: 0 16px 48px rgba(102,126,234,0.30);
-    --shadow-colorful: 0 8px 32px rgba(168,85,247,0.25);
-    --shadow-inset: inset 0 2px 4px rgba(0,0,0,0.06);
-    
-    /* Typography */
+    --gradient-overlay: linear-gradient(135deg, rgba(44,85,48,0.95) 0%, rgba(61,117,69,0.9) 100%);
+
+    /* Layered Modern Shadows */
+    --shadow-xs: 0 1px 2px rgba(0,0,0,0.05);
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.03);
+    --shadow-md: 0 4px 8px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
+    --shadow-lg: 0 8px 16px rgba(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.06);
+    --shadow-xl: 0 12px 24px rgba(0,0,0,0.12), 0 6px 12px rgba(0,0,0,0.08);
+    --shadow-2xl: 0 20px 40px rgba(0,0,0,0.15), 0 10px 20px rgba(0,0,0,0.1);
+    --shadow-inner: inset 0 2px 4px rgba(0,0,0,0.06);
+    --shadow-green: 0 4px 20px rgba(44,85,48,0.15);
+
+    /* Enhanced Typography Scale */
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
     --font-heading: 'Playfair Display', Georgia, serif;
-    --font-size-xs: 0.75rem;
-    --font-size-sm: 0.875rem;
-    --font-size-base: 1rem;
-    --font-size-lg: 1.125rem;
-    --font-size-xl: 1.25rem;
-    --font-size-2xl: 1.5rem;
-    --font-size-3xl: 1.875rem;
-    --font-size-4xl: 2.25rem;
-    --font-size-5xl: 3rem;
-    --font-size-6xl: 3.75rem;
-    
-    /* Spacing & Layout */
-    --section-padding: clamp(3rem, 8vw, 6rem) 0;
-    --container-padding: 0 clamp(1rem, 4vw, 2rem);
-    --border-radius: 16px;
-    --border-radius-lg: 24px;
-    --border-radius-xl: 32px;
-    
-    /* Transitions */
-    --transition-fast: 0.15s ease;
-    --transition-smooth: 0.3s ease;
-    --transition-slow: 0.5s ease;
+    --font-size-xs: 0.75rem;      /* 12px */
+    --font-size-sm: 0.875rem;     /* 14px */
+    --font-size-base: 1rem;       /* 16px - increased from 14px */
+    --font-size-lg: 1.125rem;     /* 18px */
+    --font-size-xl: 1.25rem;      /* 20px */
+    --font-size-2xl: 1.5rem;      /* 24px */
+    --font-size-3xl: 1.875rem;    /* 30px */
+    --font-size-4xl: 2.25rem;     /* 36px */
+    --font-size-5xl: 3rem;        /* 48px */
+    --font-size-6xl: 3.75rem;     /* 60px */
+
+    /* Improved Spacing & Layout */
+    --section-padding: clamp(4rem, 10vw, 8rem) 0;  /* Increased from 3-6rem */
+    --container-padding: 0 clamp(1.5rem, 5vw, 3rem);
+    --card-gap: 2rem;                               /* Standard card spacing */
+    --border-radius: 12px;                          /* Softer corners */
+    --border-radius-lg: 16px;
+    --border-radius-xl: 24px;
+
+    /* Smooth Transitions */
+    --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html {
@@ -78,7 +81,7 @@ body {
     font-family: var(--font-primary);
     font-size: var(--font-size-base);
     font-weight: 400;
-    line-height: 1.7;
+    line-height: 1.7;        /* Improved line height for readability */
     color: var(--text-primary);
     background: var(--background-light);
     overflow-x: hidden;
@@ -86,26 +89,62 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Enhanced Typography */
+/* Modern Typography System */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    font-weight: 600;
-    line-height: 1.2;
+    font-weight: 700;        /* Increased from 600 for better hierarchy */
+    line-height: 1.25;       /* Slightly increased from 1.2 */
     margin-bottom: 1.5rem;
     color: var(--text-primary);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
 }
 
-h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
-h2 { font-size: clamp(2rem, 4vw, 3rem); }
-h3 { font-size: clamp(1.5rem, 3vw, 2.25rem); }
-h4 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);   /* Increased max size */
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);     /* Increased max size */
+    margin-bottom: 1.75rem;
+}
+
+h3 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);   /* Increased max size */
+    margin-bottom: 1.5rem;
+}
+
+h4 {
+    font-size: clamp(1.25rem, 2.5vw, 2rem);  /* Increased max size */
+    margin-bottom: 1.25rem;
+}
+
+h5 {
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    margin-bottom: 1rem;
+}
+
+h6 {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    margin-bottom: 1rem;
+}
 
 p {
     margin-bottom: 1.5rem;
     color: var(--text-secondary);
     font-size: clamp(1rem, 2vw, 1.125rem);
-    line-height: 1.8;
+    line-height: 1.75;       /* Increased from 1.8 for better balance */
+    font-weight: 400;
+}
+
+/* Improved link styles */
+strong, b {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+em, i {
+    font-style: italic;
 }
 
 a {
@@ -168,15 +207,18 @@ img {
     line-height: 1.6;
 }
 
-/* Enhanced Buttons */
+/* Modern Enhanced Buttons */
 .btn {
-    display: inline-block;
-    padding: clamp(14px, 2.5vw, 18px) clamp(24px, 4vw, 36px);
-    border-radius: var(--border-radius);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: clamp(0.875rem, 2.5vw, 1.125rem) clamp(1.75rem, 4vw, 2.5rem);
+    border-radius: 50px;         /* Pill-shaped buttons */
     font-weight: 600;
     text-decoration: none;
-    transition: var(--transition-smooth);
-    border: none;
+    transition: all var(--transition-smooth);
+    border: 2px solid transparent;
     cursor: pointer;
     font-size: clamp(1rem, 2vw, 1.125rem);
     position: relative;
@@ -193,8 +235,8 @@ img {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-    transition: var(--transition-smooth);
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+    transition: left var(--transition-slow);
 }
 
 .btn:hover::before {
@@ -204,14 +246,14 @@ img {
 .btn-primary {
     background: var(--gradient-primary);
     color: white;
-    box-shadow: var(--shadow-md);
-    border: 2px solid transparent;
+    box-shadow: var(--shadow-green);
 }
 
 .btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
     color: white;
+    border-color: var(--primary-dark);
 }
 
 .btn-secondary {
@@ -224,8 +266,23 @@ img {
 .btn-secondary:hover {
     background: white;
     color: var(--primary-color);
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-large {
+    padding: clamp(1rem, 3vw, 1.25rem) clamp(2rem, 5vw, 3rem);
+    font-size: clamp(1.05rem, 2.2vw, 1.2rem);
+}
+
+/* Button with icon spacing */
+.btn i {
+    font-size: 1.1em;
+    transition: transform var(--transition-smooth);
+}
+
+.btn:hover i {
+    transform: translateX(2px);
 }
 
 /* Beautiful New Navigation Design */
@@ -3004,50 +3061,77 @@ img {
 }
 
 /* Footer */
+/* Modern Footer Design */
 .footer {
-    background: var(--background-dark);
-    color: var(--text-light);
-    padding: 4rem 0 2rem;
+    background: linear-gradient(180deg, var(--background-dark) 0%, #1a252f 100%);
+    color: #cbd5e0;
+    padding: 5rem 0 2rem;
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--primary-light), transparent);
 }
 
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 3rem;
-    margin-bottom: 3rem;
+    gap: 3.5rem;
+    margin-bottom: 3.5rem;
 }
 
 .footer-section h4 {
     color: white;
-    margin-bottom: 1.5rem;
-    font-size: 1.3rem;
-    font-weight: 600;
+    margin-bottom: 1.75rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+.footer-section h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--gradient-accent);
+    border-radius: 2px;
 }
 
 .footer-logo {
     display: flex;
     align-items: center;
-    gap: 1.2rem;
+    gap: 1rem;
     margin-bottom: 1.5rem;
 }
 
 .footer-logo img {
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-lg);
+    border: 2px solid rgba(255,255,255,0.1);
 }
 
 .footer-logo h3 {
     color: white;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin: 0;
+    font-weight: 700;
 }
 
 .footer-section p {
-    color: #bdc3c7;
-    line-height: 1.7;
-    font-size: 1.05rem;
+    color: #a0aec0;
+    line-height: 1.75;
+    font-size: 1rem;
 }
 
 .footer-section ul {
@@ -3055,62 +3139,82 @@ img {
 }
 
 .footer-section ul li {
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.75rem;
 }
 
 .footer-section ul li a {
-    color: #bdc3c7;
-    transition: var(--transition-smooth);
-    font-size: 1.05rem;
+    color: #a0aec0;
+    transition: all var(--transition-smooth);
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-section ul li a::before {
+    content: '→';
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all var(--transition-smooth);
 }
 
 .footer-section ul li a:hover {
     color: var(--accent-color);
-    transform: translateX(5px);
+    transform: translateX(8px);
+}
+
+.footer-section ul li a:hover::before {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .footer-social {
     display: flex;
-    gap: 1.2rem;
-    margin-top: 1.5rem;
+    gap: 1rem;
+    margin-top: 1.75rem;
 }
 
 .footer-social a {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
-    background: var(--primary-color);
+    background: rgba(44,85,48,0.3);
+    border: 2px solid var(--primary-color);
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    transition: var(--transition-smooth);
-    box-shadow: var(--shadow-md);
+    font-size: 1.1rem;
+    transition: all var(--transition-smooth);
 }
 
 .footer-social a:hover {
-    background: var(--accent-color);
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-lg);
+    background: var(--primary-color);
+    transform: translateY(-4px) scale(1.1);
+    box-shadow: var(--shadow-green);
+    border-color: var(--accent-color);
 }
 
 .contact-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
-    margin-bottom: 1.2rem;
-    color: #bdc3c7;
-    font-size: 1.05rem;
+    margin-bottom: 1rem;
+    color: #a0aec0;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 .contact-item i {
     color: var(--accent-color);
-    width: 24px;
-    font-size: 1.2rem;
+    width: 20px;
+    font-size: 1.1rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
 }
 
 .contact-item a {
-    color: #bdc3c7;
+    color: #a0aec0;
     transition: var(--transition-smooth);
 }
 
@@ -3119,15 +3223,23 @@ img {
 }
 
 .footer-bottom {
-    border-top: 1px solid #454545;
+    border-top: 1px solid rgba(255,255,255,0.1);
     padding-top: 2.5rem;
     text-align: center;
-    color: #bdc3c7;
+    color: #718096;
 }
 
 .footer-bottom p {
-    margin-bottom: 0.8rem;
-    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* Footer credibility section */
+.footer-credibility {
+    margin: 3rem 0 2rem;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 /* Back to Top Button - Duplicate removed, using styles from line 2172 */
@@ -4070,14 +4182,14 @@ body.mobile-menu-open {
 }
 
 .initiative-card {
-    background: linear-gradient(145deg, #ffffff 0%, #f7fafc 100%);
-    padding: 3rem 2.5rem;
-    border-radius: 24px;
-    box-shadow: 0 8px 32px rgba(102,126,234,0.15);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--gradient-card);
+    padding: 2.5rem 2rem;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-smooth);
     position: relative;
     overflow: hidden;
-    border: 2px solid transparent;
+    border: 1px solid var(--border-light);
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -4106,6 +4218,7 @@ body.mobile-menu-open {
     z-index: 1;
 }
 
+/* Subtle gradient overlay on hover */
 .initiative-card::after {
     content: '';
     position: absolute;
@@ -4113,8 +4226,8 @@ body.mobile-menu-open {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(102,126,234,0.08) 0%, rgba(118,75,162,0.08) 100%);
-    transition: top 0.5s ease;
+    background: linear-gradient(135deg, rgba(44,85,48,0.03) 0%, rgba(61,117,69,0.03) 100%);
+    transition: top var(--transition-slow);
     z-index: 0;
 }
 
@@ -4123,29 +4236,29 @@ body.mobile-menu-open {
 }
 
 .initiative-card:hover {
-    transform: translateY(-12px) scale(1.02);
-    box-shadow: 0 20px 60px rgba(102,126,234,0.3);
-    border-color: rgba(102,126,234,0.3);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-light);
 }
 
 .initiative-icon {
-    width: 80px;
-    height: 80px;
-    border-radius: 20px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    width: 70px;
+    height: 70px;
+    border-radius: var(--border-radius);
+    background: var(--gradient-primary);
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 1.5rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: white;
-    box-shadow: 0 8px 24px rgba(102,126,234,0.35);
-    transition: all 0.3s ease;
+    box-shadow: var(--shadow-green);
+    transition: all var(--transition-smooth);
 }
 
 .initiative-card:hover .initiative-icon {
-    transform: rotateY(360deg) scale(1.1);
-    box-shadow: 0 12px 32px rgba(102,126,234,0.5);
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: var(--shadow-xl);
 }
 
 .initiative-card h3 {
