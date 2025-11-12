@@ -1,0 +1,686 @@
+/**
+ * Enhanced Components V2 - Professional Redesign
+ * Beautiful, polished designs for DRNF Website
+ * NOT copied from Astro - custom designed for better UX
+ */
+
+:root {
+    --drnf-green: #2c5530;
+    --drnf-green-dark: #1a3320;
+    --drnf-green-light: #34663b;
+    --drnf-brown: #8b4513;
+    --drnf-orange: #f39c12;
+    --drnf-gold: #D4B258;
+    --gradient-warm: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+    --gradient-green: linear-gradient(135deg, #2c5530 0%, #1a3320 100%);
+    --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.12);
+    --shadow-hover: 0 12px 48px rgba(0, 0, 0, 0.18);
+}
+
+/* ============================================================================
+   BACK TO TOP BUTTON - Elegant Floating Design
+   ============================================================================ */
+.back-to-top-btn {
+    position: fixed;
+    bottom: 100px;
+    right: 24px;
+    z-index: 998;
+    width: 56px;
+    height: 56px;
+    background: var(--gradient-green);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px) scale(0.8);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow: 0 4px 16px rgba(44, 85, 48, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-to-top-btn.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.back-to-top-btn::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 18px;
+    padding: 2px;
+    background: linear-gradient(135deg, rgba(243, 156, 18, 0.3) 0%, rgba(139, 69, 19, 0.3) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.back-to-top-btn:hover::before {
+    opacity: 1;
+}
+
+.back-to-top-btn:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 8px 24px rgba(44, 85, 48, 0.4);
+}
+
+.back-to-top-btn:active {
+    transform: translateY(-4px) scale(1);
+}
+
+.back-to-top-icon {
+    width: 24px;
+    height: 24px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.back-to-top-btn:hover .back-to-top-icon {
+    transform: translateY(-3px);
+}
+
+@media (min-width: 768px) {
+    .back-to-top-btn {
+        width: 64px;
+        height: 64px;
+        border-radius: 20px;
+    }
+
+    .back-to-top-icon {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* ============================================================================
+   EXIT INTENT POPUP - Beautiful Modal Design
+   ============================================================================ */
+.exit-intent-popup {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.exit-intent-popup.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.exit-popup-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.exit-popup-content {
+    position: relative;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.4);
+    max-width: 560px;
+    width: 100%;
+    overflow: hidden;
+    transform: scale(0.9) translateY(20px);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.exit-intent-popup.active .exit-popup-content {
+    transform: scale(1) translateY(0);
+}
+
+/* Header Section with Icon */
+.exit-popup-header-visual {
+    background: linear-gradient(135deg, #2c5530 0%, #1a3320 100%);
+    padding: 48px 32px 32px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.exit-popup-header-visual::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+.exit-popup-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 16px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    position: relative;
+    z-index: 1;
+    animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.exit-popup-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.exit-popup-close:hover {
+    background: rgba(255,255,255,0.3);
+    transform: rotate(90deg);
+}
+
+.exit-popup-header-visual h3 {
+    font-size: 32px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 12px;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.exit-popup-header-visual p {
+    font-size: 18px;
+    color: rgba(255,255,255,0.95);
+    position: relative;
+    z-index: 1;
+    font-weight: 500;
+}
+
+/* Content Section */
+.exit-popup-body {
+    padding: 40px 32px 32px;
+}
+
+.exit-popup-benefits {
+    margin-bottom: 32px;
+    display: grid;
+    gap: 12px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    color: #374151;
+    padding: 12px 16px;
+    background: #f3f4f6;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+    background: #e5e7eb;
+    transform: translateX(4px);
+}
+
+.benefit-item::before {
+    content: '✓';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, #2c5530 0%, #1a3320 100%);
+    color: white;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+/* Form Styling */
+.exit-popup-form .form-group {
+    margin-bottom: 20px;
+}
+
+.exit-popup-form label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.exit-popup-form input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.exit-popup-form input:focus {
+    outline: none;
+    border-color: #2c5530;
+    box-shadow: 0 0 0 4px rgba(44, 85, 48, 0.1);
+    transform: translateY(-2px);
+}
+
+.exit-popup-submit {
+    width: 100%;
+    padding: 16px 32px;
+    background: var(--gradient-green);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(44, 85, 48, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.exit-popup-submit::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.exit-popup-submit:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.exit-popup-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(44, 85, 48, 0.4);
+}
+
+.exit-popup-submit:active {
+    transform: translateY(0);
+}
+
+.exit-popup-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.exit-popup-dismiss {
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+    padding: 12px;
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #6b7280;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.exit-popup-dismiss:hover {
+    color: #374151;
+}
+
+/* ============================================================================
+   STICKY CTA BAR - Elegant Bottom Bar
+   ============================================================================ */
+.sticky-cta-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: white;
+    border-top: 1px solid #e5e7eb;
+    box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.sticky-cta-bar.visible {
+    transform: translateY(0);
+}
+
+/* Desktop Version */
+.sticky-cta-desktop {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .sticky-cta-desktop {
+        display: block;
+        padding: 20px 0;
+    }
+}
+
+.sticky-cta-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sticky-cta-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.pulse-indicator {
+    width: 12px;
+    height: 12px;
+    background: #10b981;
+    border-radius: 50%;
+    position: relative;
+}
+
+.pulse-indicator::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 2px solid #10b981;
+    animation: pulseRing 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulseRing {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+.sticky-cta-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.sticky-cta-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 4px 0;
+}
+
+.sticky-cta-subtitle {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0;
+}
+
+.sticky-cta-subtitle strong {
+    color: #2c5530;
+    font-weight: 700;
+}
+
+.sticky-cta-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.sticky-cta-phone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #374151;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 10px 16px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.sticky-cta-phone:hover {
+    background: rgba(44, 85, 48, 0.05);
+    color: #2c5530;
+    transform: translateY(-2px);
+}
+
+.sticky-cta-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    background: var(--gradient-green);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(44, 85, 48, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.sticky-cta-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+.sticky-cta-button:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.sticky-cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(44, 85, 48, 0.4);
+}
+
+/* Mobile Version */
+.sticky-cta-mobile {
+    display: block;
+    padding: 16px;
+}
+
+@media (min-width: 768px) {
+    .sticky-cta-mobile {
+        display: none;
+    }
+}
+
+.sticky-cta-mobile-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 16px 24px;
+    background: var(--gradient-green);
+    color: white;
+    border: none;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(44, 85, 48, 0.3);
+}
+
+.sticky-cta-mobile-trigger:active {
+    transform: scale(0.98);
+}
+
+.sticky-cta-mobile-menu {
+    display: none;
+    background: white;
+    border-radius: 20px 20px 0 0;
+    padding: 24px;
+    box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.sticky-cta-mobile-menu.active {
+    display: block;
+    animation: slideUpMobile 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes slideUpMobile {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.sticky-cta-mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sticky-cta-mobile-header h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0;
+}
+
+.sticky-cta-mobile-close {
+    background: #f3f4f6;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.sticky-cta-mobile-close:hover {
+    background: #e5e7eb;
+    transform: rotate(90deg);
+}
+
+.sticky-cta-mobile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sticky-cta-mobile-action {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    border-radius: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.sticky-cta-mobile-action.primary {
+    background: var(--gradient-green);
+    color: white;
+    box-shadow: 0 4px 12px rgba(44, 85, 48, 0.3);
+}
+
+.sticky-cta-mobile-action.secondary {
+    background: #f3f4f6;
+    color: #1f2937;
+}
+
+.sticky-cta-mobile-action:active {
+    transform: scale(0.98);
+}
+
+.action-text {
+    flex: 1;
+}
+
+.action-title {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.action-subtitle {
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+/* Smooth scroll for better UX */
+html.smooth-scroll {
+    scroll-behavior: smooth;
+}

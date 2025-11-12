@@ -802,32 +802,84 @@ img {
 
 .scroll-indicator-modern {
     position: absolute;
-    bottom: 2rem;
+    bottom: 3rem;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    animation: bounce 2s infinite;
     z-index: 2;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.scroll-indicator-modern:hover {
+    transform: translateX(-50%) translateY(-5px);
 }
 
 .scroll-indicator-modern span {
     display: block;
-    color: var(--text-secondary);
-    font-size: 0.85rem;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-    letter-spacing: 0.5px;
+    color: var(--primary-color);
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
+    opacity: 0.9;
 }
 
 .scroll-arrow-modern {
-    width: 30px;
-    height: 30px;
-    border: 2px solid var(--primary-color);
-    border-top: none;
-    border-left: none;
-    transform: rotate(45deg);
+    width: 50px;
+    height: 50px;
     margin: 0 auto;
+    position: relative;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(44, 85, 48, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: floatPulse 3s ease-in-out infinite;
+}
+
+.scroll-arrow-modern::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.scroll-indicator-modern:hover .scroll-arrow-modern::before {
+    opacity: 0.2;
+}
+
+.scroll-arrow-modern::after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-right: 3px solid var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    transform: rotate(45deg) translateY(-3px);
+    transition: all 0.3s ease;
+}
+
+.scroll-indicator-modern:hover .scroll-arrow-modern::after {
+    transform: rotate(45deg) translateY(0);
+}
+
+@keyframes floatPulse {
+    0%, 100% {
+        transform: translateY(0);
+        box-shadow: 0 4px 20px rgba(44, 85, 48, 0.15);
+    }
+    50% {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 30px rgba(44, 85, 48, 0.25);
+    }
 }
 
 /* Responsive Design for Modern Hero */
@@ -4132,7 +4184,7 @@ body.mobile-menu-open {
 
 /* Page Hero Section for Contact and Other Pages */
 .page-hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #2c5530 0%, #1a3320 100%);
     padding: 8rem 0 6rem 0;
     margin-top: 80px; /* Account for fixed nav */
     text-align: center;
@@ -4291,13 +4343,13 @@ body.mobile-menu-open {
     border-radius: 50px;
     font-size: 0.9rem;
     font-weight: 600;
-    color: #667eea;
+    color: #2c5530;
     border: 2px solid rgba(102,126,234,0.2);
     transition: all 0.3s ease;
 }
 
 .initiative-card:hover .stat-badge {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #2c5530 0%, #1a3320 100%);
     color: white;
     border-color: transparent;
     transform: scale(1.05);
@@ -4317,7 +4369,7 @@ body.mobile-menu-open {
 }
 
 .initiative-card .btn-primary {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #2c5530 0%, #1a3320 100%);
     border: none;
 }
 
@@ -4377,7 +4429,7 @@ body.mobile-menu-open {
     left: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #2c5530 0%, #1a3320 100%);
     transform: scaleX(0);
     transition: transform 0.4s ease;
 }
@@ -4396,7 +4448,7 @@ body.mobile-menu-open {
     width: 90px;
     height: 90px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #2c5530 0%, #1a3320 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4415,7 +4467,7 @@ body.mobile-menu-open {
 .impact-number {
     font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 700;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #2c5530 0%, #1a3320 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -4432,7 +4484,7 @@ body.mobile-menu-open {
 
 /* CTA Section (Discover Our Work) Improvements */
 .cta-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #2c5530 0%, #1a3320 100%);
     color: white;
     position: relative;
     overflow: hidden;
@@ -4497,7 +4549,7 @@ body.mobile-menu-open {
 
 .cta-buttons .btn-primary {
     background: white;
-    color: #667eea;
+    color: #2c5530;
     border: 2px solid white;
 }
 
@@ -4517,7 +4569,7 @@ body.mobile-menu-open {
 
 .cta-buttons .btn-secondary:hover {
     background: white;
-    color: #667eea;
+    color: #2c5530;
     border-color: white;
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
