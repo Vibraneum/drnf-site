@@ -313,28 +313,58 @@
 <body>
     <!-- Navigation -->
     <header class="header">
-        <nav class="nav">
-            <div class="nav-container">
-                <a href="/" class="nav-logo">
-                    <img src="https://res.cloudinary.com/dhupieu4x/image/upload/v1762599287/drnf-assets/drnf-assets/DRNF_logo.jpg" alt="Dr. Rabinder Nath Foundation Logo" class="logo-img">
-                    <span class="logo-text">Dr. Rabinder Nath Foundation</span>
-                </a>
+        <!-- Top Bar for WhatsApp & Email -->
+<div class="top-bar">
+    <div class="top-bar-container">
+        <a href="https://wa.me/919966906781" class="top-bar-link" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp: <strong>+91-9966906781</strong></span>
+        </a>
+        <a href="mailto:info@drnf.org" class="top-bar-link">
+            <i class="fas fa-envelope"></i>
+            <span>Email: <strong>info@drnf.org</strong></span>
+        </a>
+    </div>
+</div>
 
-                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+<!-- Simple Modern Navbar -->
+<nav>
+    <div class="container">
+        <a href="index.html" class="logo">
+            <img src="https://res.cloudinary.com/dhupieu4x/image/upload/v1762599287/drnf-assets/drnf-assets/DRNF_logo.jpg" alt="DRNF Logo">
+            <span>Dr. Rabinder Nath Foundation</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="book.html">Heritage Book</a></li>
+            <li><a href="community.html">Programs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
 
-                <ul class="nav-menu" id="navMenu">
-                    <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="/about" class="nav-link">About DRNF</a></li>
-                    <li class="nav-item"><a href="/dr-rabinder-nath" class="nav-link active">Dr. Rabinder Nath</a></li>
-                    <li class="nav-item"><a href="/book" class="nav-link">Heritage Book</a></li>
-                    <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
+<!-- Mobile Menu -->
+<div class="mobile-menu">
+    <ul class="mobile-menu-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="dr-rabinder-nath.html">Dr. Rabinder Nath</a></li>
+        <li><a href="book.html">Heritage Book</a></li>
+        <li><a href="chai-counters.html">Free Chai Counters</a></li>
+        <li><a href="community.html">Community Programs</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+    </ul>
+    <a href="contact.html" class="mobile-menu-cta">Get in Touch</a>
+</div>
+
     </header>
 
     <!-- Page Header -->

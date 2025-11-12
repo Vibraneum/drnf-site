@@ -121,244 +121,58 @@
 </head>
 <body>
     <!-- Main Enhanced Navigation -->
-    <nav class="enhanced-nav" id="enhancedNav">
-        <div class="nav-container-enhanced">
-            <!-- Logo & Brand -->
-            <a href="index.html" class="nav-logo-enhanced">
-                <img src="https://res.cloudinary.com/dhupieu4x/image/upload/v1762599287/drnf-assets/drnf-assets/DRNF_logo.jpg" alt="Dr. Rabinder Nath Foundation Logo" class="logo-img">
-                <div class="nav-brand-text">
-                    <h1 class="brand-title">Dr. Rabinder Nath Foundation</h1>
-                    <p class="brand-tagline">Serving with Compassion</p>
-                </div>
-            </a>
+    <!-- Top Bar for WhatsApp & Email -->
+<div class="top-bar">
+    <div class="top-bar-container">
+        <a href="https://wa.me/919966906781" class="top-bar-link" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp: <strong>+91-9966906781</strong></span>
+        </a>
+        <a href="mailto:info@drnf.org" class="top-bar-link">
+            <i class="fas fa-envelope"></i>
+            <span>Email: <strong>info@drnf.org</strong></span>
+        </a>
+    </div>
+</div>
 
-            <!-- Desktop Navigation Links -->
-            <ul class="nav-links-enhanced">
-                <li><a href="index.html" class="nav-link-enhanced">Home</a></li>
+<!-- Simple Modern Navbar -->
+<nav>
+    <div class="container">
+        <a href="index.html" class="logo">
+            <img src="https://res.cloudinary.com/dhupieu4x/image/upload/v1762599287/drnf-assets/drnf-assets/DRNF_logo.jpg" alt="DRNF Logo">
+            <span>Dr. Rabinder Nath Foundation</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="book.html">Heritage Book</a></li>
+            <li><a href="community.html">Programs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
 
-                <!-- About Dropdown -->
-                <li>
-                    <div class="nav-link-enhanced nav-dropdown-trigger" data-menu="about-mega-menu">
-                        <span>About</span>
-                        <svg class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </div>
-                </li>
+<!-- Mobile Menu -->
+<div class="mobile-menu">
+    <ul class="mobile-menu-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="dr-rabinder-nath.html">Dr. Rabinder Nath</a></li>
+        <li><a href="book.html">Heritage Book</a></li>
+        <li><a href="chai-counters.html">Free Chai Counters</a></li>
+        <li><a href="community.html">Community Programs</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+    </ul>
+    <a href="contact.html" class="mobile-menu-cta">Get in Touch</a>
+</div>
 
-                <li><a href="book.html" class="nav-link-enhanced">Heritage Book</a></li>
-
-                <!-- Programs Dropdown -->
-                <li>
-                    <div class="nav-link-enhanced nav-dropdown-trigger active" data-menu="programs-mega-menu">
-                        <span>Our Programs</span>
-                        <svg class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </div>
-                </li>
-
-                <li><a href="contact.html" class="nav-link-enhanced">Contact</a></li>
-                <li><a href="faq.html" class="nav-link-enhanced">FAQ</a></li>
-            </ul>
-
-            <!-- Navigation Actions -->
-            <div class="nav-actions-enhanced">
-                <a href="about.html" class="nav-cta-enhanced">Our Story</a>
-                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-
-        <!-- About Mega Menu -->
-        <div class="mega-menu" id="about-mega-menu">
-            <div class="mega-menu-container">
-                <div class="mega-menu-content">
-                    <!-- Left Side Card -->
-                    <div class="mega-menu-card">
-                        <img src="https://res.cloudinary.com/dhupieu4x/image/upload/v1762599308/drnf-assets/drnf-assets/rabinder_nath2.1.jpg" alt="About Us">
-                        <h3>About Us</h3>
-                        <p>Learn about our story, mission, and the legacy of Dr. Rabinder Nath.</p>
-                        <div class="arrow-circle">
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-
-                    <!-- Right Side Grid -->
-                    <div class="mega-menu-grid">
-                        <div class="mega-menu-header">
-                            <h3>Discover Our Foundation</h3>
-                            <p>Learn more about our mission, values, and the legacy we continue.</p>
-                        </div>
-
-                        <div class="mega-menu-columns">
-                            <!-- Column 1 -->
-                            <div>
-                                <a href="about.html" class="mega-menu-link">
-                                    <i class="fas fa-book-open mega-menu-icon"></i>
-                                    <span class="mega-menu-text">Our Story</span>
-                                </a>
-                                <a href="book.html" class="mega-menu-link">
-                                    <i class="fas fa-book mega-menu-icon"></i>
-                                    <span class="mega-menu-text">Heritage Book</span>
-                                </a>
-                                <a href="about.html#team" class="mega-menu-link">
-                                    <i class="fas fa-users mega-menu-icon"></i>
-                                    <span class="mega-menu-text">Our Team</span>
-                                </a>
-                                <a href="about.html#impact" class="mega-menu-link">
-                                    <i class="fas fa-trophy mega-menu-icon"></i>
-                                    <span class="mega-menu-text">Impact & Stats</span>
-                                </a>
-                            </div>
-
-                            <!-- Column 2 -->
-                            <div>
-                                <a href="about.html#mission" class="mega-menu-link">
-                                    <i class="fas fa-bullseye mega-menu-icon"></i>
-                                    <span class="mega-menu-text">Vision & Mission</span>
-                                </a>
-                                <a href="about.html#legacy" class="mega-menu-link">
-                                    <i class="fas fa-scroll mega-menu-icon"></i>
-                                    <span class="mega-menu-text">Dr. Rabinder Nath's Legacy</span>
-                                </a>
-                                <a href="about.html#values" class="mega-menu-link">
-                                    <i class="fas fa-star mega-menu-icon"></i>
-                                    <span class="mega-menu-text">Our Values</span>
-                                </a>
-                                <a href="contact.html" class="mega-menu-link">
-                                    <i class="fas fa-envelope mega-menu-icon"></i>
-                                    <span class="mega-menu-text">Contact Us</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Programs Mega Menu -->
-        <div class="mega-menu" id="programs-mega-menu">
-            <div class="mega-menu-container">
-                <div class="mega-menu-content">
-                    <!-- Left Side Card -->
-                    <div class="mega-menu-card">
-                        <img src="images/chai_counter.jpg" alt="Our Programs">
-                        <h3>Our Programs</h3>
-                        <p>Explore our community service initiatives and programs making a difference.</p>
-                        <div class="arrow-circle">
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-
-                    <!-- Right Side Grid -->
-                    <div class="mega-menu-grid">
-                        <div class="mega-menu-header">
-                            <h3>Community Service Programs</h3>
-                            <p>Making a difference through dedicated community initiatives.</p>
-                        </div>
-
-                        <div class="mega-menu-columns">
-                            <!-- Column 1 -->
-                            <div>
-                                <a href="chai-counters.html" class="mega-menu-link">
-                                    <i class="fas fa-coffee mega-menu-icon"></i>
-                                    <span class="mega-menu-text">Free Chai Counters</span>
-                                </a>
-                                <a href="community.html" class="mega-menu-link">
-                                    <i class="fas fa-hands-helping mega-menu-icon"></i>
-                                    <span class="mega-menu-text">Community Support</span>
-                                </a>
-                                <a href="community.html#workshops" class="mega-menu-link">
-                                    <i class="fas fa-graduation-cap mega-menu-icon"></i>
-                                    <span class="mega-menu-text">Education Workshops</span>
-                                </a>
-                            </div>
-
-                            <!-- Column 2 -->
-                            <div>
-                                <a href="community.html#environment" class="mega-menu-link">
-                                    <i class="fas fa-leaf mega-menu-icon"></i>
-                                    <span class="mega-menu-text">Environmental Care</span>
-                                </a>
-                                <a href="community.html#animal-welfare" class="mega-menu-link">
-                                    <i class="fas fa-paw mega-menu-icon"></i>
-                                    <span class="mega-menu-text">Animal Welfare</span>
-                                </a>
-                                <a href="contact.html" class="mega-menu-link">
-                                    <i class="fas fa-heart mega-menu-icon"></i>
-                                    <span class="mega-menu-text">Get in Touch</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay">
-        <div class="mobile-menu-header">
-            <a href="index.html" class="nav-logo-enhanced">
-                <img src="https://res.cloudinary.com/dhupieu4x/image/upload/v1762599287/drnf-assets/drnf-assets/DRNF_logo.jpg" alt="DRNF Logo" class="logo-img">
-                <div class="nav-brand-text">
-                    <h1 class="brand-title">DRNF</h1>
-                </div>
-            </a>
-            <button class="mobile-menu-close" aria-label="Close mobile menu">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-
-        <div class="mobile-menu-body">
-            <!-- Home -->
-            <div class="mobile-menu-item">
-                <a href="index.html" class="mobile-menu-link">Home</a>
-            </div>
-
-            <!-- About with Submenu -->
-            <div class="mobile-menu-item">
-                <a href="#" class="mobile-menu-link" data-submenu="about">
-                    <span>About</span>
-                    <svg class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </a>
-                <div class="mobile-submenu">
-                    <a href="about.html" class="mobile-submenu-link">
-                        <i class="fas fa-book-open"></i>
-                        <span>Our Story</span>
-                    </a>
-                    <a href="book.html" class="mobile-submenu-link">
-                        <i class="fas fa-book"></i>
-                        <span>Heritage Book</span>
-                    </a>
-                    <a href="about.html#team" class="mobile-submenu-link">
-                        <i class="fas fa-users"></i>
-                        <span>Our Team</span>
-                    </a>
-                    <a href="about.html#impact" class="mobile-submenu-link">
-                        <i class="fas fa-trophy"></i>
-                        <span>Impact & Stats</span>
-                    </a>
-                    <a href="about.html#mission" class="mobile-submenu-link">
-                        <i class="fas fa-bullseye"></i>
-                        <span>Vision & Mission</span>
-                    </a>
-                    <a href="about.html#legacy" class="mobile-submenu-link">
-                        <i class="fas fa-scroll"></i>
-                        <span>Dr. Rabinder Nath's Legacy</span>
-                    </a>
-                    <a href="about.html#values" class="mobile-submenu-link">
-                        <i class="fas fa-star"></i>
-                        <span>Our Values</span>
-                    </a>
-                </div>
-            </div>
 
             <!-- Heritage Book -->
             <div class="mobile-menu-item">
