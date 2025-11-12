@@ -30,8 +30,8 @@ class ModernNavbar {
                 }
             });
 
-            // Close mobile menu when clicking a link
-            const mobileLinks = this.mobileMenu.querySelectorAll('a');
+            // Close mobile menu when clicking a link (but not dropdown toggles)
+            const mobileLinks = this.mobileMenu.querySelectorAll('.mobile-menu-links > li > a, .mobile-dropdown-content a');
             mobileLinks.forEach(link => {
                 link.addEventListener('click', () => {
                     if (this.mobileMenu.classList.contains('active')) {
@@ -40,6 +40,9 @@ class ModernNavbar {
                 });
             });
         }
+
+        // Mobile dropdown toggles
+        this.initMobileDropdowns();
 
         // Scroll progress bar
         this.createScrollProgress();
@@ -88,6 +91,28 @@ class ModernNavbar {
             if (href === currentPath || (href !== '/' && currentPath.includes(href))) {
                 link.classList.add('active');
             }
+        });
+    }
+
+    initMobileDropdowns() {
+        const dropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                const dropdown = toggle.closest('.mobile-dropdown');
+
+                // Toggle current dropdown
+                dropdown.classList.toggle('active');
+
+                // Close other dropdowns
+                const allDropdowns = document.querySelectorAll('.mobile-dropdown');
+                allDropdowns.forEach(d => {
+                    if (d !== dropdown) {
+                        d.classList.remove('active');
+                    }
+                });
+            });
         });
     }
 }

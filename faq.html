@@ -141,21 +141,91 @@
     </div>
 </div>
 
-<!-- Simple Modern Navbar -->
+<!-- Enhanced Modern Navbar with Dropdowns -->
 <nav>
     <div class="container">
         <a href="index.html" class="logo">
             <img src="https://res.cloudinary.com/dhupieu4x/image/upload/v1762599287/drnf-assets/drnf-assets/DRNF_logo.jpg" alt="DRNF Logo">
             <span>Dr. Rabinder Nath Foundation</span>
         </a>
+
+        <!-- Desktop Navigation -->
         <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="book.html">Heritage Book</a></li>
-            <li><a href="community.html">Programs</a></li>
+            <li><a href="index.html">Home</a></li>
+
+            <!-- About Dropdown -->
+            <li class="dropdown">
+                <a href="about.html">About <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-menu">
+                    <a href="about.html">
+                        <i class="fas fa-heart"></i>
+                        <span>About Foundation</span>
+                    </a>
+                    <a href="dr-rabinder-nath.html">
+                        <i class="fas fa-user-md"></i>
+                        <span>Dr. Rabinder Nath</span>
+                    </a>
+                    <a href="transparency.html">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Transparency</span>
+                    </a>
+                    <a href="faq.html">
+                        <i class="fas fa-question-circle"></i>
+                        <span>FAQ</span>
+                    </a>
+                </div>
+            </li>
+
+            <!-- Our Work Dropdown -->
+            <li class="dropdown">
+                <a href="community.html">Our Work <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-menu">
+                    <a href="chai-counters.html">
+                        <i class="fas fa-mug-hot"></i>
+                        <span>Free Chai Counters</span>
+                    </a>
+                    <a href="community.html">
+                        <i class="fas fa-hands-helping"></i>
+                        <span>Community Programs</span>
+                    </a>
+                    <a href="frontline-workers.html">
+                        <i class="fas fa-user-shield"></i>
+                        <span>Frontline Workers Support</span>
+                    </a>
+                    <a href="loocafe-impact.html">
+                        <i class="fas fa-toilet"></i>
+                        <span>LooCafe Impact</span>
+                    </a>
+                </div>
+            </li>
+
+            <!-- Heritage Dropdown -->
+            <li class="dropdown">
+                <a href="book.html">Heritage <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-menu">
+                    <a href="book.html">
+                        <i class="fas fa-book"></i>
+                        <span>Heritage Book</span>
+                    </a>
+                    <a href="book/story.html">
+                        <i class="fas fa-film"></i>
+                        <span>Interactive Story</span>
+                    </a>
+                    <a href="book/explore.html">
+                        <i class="fas fa-book-open"></i>
+                        <span>Explore the Book</span>
+                    </a>
+                    <a href="partition-story-complete.html">
+                        <i class="fas fa-history"></i>
+                        <span>Partition Story</span>
+                    </a>
+                </div>
+            </li>
+
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="faq.html">FAQ</a></li>
         </ul>
+
+        <!-- Mobile Menu Toggle -->
         <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
             <span></span>
             <span></span>
@@ -168,17 +238,90 @@
 <div class="mobile-menu">
     <ul class="mobile-menu-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="dr-rabinder-nath.html">Dr. Rabinder Nath</a></li>
-        <li><a href="book.html">Heritage Book</a></li>
-        <li><a href="chai-counters.html">Free Chai Counters</a></li>
-        <li><a href="community.html">Community Programs</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="faq.html">FAQ</a></li>
+
+        <!-- About Section -->
+        <li class="mobile-dropdown">
+            <button class="mobile-dropdown-toggle">
+                <span>About</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="mobile-dropdown-content">
+                <a href="about.html">
+                    <i class="fas fa-heart"></i>
+                    <span>About Foundation</span>
+                </a>
+                <a href="dr-rabinder-nath.html">
+                    <i class="fas fa-user-md"></i>
+                    <span>Dr. Rabinder Nath</span>
+                </a>
+                <a href="transparency.html">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Transparency</span>
+                </a>
+                <a href="faq.html">
+                    <i class="fas fa-question-circle"></i>
+                    <span>FAQ</span>
+                </a>
+            </div>
+        </li>
+
+        <!-- Our Work Section -->
+        <li class="mobile-dropdown">
+            <button class="mobile-dropdown-toggle">
+                <span>Our Work</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="mobile-dropdown-content">
+                <a href="chai-counters.html">
+                    <i class="fas fa-mug-hot"></i>
+                    <span>Free Chai Counters</span>
+                </a>
+                <a href="community.html">
+                    <i class="fas fa-hands-helping"></i>
+                    <span>Community Programs</span>
+                </a>
+                <a href="frontline-workers.html">
+                    <i class="fas fa-user-shield"></i>
+                    <span>Frontline Workers Support</span>
+                </a>
+                <a href="loocafe-impact.html">
+                    <i class="fas fa-toilet"></i>
+                    <span>LooCafe Impact</span>
+                </a>
+            </div>
+        </li>
+
+        <!-- Heritage Section -->
+        <li class="mobile-dropdown">
+            <button class="mobile-dropdown-toggle">
+                <span>Heritage</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="mobile-dropdown-content">
+                <a href="book.html">
+                    <i class="fas fa-book"></i>
+                    <span>Heritage Book</span>
+                </a>
+                <a href="book/story.html">
+                    <i class="fas fa-film"></i>
+                    <span>Interactive Story</span>
+                </a>
+                <a href="book/explore.html">
+                    <i class="fas fa-book-open"></i>
+                    <span>Explore the Book</span>
+                </a>
+                <a href="partition-story-complete.html">
+                    <i class="fas fa-history"></i>
+                    <span>Partition Story</span>
+                </a>
+            </div>
+        </li>
+
+        <li><a href="contact.html">Contact</a></li>
     </ul>
+
     <a href="contact.html" class="mobile-menu-cta">Get in Touch</a>
 </div>
-
 
             <!-- Heritage Book -->
             <div class="mobile-menu-item">

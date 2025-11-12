@@ -1,0 +1,38 @@
+{
+  "name": "Dr. Rabinder Nath Foundation",
+  "short_name": "DRNF",
+  "description": "Community service and social impact initiatives",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#D4B258",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["nonprofit", "social"],
+  "shortcuts": [
+    {
+      "name": "About",
+      "short_name": "About",
+      "description": "Learn about DRNF",
+      "url": "/about.html",
+      "icons": [{ "src": "/favicon.ico", "sizes": "192x192" }]
+    },
+    {
+      "name": "Initiatives",
+      "short_name": "Initiatives",
+      "description": "View our initiatives",
+      "url": "/initiatives.html",
+      "icons": [{ "src": "/favicon.ico", "sizes": "192x192" }]
+    }
+  ]
+}
+
+
+

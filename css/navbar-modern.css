@@ -464,3 +464,101 @@ html {
 body.mobile-menu-open {
     overflow: hidden;
 }
+
+/* ============================================================================
+   MOBILE DROPDOWN MENUS
+   ============================================================================ */
+
+.mobile-dropdown {
+    list-style: none;
+}
+
+.mobile-dropdown-toggle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    background: none;
+    border: none;
+    color: var(--gray-700);
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: left;
+}
+
+.mobile-dropdown-toggle:hover {
+    background: rgba(44, 85, 48, 0.05);
+    color: var(--drnf-primary);
+}
+
+.mobile-dropdown-toggle i {
+    transition: transform 0.3s ease;
+    font-size: 14px;
+}
+
+.mobile-dropdown.active .mobile-dropdown-toggle {
+    background: rgba(44, 85, 48, 0.08);
+    color: var(--drnf-primary);
+}
+
+.mobile-dropdown.active .mobile-dropdown-toggle i {
+    transform: rotate(180deg);
+}
+
+.mobile-dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding-left: 16px;
+    margin-top: 4px;
+}
+
+.mobile-dropdown.active .mobile-dropdown-content {
+    max-height: 500px;
+}
+
+.mobile-dropdown-content a {
+    display: flex !important;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px !important;
+    color: var(--gray-600) !important;
+    text-decoration: none;
+    font-weight: 400 !important;
+    font-size: 15px !important;
+    border-radius: 8px !important;
+    margin-bottom: 4px;
+    transition: all 0.3s ease;
+}
+
+.mobile-dropdown-content a i {
+    width: 20px;
+    font-size: 16px;
+    color: var(--drnf-primary);
+    opacity: 0.7;
+}
+
+.mobile-dropdown-content a:hover {
+    background: rgba(44, 85, 48, 0.05) !important;
+    color: var(--drnf-primary) !important;
+    transform: translateX(4px) !important;
+}
+
+.mobile-dropdown-content a:hover i {
+    opacity: 1;
+}
+
+/* Desktop Dropdown Icon Styling */
+.nav-links .dropdown > a i {
+    font-size: 12px;
+    margin-left: 4px;
+    transition: transform 0.3s ease;
+}
+
+.nav-links .dropdown:hover > a i {
+    transform: rotate(180deg);
+}
