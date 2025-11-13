@@ -443,18 +443,6 @@ nav .logo span {
     box-shadow: 0 4px 12px rgba(44, 85, 48, 0.3);
 }
 
-/* Scroll Progress Bar */
-.scroll-progress {
-    position: fixed;
-    top: 121px; /* Below top bar + nav */
-    left: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--drnf-primary) 0%, var(--drnf-accent) 100%);
-    width: 0;
-    transition: width 0.1s ease;
-    z-index: calc(var(--z-navbar) + 1);
-}
-
 /* Smooth Scroll */
 html {
     scroll-behavior: smooth;

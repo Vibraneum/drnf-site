@@ -194,121 +194,204 @@
 </head>
 <body>
     <!-- Main Enhanced Navigation -->
-    <nav class="enhanced-nav" id="enhancedNav">
-        <div class="nav-container-enhanced">
-            <!-- Logo & Brand -->
-            <a href="index.html" class="nav-logo-enhanced">
-                <img src="https://res.cloudinary.com/dhupieu4x/image/upload/v1762599287/drnf-assets/drnf-assets/DRNF_logo.jpg" alt="Dr. Rabinder Nath Foundation Logo" class="logo-img">
-                <div class="nav-brand-text">
-                    <h1 class="brand-title">Dr. Rabinder Nath Foundation</h1>
-                    <p class="brand-tagline">Serving with Compassion</p>
-                </div>
-            </a>
 
-            <!-- Hamburger Menu (Mobile) -->
-            <button class="hamburger" id="hamburger" aria-label="Toggle Navigation">
-                <span></span>
-                <span></span>
-                <span></span>
+<!-- Top Bar for WhatsApp & Email -->
+<div class="top-bar">
+    <div class="top-bar-container">
+        <a href="https://wa.me/919966906781" class="top-bar-link" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp: <strong>+91-9966906781</strong></span>
+        </a>
+        <a href="mailto:info@drnf.org" class="top-bar-link">
+            <i class="fas fa-envelope"></i>
+            <span>Email: <strong>info@drnf.org</strong></span>
+        </a>
+    </div>
+</div>
+
+<!-- Enhanced Modern Navbar with Dropdowns -->
+<nav>
+    <div class="container">
+        <a href="index.html" class="logo">
+            <img src="https://res.cloudinary.com/dhupieu4x/image/upload/v1762599287/drnf-assets/drnf-assets/DRNF_logo.jpg" alt="DRNF Logo">
+            <span>Dr. Rabinder Nath Foundation</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+
+            <!-- About Dropdown -->
+            <li class="dropdown">
+                <a href="about.html">About <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-menu">
+                    <a href="about.html">
+                        <i class="fas fa-heart"></i>
+                        <span>About Foundation</span>
+                    </a>
+                    <a href="dr-rabinder-nath.html">
+                        <i class="fas fa-user-md"></i>
+                        <span>Dr. Rabinder Nath</span>
+                    </a>
+                    <a href="transparency.html">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Transparency</span>
+                    </a>
+                    <a href="faq.html">
+                        <i class="fas fa-question-circle"></i>
+                        <span>FAQ</span>
+                    </a>
+                </div>
+            </li>
+
+            <!-- Our Work Dropdown -->
+            <li class="dropdown">
+                <a href="community.html">Our Work <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-menu">
+                    <a href="chai-counters.html">
+                        <i class="fas fa-mug-hot"></i>
+                        <span>Free Chai Counters</span>
+                    </a>
+                    <a href="community.html">
+                        <i class="fas fa-hands-helping"></i>
+                        <span>Community Programs</span>
+                    </a>
+                    <a href="frontline-workers.html">
+                        <i class="fas fa-user-shield"></i>
+                        <span>Frontline Workers Support</span>
+                    </a>
+                    <a href="loocafe-impact.html">
+                        <i class="fas fa-toilet"></i>
+                        <span>LooCafe Impact</span>
+                    </a>
+                </div>
+            </li>
+
+            <!-- Heritage Dropdown -->
+            <li class="dropdown">
+                <a href="book.html">Heritage <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-menu">
+                    <a href="book.html">
+                        <i class="fas fa-book"></i>
+                        <span>Heritage Book</span>
+                    </a>
+                    <a href="book/story.html">
+                        <i class="fas fa-film"></i>
+                        <span>Interactive Story</span>
+                    </a>
+                    <a href="book/explore.html">
+                        <i class="fas fa-book-open"></i>
+                        <span>Explore the Book</span>
+                    </a>
+                    <a href="partition-story-complete.html">
+                        <i class="fas fa-history"></i>
+                        <span>Partition Story</span>
+                    </a>
+                </div>
+            </li>
+
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu">
+    <ul class="mobile-menu-links">
+        <li><a href="index.html">Home</a></li>
+
+        <!-- About Section -->
+        <li class="mobile-dropdown">
+            <button class="mobile-dropdown-toggle">
+                <span>About</span>
+                <i class="fas fa-chevron-down"></i>
             </button>
-
-            <!-- Navigation Menu -->
-            <div class="nav-menu-enhanced" id="navMenu">
-                <a href="index.html" class="nav-link-enhanced">Home</a>
-                <a href="about.html" class="nav-link-enhanced">About</a>
-                <a href="initiatives.html" class="nav-link-enhanced">Initiatives</a>
-                <a href="contact.html" class="nav-link-enhanced">Contact</a>
-                <a href="about.html" class="nav-cta-enhanced">Our Story</a>
+            <div class="mobile-dropdown-content">
+                <a href="about.html">
+                    <i class="fas fa-heart"></i>
+                    <span>About Foundation</span>
+                </a>
+                <a href="dr-rabinder-nath.html">
+                    <i class="fas fa-user-md"></i>
+                    <span>Dr. Rabinder Nath</span>
+                </a>
+                <a href="transparency.html">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Transparency</span>
+                </a>
+                <a href="faq.html">
+                    <i class="fas fa-question-circle"></i>
+                    <span>FAQ</span>
+                </a>
             </div>
-        </div>
-    </nav>
+        </li>
 
-    <div class="privacy-container">
-        <!-- Header -->
-        <div class="privacy-header" data-aos="fade-up">
-            <h1>Privacy Policy</h1>
-            <p><strong>Last Updated:</strong> January 2025</p>
-        </div>
-
-        <!-- Content -->
-        <div class="privacy-content">
-            <!-- Section 1 -->
-            <div class="privacy-section" data-aos="fade-up">
-                <h2>1. Introduction</h2>
-                <p>
-                    Dr. Rabinder Nath Foundation ("DRNF", "we", "us", or "our") is committed to protecting your privacy and personal information. This Privacy Policy explains how we collect, use, store, and protect your data when you visit our website (<strong>drnf.org</strong>) or interact with our organization.
-                </p>
-                <p>
-                    By using our website or submitting any information to us, you consent to the data practices described in this policy.
-                </p>
+        <!-- Our Work Section -->
+        <li class="mobile-dropdown">
+            <button class="mobile-dropdown-toggle">
+                <span>Our Work</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="mobile-dropdown-content">
+                <a href="chai-counters.html">
+                    <i class="fas fa-mug-hot"></i>
+                    <span>Free Chai Counters</span>
+                </a>
+                <a href="community.html">
+                    <i class="fas fa-hands-helping"></i>
+                    <span>Community Programs</span>
+                </a>
+                <a href="frontline-workers.html">
+                    <i class="fas fa-user-shield"></i>
+                    <span>Frontline Workers Support</span>
+                </a>
+                <a href="loocafe-impact.html">
+                    <i class="fas fa-toilet"></i>
+                    <span>LooCafe Impact</span>
+                </a>
             </div>
+        </li>
 
-            <!-- Section 2 - Highlighted -->
-            <div class="privacy-section" data-aos="fade-up">
-                <div class="highlight-box">
-                    <h3>2. Automatic Communication Opt-In</h3>
-                    <p><strong style="color: #d97706;">IMPORTANT NOTICE:</strong></p>
-                    <p>
-                        When you submit any contact form, volunteer registration, inquiry, or provide your contact information on our website, you are <strong>automatically subscribed</strong> to our communications including:
-                    </p>
-                    <ul style="margin-top: 15px;">
-                        <li>Email newsletters and program updates</li>
-                        <li>Volunteer opportunity notifications</li>
-                        <li>Event announcements and invitations</li>
-                        <li>Impact reports and success stories</li>
-                        <li>SMS/WhatsApp messages (if phone number provided)</li>
-                        <li>Fundraising campaigns and appeals</li>
-                    </ul>
-                    <p style="margin-top: 20px;">
-                        <strong>You may unsubscribe at any time</strong> by clicking the unsubscribe link in emails, replying STOP to SMS messages, or contacting us directly at <a href="mailto:info@drnf.org" style="color: #2c5530; text-decoration: underline;">info@drnf.org</a>.
-                    </p>
-                </div>
+        <!-- Heritage Section -->
+        <li class="mobile-dropdown">
+            <button class="mobile-dropdown-toggle">
+                <span>Heritage</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="mobile-dropdown-content">
+                <a href="book.html">
+                    <i class="fas fa-book"></i>
+                    <span>Heritage Book</span>
+                </a>
+                <a href="book/story.html">
+                    <i class="fas fa-film"></i>
+                    <span>Interactive Story</span>
+                </a>
+                <a href="book/explore.html">
+                    <i class="fas fa-book-open"></i>
+                    <span>Explore the Book</span>
+                </a>
+                <a href="partition-story-complete.html">
+                    <i class="fas fa-history"></i>
+                    <span>Partition Story</span>
+                </a>
             </div>
+        </li>
 
-            <!-- Section 3 -->
-            <div class="privacy-section" data-aos="fade-up">
-                <h2>3. Information We Collect</h2>
-                <p><strong>3.1 Information You Provide Directly:</strong></p>
-                <ul>
-                    <li><strong>Contact Forms:</strong> Name, email address, phone number, message content</li>
-                    <li><strong>Volunteer Registration:</strong> Name, contact details, interests, availability</li>
-                    <li><strong>Donation Information:</strong> Name, contact details, donation amount (payment processed by third-party gateways)</li>
-                    <li><strong>Newsletter Signup:</strong> Email address, name (optional)</li>
-                    <li><strong>Event Registration:</strong> Name, contact details, dietary preferences, emergency contact</li>
-                </ul>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
 
-                <p style="margin-top: 25px;"><strong>3.2 Information Collected Automatically:</strong></p>
-                <ul>
-                    <li><strong>Technical Data:</strong> IP address, browser type, device type, operating system</li>
-                    <li><strong>Usage Data:</strong> Pages visited, time on site, referral source, click patterns</li>
-                    <li><strong>Cookies:</strong> Session cookies for website functionality (see Cookie Policy below)</li>
-                </ul>
+    <a href="contact.html" class="mobile-menu-cta">Get in Touch</a>
+</div>
 
-                <p style="margin-top: 25px;"><strong>3.3 Information from Third Parties:</strong></p>
-                <ul>
-                    <li>Social media profile information (if you interact with us on Facebook, LinkedIn)</li>
-                    <li>Partner organization referrals (LooCafe, Ixora Group, Abhi Sai Datta Trust)</li>
-                </ul>
-            </div>
 
-            <!-- Section 4 -->
-            <div class="privacy-section" data-aos="fade-up">
-                <h2>4. How We Use Your Information</h2>
-                <p>We use your personal information for the following purposes:</p>
-                <ul>
-                    <li><strong>Communication:</strong> Respond to inquiries, send updates, newsletters, and event invitations</li>
-                    <li><strong>Volunteer Management:</strong> Coordinate volunteer activities, send opportunities, track participation</li>
-                    <li><strong>Donation Processing:</strong> Process donations, issue receipts, send thank-you messages</li>
-                    <li><strong>Program Delivery:</strong> Organize events, workshops, and community programs</li>
-                    <li><strong>Impact Reporting:</strong> Share success stories, impact metrics, and organizational updates</li>
-                    <li><strong>Fundraising:</strong> Send fundraising appeals and campaign updates</li>
-                    <li><strong>Website Improvement:</strong> Analyze usage patterns to enhance user experience</li>
-                    <li><strong>Compliance:</strong> Meet legal and regulatory requirements</li>
-                </ul>
-            </div>
-
-            <!-- Section 5 -->
-            <div class="privacy-section" data-aos="fade-up">
                 <h2>5. Information Sharing and Disclosure</h2>
                 <p>We may share your information with:</p>
                 <ul>

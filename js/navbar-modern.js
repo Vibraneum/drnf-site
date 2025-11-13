@@ -44,11 +44,6 @@ class ModernNavbar {
         // Mobile dropdown toggles
         this.initMobileDropdowns();
 
-        // Scroll progress bar
-        this.createScrollProgress();
-        this.updateScrollProgress();
-        window.addEventListener('scroll', () => this.updateScrollProgress());
-
         // Set active link based on current page
         this.setActiveLink();
     }
@@ -65,21 +60,6 @@ class ModernNavbar {
         this.mobileMenu.classList.toggle('active');
         this.mobileToggle.classList.toggle('active');
         this.body.classList.toggle('mobile-menu-open');
-    }
-
-    createScrollProgress() {
-        const progressBar = document.createElement('div');
-        progressBar.className = 'scroll-progress';
-        document.body.appendChild(progressBar);
-        this.progressBar = progressBar;
-    }
-
-    updateScrollProgress() {
-        if (!this.progressBar) return;
-
-        const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (window.pageYOffset / windowHeight) * 100;
-        this.progressBar.style.width = `${scrolled}%`;
     }
 
     setActiveLink() {
