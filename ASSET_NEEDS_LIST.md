@@ -449,12 +449,33 @@ When replacing with real photo:
 
 ---
 
-**Status**: Asset list complete - Ready for implementation
-**Next**: Begin creating pages with placeholders
+## 🔗 NEW: Comprehensive Image Sourcing Guide Available
+
+**See IMAGE_SOURCING_GUIDE.md** for detailed instructions on:
+- Specific sections to check on loocafe.com
+- Specific sections to check on ixoragroup.com
+- News article sources with photos
+- Stock photo backup options
+- Download & optimization workflow
+- HTML integration examples
+- Attribution & licensing guidelines
+- Complete 24-image checklist
+
+**Quick Start**:
+```bash
+./download_partner_images.sh
+# Follow the interactive instructions
+```
+
+---
+
+**Status**: Asset list complete - Ready for implementation with sourcing guide
+**Next**: Download images from partner websites (see IMAGE_SOURCING_GUIDE.md)
 **Update frequency**: As real images become available
 
 ---
 
 **Created**: November 7, 2025
+**Updated**: November 13, 2025 (Added sourcing guide)
 **Total Assets**: 24 images + icons + patterns
-**Placeholder Strategy**: Stock photos → Real photos over time
+**Placeholder Strategy**: Partner website images → Real DRNF photos over time
