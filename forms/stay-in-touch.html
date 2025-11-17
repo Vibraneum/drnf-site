@@ -10,7 +10,10 @@
     <style>
         .form-page {
             min-height: 100vh;
-            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            background:
+                radial-gradient(ellipse at 40% 20%, rgba(44, 85, 48, 0.1) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 90%, rgba(61, 117, 69, 0.08) 0%, transparent 50%),
+                linear-gradient(135deg, #f7faf7 0%, #ffffff 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -19,11 +22,12 @@
 
         .form-container {
             background: white;
-            border-radius: 20px;
+            border-radius: var(--border-radius-xl);
             padding: 3rem;
             max-width: 450px;
             width: 100%;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            box-shadow: var(--shadow-2xl);
+            border: 1px solid rgba(44, 85, 48, 0.1);
         }
 
         .form-header {
@@ -34,7 +38,7 @@
         .form-header .icon {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            background: var(--gradient-primary);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -42,6 +46,7 @@
             margin: 0 auto 1.5rem;
             font-size: 2.5rem;
             color: white;
+            box-shadow: var(--shadow-green);
         }
 
         .form-header h1 {
@@ -83,25 +88,27 @@
 
         .form-group input:focus {
             outline: none;
-            border-color: #fa709a;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(44, 85, 48, 0.1);
         }
 
         .submit-btn {
             width: 100%;
             padding: 1.1rem 2rem;
-            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            background: var(--gradient-primary);
             color: white;
             border: none;
-            border-radius: 8px;
+            border-radius: var(--border-radius);
             font-size: 1.1rem;
-            font-weight: 600;
+            font-weight: 700;
             cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: all var(--transition-smooth);
+            box-shadow: var(--shadow-green);
         }
 
         .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(250, 112, 154, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 28px rgba(44, 85, 48, 0.3);
         }
 
         .submit-btn:disabled {

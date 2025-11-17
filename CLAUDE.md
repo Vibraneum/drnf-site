@@ -65,7 +65,7 @@ This is a **static website** deployed to **GitHub Pages** at **drnf.org**.
 - **Vanilla JavaScript**: No framework dependencies, DOM manipulation only
 - **Animation Library**: AOS (Animate On Scroll) v2.3.1
 - **Icons**: Font Awesome 6.4.0
-- **Fonts**: Google Fonts (Inter for body text, Playfair Display for headings)
+- **Fonts**: Google Fonts (Manrope for body text, Playfair Display for headings)
 
 ### Project Structure
 ```
@@ -200,24 +200,421 @@ Since this is a static site, testing primarily involves:
 
 ## Design System
 
+**Last Updated**: November 17, 2025
+**Major Redesign**: Issues #2 and #3 - Enhanced visual identity with atmospheric depth
+
+### Design Philosophy
+
+The DRNF design system emphasizes **warmth, approachability, and depth** through:
+- **Atmospheric backgrounds** with subtle radial gradients for visual interest
+- **Bold accent colors** (teal, terracotta) for emotional storytelling
+- **Multi-layered shadows** for depth and hierarchy
+- **Rich color palette** with 7-tone green scale for versatility
+- **Modern typography** (Manrope + Playfair Display) for professional readability
+
 ### Color Palette
+
+#### Primary Colors (7-Tone Green Scale)
+The foundation of DRNF's brand identity, providing versatility for all design needs:
+
 ```css
---primary-color: #2c5530;      /* Forest Green */
---secondary-color: #8b4513;     /* Saddle Brown */
---accent-color: #f39c12;        /* Orange */
---text-primary: #2c3e50;        /* Dark Slate Gray */
---text-secondary: #7f8c8d;      /* Gray */
+--primary-color: #2c5530;        /* Forest Green - main brand color */
+--primary-50: #e8f0ea;           /* Lightest green tint - subtle backgrounds */
+--primary-100: #c4dbc9;          /* Very light green - soft accents */
+--primary-300: #78a67e;          /* Medium light green - borders, dividers */
+--primary-light: #3d7545;        /* Lighter green - hover states */
+--primary-dark: #1a3320;         /* Darker green - depth, shadows */
+--primary-900: #0f1d13;          /* Deepest green shade - high contrast text */
 ```
 
-### Typography
-- **Headings**: Playfair Display (serif) - elegant, traditional feel
-- **Body Text**: Inter (sans-serif) - modern, readable
-- **Responsive Sizing**: Uses CSS clamp() for fluid typography
+**Usage Guide**:
+- `--primary-color`: Primary buttons, links, brand elements
+- `--primary-50` to `--primary-300`: Backgrounds, cards, subtle highlights
+- `--primary-light`: Hover states, interactive elements
+- `--primary-dark` & `--primary-900`: Text on light backgrounds, footer, depth
+
+#### Secondary Colors
+```css
+--secondary-color: #8b4513;      /* Saddle Brown - complementary to green */
+--secondary-light: #a0522d;      /* Lighter brown - warm accents */
+--secondary-dark: #6b3410;       /* Darker brown - depth */
+```
+
+**Usage**: Gradients, dual-tone designs, warm sections
+
+#### Accent Colors - The Bold Palette
+New accent colors added for emotional storytelling and visual variety:
+
+```css
+--accent-color: #f39c12;         /* Warm Orange - primary CTA color */
+--accent-hover: #e67e22;         /* Darker orange - hover states */
+--accent-teal: #0d7377;          /* Deep Teal - modern/innovative content */
+--accent-teal-light: #14919b;    /* Lighter teal - gradients */
+--accent-terracotta: #c1666b;    /* Warm Terracotta - emotional/personal stories */
+--accent-terracotta-light: #d48a8e; /* Lighter terracotta - gradients */
+```
+
+**Color Strategy**:
+- **Teal** (`--accent-teal`): Use for modern, innovative, or technology-related content
+- **Terracotta** (`--accent-terracotta`): Use for emotional stories, personal narratives, community impact
+- **Orange** (`--accent-color`): Primary CTA buttons, urgent actions
+- **Warm tones**: Community-focused sections, partnership highlights
+- **Green tints**: Brand-aligned sections, environmental initiatives
+
+#### Text Colors
+```css
+--text-primary: #1a202c;         /* Almost black - maximum readability */
+--text-secondary: #4a5568;       /* Medium gray - secondary text */
+--text-light: #718096;           /* Light gray - subtle text, captions */
+```
+
+#### Background Colors
+```css
+--background-light: #f7fafc;     /* Very light gray - page background */
+--background-white: #ffffff;     /* Pure white - cards, sections */
+--background-dark: #2d3748;      /* Dark gray - dark sections, footer */
+--border-light: #e2e8f0;         /* Light border color */
+```
+
+#### Utility Colors
+```css
+--success-color: #38a169;        /* Green - success states */
+--info-color: #3182ce;           /* Blue - informational content */
+--warning-color: #dd6b20;        /* Orange - warnings */
+```
+
+### Gradient System
+
+#### Core Gradients
+```css
+--gradient-primary: linear-gradient(135deg, #2c5530 0%, #3d7545 100%);
+--gradient-secondary: linear-gradient(135deg, #8b4513 0%, #a0522d 100%);
+--gradient-accent: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+--gradient-teal: linear-gradient(135deg, #0d7377 0%, #14919b 100%);
+--gradient-terracotta: linear-gradient(135deg, #c1666b 0%, #d48a8e 100%);
+```
+
+#### Special Gradients
+```css
+/* Hero Section - Multi-layered atmospheric gradient */
+--gradient-hero:
+    radial-gradient(ellipse at 80% 20%, rgba(232, 240, 234, 0.6) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 80%, rgba(196, 219, 201, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 60% 60%, rgba(255, 255, 255, 0.8) 0%, transparent 60%),
+    linear-gradient(135deg, #e8f0ea 0%, #ffffff 40%, #c4dbc9 100%);
+
+/* Card Backgrounds - Subtle depth */
+--gradient-card: linear-gradient(145deg, #ffffff 0%, #f7fafc 100%);
+
+/* Dark Overlays - For images with text */
+--gradient-overlay: linear-gradient(135deg, rgba(44,85,48,0.95) 0%, rgba(61,117,69,0.9) 100%);
+```
+
+**Gradient Usage**:
+- `--gradient-primary`: Primary buttons, CTAs, brand elements
+- `--gradient-teal`/`--gradient-terracotta`: Story-specific CTAs and highlights
+- `--gradient-hero`: Hero sections only (distinctive DRNF look)
+- `--gradient-card`: Elevated card backgrounds
+
+### Shadow System
+
+Six levels of shadows for depth and hierarchy:
+
+```css
+--shadow-xs: 0 1px 2px rgba(0,0,0,0.05);           /* Minimal - subtle borders */
+--shadow-sm: 0 2px 4px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.03);  /* Small cards */
+--shadow-md: 0 4px 8px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);  /* Standard cards */
+--shadow-lg: 0 8px 16px rgba(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.06);  /* Elevated cards */
+--shadow-xl: 0 12px 24px rgba(0,0,0,0.12), 0 6px 12px rgba(0,0,0,0.08); /* Floating elements */
+--shadow-2xl: 0 20px 40px rgba(0,0,0,0.15), 0 10px 20px rgba(0,0,0,0.1); /* Modals, popups */
+--shadow-inner: inset 0 2px 4px rgba(0,0,0,0.06); /* Inset shadows */
+--shadow-green: 0 4px 20px rgba(44,85,48,0.15);   /* Green-tinted shadow for brand elements */
+```
+
+**Shadow Selection Guide**:
+- **xs/sm**: Subtle separation, minimal depth
+- **md**: Standard cards, most components
+- **lg/xl**: Prominent cards, hover states
+- **2xl**: Modals, popups, critical UI
+- **green**: Buttons, CTAs, brand-colored elements
+
+### Typography System
+
+#### Font Families
+```css
+--font-primary: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+--font-heading: 'Playfair Display', Georgia, serif;
+```
+
+**Font Strategy**:
+- **Manrope**: Modern, clean sans-serif for body text (replaces Inter)
+  - Professional and highly readable
+  - Excellent at all sizes
+  - Friendly yet authoritative tone
+- **Playfair Display**: Elegant serif for headings
+  - Timeless, dignified aesthetic
+  - Perfect for storytelling and heritage content
+  - Creates strong visual hierarchy
+
+#### Font Size Scale
+```css
+--font-size-xs: 0.75rem;      /* 12px - labels, captions */
+--font-size-sm: 0.875rem;     /* 14px - small text */
+--font-size-base: 1rem;       /* 16px - body text (increased from 14px) */
+--font-size-lg: 1.125rem;     /* 18px - large body text */
+--font-size-xl: 1.25rem;      /* 20px - subheadings */
+--font-size-2xl: 1.5rem;      /* 24px - small headings */
+--font-size-3xl: 1.875rem;    /* 30px - medium headings */
+--font-size-4xl: 2.25rem;     /* 36px - large headings */
+--font-size-5xl: 3rem;        /* 48px - hero headings */
+--font-size-6xl: 3.75rem;     /* 60px - extra large hero */
+```
+
+**Typography Guidelines**:
+- **Base size**: 16px (increased for better readability)
+- **Line height**: 1.7 for body text (improved readability)
+- **Headings**: Use Playfair Display with appropriate hierarchy
+- **Body**: Manrope at 16px base for optimal reading experience
+
+### Atmospheric Backgrounds
+
+Replace generic solid backgrounds with atmospheric depth:
+
+#### Light Atmospheric (Brand-Aligned)
+```css
+.section-atmospheric-light {
+    background:
+        radial-gradient(ellipse at 20% 20%, rgba(232, 240, 234, 0.4) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(196, 219, 201, 0.3) 0%, transparent 50%),
+        linear-gradient(135deg, #ffffff 0%, #f7fafc 50%, #e8f0ea 100%);
+}
+```
+**Use for**: General content sections, about pages, standard content
+
+#### Warm Atmospheric (Community)
+```css
+.section-atmospheric-warm {
+    background:
+        radial-gradient(ellipse at 30% 40%, rgba(243, 156, 18, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 70% 70%, rgba(139, 69, 19, 0.06) 0%, transparent 50%),
+        linear-gradient(135deg, #ffffff 0%, #fff5f0 100%);
+}
+```
+**Use for**: Community programs, chai counter sections, warm stories
+
+#### Teal Atmospheric (Innovation)
+```css
+.section-atmospheric-teal {
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(13, 115, 119, 0.1) 0%, transparent 60%),
+        radial-gradient(ellipse at 0% 100%, rgba(20, 145, 155, 0.08) 0%, transparent 50%),
+        linear-gradient(135deg, #f0f9fa 0%, #ffffff 100%);
+}
+```
+**Use for**: Modern initiatives, partnerships, innovation stories
+
+#### Terracotta Atmospheric (Emotional)
+```css
+.section-atmospheric-terracotta {
+    background:
+        radial-gradient(ellipse at 60% 30%, rgba(193, 102, 107, 0.12) 0%, transparent 60%),
+        radial-gradient(ellipse at 20% 80%, rgba(212, 138, 142, 0.08) 0%, transparent 50%),
+        linear-gradient(135deg, #fff8f8 0%, #ffffff 100%);
+}
+```
+**Use for**: Personal stories, emotional narratives, testimonials
+
+#### Green Atmospheric (Environmental)
+```css
+.section-atmospheric-green {
+    background:
+        radial-gradient(ellipse at 40% 20%, rgba(44, 85, 48, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 90%, rgba(61, 117, 69, 0.06) 0%, transparent 50%),
+        linear-gradient(135deg, #f7faf7 0%, #ffffff 100%);
+}
+```
+**Use for**: Environmental initiatives, tree plantation, sustainability content
+
+### Component Utilities
+
+#### Card System
+```css
+/* Elevated Card - Standard depth */
+.card-elevated {
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-md);
+    border-radius: var(--border-radius-lg);  /* 16px */
+    transition: all var(--transition-smooth);
+    border: 1px solid var(--border-light);
+}
+
+.card-elevated:hover {
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-4px);
+}
+
+/* Floating Card - Premium depth */
+.card-float {
+    background: white;
+    box-shadow: var(--shadow-lg), 0 0 0 1px rgba(44, 85, 48, 0.05);
+    border-radius: var(--border-radius-xl);  /* 24px */
+    transition: all var(--transition-smooth);
+}
+
+.card-float:hover {
+    box-shadow: var(--shadow-2xl), 0 0 0 1px rgba(44, 85, 48, 0.08);
+    transform: translateY(-6px) scale(1.01);
+}
+```
+
+**When to use**:
+- **card-elevated**: Standard content cards, service boxes, info sections
+- **card-float**: Premium features, highlighted content, hero cards
+
+#### Button Variants
+
+```css
+/* Primary Button - Brand green */
+.btn-primary {
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: var(--shadow-green);
+}
+
+/* Teal Button - Innovation/Modern */
+.btn-teal {
+    background: var(--gradient-teal);
+    color: white;
+    box-shadow: 0 4px 20px rgba(13, 115, 119, 0.25);
+}
+
+/* Terracotta Button - Emotional/Personal */
+.btn-terracotta {
+    background: var(--gradient-terracotta);
+    color: white;
+    box-shadow: 0 4px 20px rgba(193, 102, 107, 0.25);
+}
+```
+
+**Button Selection**:
+- **btn-primary**: Default CTAs, standard actions
+- **btn-teal**: Modern content, partnerships, innovation CTAs
+- **btn-terracotta**: Emotional CTAs, personal story actions, testimonials
+- **btn-secondary**: Alternative actions, less emphasis
+
+#### Text Gradients
+
+```css
+/* Teal gradient text */
+.text-gradient-teal {
+    background: var(--gradient-teal);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+/* Primary gradient text */
+.text-gradient-primary {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+/* Terracotta gradient text */
+.text-gradient-terracotta {
+    background: var(--gradient-terracotta);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+```
+
+**Best Practices**:
+- Use for emphasis on key phrases or numbers
+- Always set `font-weight: 700` for visibility
+- Don't overuse - one or two per section maximum
+- Ensure sufficient contrast against background
+
+#### Accent Border Utilities
+
+```css
+.accent-border-teal { border-left: 4px solid var(--accent-teal); }
+.accent-border-terracotta { border-left: 4px solid var(--accent-terracotta); }
+.accent-border-green { border-left: 4px solid var(--primary-color); }
+```
+
+**Use for**: Callouts, quotes, highlighted sections
+
+#### Stat Highlights
+
+```css
+/* Teal stat highlight */
+.stat-highlight {
+    padding: 0.25rem 0.75rem;
+    background: linear-gradient(135deg, rgba(13, 115, 119, 0.1) 0%, rgba(20, 145, 155, 0.05) 100%);
+    border-radius: 8px;
+    font-weight: 700;
+    color: var(--accent-teal);
+    border: 2px solid rgba(13, 115, 119, 0.15);
+}
+
+/* Terracotta stat highlight */
+.stat-highlight-terracotta {
+    padding: 0.25rem 0.75rem;
+    background: linear-gradient(135deg, rgba(193, 102, 107, 0.1) 0%, rgba(212, 138, 142, 0.05) 100%);
+    border-radius: 8px;
+    font-weight: 700;
+    color: var(--accent-terracotta);
+    border: 2px solid rgba(193, 102, 107, 0.15);
+}
+```
+
+**Use for**: Inline statistics, key numbers, impact metrics
+
+### Spacing & Layout
+
+```css
+--section-padding: clamp(4rem, 10vw, 8rem) 0;  /* Vertical section spacing */
+--container-padding: 0 clamp(1.5rem, 5vw, 3rem); /* Horizontal container padding */
+--card-gap: 2rem;                               /* Standard gap between cards */
+--border-radius: 12px;                          /* Standard border radius */
+--border-radius-lg: 16px;                       /* Large border radius */
+--border-radius-xl: 24px;                       /* Extra large border radius */
+```
+
+### Transitions
+
+```css
+--transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);    /* Quick interactions */
+--transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);   /* Standard animations */
+--transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);     /* Dramatic effects */
+```
 
 ### Responsive Breakpoints
 - **Mobile**: 320px - 767px
 - **Tablet**: 768px - 1199px
 - **Desktop**: 1200px+
+
+### Design System Maintenance
+
+**When adding new components**:
+1. Use existing CSS variables - don't create new colors
+2. Choose appropriate atmospheric background from the 5 variants
+3. Select button variant based on content emotion/context
+4. Use shadow scale appropriately for hierarchy
+5. Maintain font system - don't introduce new sizes
+
+**Consistency checklist**:
+- ✅ Uses design system color variables
+- ✅ Applies appropriate shadow level
+- ✅ Uses atmospheric background (not solid colors)
+- ✅ Follows typography scale
+- ✅ Includes smooth transitions
+- ✅ Responsive across all breakpoints
 
 ## JavaScript Features (js/main.js)
 
@@ -242,7 +639,69 @@ The main.js file provides:
 
 ## Recent Changes & Updates
 
-### November 2025 - Website Refocus
+### November 17, 2025 - Design System Overhaul (Issues #2 & #3)
+**Major Update**: Complete redesign with enhanced visual identity, atmospheric backgrounds, and bold accent colors.
+
+#### Issue #2: Typography & Color Enhancements
+1. **Typography Update**
+   - Replaced Inter with **Manrope** for body text (more professional, highly readable)
+   - Maintained Playfair Display for headings (elegant, storytelling focus)
+   - Increased base font size from 14px to 16px for better readability
+   - Improved line height to 1.7 for enhanced reading experience
+
+2. **Rich Color Palette Expansion**
+   - Added **7-tone green scale** (primary-50 through primary-900)
+   - Introduced **bold accent colors**: Teal (#0d7377) and Terracotta (#c1666b)
+   - Created **strategic color usage guide**:
+     - Teal for modern/innovative content
+     - Terracotta for emotional/personal stories
+     - Warm tones for community sections
+     - Green tints for brand-aligned content
+
+3. **Multi-Layered Gradient System**
+   - Enhanced hero gradient with multi-layer atmospheric effect
+   - Added teal and terracotta gradient variants
+   - Created 5 core gradients for different use cases
+
+4. **Enhanced Shadow System**
+   - Expanded to 6 shadow levels (xs, sm, md, lg, xl, 2xl)
+   - Added green-tinted shadow for brand elements
+   - Created clear hierarchy for depth and elevation
+
+#### Issue #3: Atmospheric Backgrounds & Components
+1. **Atmospheric Section Backgrounds**
+   - Created 5 atmospheric background variants replacing flat colors:
+     - `section-atmospheric-light` - Brand-aligned (general content)
+     - `section-atmospheric-warm` - Community programs
+     - `section-atmospheric-teal` - Innovation/partnerships
+     - `section-atmospheric-terracotta` - Emotional stories
+     - `section-atmospheric-green` - Environmental initiatives
+   - Each uses multi-layered radial gradients for depth
+
+2. **Enhanced Component Utilities**
+   - **Card System**: `.card-elevated` and `.card-float` with hover effects
+   - **Button Variants**: `.btn-teal`, `.btn-terracotta` for story-specific CTAs
+   - **Text Gradients**: `.text-gradient-teal`, `.text-gradient-terracotta`, `.text-gradient-primary`
+   - **Stat Highlights**: `.stat-highlight` and `.stat-highlight-terracotta` for metrics
+   - **Accent Borders**: Color-coded left borders for callouts
+
+3. **Design Philosophy Shift**
+   - From generic web design to distinctive DRNF identity
+   - Emphasis on warmth, approachability, and atmospheric depth
+   - Strategic use of color for emotional storytelling
+   - Professional polish with accessible, modern aesthetics
+
+#### Background Agent Enhancements
+- Improved spacing with clamp() for fluid responsive design
+- Enhanced transition system (fast/smooth/slow variants)
+- Better component organization in CSS
+- Comprehensive design system documentation
+
+**Impact**: The design overhaul transforms DRNF from a basic static site to a professionally polished, emotionally engaging platform that better represents the foundation's warmth and community focus.
+
+---
+
+### November 13, 2025 - Website Refocus
 **Major Update**: Transformed site from volunteer-focused to information-focused showcase.
 
 #### Key Changes:
@@ -399,7 +858,7 @@ For technical issues or enhancement requests regarding this website, contact:
 
 ---
 
-**Document Version**: 1.1
-**Last Updated**: November 13, 2025
+**Document Version**: 1.2
+**Last Updated**: November 17, 2025
 **Created By**: Claude Code (AI Assistant)
-**Status**: Complete documentation for information-focused showcase website
+**Status**: Complete documentation with comprehensive design system (Issues #2 & #3 resolved)

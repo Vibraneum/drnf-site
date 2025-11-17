@@ -10,7 +10,10 @@
     <style>
         .form-page {
             min-height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background:
+                radial-gradient(ellipse at 60% 30%, rgba(193, 102, 107, 0.15) 0%, transparent 60%),
+                radial-gradient(ellipse at 20% 80%, rgba(212, 138, 142, 0.12) 0%, transparent 50%),
+                linear-gradient(135deg, #fff8f8 0%, #ffffff 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -19,11 +22,12 @@
 
         .form-container {
             background: white;
-            border-radius: 20px;
+            border-radius: var(--border-radius-xl);
             padding: 3rem;
             max-width: 600px;
             width: 100%;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            box-shadow: var(--shadow-2xl);
+            border: 1px solid rgba(193, 102, 107, 0.1);
         }
 
         .form-header {
@@ -102,19 +106,20 @@
         .submit-btn {
             width: 100%;
             padding: 1rem 2rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: var(--gradient-terracotta);
             color: white;
             border: none;
-            border-radius: 8px;
+            border-radius: var(--border-radius);
             font-size: 1.1rem;
-            font-weight: 600;
+            font-weight: 700;
             cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: all var(--transition-smooth);
+            box-shadow: var(--shadow-md);
         }
 
         .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
         }
 
         .submit-btn:disabled {

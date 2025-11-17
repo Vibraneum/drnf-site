@@ -1199,19 +1199,19 @@ img {
 }
 
 .stat-card {
-    background: white;
+    background: var(--gradient-card);
     padding: 2.5rem;
     border-radius: var(--border-radius-lg);
     text-align: center;
     transition: var(--transition-smooth);
-    box-shadow: var(--shadow-sm);
+    box-shadow: var(--shadow-md);
     border: 1px solid var(--border-light);
 }
 
 .stat-card:hover {
     transform: translateY(-8px);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--accent-color);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--accent-teal);
 }
 
 .stat-card .stat-icon {
@@ -4904,5 +4904,283 @@ body.mobile-menu-open {
 
     .share-btn span {
         display: none;
+    }
+}
+/* ========================================
+   ATMOSPHERIC ENHANCEMENTS - Issue #3
+   Enhanced Design System Implementation
+   ======================================== */
+
+/* Atmospheric Section Backgrounds - Replace Generic Gradients */
+.section-atmospheric-light {
+    background:
+        radial-gradient(ellipse at 20% 20%, rgba(232, 240, 234, 0.4) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(196, 219, 201, 0.3) 0%, transparent 50%),
+        linear-gradient(135deg, #ffffff 0%, #f7fafc 50%, #e8f0ea 100%);
+    position: relative;
+}
+
+.section-atmospheric-warm {
+    background:
+        radial-gradient(ellipse at 30% 40%, rgba(243, 156, 18, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 70% 70%, rgba(139, 69, 19, 0.06) 0%, transparent 50%),
+        linear-gradient(135deg, #ffffff 0%, #fff5f0 100%);
+    position: relative;
+}
+
+.section-atmospheric-teal {
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(13, 115, 119, 0.1) 0%, transparent 60%),
+        radial-gradient(ellipse at 0% 100%, rgba(20, 145, 155, 0.08) 0%, transparent 50%),
+        linear-gradient(135deg, #f0f9fa 0%, #ffffff 100%);
+    position: relative;
+}
+
+.section-atmospheric-terracotta {
+    background:
+        radial-gradient(ellipse at 60% 30%, rgba(193, 102, 107, 0.12) 0%, transparent 60%),
+        radial-gradient(ellipse at 20% 80%, rgba(212, 138, 142, 0.08) 0%, transparent 50%),
+        linear-gradient(135deg, #fff8f8 0%, #ffffff 100%);
+    position: relative;
+}
+
+.section-atmospheric-green {
+    background:
+        radial-gradient(ellipse at 40% 20%, rgba(44, 85, 48, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 90%, rgba(61, 117, 69, 0.06) 0%, transparent 50%),
+        linear-gradient(135deg, #f7faf7 0%, #ffffff 100%);
+    position: relative;
+}
+
+/* Enhanced Card Depth System */
+.card-elevated {
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-md);
+    border-radius: var(--border-radius-lg);
+    transition: all var(--transition-smooth);
+    border: 1px solid var(--border-light);
+}
+
+.card-elevated:hover {
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-4px);
+}
+
+.card-float {
+    background: white;
+    box-shadow:
+        var(--shadow-lg),
+        0 0 0 1px rgba(44, 85, 48, 0.05);
+    border-radius: var(--border-radius-xl);
+    transition: all var(--transition-smooth);
+}
+
+.card-float:hover {
+    box-shadow:
+        var(--shadow-2xl),
+        0 0 0 1px rgba(44, 85, 48, 0.08);
+    transform: translateY(-6px) scale(1.01);
+}
+
+/* Accent Color Utilities */
+.accent-teal {
+    background: var(--gradient-teal);
+    color: white;
+}
+
+.accent-terracotta {
+    background: var(--gradient-terracotta);
+    color: white;
+}
+
+.accent-border-teal {
+    border-left: 4px solid var(--accent-teal);
+}
+
+.accent-border-terracotta {
+    border-left: 4px solid var(--accent-terracotta);
+}
+
+.accent-border-green {
+    border-left: 4px solid var(--primary-color);
+}
+
+/* Text Gradient Utilities */
+.text-gradient-teal {
+    background: var(--gradient-teal);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.text-gradient-primary {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.text-gradient-terracotta {
+    background: var(--gradient-terracotta);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+/* Enhanced Section Headers */
+.section-header-enhanced {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.section-header-enhanced::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--gradient-accent);
+    margin: 1.5rem auto 0;
+    border-radius: 2px;
+}
+
+.section-header-enhanced h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.section-header-enhanced p {
+    font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Decorative Elements */
+.section-pattern-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.03;
+    background-image:
+        repeating-linear-gradient(45deg, transparent, transparent 35px, var(--primary-color) 35px, var(--primary-color) 36px),
+        repeating-linear-gradient(-45deg, transparent, transparent 35px, var(--primary-color) 35px, var(--primary-color) 36px);
+    pointer-events: none;
+}
+
+/* Improved Stats/Metrics Display */
+.stat-highlight {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: linear-gradient(135deg, rgba(13, 115, 119, 0.1) 0%, rgba(20, 145, 155, 0.05) 100%);
+    border-radius: 8px;
+    font-weight: 700;
+    color: var(--accent-teal);
+    font-size: 1.1em;
+    border: 2px solid rgba(13, 115, 119, 0.15);
+}
+
+.stat-highlight-terracotta {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: linear-gradient(135deg, rgba(193, 102, 107, 0.1) 0%, rgba(212, 138, 142, 0.05) 100%);
+    border-radius: 8px;
+    font-weight: 700;
+    color: var(--accent-terracotta);
+    font-size: 1.1em;
+    border: 2px solid rgba(193, 102, 107, 0.15);
+}
+
+/* CTA Section Enhancements */
+.cta-section-teal {
+    background:
+        radial-gradient(ellipse at 50% 50%, var(--accent-teal) 0%, var(--accent-teal-light) 100%);
+    color: white;
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section-teal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,165.3C384,171,480,149,576,133.3C672,117,768,107,864,122.7C960,139,1056,181,1152,181.3C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom center;
+    background-size: cover;
+    opacity: 0.2;
+}
+
+.cta-section-terracotta {
+    background:
+        radial-gradient(ellipse at 30% 50%, var(--accent-terracotta) 0%, var(--accent-terracotta-light) 100%);
+    color: white;
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section-terracotta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,165.3C384,171,480,149,576,133.3C672,117,768,107,864,122.7C960,139,1056,181,1152,181.3C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom center;
+    background-size: cover;
+    opacity: 0.2;
+}
+
+/* Enhanced Button Variants with Bold Colors */
+.btn-teal {
+    background: var(--gradient-teal);
+    color: white;
+    box-shadow: 0 4px 20px rgba(13, 115, 119, 0.25);
+}
+
+.btn-teal:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow:
+        var(--shadow-xl),
+        0 0 0 3px rgba(13, 115, 119, 0.15);
+    color: white;
+}
+
+.btn-terracotta {
+    background: var(--gradient-terracotta);
+    color: white;
+    box-shadow: 0 4px 20px rgba(193, 102, 107, 0.25);
+}
+
+.btn-terracotta:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow:
+        var(--shadow-xl),
+        0 0 0 3px rgba(193, 102, 107, 0.15);
+    color: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .section-header-enhanced h2 {
+        font-size: 2rem;
+    }
+
+    .section-header-enhanced p {
+        font-size: 1.125rem;
+    }
+
+    .cta-section-teal,
+    .cta-section-terracotta {
+        padding: 3rem 0;
     }
 }

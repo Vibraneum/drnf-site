@@ -208,10 +208,15 @@
         }
 
         .volunteer-card-large {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            background:
+                radial-gradient(ellipse at 20% 20%, rgba(232, 240, 234, 0.4) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(196, 219, 201, 0.3) 0%, transparent 50%),
+                linear-gradient(135deg, #ffffff 0%, #f7fafc 50%, #e8f0ea 100%);
             padding: 3rem;
-            border-radius: 12px;
+            border-radius: 16px;
             text-align: center;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-light);
         }
 
         .volunteer-card-large h3 {

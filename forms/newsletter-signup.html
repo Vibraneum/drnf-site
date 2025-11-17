@@ -10,7 +10,10 @@
     <style>
         .form-page {
             min-height: 100vh;
-            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            background:
+                radial-gradient(ellipse at 50% 0%, rgba(13, 115, 119, 0.12) 0%, transparent 60%),
+                radial-gradient(ellipse at 0% 100%, rgba(20, 145, 155, 0.1) 0%, transparent 50%),
+                linear-gradient(135deg, #f0f9fa 0%, #ffffff 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -19,11 +22,20 @@
 
         .form-container {
             background: white;
-            border-radius: 20px;
+            border-radius: var(--border-radius-xl);
             padding: 3rem;
             max-width: 500px;
             width: 100%;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            box-shadow: var(--shadow-2xl), 0 0 0 1px rgba(13, 115, 119, 0.08);
+            transition: all var(--transition-smooth);
+        }
+
+        .form-container:hover {
+            box-shadow:
+                0 24px 48px rgba(0,0,0,0.18),
+                0 12px 24px rgba(0,0,0,0.12),
+                0 0 0 1px rgba(13, 115, 119, 0.12);
+            transform: translateY(-4px) scale(1.01);
         }
 
         .form-header {
@@ -70,7 +82,8 @@
 
         .form-group input:focus {
             outline: none;
-            border-color: #43e97b;
+            border-color: var(--accent-teal);
+            box-shadow: 0 0 0 3px rgba(13, 115, 119, 0.1);
         }
 
         .checkbox-group {
@@ -94,19 +107,20 @@
         .submit-btn {
             width: 100%;
             padding: 1rem 2rem;
-            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            background: var(--gradient-teal);
             color: white;
             border: none;
-            border-radius: 8px;
+            border-radius: var(--border-radius);
             font-size: 1.1rem;
-            font-weight: 600;
+            font-weight: 700;
             cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: all var(--transition-smooth);
+            box-shadow: 0 4px 20px rgba(13, 115, 119, 0.25);
         }
 
         .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(67, 233, 123, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 28px rgba(13, 115, 119, 0.35);
         }
 
         .submit-btn:disabled {
