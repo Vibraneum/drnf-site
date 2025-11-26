@@ -1,0 +1,154 @@
+{
+  "logos": [
+    {
+      "name": "DRNF_logo.jpg",
+      "publicId": "drnf-assets/logos/drnf-logo",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764069042/drnf-assets/logos/drnf-logo.jpg",
+      "description": "DRNF main logo"
+    }
+  ],
+  "founder": [
+    {
+      "name": "rabinder_nath_1.6.jpg",
+      "publicId": "drnf-assets/founder/rabinder-nath-portrait-1",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764069044/drnf-assets/founder/rabinder-nath-portrait-1.jpg",
+      "description": "Dr. Rabinder Nath portrait"
+    },
+    {
+      "name": "rabinder_nath2.1.jpg",
+      "publicId": "drnf-assets/founder/rabinder-nath-portrait-2",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764069045/drnf-assets/founder/rabinder-nath-portrait-2.jpg",
+      "description": "Dr. Rabinder Nath portrait alt"
+    },
+    {
+      "name": "rabinder_nath_5.1.jpg",
+      "publicId": "drnf-assets/founder/rabinder-nath-photo-5-1",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764069046/drnf-assets/founder/rabinder-nath-photo-5-1.jpg",
+      "description": "Dr. Rabinder Nath photo"
+    },
+    {
+      "name": "rabinder_nath_5.5.jpg",
+      "publicId": "drnf-assets/founder/rabinder-nath-photo-5-5",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764069047/drnf-assets/founder/rabinder-nath-photo-5-5.jpg",
+      "description": "Dr. Rabinder Nath photo alt"
+    },
+    {
+      "name": "rabinder_nath_drive.jpg",
+      "publicId": "drnf-assets/founder/rabinder-nath-drive",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764069049/drnf-assets/founder/rabinder-nath-drive.jpg",
+      "description": "Dr. Rabinder Nath historical photo"
+    }
+  ],
+  "community": [
+    {
+      "name": "Untitled.png",
+      "publicId": "drnf-assets/community/chai-service-main",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764069050/drnf-assets/community/chai-service-main.png",
+      "description": "Main chai service photo"
+    },
+    {
+      "name": "Untitled 1.png",
+      "publicId": "drnf-assets/community/chai-service-1",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764069053/drnf-assets/community/chai-service-1.png",
+      "description": "Chai service photo 1"
+    },
+    {
+      "name": "Untitled 2.png",
+      "publicId": "drnf-assets/community/chai-service-2",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764069054/drnf-assets/community/chai-service-2.png",
+      "description": "Chai service photo 2"
+    },
+    {
+      "name": "Untitled 3.png",
+      "publicId": "drnf-assets/community/chai-service-3",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764069055/drnf-assets/community/chai-service-3.png",
+      "description": "Chai service photo 3"
+    },
+    {
+      "name": "Untitled 4.png",
+      "publicId": "drnf-assets/community/chai-service-4",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764069056/drnf-assets/community/chai-service-4.png",
+      "description": "Chai service photo 4"
+    },
+    {
+      "name": "Untitled 5.png",
+      "publicId": "drnf-assets/community/chai-service-5",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764069058/drnf-assets/community/chai-service-5.png",
+      "description": "Chai service photo 5"
+    },
+    {
+      "name": "Untitled 6.png",
+      "publicId": "drnf-assets/community/chai-service-6",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764069059/drnf-assets/community/chai-service-6.png",
+      "description": "Chai service photo 6"
+    },
+    {
+      "name": "Untitled 7.png",
+      "publicId": "drnf-assets/community/chai-service-7",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764069060/drnf-assets/community/chai-service-7.png",
+      "description": "Chai service photo 7"
+    }
+  ],
+  "loocafe": [
+    {
+      "name": "loocafe_no_bg_collage.png",
+      "publicId": "drnf-assets/loocafe/collage-main",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764069061/drnf-assets/loocafe/collage-main.png",
+      "description": "LooCafe collage main"
+    },
+    {
+      "name": "LooCafe_Workstation.png",
+      "publicId": "drnf-assets/loocafe/workstation",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764069063/drnf-assets/loocafe/workstation.png",
+      "description": "LooCafe workstation"
+    },
+    {
+      "name": "hero-cover.png",
+      "publicId": "drnf-assets/loocafe/hero-cover",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764069064/drnf-assets/loocafe/hero-cover.png",
+      "description": "LooCafe hero image"
+    },
+    {
+      "name": "logo.png",
+      "publicId": "drnf-assets/loocafe/logo",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764069066/drnf-assets/loocafe/logo.png",
+      "description": "LooCafe logo"
+    },
+    {
+      "name": "exterior-view.png",
+      "publicId": "drnf-assets/loocafe/exterior-view",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764069067/drnf-assets/loocafe/exterior-view.png",
+      "description": "LooCafe exterior view"
+    },
+    {
+      "name": "mini-collage.png",
+      "publicId": "drnf-assets/loocafe/mini-collage",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764069069/drnf-assets/loocafe/mini-collage.png",
+      "description": "LooCafe Mini collage"
+    },
+    {
+      "name": "collage-2024.png",
+      "publicId": "drnf-assets/loocafe/collage-2024",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764069071/drnf-assets/loocafe/collage-2024.png",
+      "description": "LooCafe 2024 collage"
+    },
+    {
+      "name": "facility-photo-1.png",
+      "publicId": "drnf-assets/loocafe/facility-1",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764069072/drnf-assets/loocafe/facility-1.png",
+      "description": "LooCafe facility photo"
+    },
+    {
+      "name": "facility-collage-1.png",
+      "publicId": "drnf-assets/loocafe/facility-collage-1",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764069074/drnf-assets/loocafe/facility-collage-1.png",
+      "description": "LooCafe facility collage 1"
+    },
+    {
+      "name": "facility-collage-2.png",
+      "publicId": "drnf-assets/loocafe/facility-collage-2",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764069076/drnf-assets/loocafe/facility-collage-2.png",
+      "description": "LooCafe facility collage 2"
+    }
+  ]
+}

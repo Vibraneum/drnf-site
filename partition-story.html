@@ -3,99 +3,382 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Partition Story: From Lahore to Hyderabad | Heritage | DRNF</title>
-    <meta name="description" content="How Partition of 1947 scattered the Nath family, delayed 'The Beginning of Punjabi Nationalism' book by 28 years, and nearly erased a legacy of institutional building and social service.">
-    <meta name="keywords" content="Partition 1947, Rai Bahadur Mul Raj, family history, Punjab heritage, Lahore to Hyderabad, Indian independence">
-    <meta name="author" content="Dr. Rabinder Nath Foundation">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://drnf.org/partition-story.html">
-    <meta property="og:title" content="The Partition Story: From Lahore to Hyderabad">
-    <meta property="og:description" content="How Partition of 1947 scattered the Nath family and delayed the publication of 'The Beginning of Punjabi Nationalism' book.">
-    <meta property="og:image" content="https://res.cloudinary.com/dhupieu4x/image/upload/v1762599287/drnf-assets/drnf-assets/DRNF_logo.jpg">
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://drnf.org/partition-story.html">
+    <title>The Partition Story | Heritage | DRNF</title>
+    <meta name="description" content="How the Partition of 1947 scattered the Nath family from Lahore to Hyderabad, and how their legacy of service continues today.">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Source+Sans+Pro:wght@400;600;700&family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- AOS Animation -->
+    <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- Stylesheets -->
+    <!-- Site CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/navbar-modern.css">
 
-    <!-- Schema.org Structured Data - Article -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "The Partition Story: From Lahore to Hyderabad",
-      "description": "How Partition of 1947 scattered the Nath family, delayed 'The Beginning of Punjabi Nationalism' book by 28 years, and nearly erased a legacy of institutional building and social service.",
-      "image": "https://res.cloudinary.com/dhupieu4x/image/upload/v1762599287/drnf-assets/drnf-assets/DRNF_logo.jpg",
-      "datePublished": "2016-02-13",
-      "author": {
-        "@type": "Organization",
-        "name": "Dr. Rabinder Nath Foundation"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Dr. Rabinder Nath Foundation",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1762599287/drnf-assets/drnf-assets/DRNF_logo.jpg"
-        }
-      },
-      "url": "https://drnf.org/partition-story.html",
-      "articleBody": "A comprehensive account of how the 1947 Partition of India scattered the Nath family from Lahore, delayed the publication of Rai Bahadur Mul Raj's autobiography, and forced the family to rebuild their legacy in Hyderabad. This story documents the family's journey from Punjab's intellectual centers to the challenges of rebuilding in unfamiliar cities.",
-      "keywords": ["Partition 1947", "Rai Bahadur Mul Raj", "Punjab heritage", "family history", "Lahore to Hyderabad"],
-      "about": {
-        "@type": "Thing",
-        "name": "Partition of India 1947",
-        "description": "The division of the Indian subcontinent into India and Pakistan"
-      }
-    }
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BKRC1PBFTM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-BKRC1PBFTM');
     </script>
 
     <style>
-        /* Page-specific enhancements */
-        .page-header {
-            background: linear-gradient(135deg, #2c5530 0%, #1a3320 100%);
-            color: white;
-            padding: 8rem 2rem 4rem;
-            text-align: center;
+        :root {
+            --serif: 'Merriweather', Georgia, serif;
+            --sans: 'Source Sans Pro', -apple-system, sans-serif;
+            --black: #1a1a1a;
+            --gray: #666;
+            --light-gray: #f5f5f5;
+            --accent: #8B0000;
+            --gold: #c9a227;
         }
 
-        .page-header h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            margin-bottom: 1rem;
-            font-weight: 700;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .page-header .subtitle {
-            font-size: 1.3rem;
-            opacity: 0.95;
+        body {
+            font-family: var(--serif);
+            color: var(--black);
+            line-height: 1.8;
+            background: white;
+        }
+
+        /* Hero - Account for fixed navbar */
+        .hero {
+            height: 100vh;
+            min-height: 600px;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            padding-top: 120px; /* Account for fixed navbar */
+            background: linear-gradient(to bottom,
+                rgba(0,0,0,0) 0%,
+                rgba(0,0,0,0.7) 100%),
+                url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Partition_of_India_1947_en.svg/1200px-Partition_of_India_1947_en.svg.png') center/cover;
+            background-color: #2c3e50;
+        }
+
+        .hero-content {
+            padding: 4rem;
             max-width: 800px;
-            margin: 0 auto;
+            color: white;
+        }
+
+        .hero-label {
+            font-family: var(--sans);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            font-weight: 300;
+            opacity: 0.9;
             line-height: 1.6;
         }
 
+        /* Article */
+        .article {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .article p {
+            font-size: 1.2rem;
+            margin-bottom: 1.8rem;
+            color: #333;
+        }
+
+        .article h2 {
+            font-size: 2rem;
+            margin: 3rem 0 1.5rem;
+            color: var(--black);
+        }
+
+        .article h3 {
+            font-size: 1.5rem;
+            margin: 2.5rem 0 1rem;
+            color: var(--black);
+        }
+
+        .lead {
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: var(--gray);
+            border-left: 4px solid var(--accent);
+            padding-left: 1.5rem;
+            margin: 2rem 0 3rem;
+        }
+
+        /* Full-width Image */
+        .full-image {
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .full-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .full-image figcaption {
+            max-width: 720px;
+            margin: 1rem auto 0;
+            padding: 0 2rem;
+            font-family: var(--sans);
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        /* Inline Image */
+        .inline-image {
+            margin: 2.5rem 0;
+        }
+
+        .inline-image img {
+            width: 100%;
+            border-radius: 4px;
+        }
+
+        .inline-image figcaption {
+            font-family: var(--sans);
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Quote */
+        .quote {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: var(--light-gray);
+            border-left: 4px solid var(--accent);
+        }
+
+        .quote p {
+            font-size: 1.4rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--black);
+        }
+
+        .quote cite {
+            font-family: var(--sans);
+            font-style: normal;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        /* Stats */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin: 3rem 0;
+            padding: 2rem 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--accent);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-family: var(--sans);
+            font-size: 0.8rem;
+            color: var(--gray);
+            margin-top: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Timeline */
+        .timeline {
+            margin: 3rem 0;
+            padding-left: 2rem;
+            border-left: 2px solid var(--accent);
+        }
+
+        .timeline-item {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.35rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .timeline-date {
+            font-family: var(--sans);
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .timeline-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0.5rem 0;
+        }
+
+        .timeline-text {
+            font-size: 1rem;
+            color: var(--gray);
+        }
+
+        /* Side-by-side */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .two-col img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--black);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: rgba(255,255,255,0.8);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--gold);
+            color: var(--black);
+            text-decoration: none;
+            font-family: var(--sans);
+            font-weight: 700;
+            border-radius: 4px;
+            margin: 0.5rem;
+        }
+
+        .cta-btn:hover {
+            background: white;
+        }
+
+        .cta-btn.secondary {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .cta-btn.secondary:hover {
+            background: white;
+            color: var(--black);
+        }
+
+        /* Footer */
+        .footer-minimal {
+            padding: 2rem;
+            text-align: center;
+            font-family: var(--sans);
+            font-size: 0.9rem;
+            color: var(--gray);
+            border-top: 1px solid #eee;
+        }
+
+        .footer-minimal a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            .page-header {
-                padding: 6rem 1.5rem 3rem;
+            .hero {
+                height: 80vh;
+            }
+
+            .hero-content {
+                padding: 2rem;
+            }
+
+            .stats-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+
+            .article {
+                padding: 2rem 1.5rem;
+            }
+
+            .full-image img {
+                height: 300px;
             }
         }
     </style>
 </head>
 <body>
+<!-- Skip to Content - Accessibility -->
+<a href="#main-content" class="skip-to-content">Skip to content</a>
 
 <!-- Top Bar for WhatsApp & Email -->
 <div class="top-bar">
@@ -115,7 +398,7 @@
 <nav>
     <div class="container">
         <a href="index.html" class="logo">
-            <img src="https://res.cloudinary.com/dhupieu4x/image/upload/v1762599287/drnf-assets/drnf-assets/DRNF_logo.jpg" alt="DRNF Logo">
+            <img src="images/DRNF_logo.jpg" alt="DRNF Logo">
             <span>Dr. Rabinder Nath Foundation</span>
         </a>
 
@@ -293,295 +576,195 @@
     <a href="contact.html" class="mobile-menu-cta">Get in Touch</a>
 </div>
 
-<main>
-<!-- Page Header -->
-<section class="page-header section-atmospheric-terracotta">
-    <div class="container">
-        <h1 class="text-gradient-terracotta" data-aos="fade-up">The Partition Story</h1>
-        <p class="subtitle" data-aos="fade-up" data-aos-delay="100">
-            From Lahore to Hyderabad: How the Holocaust of <span class="stat-highlight-terracotta">1947</span> Scattered a Family, Delayed a Book for <span class="stat-highlight-terracotta">28 Years</span>, and Nearly Erased a Legacy
-        </p>
+<!-- Hero Section -->
+<section id="main-content" class="hero">
+    <div class="hero-content">
+        <div class="hero-label">Heritage Story</div>
+        <h1>From Lahore to Hyderabad</h1>
+        <p class="hero-subtitle">How the Partition of 1947 scattered a family, delayed a book for 28 years, and nearly erased a legacy of service</p>
     </div>
 </section>
 
-<!-- Main Content -->
-<section>
-    <!-- The Partition Story: From Lahore to Hyderabad -->
-    <section class="section section-atmospheric-terracotta">
-        <div class="container">
-            <h2 class="section-title text-gradient-terracotta" data-aos="fade-up" style="font-size: clamp(2.5rem, 5vw, 3.5rem);">
-                The Partition Story: From Lahore to Hyderabad
-            </h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.3rem; font-style: italic; color: var(--text-secondary);">
-                How the holocaust of 1947 scattered a family, delayed a book for 30 years, and nearly erased a legacy
-            </p>
+<!-- Article Content -->
+<article class="article">
 
-            <!-- 1. Life in Lahore Before Partition -->
-            <div class="highlight-section accent-border-terracotta card-elevated" data-aos="fade-up" style="margin-top: 3rem; padding: 2rem; background: white;">
-                <h3 style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1.5rem;">
-                    <i class="fas fa-home"></i> Life in Lahore Before Partition
-                </h3>
+    <p class="lead">
+        In August 1947, the Nath family fled Lahore with nothing but their lives. They left behind generations of wealth, a center of intellectual thought, and the only home they had ever known. This is their story.
+    </p>
 
-                <div class="card-float" style="padding: 2rem; margin-bottom: 2rem;">
-                    <h4 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 1rem;">
-                        <i class="fas fa-building"></i> "Willows" - A Center of Ideas
-                    </h4>
-                    <p style="font-size: 1.1rem; line-height: 1.8;">
-                        In 1905, Rai Bahadur Mul Raj purchased a bungalow in Lahore that he named "Willows." This wasn't just a family home - it became an active intellectual and cultural center where the brightest minds of Punjab gathered. Here, the future of India was debated, institutions were conceived, and movements were born.
-                    </p>
-                </div>
-
-                <div class="achievement-grid">
-                    <div class="achievement-card">
-                        <div class="achievement-icon"><i class="fas fa-heart"></i></div>
-                        <h4>Goma Devi's Social Work</h4>
-                        <p>Mul Raj's wife ran a Widows Home and Orphanage, providing shelter and education to those society had abandoned. Her compassionate work embodied the family's commitment to service.</p>
-                    </div>
-
-                    <div class="achievement-card">
-                        <div class="achievement-icon"><i class="fas fa-om"></i></div>
-                        <h4>Thriving Arya Samaj</h4>
-                        <p>The Lahore Arya Samaj, founded and led by Mul Raj, was at the heart of Punjab's religious and social reform movement, attracting thousands to its inclusive vision.</p>
-                    </div>
-
-                    <div class="achievement-card">
-                        <div class="achievement-icon"><i class="fas fa-university"></i></div>
-                        <h4>V.V.R.I. Institute</h4>
-                        <p>The Vishveshvaranand Vedic Research Institute operated actively, preserving Sanskrit scholarship and Vedic knowledge while promoting modern research methods.</p>
-                    </div>
-
-                    <div class="achievement-card">
-                        <div class="achievement-icon"><i class="fas fa-tooth"></i></div>
-                        <h4>Dr. Prem Nath's Practice</h4>
-                        <p>Mul Raj's son ran a successful dental practice in Lahore, serving the city's elite and building strong community connections across religious lines.</p>
-                    </div>
-
-                    <div class="achievement-card">
-                        <div class="achievement-icon"><i class="fas fa-child"></i></div>
-                        <h4>Dr. Upender Nath Growing Up</h4>
-                        <p>Mul Raj's grandson grew up immersed in this environment of intellectual ferment and social service, eventually becoming Royal Surgeon to the Nizam of Hyderabad.</p>
-                    </div>
-
-                    <div class="achievement-card">
-                        <div class="achievement-icon"><i class="fas fa-flag"></i></div>
-                        <h4>Center of Nationalism</h4>
-                        <p>Punjab was the beating heart of Indian nationalism - from the Arya Samaj to the Congress, from Punjab National Bank to the Swadeshi movement.</p>
-                    </div>
-
-                    <div class="achievement-card">
-                        <div class="achievement-icon"><i class="fas fa-mountain"></i></div>
-                        <h4>Large Family Lands</h4>
-                        <p>The family owned significant property and lands in Punjab, accumulated through generations of service and success - wealth built on merit and hard work.</p>
-                    </div>
-
-                    <div class="achievement-card">
-                        <div class="achievement-icon"><i class="fas fa-users"></i></div>
-                        <h4>Deep Community Networks</h4>
-                        <p>Connections spanned across religions, regions, and institutions - from government officials to freedom fighters, from scholars to businessmen.</p>
-                    </div>
-                </div>
-
-                <div style="background: linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%); padding: 2rem; border-radius: var(--border-radius); margin-top: 2rem;">
-                    <p style="font-size: 1.2rem; line-height: 1.8; text-align: center; font-style: italic; color: var(--text-primary);">
-                        This was a life of prosperity, purpose, and deep roots - a family at the center of Punjab's transformation. All of it would be left behind in a single night.
-                    </p>
-                </div>
-            </div>
-
-            <!-- 2. The Narrow Escape (1947) -->
-            <div class="highlight-section" data-aos="fade-up" style="margin-top: 4rem; background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%); border-left: 5px solid #e53e3e;">
-                <h3 style="font-size: 2rem; color: #e53e3e; margin-bottom: 1.5rem;">
-                    <i class="fas fa-exclamation-triangle"></i> The Narrow Escape (1947)
-                </h3>
-
-                <div style="background: white; padding: 3rem; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-lg); border: 2px solid #e53e3e; margin-bottom: 2rem;">
-                    <h4 style="color: #e53e3e; font-size: 1.8rem; margin-bottom: 1.5rem; text-align: center;">
-                        <i class="fas fa-moon"></i> The Night That Changed Everything
-                    </h4>
-
-                    <div style="font-size: 1.15rem; line-height: 2; color: var(--text-primary);">
-                        <p style="margin-bottom: 1.5rem;">
-                            <strong style="color: #e53e3e;">August 1947.</strong> The subcontinent was being torn apart. In Lahore, communal violence had reached horrifying levels. Dr. Prem Nath (Mul Raj's son) and his family were in grave danger.
-                        </p>
-
-                        <p style="margin-bottom: 1.5rem; padding-left: 2rem; border-left: 4px solid #e53e3e; background: #fff5f5; padding: 1.5rem;">
-                            <strong>The Conspiracy:</strong> Muslim neighbors, aware of the family's wealth and property, were plotting to kill them and seize their assets. In the chaos of Partition, such murders were common - and often went unpunished.
-                        </p>
-
-                        <p style="margin-bottom: 1.5rem;">
-                            <strong style="color: #e53e3e;">But fate intervened.</strong> Dr. Prem Nath overheard the conspiracy. He had hours, not days. In desperation, he called his brother - <strong>Air Marshal Ajit Nath</strong>, who was serving in the Indian Armed Forces.
-                        </p>
-
-                        <p style="margin-bottom: 1.5rem; font-size: 1.2rem; background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%); padding: 2rem; border-radius: var(--border-radius); text-align: center; font-weight: 600;">
-                            "We have one night. Get everyone out."
-                        </p>
-
-                        <p style="margin-bottom: 1.5rem;">
-                            Air Marshal Ajit Nath acted with military precision. Using his position and contacts, he arranged for an <strong style="color: #e53e3e;">emergency airlift evacuation</strong>. Through the night, family members were quietly gathered and rushed to the airfield.
-                        </p>
-
-                        <p style="margin-bottom: 1.5rem; padding: 2rem; background: #f7fafc; border-radius: var(--border-radius);">
-                            <i class="fas fa-plane" style="color: #e53e3e; font-size: 2rem; display: block; text-align: center; margin-bottom: 1rem;"></i>
-                            <strong>Dawn broke.</strong> As the plane lifted off from Lahore, the family looked down at the city that had been their home for generations. Below them lay "Willows," the V.V.R.I. Institute, their lands, their wealth, their history. They would never return.
-                        </p>
-
-                        <p style="margin-bottom: 1.5rem; font-size: 1.1rem; font-style: italic; text-align: center; color: var(--text-secondary);">
-                            <strong>They left with nothing but their lives.</strong>
-                        </p>
-
-                        <p style="margin-bottom: 0; padding: 1.5rem; background: linear-gradient(135deg, rgba(229,62,62,0.1) 0%, rgba(229,62,62,0.05) 100%); border-radius: var(--border-radius); font-weight: 600; text-align: center;">
-                            "A fortunate escape that many during that time did not have."
-                        </p>
-                    </div>
-                </div>
-
-                <div class="achievement-grid">
-                    <div class="achievement-card" style="border-top: 4px solid #e53e3e;">
-                        <div class="achievement-icon" style="color: #e53e3e;"><i class="fas fa-times-circle"></i></div>
-                        <h4>Everything Lost</h4>
-                        <ul style="text-align: left; padding-left: 1.5rem;">
-                            <li>"Willows" bungalow seized</li>
-                            <li>All family lands abandoned</li>
-                            <li>Generations of accumulated wealth gone</li>
-                            <li>Personal belongings left behind</li>
-                            <li>Community connections severed</li>
-                        </ul>
-                    </div>
-
-                    <div class="achievement-card" style="border-top: 4px solid #38a169;">
-                        <div class="achievement-icon" style="color: #38a169;"><i class="fas fa-check-circle"></i></div>
-                        <h4>What They Saved</h4>
-                        <ul style="text-align: left; padding-left: 1.5rem;">
-                            <li>Their lives - the most precious gift</li>
-                            <li>Family unity (mostly intact)</li>
-                            <li>Education and professional skills</li>
-                            <li>The manuscript (somehow survived)</li>
-                            <li>Spirit of service and values</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Final Hope Section -->
-            <div style="background: var(--gradient-primary); color: white; padding: 3rem; border-radius: var(--border-radius-lg); text-align: center; margin-top: 4rem;" data-aos="fade-up">
-                <h3 style="color: white; font-size: 2rem; margin-bottom: 1rem;">
-                    <i class="fas fa-seedling"></i> Yet Hope Remains
-                </h3>
-                <p style="font-size: 1.2rem; line-height: 1.8; max-width: 900px; margin: 0 auto; color: rgba(255,255,255,0.95);">
-                    The book survived. The story survived. And now, through the Dr. Rabinder Nath Foundation, the spirit of service continues - connecting the Swadeshi movement of 1893 to free chai counters in 2024, proving that principles transcend tragedy and time.
-                </p>
-            </div>
+    <div class="stats-row">
+        <div class="stat">
+            <div class="stat-number">15M</div>
+            <div class="stat-label">People Displaced</div>
         </div>
-    </section>
-</section>
+        <div class="stat">
+            <div class="stat-number">1M+</div>
+            <div class="stat-label">Lives Lost</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">28</div>
+            <div class="stat-label">Years Delayed</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">1</div>
+            <div class="stat-label">Night to Escape</div>
+        </div>
+    </div>
+
+    <h2>Life Before Partition</h2>
+
+    <p>
+        Before the tragedy of 1947, Punjab was the crown jewel of British India. Lahore, its capital, was known as the "Paris of the East" — a cosmopolitan city where Hindu, Muslim, and Sikh communities had lived together for centuries.
+    </p>
+
+    <figure class="inline-image">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Lahore_Museum%2C_by_Foulconer%2C_c._1870%27s.jpg/1280px-Lahore_Museum%2C_by_Foulconer%2C_c._1870%27s.jpg"
+             alt="Lahore Museum in the 1870s">
+        <figcaption>The Lahore Museum, c. 1870s — The cultural heart of Punjab where intellectuals and reformers gathered</figcaption>
+    </figure>
+
+    <p>
+        In 1905, Rai Bahadur Mul Raj purchased a bungalow in Lahore that he named "Willows." It wasn't just a family home — it became an intellectual center where the brightest minds of Punjab gathered. Here, the future of India was debated, institutions were conceived, and movements were born.
+    </p>
+
+    <h3>The Arya Samaj Connection</h3>
+
+    <p>
+        Rai Bahadur Mul Raj was a leading figure in the Arya Samaj movement founded by Swami Dayanand Saraswati. This reformist organization championed education for all, women's rights, and a return to Vedic principles while rejecting casteism.
+    </p>
+
+    <figure class="inline-image">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Swami_Dayanand.jpg"
+             alt="Swami Dayanand Saraswati">
+        <figcaption>Swami Dayanand Saraswati (1824-1883) — Founder of Arya Samaj, whose ideas shaped the Nath family's values</figcaption>
+    </figure>
+
+    <p>
+        The Lahore Arya Samaj became a crucible for nationalist ideas, producing leaders who would shape India's freedom struggle. Mul Raj's wife, Goma Devi, ran a Widows Home and Orphanage, providing shelter and education to those society had abandoned.
+    </p>
+
+    <div class="quote">
+        <p>"This was a life of prosperity, purpose, and deep roots — a family at the center of Punjab's transformation. All of it would be left behind in a single night."</p>
+    </div>
+
+    <h2>August 1947: The Crisis</h2>
+
+    <figure class="full-image">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/A_refugee_special_train_at_Ambala_Station_during_the_Partition_of_India.jpg"
+             alt="Refugee train at Ambala Station during Partition">
+        <figcaption>A refugee train at Ambala Station, 1947 — Overcrowded trains carried millions fleeing the violence of Partition</figcaption>
+    </figure>
+
+    <p>
+        As the British withdrew and the subcontinent was carved into India and Pakistan, communal violence erupted across Punjab. Lahore, which would fall to Pakistan, became a killing field. Hindu and Sikh families were targeted for their property and their faith.
+    </p>
+
+    <p>
+        Dr. Prem Nath, Mul Raj's son, overheard neighbors plotting to kill the family and seize their assets. In the chaos of Partition, such murders were common — and went unpunished.
+    </p>
+
+    <h3>The Escape</h3>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-date">Early August 1947</div>
+            <div class="timeline-title">The Conspiracy Discovered</div>
+            <div class="timeline-text">Dr. Prem Nath overhears neighbors planning to murder the family and seize their property.</div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-date">That Same Night</div>
+            <div class="timeline-title">The Desperate Call</div>
+            <div class="timeline-text">With hours — not days — to act, he contacts his brother Air Marshal Ajit Nath in the Indian Armed Forces.</div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-date">Before Dawn</div>
+            <div class="timeline-title">Emergency Airlift</div>
+            <div class="timeline-text">Using military contacts, an emergency evacuation is arranged. Family members are quietly gathered and rushed to the airfield.</div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-date">Dawn</div>
+            <div class="timeline-title">Flight to Safety</div>
+            <div class="timeline-text">The plane lifts off from Lahore. Below lies "Willows," the V.V.R.I. Institute, their lands, their history. They would never return.</div>
+        </div>
+    </div>
+
+    <div class="quote">
+        <p>"We have one night. Get everyone out."</p>
+        <cite>— Dr. Prem Nath to Air Marshal Ajit Nath</cite>
+    </div>
+
+    <p>
+        They left with nothing but their lives. "Willows" was seized. All family lands were abandoned. Generations of accumulated wealth — gone. But the family survived. And somehow, the manuscript survived too.
+    </p>
+
+    <h2>Rebuilding in Hyderabad</h2>
+
+    <div class="two-col">
+        <div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Charminar_Hyderabad_1.jpg/800px-Charminar_Hyderabad_1.jpg"
+                 alt="Charminar, Hyderabad">
+        </div>
+        <div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Golconda_Fort_at_Night.JPG/1024px-Golconda_Fort_at_Night.JPG"
+                 alt="Golconda Fort at Night">
+        </div>
+    </div>
+
+    <p>
+        The family's journey didn't end with escape. Landing in an unfamiliar city, they had to rebuild everything from scratch. Dr. Upender Nath, who had trained in the finest medical traditions, eventually became the Royal Surgeon to the Nizam of Hyderabad.
+    </p>
+
+    <p>
+        His son, Dr. Rabinder Nath, would continue the family's legacy of service through dentistry and social work. The values instilled at "Willows" — service, education, compassion — survived the journey from Lahore to Hyderabad.
+    </p>
+
+    <figure class="inline-image">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/The_Buddha_Statue%2C_Hyderabad.JPG/1024px-The_Buddha_Statue%2C_Hyderabad.JPG"
+             alt="Buddha Statue at Hussain Sagar, Hyderabad">
+        <figcaption>The Buddha Statue at Hussain Sagar — Hyderabad became the new home where the Nath family rebuilt their legacy</figcaption>
+    </figure>
+
+    <h2>The Legacy Continues</h2>
+
+    <p>
+        The book that Rai Bahadur Mul Raj had been writing — "The Beginning of Punjabi Nationalism" — was delayed by 28 years due to the upheaval. But it was eventually published, preserving the story of Punjab's reform movements and the family's role in shaping modern India.
+    </p>
+
+    <p>
+        Today, the Dr. Rabinder Nath Foundation carries forward the spirit of service that began at "Willows" over a century ago. The free chai counters serving Hyderabad's homeless connect directly to Goma Devi's work at the Widows Home in Lahore.
+    </p>
+
+    <div class="quote">
+        <p>"The book survived. The story survived. And the spirit of service continues — connecting 1893 to today, proving that principles transcend tragedy and time."</p>
+    </div>
+
+</article>
 
 <!-- Call to Action -->
-<section class="section" style="background: var(--background-light);">
-    <div class="container">
-        <div style="text-align: center;" data-aos="fade-up">
-            <h2 class="section-title">Learn More About the Heritage Book</h2>
-            <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--text-secondary);">
-                Discover the full story of "The Beginning of Punjabi Nationalism" and its impact on modern India.
-            </p>
-            <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
-                <a href="book.html" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem;">
-                    <i class="fas fa-book"></i> Read About the Book
-                </a>
-                <a href="book/explore.html" class="btn btn-secondary" style="display: inline-flex; align-items: center; gap: 0.5rem;">
-                    <i class="fas fa-book-open"></i> Explore the Book
-                </a>
-            </div>
-        </div>
-    </div>
+<section class="cta-section">
+    <h2>Continue the Journey</h2>
+    <p>Learn more about the heritage book and how the foundation continues this legacy of service today.</p>
+    <a href="book.html" class="cta-btn">Explore the Book</a>
+    <a href="about.html" class="cta-btn secondary">About the Foundation</a>
 </section>
 
-</main>
-
 <!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <!-- About Section -->
-            <div class="footer-section">
-                <div class="footer-logo">
-                    <img src="https://res.cloudinary.com/dhupieu4x/image/upload/v1762599287/drnf-assets/drnf-assets/DRNF_logo.jpg" alt="DRNF Logo">
-                    <h3>Dr. Rabinder Nath Foundation</h3>
-                </div>
-                <p>Serving the community with compassion and care since 2020.</p>
-                <div class="footer-social">
-                    <a href="https://www.facebook.com/DrRabinderNathFoundation/" target="_blank" aria-label="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/company/dr-rabinder-nath-foundation/" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Initiatives -->
-            <div class="footer-section">
-                <h4>Our Programs</h4>
-                <ul>
-                    <li><a href="chai-counters.html">Free Chai Counters</a></li>
-                    <li><a href="community.html">Community Support</a></li>
-                    <li><a href="community.html#workshops">Education Workshops</a></li>
-                    <li><a href="community.html#environment">Environmental Care</a></li>
-                </ul>
-            </div>
-
-            <!-- Quick Links -->
-            <div class="footer-section">
-                <h4>Explore</h4>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="dr-rabinder-nath.html">Dr. Rabinder Nath</a></li>
-                    <li><a href="book.html">Heritage Book</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                </ul>
-            </div>
-
-            <!-- Contact -->
-            <div class="footer-section">
-                <h4>Get in Touch</h4>
-                <div class="contact-item">
-                    <i class="fab fa-whatsapp"></i>
-                    <a href="https://wa.me/919404850485" target="_blank">+91-40-4850-4850</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:info@drnf.org">info@drnf.org</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Jubilee Hills, Hyderabad</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-            <p>&copy; <span id="current-year">2025</span> Dr. Rabinder Nath Foundation. All Rights Reserved.</p>
-            <p>Designed with care for our community | <a href="privacy-policy.html">Privacy</a> | <a href="terms-of-service.html">Terms</a></p>
-        </div>
-    </div>
+<footer class="footer-minimal">
+    <p>&copy; 2024 <a href="index.html">Dr. Rabinder Nath Foundation</a>. All rights reserved.</p>
 </footer>
 
 <!-- AOS Animation Library -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="js/navbar-modern.js"></script>
-
 <script>
-    // Initialize AOS
     AOS.init({
         duration: 800,
-        once: true,
-        offset: 100
+        easing: 'ease-out',
+        once: true
     });
 </script>
 
-<!-- Google Analytics -->
-<script src="js/analytics.js"></script>
+<!-- Main JavaScript -->
+<script src="js/main.js"></script>
 
 </body>
 </html>
