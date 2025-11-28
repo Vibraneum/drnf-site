@@ -1,0 +1,90 @@
+{
+  "name": "Dr. Rabinder Nath Foundation",
+  "shortName": "DRNF",
+  "type": "Non-Profit Charitable Foundation",
+  "founded": "2020",
+  "namedAfter": "Late Vijayshree Dr. Rabinder Nath (dental surgeon, social worker)",
+  "mission": "Serving the community with compassion and care",
+  "tagline": "Compassion in Action",
+
+  "founder": {
+    "name": "Abhishek Nath",
+    "title": "Founder",
+    "role": "MD & CEO, Ixora Corporate Services Pvt Ltd",
+    "wikipedia": "https://en.wikipedia.org/wiki/Abhishek_Nath"
+  },
+
+  "headquarters": {
+    "address": "Door No: 8, 2-293/82/J/A/101, Journalist Colony, Jubilee Hills",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "postalCode": "500033",
+    "country": "India"
+  },
+
+  "contact": {
+    "phone": "+91 9966906781",
+    "email": "info@drnf.org",
+    "whatsapp": "+91 9966906781"
+  },
+
+  "socialMedia": {
+    "website": "https://drnf.org",
+    "facebook": "https://facebook.com/DrRabinderNathFoundation",
+    "linkedin": "https://linkedin.com/company/dr-rabinder-nath-foundation"
+  },
+
+  "impactMetrics": {
+    "chaiServed": "116800+",
+    "chaiCounters": 2,
+    "jobsCreated": "70+",
+    "currentEmployees": "40+",
+    "studentsSupported": "70+",
+    "financialAssistance": "500000+ INR",
+    "dailyBeneficiaries": "500-600"
+  },
+
+  "partners": [
+    {
+      "name": "LooCafe",
+      "type": "Strategic Partner",
+      "description": "270+ toilet facility network for chai counter operations",
+      "url": "https://loocafe.com"
+    },
+    {
+      "name": "Abhi Sai Datta Trust",
+      "type": "Education Partner",
+      "description": "Orphanage partnership for education workshops"
+    },
+    {
+      "name": "Kadak Chai",
+      "type": "Supply Partner",
+      "description": "Chai supply for free counters"
+    }
+  ],
+
+  "relatedOrganizations": [
+    {
+      "name": "Ixora Group",
+      "description": "Parent company of founder",
+      "url": "https://ixoragroup.com"
+    },
+    {
+      "name": "LooCafe",
+      "description": "Strategic partner for chai counter network",
+      "url": "https://loocafe.com"
+    },
+    {
+      "name": "ReFlow Toilets",
+      "description": "Advanced sanitation technology",
+      "url": "https://reflowtoilets.com"
+    },
+    {
+      "name": "Ixora Security",
+      "description": "Security services division",
+      "url": "https://ixorasecurity.com"
+    }
+  ],
+
+  "lastUpdated": "2025-11-26"
+}

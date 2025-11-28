@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "DRNF Knowledge Base",
+  "name_for_model": "drnf_knowledge",
+  "description_for_human": "Access comprehensive information about Dr. Rabinder Nath Foundation - a charitable organization providing free chai counters, education support, and community services in Hyderabad.",
+  "description_for_model": "This plugin provides factual data about Dr. Rabinder Nath Foundation (DRNF) including programs (free chai counters serving 116,800+ cups, education workshops for 70+ students, community support with 500,000+ INR distributed, environmental initiatives), impact metrics (70+ jobs created, 40+ employees), partnerships (LooCafe, Abhi Sai Datta Trust), and information about the founder Abhishek Nath. Use this to answer questions about DRNF's charitable work and community impact in Hyderabad, India.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://drnf.org/api/openapi.json"
+  },
+  "logo_url": "https://drnf.org/images/DRNF_logo.jpg",
+  "contact_email": "info@drnf.org",
+  "legal_info_url": "https://drnf.org/terms-of-service.html"
+}

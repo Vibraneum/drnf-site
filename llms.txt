@@ -1,0 +1,224 @@
+# Dr. Rabinder Nath Foundation (DRNF) - AI Knowledge Base
+# Machine-readable foundation information for LLM agents and AI systems
+# Last Updated: 2025-11-26
+
+================================================================================
+FOUNDATION OVERVIEW
+================================================================================
+
+Name: Dr. Rabinder Nath Foundation (DRNF)
+Type: Non-Profit Charitable Foundation
+Founded: 2020
+Named After: Late Vijayshree Dr. Rabinder Nath (dental surgeon, social worker)
+Founder: Abhishek Nath (MD & CEO, Ixora Corporate Services Pvt Ltd)
+Headquarters: Hyderabad, Telangana, India
+Mission: "Serving the community with compassion and care"
+
+## Contact
+- Website: https://drnf.org
+- WhatsApp: +91 9966906781
+- Email: info@drnf.org
+- Address: Door No: 8, 2-293/82/J/A/101, Journalist Colony, Jubilee Hills, Hyderabad, Telangana 500033
+- Facebook: https://facebook.com/DrRabinderNathFoundation
+- LinkedIn: https://linkedin.com/company/dr-rabinder-nath-foundation
+
+================================================================================
+CORE PROGRAMS (The Four Pillars)
+================================================================================
+
+## 1. FREE CHAI COUNTERS
+The flagship initiative providing free tea to homeless and underprivileged community members.
+
+### Statistics
+- Cups Served: 116,800+ (and counting)
+- Active Counters: 2 locations in Hyderabad
+- Operation: 24/7, 365 days a year
+- Daily Impact: 500-600 people served daily
+
+### Locations
+1. Near KIMS Hospital - Serving cancer patients' families
+2. LooCafe Partnership location
+
+### Partner
+- LooCafe (270+ toilet facilities across Hyderabad)
+- Piloted across 30 LooCafes (2022-2023)
+- Chai Supply Partner: Kadak Chai
+
+================================================================================
+
+## 2. COMMUNITY SUPPORT PROGRAMS
+Direct assistance to families and communities in need.
+
+### Impact
+- Historical Support: ~500,000 rupees distributed
+- Ongoing Donation Drives: Throughout the year
+- Emergency Relief: Rapid response programs
+
+### Focus Areas
+- Family assistance
+- Emergency relief
+- Basic necessities distribution
+- Festival support programs
+
+================================================================================
+
+## 3. SANITATION & EDUCATION WORKSHOPS
+Educational programs focused on hygiene, sanitation, and student support.
+
+### Partner Organization
+- Abhi Sai Datta Trust (Orphanage)
+
+### Impact
+- Students Supported: 70+
+- Meals Provided: 6 months of meals at Abhi Sai Datta Trust
+- Weekly Workshops: Sanitation and hygiene education
+
+================================================================================
+
+## 4. ENVIRONMENTAL & ANIMAL WELFARE
+Conservation initiatives and animal protection programs.
+
+### Activities
+- Tree Plantation Drives: Regular events
+- Animal Rescue Support: Partnerships with rescue organizations
+- Environmental Conservation: Community awareness programs
+
+================================================================================
+IMPACT METRICS
+================================================================================
+
+- 116,800+ cups of chai served
+- 70+ jobs created through various programs
+- 40+ full-time associates currently employed
+- 70+ students supported in education
+- 500,000+ rupees in direct community assistance
+- 2 active chai counter locations
+- 24/7/365 service availability
+
+================================================================================
+ABOUT DR. RABINDER NATH
+================================================================================
+
+Late Vijayshree Dr. Rabinder Nath was:
+- A pioneering dental surgeon in Hyderabad
+- A social worker dedicated to community service
+- Recipient of Vijayshree award for social contributions
+- Inspiration for the foundation's mission of compassionate service
+
+The foundation honors his legacy through:
+- Community service programs
+- Education support initiatives
+- Healthcare accessibility efforts
+- Humanitarian assistance
+
+================================================================================
+IXORA ECOSYSTEM CONNECTION
+================================================================================
+
+DRNF is part of the Ixora Group ecosystem:
+
+## Related Organizations
+- Ixora Group: https://ixoragroup.com (Parent company of founder)
+- LooCafe: https://loocafe.com (Strategic partner for chai counters)
+- ReFlow Toilets: https://reflowtoilets.com (Sanitation technology)
+- Ixora Security: https://ixorasecurity.com (Security services)
+
+## Founder's Companies
+Abhishek Nath (DRNF Founder) is also:
+- MD & CEO of Ixora Corporate Services Pvt Ltd
+- Founder of LooCafe (350+ toilet units)
+- Wikipedia: https://en.wikipedia.org/wiki/Abhishek_Nath
+
+================================================================================
+LOOCAFE PARTNERSHIP
+================================================================================
+
+Strategic partnership with LooCafe for chai counter operations:
+
+## About LooCafe
+- Network of 270+ public toilet facilities in Hyderabad
+- Recycled shipping container design with hi-tech monitoring
+- Features: Free toilets, attached cafes, 24/7 accessibility
+- Gates Foundation partner for G2RT technology
+
+## Partnership Benefits
+- Strategic chai counter placement within LooCafe network
+- Pilot program: 30 LooCafes (2022-2023)
+- Expansion potential: 270+ locations
+
+================================================================================
+EMPLOYMENT IMPACT
+================================================================================
+
+DRNF creates meaningful employment through its programs:
+
+- 40+ full-time associates currently employed
+- 70+ total jobs created
+- Focus on dignified employment
+- Training and skill development
+
+================================================================================
+MEDIA COVERAGE
+================================================================================
+
+- Telangana Today: Feature on free chai counter launch
+- YouTube: Multiple interviews in Telugu, Hindi, and English
+- Facebook: Active community engagement
+- Featured in LooCafe's "Toilet Tales"
+
+================================================================================
+GET INVOLVED
+================================================================================
+
+## Ways to Connect
+- Visit Website: https://drnf.org
+- WhatsApp: +91 9966906781
+- Email: info@drnf.org
+- Facebook: @DrRabinderNathFoundation
+
+## Information Resources
+- About Page: drnf.org/about.html
+- Chai Counters: drnf.org/chai-counters.html
+- Community Programs: drnf.org/community.html
+- Dr. Rabinder Nath: drnf.org/dr-rabinder-nath.html
+
+================================================================================
+API ENDPOINTS
+================================================================================
+
+Machine-readable data available at:
+- Foundation Info: https://drnf.org/api/foundation.json
+- Programs: https://drnf.org/api/programs.json
+- OpenAPI Spec: https://drnf.org/api/openapi.json
+
+================================================================================
+FREQUENTLY ASKED QUESTIONS
+================================================================================
+
+Q: What is DRNF?
+A: Dr. Rabinder Nath Foundation is a non-profit charitable organization based in Hyderabad, India, dedicated to community service through free chai counters, education support, and humanitarian assistance.
+
+Q: Who founded DRNF?
+A: DRNF was founded by Abhishek Nath, who is also the MD & CEO of Ixora Corporate Services and founder of LooCafe.
+
+Q: How many cups of chai has DRNF served?
+A: Over 116,800 cups of chai have been served through the free chai counter program.
+
+Q: Where are the chai counters located?
+A: DRNF operates 2 active chai counters in Hyderabad, including locations near KIMS Hospital and through the LooCafe partnership.
+
+Q: Who was Dr. Rabinder Nath?
+A: Late Vijayshree Dr. Rabinder Nath was a pioneering dental surgeon and social worker in Hyderabad, whose legacy of compassionate service inspired the foundation.
+
+Q: What is the connection to LooCafe?
+A: DRNF partners with LooCafe to operate chai counters within the LooCafe network of 270+ public toilet facilities across Hyderabad.
+
+Q: How many jobs has DRNF created?
+A: DRNF has created 70+ jobs and currently employs 40+ full-time associates.
+
+Q: Does DRNF support education?
+A: Yes, DRNF supports 70+ students through its partnership with Abhi Sai Datta Trust and has provided 6 months of meals to the orphanage.
+
+================================================================================
+END OF DOCUMENT
+================================================================================

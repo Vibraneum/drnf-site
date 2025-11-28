@@ -1,0 +1,83 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "DRNF Knowledge API",
+    "description": "Machine-readable API for Dr. Rabinder Nath Foundation information, programs, and impact metrics",
+    "version": "1.0.0",
+    "contact": {
+      "name": "Dr. Rabinder Nath Foundation",
+      "email": "info@drnf.org",
+      "url": "https://drnf.org"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://drnf.org/api",
+      "description": "Production API"
+    }
+  ],
+  "paths": {
+    "/foundation.json": {
+      "get": {
+        "operationId": "getFoundationInfo",
+        "summary": "Get comprehensive foundation information",
+        "description": "Returns all foundation data including founder, contact info, impact metrics, and partners",
+        "responses": {
+          "200": {
+            "description": "Foundation information",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Foundation"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/programs.json": {
+      "get": {
+        "operationId": "getPrograms",
+        "summary": "Get all DRNF programs",
+        "description": "Returns detailed information about free chai counters, community support, education workshops, and environmental initiatives",
+        "responses": {
+          "200": {
+            "description": "Programs catalog",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProgramsCatalog"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Foundation": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "type": { "type": "string" },
+          "founded": { "type": "string" },
+          "founder": { "type": "object" },
+          "contact": { "type": "object" },
+          "impactMetrics": { "type": "object" },
+          "partners": { "type": "array" }
+        }
+      },
+      "ProgramsCatalog": {
+        "type": "object",
+        "properties": {
+          "programs": { "type": "array" },
+          "employmentImpact": { "type": "object" },
+          "aboutDrRabinderNath": { "type": "object" }
+        }
+      }
+    }
+  }
+}

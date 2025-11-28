@@ -1,0 +1,107 @@
+{
+  "community": [],
+  "chai-counters": [
+    {
+      "localPath": "images/chai-counter-photos/20250313_182621.jpg",
+      "publicId": "drnf-assets/chai-counter-photos/chai-counter-01",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764149050/drnf-assets/chai-counter-photos/chai-counter-01.jpg",
+      "optimizedUrl": "https://res.cloudinary.com/dhupieu4x/image/upload/q_auto,f_auto/drnf-assets/chai-counter-photos/chai-counter-01"
+    },
+    {
+      "localPath": "images/chai-counter-photos/20250313_182624.jpg",
+      "publicId": "drnf-assets/chai-counter-photos/chai-counter-02",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764149055/drnf-assets/chai-counter-photos/chai-counter-02.jpg",
+      "optimizedUrl": "https://res.cloudinary.com/dhupieu4x/image/upload/q_auto,f_auto/drnf-assets/chai-counter-photos/chai-counter-02"
+    },
+    {
+      "localPath": "images/chai-counter-photos/20250313_182635.jpg",
+      "publicId": "drnf-assets/chai-counter-photos/chai-counter-03",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764149060/drnf-assets/chai-counter-photos/chai-counter-03.jpg",
+      "optimizedUrl": "https://res.cloudinary.com/dhupieu4x/image/upload/q_auto,f_auto/drnf-assets/chai-counter-photos/chai-counter-03"
+    },
+    {
+      "localPath": "images/chai-counter-photos/20250313_182638.jpg",
+      "publicId": "drnf-assets/chai-counter-photos/chai-counter-04",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764149065/drnf-assets/chai-counter-photos/chai-counter-04.jpg",
+      "optimizedUrl": "https://res.cloudinary.com/dhupieu4x/image/upload/q_auto,f_auto/drnf-assets/chai-counter-photos/chai-counter-04"
+    },
+    {
+      "localPath": "images/chai-counter-photos/20250313_182639.jpg",
+      "publicId": "drnf-assets/chai-counter-photos/chai-counter-05",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764149069/drnf-assets/chai-counter-photos/chai-counter-05.jpg",
+      "optimizedUrl": "https://res.cloudinary.com/dhupieu4x/image/upload/q_auto,f_auto/drnf-assets/chai-counter-photos/chai-counter-05"
+    },
+    {
+      "localPath": "images/chai-counter-photos/20250313_182642.jpg",
+      "publicId": "drnf-assets/chai-counter-photos/chai-counter-06",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764149072/drnf-assets/chai-counter-photos/chai-counter-06.jpg",
+      "optimizedUrl": "https://res.cloudinary.com/dhupieu4x/image/upload/q_auto,f_auto/drnf-assets/chai-counter-photos/chai-counter-06"
+    },
+    {
+      "localPath": "images/chai-counter-photos/20250313_182649.jpg",
+      "publicId": "drnf-assets/chai-counter-photos/chai-counter-07",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764149078/drnf-assets/chai-counter-photos/chai-counter-07.jpg",
+      "optimizedUrl": "https://res.cloudinary.com/dhupieu4x/image/upload/q_auto,f_auto/drnf-assets/chai-counter-photos/chai-counter-07"
+    },
+    {
+      "localPath": "images/chai-counter-photos/20250313_182655.jpg",
+      "publicId": "drnf-assets/chai-counter-photos/chai-counter-08",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764149086/drnf-assets/chai-counter-photos/chai-counter-08.jpg",
+      "optimizedUrl": "https://res.cloudinary.com/dhupieu4x/image/upload/q_auto,f_auto/drnf-assets/chai-counter-photos/chai-counter-08"
+    },
+    {
+      "localPath": "images/chai-counter-photos/20250313_182703.jpg",
+      "publicId": "drnf-assets/chai-counter-photos/chai-counter-09",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764149091/drnf-assets/chai-counter-photos/chai-counter-09.jpg",
+      "optimizedUrl": "https://res.cloudinary.com/dhupieu4x/image/upload/q_auto,f_auto/drnf-assets/chai-counter-photos/chai-counter-09"
+    },
+    {
+      "localPath": "images/chai-counter-photos/20250313_182711.jpg",
+      "publicId": "drnf-assets/chai-counter-photos/chai-counter-10",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764149095/drnf-assets/chai-counter-photos/chai-counter-10.jpg",
+      "optimizedUrl": "https://res.cloudinary.com/dhupieu4x/image/upload/q_auto,f_auto/drnf-assets/chai-counter-photos/chai-counter-10"
+    },
+    {
+      "localPath": "images/chai-counter-photos/20250313_182715.jpg",
+      "publicId": "drnf-assets/chai-counter-photos/chai-counter-11",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764149100/drnf-assets/chai-counter-photos/chai-counter-11.jpg",
+      "optimizedUrl": "https://res.cloudinary.com/dhupieu4x/image/upload/q_auto,f_auto/drnf-assets/chai-counter-photos/chai-counter-11"
+    },
+    {
+      "localPath": "images/chai-counter-photos/20250313_182720.jpg",
+      "publicId": "drnf-assets/chai-counter-photos/chai-counter-12",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764149103/drnf-assets/chai-counter-photos/chai-counter-12.jpg",
+      "optimizedUrl": "https://res.cloudinary.com/dhupieu4x/image/upload/q_auto,f_auto/drnf-assets/chai-counter-photos/chai-counter-12"
+    },
+    {
+      "localPath": "images/chai-counter-photos/20250313_182727.jpg",
+      "publicId": "drnf-assets/chai-counter-photos/chai-counter-13",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764149116/drnf-assets/chai-counter-photos/chai-counter-13.jpg",
+      "optimizedUrl": "https://res.cloudinary.com/dhupieu4x/image/upload/q_auto,f_auto/drnf-assets/chai-counter-photos/chai-counter-13"
+    },
+    {
+      "localPath": "images/chai-counter-photos/20250313_182731.jpg",
+      "publicId": "drnf-assets/chai-counter-photos/chai-counter-14",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764149126/drnf-assets/chai-counter-photos/chai-counter-14.jpg",
+      "optimizedUrl": "https://res.cloudinary.com/dhupieu4x/image/upload/q_auto,f_auto/drnf-assets/chai-counter-photos/chai-counter-14"
+    },
+    {
+      "localPath": "images/chai-counter-photos/20250313_182738.jpg",
+      "publicId": "drnf-assets/chai-counter-photos/chai-counter-15",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764149132/drnf-assets/chai-counter-photos/chai-counter-15.jpg",
+      "optimizedUrl": "https://res.cloudinary.com/dhupieu4x/image/upload/q_auto,f_auto/drnf-assets/chai-counter-photos/chai-counter-15"
+    },
+    {
+      "localPath": "images/chai-counter-photos/20250313_182758.jpg",
+      "publicId": "drnf-assets/chai-counter-photos/chai-counter-16",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764149136/drnf-assets/chai-counter-photos/chai-counter-16.jpg",
+      "optimizedUrl": "https://res.cloudinary.com/dhupieu4x/image/upload/q_auto,f_auto/drnf-assets/chai-counter-photos/chai-counter-16"
+    },
+    {
+      "localPath": "images/chai-counter-photos/20250313_182804.jpg",
+      "publicId": "drnf-assets/chai-counter-photos/chai-counter-17",
+      "url": "https://res.cloudinary.com/dhupieu4x/image/upload/v1764149141/drnf-assets/chai-counter-photos/chai-counter-17.jpg",
+      "optimizedUrl": "https://res.cloudinary.com/dhupieu4x/image/upload/q_auto,f_auto/drnf-assets/chai-counter-photos/chai-counter-17"
+    }
+  ]
+}

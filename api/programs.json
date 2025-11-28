@@ -1,0 +1,91 @@
+{
+  "programs": [
+    {
+      "id": "free-chai-counters",
+      "name": "Free Chai Counters",
+      "description": "Flagship initiative providing free tea to homeless, underprivileged, and hospital visitors 24/7, 365 days a year",
+      "status": "Active",
+      "impact": {
+        "cupsServed": "116800+",
+        "activeLocations": 2,
+        "operation": "24/7, 365 days",
+        "dailyBeneficiaries": "500-600"
+      },
+      "locations": [
+        {
+          "name": "Near KIMS Hospital",
+          "beneficiaries": "Cancer patients' families, hospital visitors"
+        },
+        {
+          "name": "LooCafe Partnership Location",
+          "beneficiaries": "General public, homeless community"
+        }
+      ],
+      "partners": ["LooCafe", "Kadak Chai"],
+      "expansion": {
+        "potential": "270+ LooCafe locations",
+        "pilot": "30 LooCafes piloted (2022-2023)"
+      }
+    },
+    {
+      "id": "community-support",
+      "name": "Community Support Programs",
+      "description": "Direct financial and material assistance to families and communities in need",
+      "status": "Active",
+      "impact": {
+        "financialSupport": "500000+ INR distributed",
+        "donationDrives": "Ongoing throughout year"
+      },
+      "activities": [
+        "Emergency relief assistance",
+        "Basic necessities distribution",
+        "Festival support programs",
+        "Family assistance"
+      ]
+    },
+    {
+      "id": "education-workshops",
+      "name": "Sanitation & Education Workshops",
+      "description": "Educational programs focused on hygiene, sanitation, and student welfare at partner orphanage",
+      "status": "Active",
+      "partner": {
+        "name": "Abhi Sai Datta Trust",
+        "type": "Orphanage"
+      },
+      "impact": {
+        "studentsSupported": "70+",
+        "mealsProvided": "6 months at Abhi Sai Datta Trust",
+        "workshopFrequency": "Weekly"
+      },
+      "focus": ["Sanitation education", "Hygiene awareness", "Academic support"]
+    },
+    {
+      "id": "environmental-welfare",
+      "name": "Environmental & Animal Welfare",
+      "description": "Conservation initiatives and animal protection programs",
+      "status": "Active",
+      "activities": [
+        "Tree plantation drives",
+        "Animal rescue support",
+        "Environmental conservation awareness",
+        "Partnership with rescue organizations"
+      ]
+    }
+  ],
+
+  "employmentImpact": {
+    "totalJobsCreated": "70+",
+    "currentFullTimeAssociates": "40+",
+    "focus": ["Meaningful employment", "Skill development", "Community service"]
+  },
+
+  "aboutDrRabinderNath": {
+    "name": "Late Vijayshree Dr. Rabinder Nath",
+    "profession": "Dental Surgeon",
+    "role": "Social Worker & Pioneer in Hyderabad",
+    "award": "Vijayshree Award for social contributions",
+    "legacy": "Inspiration for the foundation's mission of compassionate community service"
+  },
+
+  "lastUpdated": "2025-11-26"
+}

@@ -5,6 +5,31 @@
 User-agent: *
 Allow: /
 
+# AI/LLM Crawlers - Explicitly Welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Cohere-ai
+Allow: /
+
 # Block system and config files
 Disallow: /.git/
 Disallow: /.github/
@@ -13,7 +38,6 @@ Disallow: /.nojekyll
 # Block documentation files
 Disallow: /CLAUDE.md
 Disallow: /README.md
-Disallow: /*.md$
 
 # Allow all HTML pages
 Allow: /*.html
@@ -23,6 +47,11 @@ Allow: /css/
 Allow: /js/
 Allow: /images/
 
+# Allow AI-accessible files
+Allow: /llms.txt
+Allow: /api/
+Allow: /.well-known/
+
 # Allow important files
 Allow: /sitemap.xml
 Allow: /CNAME
@@ -30,5 +59,8 @@ Allow: /CNAME
 # Sitemap location
 Sitemap: https://drnf.org/sitemap.xml
 
-# Crawl delay (optional)
-Crawl-delay: 1
+# Machine-Readable Endpoints
+# API: /api/foundation.json - Foundation information
+# API: /api/programs.json - Programs and initiatives
+# Knowledge: /llms.txt - AI knowledge base
+# Plugin: /.well-known/ai-plugin.json - AI plugin manifest
